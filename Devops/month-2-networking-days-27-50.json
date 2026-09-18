@@ -1,0 +1,1759 @@
+{
+  "days": [
+    {
+      "day": 27,
+      "title": "How Networks Actually Work",
+      "tasks": [
+        {
+          "key": "d27-osi-tcpip",
+          "title": "Read the four TCP/IP layers and map each one to something you already touched in Month 1.",
+          "required": false
+        },
+        {
+          "key": "d27-ip-address",
+          "title": "Run ip addr on your VM and identify your IP address, your interface name and your MAC address.",
+          "required": true
+        },
+        {
+          "key": "d27-loopback",
+          "title": "Ping 127.0.0.1 and then ping your own IP. Work out why both succeed and what is different.",
+          "required": true
+        },
+        {
+          "key": "d27-private-public",
+          "title": "Find your VM private IP and your real public IP. Write down why they are not the same.",
+          "required": true
+        },
+        {
+          "key": "d27-ip-vs-ifconfig",
+          "title": "Learn the modern ip command and note which old ifconfig command each part replaces.",
+          "required": true
+        },
+        {
+          "key": "d27-notes-network",
+          "title": "Start a networking section in your notes file for every command and term you meet this month.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 28,
+      "title": "IPv4 Addresses And Binary",
+      "tasks": [
+        {
+          "key": "d28-binary-convert",
+          "title": "Convert ten decimal octets to binary and back by hand until it stops being slow.",
+          "required": true
+        },
+        {
+          "key": "d28-octets",
+          "title": "Break four IP addresses into their four octets and write each one in binary.",
+          "required": true
+        },
+        {
+          "key": "d28-address-classes",
+          "title": "Read what the old address classes A, B and C were and why they were replaced.",
+          "required": false
+        },
+        {
+          "key": "d28-private-ranges",
+          "title": "Memorise the three private ranges: 10.x, 172.16 to 172.31, and 192.168.x.",
+          "required": true
+        },
+        {
+          "key": "d28-reserved",
+          "title": "Find out what 0.0.0.0, 127.0.0.1 and 255.255.255.255 each mean.",
+          "required": true
+        },
+        {
+          "key": "d28-ipv6-glance",
+          "title": "Look at one IPv6 address and learn only its shape. Do not study it further this month.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 29,
+      "title": "Subnet Masks And CIDR",
+      "tasks": [
+        {
+          "key": "d29-mask-meaning",
+          "title": "Learn what a subnet mask does and why 255.255.255.0 is the same as slash 24.",
+          "required": true
+        },
+        {
+          "key": "d29-cidr-table",
+          "title": "Write out a CIDR table from slash 24 to slash 30 with host counts, from memory.",
+          "required": true
+        },
+        {
+          "key": "d29-network-broadcast",
+          "title": "For five given addresses, work out the network address and the broadcast address by hand.",
+          "required": true
+        },
+        {
+          "key": "d29-usable-hosts",
+          "title": "Calculate usable host counts and explain why you subtract two.",
+          "required": true
+        },
+        {
+          "key": "d29-ipcalc",
+          "title": "Install ipcalc and use it to check every answer you worked out by hand.",
+          "required": true
+        },
+        {
+          "key": "d29-drill",
+          "title": "Do twenty subnetting questions on paper. Time yourself. Record your score in your notes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 30,
+      "title": "Subnetting Practice Day",
+      "tasks": [
+        {
+          "key": "d30-split-network",
+          "title": "Split a slash 24 network into four equal subnets and list the range of each one.",
+          "required": true
+        },
+        {
+          "key": "d30-vlsm",
+          "title": "Read what variable length subnet masking is and why real networks use unequal subnets.",
+          "required": false
+        },
+        {
+          "key": "d30-plan-vpc",
+          "title": "Plan an address scheme for a fake company with three subnets: web, app and database.",
+          "required": true
+        },
+        {
+          "key": "d30-same-subnet",
+          "title": "Given two IPs and a mask, decide whether they can talk directly without a router.",
+          "required": true
+        },
+        {
+          "key": "d30-change-mask",
+          "title": "Break it: set a wrong subnet mask on your VM, watch connectivity fail, then fix it.",
+          "required": true
+        },
+        {
+          "key": "d30-drill-again",
+          "title": "Do twenty more subnetting questions and beat yesterday's time.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 31,
+      "title": "ARP, Switches And Routers",
+      "tasks": [
+        {
+          "key": "d31-arp-table",
+          "title": "View your ARP table with ip neigh and explain what each entry is for.",
+          "required": true
+        },
+        {
+          "key": "d31-mac-vs-ip",
+          "title": "Write down in your own words why a machine needs both a MAC address and an IP address.",
+          "required": true
+        },
+        {
+          "key": "d31-switch-router",
+          "title": "Learn the difference between what a switch does and what a router does.",
+          "required": true
+        },
+        {
+          "key": "d31-arp-watch",
+          "title": "Clear your ARP cache, ping a device, then watch the entry reappear.",
+          "required": true
+        },
+        {
+          "key": "d31-broadcast-domain",
+          "title": "Read what a broadcast domain is and where it ends.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 32,
+      "title": "Routing And Default Gateways",
+      "tasks": [
+        {
+          "key": "d32-route-table",
+          "title": "Print your routing table with ip route and explain every line in it.",
+          "required": true
+        },
+        {
+          "key": "d32-default-gateway",
+          "title": "Identify your default gateway and explain what happens to traffic with no matching route.",
+          "required": true
+        },
+        {
+          "key": "d32-add-route",
+          "title": "Add a static route manually, confirm it appears, then delete it again.",
+          "required": true
+        },
+        {
+          "key": "d32-traceroute",
+          "title": "Run traceroute to a public site and count the hops between you and it.",
+          "required": true
+        },
+        {
+          "key": "d32-break-gateway",
+          "title": "Break it: remove your default route, watch the internet vanish, then restore it.",
+          "required": true
+        },
+        {
+          "key": "d32-forwarding",
+          "title": "Read what IP forwarding is and check whether it is enabled on your VM.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 33,
+      "title": "DHCP And Static Addressing",
+      "tasks": [
+        {
+          "key": "d33-dhcp-flow",
+          "title": "Learn the four DHCP steps and what the client and server each send.",
+          "required": true
+        },
+        {
+          "key": "d33-lease",
+          "title": "Find your current DHCP lease details on the VM and note when it expires.",
+          "required": true
+        },
+        {
+          "key": "d33-release-renew",
+          "title": "Release and renew your DHCP lease and watch the address get reassigned.",
+          "required": true
+        },
+        {
+          "key": "d33-static-ip",
+          "title": "Set a static IP on your VM with netplan and confirm it survives a reboot.",
+          "required": true
+        },
+        {
+          "key": "d33-conflict",
+          "title": "Break it: set a static IP that clashes with another device and observe what happens.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 34,
+      "title": "DNS: How Names Become Addresses",
+      "tasks": [
+        {
+          "key": "d34-resolution-steps",
+          "title": "Learn the path a lookup takes: cache, resolver, root, TLD, then authoritative server.",
+          "required": true
+        },
+        {
+          "key": "d34-dig-basic",
+          "title": "Use dig on three domains and read the answer section properly.",
+          "required": true
+        },
+        {
+          "key": "d34-record-types",
+          "title": "Learn what A, AAAA, CNAME, MX, TXT and NS records each do.",
+          "required": true
+        },
+        {
+          "key": "d34-dig-trace",
+          "title": "Run dig with plus trace on one domain and follow the whole path from root to answer.",
+          "required": true
+        },
+        {
+          "key": "d34-resolv-conf",
+          "title": "Look at how your VM decides which DNS server to use and change it to 1.1.1.1.",
+          "required": true
+        },
+        {
+          "key": "d34-ttl",
+          "title": "Find the TTL on a record and explain why DNS changes are not instant.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 35,
+      "title": "DNS Troubleshooting And Hosts Files",
+      "tasks": [
+        {
+          "key": "d35-etc-hosts",
+          "title": "Add an entry to /etc/hosts, point a fake name at your VM, and prove it works.",
+          "required": true
+        },
+        {
+          "key": "d35-hosts-priority",
+          "title": "Work out whether /etc/hosts or DNS wins when both have an answer.",
+          "required": true
+        },
+        {
+          "key": "d35-nslookup-host",
+          "title": "Compare the output of dig, host and nslookup on the same domain.",
+          "required": true
+        },
+        {
+          "key": "d35-break-dns",
+          "title": "Break it: point your resolver at a dead DNS server, then diagnose the failure from symptoms alone.",
+          "required": true
+        },
+        {
+          "key": "d35-reverse-dns",
+          "title": "Do a reverse lookup on an IP address and find out what PTR records are for.",
+          "required": true
+        },
+        {
+          "key": "d35-dns-cache",
+          "title": "Read how DNS caching works at the resolver and at the operating system.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 36,
+      "title": "Ports, Sockets And Listening Services",
+      "tasks": [
+        {
+          "key": "d36-port-concept",
+          "title": "Learn what a port is and why one IP address can run many services at once.",
+          "required": true
+        },
+        {
+          "key": "d36-wellknown",
+          "title": "Memorise the common ports: 22, 25, 53, 80, 443, 3306 and 5432.",
+          "required": true
+        },
+        {
+          "key": "d36-ss-listening",
+          "title": "List every listening socket on your VM with ss and identify which process owns each.",
+          "required": true
+        },
+        {
+          "key": "d36-etc-services",
+          "title": "Look at /etc/services and find three protocols you have never heard of.",
+          "required": true
+        },
+        {
+          "key": "d36-bind-address",
+          "title": "Learn the difference between a service bound to 127.0.0.1 and one bound to 0.0.0.0.",
+          "required": true
+        },
+        {
+          "key": "d36-port-conflict",
+          "title": "Break it: start two services on the same port and read the error you get.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 37,
+      "title": "TCP, UDP And The Handshake",
+      "tasks": [
+        {
+          "key": "d37-tcp-udp",
+          "title": "Write down three differences between TCP and UDP and one real use of each.",
+          "required": true
+        },
+        {
+          "key": "d37-handshake",
+          "title": "Learn the three way handshake and what SYN, SYN ACK and ACK mean.",
+          "required": true
+        },
+        {
+          "key": "d37-connection-states",
+          "title": "Run ss and identify connections in ESTABLISHED, LISTEN and TIME WAIT states.",
+          "required": true
+        },
+        {
+          "key": "d37-nc-listen",
+          "title": "Use netcat to open a listener on one terminal and connect to it from another.",
+          "required": true
+        },
+        {
+          "key": "d37-nc-transfer",
+          "title": "Send a file between two machines using netcat only.",
+          "required": true
+        },
+        {
+          "key": "d37-teardown",
+          "title": "Read how a TCP connection closes and what FIN does.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 38,
+      "title": "The Troubleshooting Toolkit",
+      "tasks": [
+        {
+          "key": "d38-ping-deeper",
+          "title": "Use ping with a count and a size, and read what the round trip times tell you.",
+          "required": true
+        },
+        {
+          "key": "d38-mtr",
+          "title": "Install mtr and compare its live output to a plain traceroute.",
+          "required": true
+        },
+        {
+          "key": "d38-telnet-port",
+          "title": "Test whether a remote port is open using nc with the z flag.",
+          "required": true
+        },
+        {
+          "key": "d38-nmap-self",
+          "title": "Install nmap and scan only your own VM to see which ports are open.",
+          "required": true
+        },
+        {
+          "key": "d38-order-of-checks",
+          "title": "Write a checklist for diagnosing a network fault, working from your machine outwards.",
+          "required": true
+        },
+        {
+          "key": "d38-apply-checklist",
+          "title": "Use your own checklist to diagnose a fault a friend creates on your VM.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 39,
+      "title": "Reading Real Packets With tcpdump",
+      "tasks": [
+        {
+          "key": "d39-tcpdump-basic",
+          "title": "Capture traffic on your interface with tcpdump and stop it before the screen floods.",
+          "required": true
+        },
+        {
+          "key": "d39-tcpdump-filter",
+          "title": "Filter a capture down to one host and one port.",
+          "required": true
+        },
+        {
+          "key": "d39-see-handshake",
+          "title": "Capture a real TCP handshake and identify the SYN, SYN ACK and ACK packets yourself.",
+          "required": true
+        },
+        {
+          "key": "d39-dns-capture",
+          "title": "Capture a DNS query and its response, then match them to what dig showed you.",
+          "required": true
+        },
+        {
+          "key": "d39-write-pcap",
+          "title": "Save a capture to a pcap file so you can open it later.",
+          "required": true
+        },
+        {
+          "key": "d39-http-plaintext",
+          "title": "Capture an HTTP request and see the plain text. Understand why this matters.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 40,
+      "title": "HTTP From The Command Line",
+      "tasks": [
+        {
+          "key": "d40-request-response",
+          "title": "Learn the parts of an HTTP request and an HTTP response.",
+          "required": true
+        },
+        {
+          "key": "d40-methods",
+          "title": "Learn what GET, POST, PUT, PATCH, DELETE and HEAD are for.",
+          "required": true
+        },
+        {
+          "key": "d40-status-codes",
+          "title": "Memorise what the 2xx, 3xx, 4xx and 5xx families mean, plus 200, 301, 404 and 502.",
+          "required": true
+        },
+        {
+          "key": "d40-curl-verbose",
+          "title": "Use curl with -v on a real site and read every header in both directions.",
+          "required": true
+        },
+        {
+          "key": "d40-curl-post",
+          "title": "Send a POST request with curl including a JSON body and a custom header.",
+          "required": true
+        },
+        {
+          "key": "d40-headers-matter",
+          "title": "Find three response headers on a real site and look up what each one does.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 41,
+      "title": "TLS And Certificates",
+      "tasks": [
+        {
+          "key": "d41-why-tls",
+          "title": "Compare your earlier plain text HTTP capture with an HTTPS one and see the difference.",
+          "required": true
+        },
+        {
+          "key": "d41-cert-chain",
+          "title": "Learn what a certificate chain is and what a certificate authority actually vouches for.",
+          "required": true
+        },
+        {
+          "key": "d41-openssl-inspect",
+          "title": "Use openssl to inspect a live site certificate and read its expiry date and issuer.",
+          "required": true
+        },
+        {
+          "key": "d41-self-signed",
+          "title": "Generate a self signed certificate for your own VM.",
+          "required": true
+        },
+        {
+          "key": "d41-browser-warning",
+          "title": "Load your self signed site, read the browser warning, and explain why it appears.",
+          "required": true
+        },
+        {
+          "key": "d41-expiry",
+          "title": "Break it: use an expired or wrong name certificate and watch the exact error it produces.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 42,
+      "title": "Wireshark",
+      "tasks": [
+        {
+          "key": "d42-install",
+          "title": "Install Wireshark on your host machine and open the pcap file you saved on day 39.",
+          "required": true
+        },
+        {
+          "key": "d42-display-filters",
+          "title": "Learn three display filters: by IP, by port and by protocol.",
+          "required": true
+        },
+        {
+          "key": "d42-follow-stream",
+          "title": "Use follow TCP stream on an HTTP conversation and read the whole exchange.",
+          "required": true
+        },
+        {
+          "key": "d42-compare-tcpdump",
+          "title": "Write down when you would reach for tcpdump and when for Wireshark.",
+          "required": true
+        },
+        {
+          "key": "d42-tls-vs-plain",
+          "title": "Compare an HTTP stream and an HTTPS stream side by side in Wireshark.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 43,
+      "title": "nginx As A Web Server",
+      "tasks": [
+        {
+          "key": "d43-serve-static",
+          "title": "Configure nginx to serve a simple static site from a folder you choose.",
+          "required": true
+        },
+        {
+          "key": "d43-config-structure",
+          "title": "Learn the structure of an nginx config: http, server and location blocks.",
+          "required": true
+        },
+        {
+          "key": "d43-server-name",
+          "title": "Set up two server names on one nginx instance and test both with the hosts file.",
+          "required": true
+        },
+        {
+          "key": "d43-nginx-logs",
+          "title": "Find the nginx access log and error log and generate entries in both.",
+          "required": true
+        },
+        {
+          "key": "d43-test-reload",
+          "title": "Learn why nginx -t before a reload saves you from taking a site down.",
+          "required": true
+        },
+        {
+          "key": "d43-break-config",
+          "title": "Break it: introduce a config error, watch the reload refuse, then read the message and fix it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 44,
+      "title": "Second Machine And Machine To Machine Traffic",
+      "tasks": [
+        {
+          "key": "d44-second-vm",
+          "title": "Create a second VM on the same host network and confirm the two can ping each other.",
+          "required": true
+        },
+        {
+          "key": "d44-name-them",
+          "title": "Give both machines hostnames and make them reachable by name using the hosts file.",
+          "required": true
+        },
+        {
+          "key": "d44-simple-app",
+          "title": "Run a simple web app on VM two listening on port 8080 and reach it from VM one with curl.",
+          "required": true
+        },
+        {
+          "key": "d44-ss-both",
+          "title": "Compare the listening sockets on both machines and note what each one exposes.",
+          "required": true
+        },
+        {
+          "key": "d44-capture-between",
+          "title": "Capture the traffic between the two VMs with tcpdump and confirm what you expect to see.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 45,
+      "title": "Firewalls With ufw",
+      "tasks": [
+        {
+          "key": "d45-ufw-basics",
+          "title": "Enable ufw and set a default policy of deny incoming and allow outgoing.",
+          "required": true
+        },
+        {
+          "key": "d45-allow-rules",
+          "title": "Allow SSH and HTTP, then confirm both still work while other ports are blocked.",
+          "required": true
+        },
+        {
+          "key": "d45-status-verbose",
+          "title": "Read ufw status verbose and explain every rule listed.",
+          "required": true
+        },
+        {
+          "key": "d45-block-test",
+          "title": "Prove a blocked port is really blocked by testing it from the second VM.",
+          "required": true
+        },
+        {
+          "key": "d45-lockout",
+          "title": "Break it: block SSH, lose your connection, then recover through the VM console.",
+          "required": true
+        },
+        {
+          "key": "d45-rule-order",
+          "title": "Read why firewall rule order matters and what happens on first match.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 46,
+      "title": "iptables And NAT",
+      "tasks": [
+        {
+          "key": "d46-iptables-list",
+          "title": "List the current iptables rules and find the ones ufw created for you.",
+          "required": true
+        },
+        {
+          "key": "d46-chains",
+          "title": "Learn what the INPUT, OUTPUT and FORWARD chains do.",
+          "required": true
+        },
+        {
+          "key": "d46-manual-rule",
+          "title": "Add one iptables rule by hand, test it, then remove it.",
+          "required": true
+        },
+        {
+          "key": "d46-nat-concept",
+          "title": "Learn what NAT does and why many devices can share one public IP.",
+          "required": true
+        },
+        {
+          "key": "d46-port-forward",
+          "title": "Set up a port forward so traffic hitting VM one reaches a service on VM two.",
+          "required": true
+        },
+        {
+          "key": "d46-nftables",
+          "title": "Read that nftables is replacing iptables on modern systems.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 47,
+      "title": "SSH Tunnelling And Port Forwarding",
+      "tasks": [
+        {
+          "key": "d47-local-forward",
+          "title": "Create a local port forward and reach a service on VM two through VM one.",
+          "required": true
+        },
+        {
+          "key": "d47-remote-forward",
+          "title": "Learn what a remote port forward does and when you would need one.",
+          "required": true
+        },
+        {
+          "key": "d47-jump-host",
+          "title": "Use a jump host to reach a machine you cannot connect to directly.",
+          "required": true
+        },
+        {
+          "key": "d47-tunnel-db",
+          "title": "Tunnel a database port over SSH and connect to it as if it were local.",
+          "required": true
+        },
+        {
+          "key": "d47-why-tunnels",
+          "title": "Write down why tunnelling is safer than opening a port to the whole internet.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 48,
+      "title": "nginx As A Reverse Proxy",
+      "tasks": [
+        {
+          "key": "d48-proxy-pass",
+          "title": "Configure nginx on VM one to proxy requests to the app on VM two.",
+          "required": true
+        },
+        {
+          "key": "d48-headers",
+          "title": "Pass the real client IP through the proxy using the forwarded headers.",
+          "required": true
+        },
+        {
+          "key": "d48-close-port",
+          "title": "Close port 8080 on VM two so the app is only reachable through the proxy.",
+          "required": true
+        },
+        {
+          "key": "d48-proxy-logs",
+          "title": "Trace one single request through the proxy log and then the app log.",
+          "required": true
+        },
+        {
+          "key": "d48-502",
+          "title": "Break it: stop the backend app and study the 502 error nginx returns.",
+          "required": true
+        },
+        {
+          "key": "d48-why-proxy",
+          "title": "Write down four jobs a reverse proxy does in a real system.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 49,
+      "title": "Load Balancing And TLS Termination",
+      "tasks": [
+        {
+          "key": "d49-upstream",
+          "title": "Define an upstream block in nginx with two backend targets.",
+          "required": true
+        },
+        {
+          "key": "d49-round-robin",
+          "title": "Send repeated requests and prove they alternate between the two backends.",
+          "required": true
+        },
+        {
+          "key": "d49-health",
+          "title": "Stop one backend and watch traffic continue through the healthy one.",
+          "required": true
+        },
+        {
+          "key": "d49-tls-terminate",
+          "title": "Terminate TLS at nginx so the outside is HTTPS and the inside stays HTTP.",
+          "required": true
+        },
+        {
+          "key": "d49-redirect-https",
+          "title": "Redirect all HTTP traffic to HTTPS and confirm it with curl.",
+          "required": true
+        },
+        {
+          "key": "d49-sticky",
+          "title": "Read what session stickiness is and why it complicates load balancing.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 50,
+      "title": "Capstone: Build It, Break It, Prove It",
+      "tasks": [
+        {
+          "key": "d50-build-stack",
+          "title": "Build the full stack: app on VM two, nginx reverse proxy on VM one, firewall locked down.",
+          "required": true
+        },
+        {
+          "key": "d50-tls-working",
+          "title": "Serve the site over HTTPS with your certificate and no plain HTTP reachable.",
+          "required": true
+        },
+        {
+          "key": "d50-sabotage",
+          "title": "Have a friend break one thing at any layer without telling you what it was.",
+          "required": true
+        },
+        {
+          "key": "d50-diagnose",
+          "title": "Diagnose the fault using your day 38 checklist, tcpdump and the logs. No guessing.",
+          "required": true
+        },
+        {
+          "key": "d50-document",
+          "title": "Write the whole build up as a README with a diagram of the traffic path.",
+          "required": true
+        },
+        {
+          "key": "d50-push-repo",
+          "title": "Push the configs and the README to your GitHub repo from Month 1.",
+          "required": true
+        },
+        {
+          "key": "d50-review",
+          "title": "Review your networking notes and mark every command you still cannot recall unaided.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 30,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q30-1",
+          "type": "mcq",
+          "prompt": "What does the slash 24 in 192.168.1.0/24 tell you?",
+          "options": [
+            "There are 24 usable hosts",
+            "The first 24 bits are the network part",
+            "The network has 24 subnets",
+            "The address expires in 24 hours"
+          ],
+          "answer": 1,
+          "explanation": "CIDR notation counts how many leading bits belong to the network portion of the address."
+        },
+        {
+          "key": "q30-2",
+          "type": "mcq",
+          "prompt": "Which subnet mask matches slash 24?",
+          "options": [
+            "255.255.0.0",
+            "255.255.255.0",
+            "255.255.255.192",
+            "255.0.0.0"
+          ],
+          "answer": 1,
+          "explanation": "Twenty four network bits produce three full octets of 255 followed by a zero."
+        },
+        {
+          "key": "q30-3",
+          "type": "mcq",
+          "prompt": "How many usable host addresses are in a slash 24 network?",
+          "options": [
+            "256",
+            "255",
+            "254",
+            "252"
+          ],
+          "answer": 2,
+          "explanation": "Of the 256 addresses, one is the network address and one is the broadcast address."
+        },
+        {
+          "key": "q30-4",
+          "type": "mcq",
+          "prompt": "Why do you subtract two when counting usable hosts?",
+          "options": [
+            "For the router and the switch",
+            "For the network address and the broadcast address",
+            "For DNS and DHCP",
+            "For IPv4 and IPv6"
+          ],
+          "answer": 1,
+          "explanation": "The lowest address identifies the network and the highest is reserved for broadcast."
+        },
+        {
+          "key": "q30-5",
+          "type": "mcq",
+          "prompt": "Which of these is a private address range?",
+          "options": [
+            "11.0.0.0/8",
+            "172.32.0.0/16",
+            "192.168.0.0/16",
+            "8.8.8.0/24"
+          ],
+          "answer": 2,
+          "explanation": "192.168.0.0/16 is one of the three reserved private ranges, along with 10.x and 172.16 to 172.31."
+        },
+        {
+          "key": "q30-6",
+          "type": "mcq",
+          "prompt": "What is 127.0.0.1 used for?",
+          "options": [
+            "The default gateway",
+            "Broadcasting to the network",
+            "Referring to the machine itself",
+            "The DNS server"
+          ],
+          "answer": 2,
+          "explanation": "The loopback address always points back at the local machine."
+        },
+        {
+          "key": "q30-7",
+          "type": "mcq",
+          "prompt": "Which command shows your IP address on a modern Linux system?",
+          "options": [
+            "ipconfig",
+            "ip addr",
+            "netstat -i",
+            "showip"
+          ],
+          "answer": 1,
+          "explanation": "The ip command replaced the older ifconfig tool on current distributions."
+        },
+        {
+          "key": "q30-8",
+          "type": "mcq",
+          "prompt": "How many usable hosts does a slash 30 network give you?",
+          "options": [
+            "1",
+            "2",
+            "4",
+            "6"
+          ],
+          "answer": 1,
+          "explanation": "A slash 30 has four addresses in total, and two of them are reserved."
+        },
+        {
+          "key": "q30-9",
+          "type": "mcq",
+          "prompt": "What is the broadcast address of 192.168.10.0/24?",
+          "options": [
+            "192.168.10.0",
+            "192.168.10.1",
+            "192.168.10.254",
+            "192.168.10.255"
+          ],
+          "answer": 3,
+          "explanation": "The broadcast address is the highest address in the range, with all host bits set to one."
+        },
+        {
+          "key": "q30-10",
+          "type": "mcq",
+          "prompt": "If you split a slash 24 into four equal subnets, what mask do you get?",
+          "options": [
+            "/25",
+            "/26",
+            "/27",
+            "/28"
+          ],
+          "answer": 1,
+          "explanation": "Borrowing two host bits produces four subnets and gives a slash 26."
+        },
+        {
+          "key": "q30-11",
+          "type": "mcq",
+          "prompt": "What is a MAC address used for?",
+          "options": [
+            "Routing between networks",
+            "Identifying a device on the local network segment",
+            "Naming a website",
+            "Assigning DNS records"
+          ],
+          "answer": 1,
+          "explanation": "MAC addresses work at the local link level, while IP addresses route across networks."
+        },
+        {
+          "key": "q30-12",
+          "type": "true_false",
+          "prompt": "Two devices with the same subnet mask but different network portions can talk directly without a router.",
+          "answer": false,
+          "explanation": "If their network portions differ they are on different networks, so traffic has to go through a router."
+        },
+        {
+          "key": "q30-13",
+          "type": "true_false",
+          "prompt": "A private IP address can be reached directly from the public internet.",
+          "answer": false,
+          "explanation": "Private ranges are not routable on the internet, which is why NAT exists."
+        },
+        {
+          "key": "q30-14",
+          "type": "true_false",
+          "prompt": "Setting the wrong subnet mask can break connectivity even when the IP address itself is correct.",
+          "answer": true,
+          "explanation": "The mask decides which destinations are treated as local, so a wrong mask sends traffic the wrong way."
+        },
+        {
+          "key": "q30-15",
+          "type": "true_false",
+          "prompt": "Every device needs both an IP address and a MAC address to communicate on a normal network.",
+          "answer": true,
+          "explanation": "The IP address gets traffic across networks and the MAC address delivers it on the final segment."
+        }
+      ]
+    },
+    {
+      "afterDay": 35,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q35-1",
+          "type": "mcq",
+          "prompt": "What does ARP do?",
+          "options": [
+            "Assigns IP addresses",
+            "Maps an IP address to a MAC address",
+            "Resolves domain names",
+            "Routes between subnets"
+          ],
+          "answer": 1,
+          "explanation": "ARP finds the hardware address that belongs to a known IP on the local segment."
+        },
+        {
+          "key": "q35-2",
+          "type": "mcq",
+          "prompt": "What is the main difference between a switch and a router?",
+          "options": [
+            "A switch is faster",
+            "A switch works inside one network, a router connects different networks",
+            "A router only handles wireless",
+            "A switch assigns IP addresses"
+          ],
+          "answer": 1,
+          "explanation": "Switches forward within a segment using MAC addresses, and routers move traffic between networks using IP."
+        },
+        {
+          "key": "q35-3",
+          "type": "mcq",
+          "prompt": "What happens to a packet with no matching route in the routing table?",
+          "options": [
+            "It is dropped immediately",
+            "It goes to the default gateway",
+            "It is broadcast to everyone",
+            "It is returned to the sender"
+          ],
+          "answer": 1,
+          "explanation": "The default route is the catch all destination for anything not matched by a more specific route."
+        },
+        {
+          "key": "q35-4",
+          "type": "mcq",
+          "prompt": "Which command prints the routing table?",
+          "options": [
+            "ip route",
+            "ip neigh",
+            "ip addr",
+            "ip link"
+          ],
+          "answer": 0,
+          "explanation": "ip route shows the routes the kernel will use to reach different destinations."
+        },
+        {
+          "key": "q35-5",
+          "type": "mcq",
+          "prompt": "What does traceroute show you?",
+          "options": [
+            "Open ports on a host",
+            "The path and the hops between you and a destination",
+            "DNS records for a domain",
+            "Bandwidth available"
+          ],
+          "answer": 1,
+          "explanation": "Traceroute reveals each router along the path, which helps you find where a problem starts."
+        },
+        {
+          "key": "q35-6",
+          "type": "mcq",
+          "prompt": "How many messages are in the standard DHCP exchange?",
+          "options": [
+            "Two",
+            "Three",
+            "Four",
+            "Five"
+          ],
+          "answer": 2,
+          "explanation": "Discover, offer, request and acknowledge make up the four step exchange."
+        },
+        {
+          "key": "q35-7",
+          "type": "mcq",
+          "prompt": "What is a DHCP lease?",
+          "options": [
+            "A permanent address assignment",
+            "A time limited assignment of an address",
+            "A firewall rule",
+            "A DNS record"
+          ],
+          "answer": 1,
+          "explanation": "Leases expire so addresses can be reclaimed and reused."
+        },
+        {
+          "key": "q35-8",
+          "type": "mcq",
+          "prompt": "In DNS, what does an A record hold?",
+          "options": [
+            "A mail server name",
+            "An IPv4 address",
+            "An alias to another name",
+            "Text data"
+          ],
+          "answer": 1,
+          "explanation": "The A record maps a hostname to an IPv4 address."
+        },
+        {
+          "key": "q35-9",
+          "type": "mcq",
+          "prompt": "What does a CNAME record do?",
+          "options": [
+            "Points a name at another name",
+            "Points a name at an IP",
+            "Lists name servers",
+            "Holds verification text"
+          ],
+          "answer": 0,
+          "explanation": "A CNAME is an alias that redirects one hostname to another hostname."
+        },
+        {
+          "key": "q35-10",
+          "type": "mcq",
+          "prompt": "Which record type tells you where email for a domain should go?",
+          "options": [
+            "NS",
+            "TXT",
+            "MX",
+            "PTR"
+          ],
+          "answer": 2,
+          "explanation": "MX records identify the mail servers responsible for a domain."
+        },
+        {
+          "key": "q35-11",
+          "type": "mcq",
+          "prompt": "What does the TTL on a DNS record control?",
+          "options": [
+            "How long the domain is registered",
+            "How long resolvers may cache the answer",
+            "How many hops the query can take",
+            "How long the server waits before timing out"
+          ],
+          "answer": 1,
+          "explanation": "TTL is the cache lifetime, which is why DNS changes take time to appear everywhere."
+        },
+        {
+          "key": "q35-12",
+          "type": "mcq",
+          "prompt": "Which usually wins when a name exists in both /etc/hosts and DNS?",
+          "options": [
+            "DNS",
+            "The hosts file",
+            "Whichever answers first",
+            "Neither, it fails"
+          ],
+          "answer": 1,
+          "explanation": "On a default configuration the local hosts file is consulted before DNS."
+        },
+        {
+          "key": "q35-13",
+          "type": "true_false",
+          "prompt": "Clearing your ARP cache permanently stops the entries from coming back.",
+          "answer": false,
+          "explanation": "Entries are rebuilt automatically the next time the machine needs to reach that address."
+        },
+        {
+          "key": "q35-14",
+          "type": "true_false",
+          "prompt": "A DNS change can appear instantly for one person and hours later for another.",
+          "answer": true,
+          "explanation": "Caching at different resolvers means the old answer survives until its TTL expires."
+        },
+        {
+          "key": "q35-15",
+          "type": "true_false",
+          "prompt": "Removing your default route will usually break internet access while leaving local traffic working.",
+          "answer": true,
+          "explanation": "Local destinations still match specific routes, but everything else has nowhere to go."
+        }
+      ]
+    },
+    {
+      "afterDay": 40,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q40-1",
+          "type": "mcq",
+          "prompt": "Why can one IP address serve many different applications?",
+          "options": [
+            "It has multiple MAC addresses",
+            "Each service listens on a different port",
+            "DNS splits the traffic",
+            "The router duplicates packets"
+          ],
+          "answer": 1,
+          "explanation": "Ports let a single address separate traffic between many listening services."
+        },
+        {
+          "key": "q40-2",
+          "type": "mcq",
+          "prompt": "Which port does HTTPS use by default?",
+          "options": [
+            "80",
+            "22",
+            "443",
+            "8080"
+          ],
+          "answer": 2,
+          "explanation": "Port 443 is the standard for HTTPS, while 80 is plain HTTP."
+        },
+        {
+          "key": "q40-3",
+          "type": "mcq",
+          "prompt": "Which port does SSH use by default?",
+          "options": [
+            "21",
+            "22",
+            "23",
+            "25"
+          ],
+          "answer": 1,
+          "explanation": "SSH listens on port 22 unless it has been deliberately changed."
+        },
+        {
+          "key": "q40-4",
+          "type": "mcq",
+          "prompt": "What is the difference between binding to 127.0.0.1 and 0.0.0.0?",
+          "options": [
+            "No difference",
+            "127.0.0.1 is local only, 0.0.0.0 accepts connections on all interfaces",
+            "0.0.0.0 is faster",
+            "127.0.0.1 requires root"
+          ],
+          "answer": 1,
+          "explanation": "Binding to loopback keeps a service private to the machine, while 0.0.0.0 exposes it to the network."
+        },
+        {
+          "key": "q40-5",
+          "type": "mcq",
+          "prompt": "What are the three steps of the TCP handshake?",
+          "options": [
+            "SYN, ACK, FIN",
+            "SYN, SYN ACK, ACK",
+            "HELLO, ACK, DATA",
+            "REQ, RES, CLOSE"
+          ],
+          "answer": 1,
+          "explanation": "The client sends SYN, the server replies SYN ACK, and the client confirms with ACK."
+        },
+        {
+          "key": "q40-6",
+          "type": "mcq",
+          "prompt": "Which protocol does not guarantee delivery?",
+          "options": [
+            "TCP",
+            "UDP",
+            "HTTP",
+            "SSH"
+          ],
+          "answer": 1,
+          "explanation": "UDP sends without acknowledgement, which makes it fast but unreliable."
+        },
+        {
+          "key": "q40-7",
+          "type": "mcq",
+          "prompt": "Which command lists listening sockets and the processes that own them?",
+          "options": [
+            "ping",
+            "ss",
+            "dig",
+            "curl"
+          ],
+          "answer": 1,
+          "explanation": "The ss command shows socket state and can display the owning process."
+        },
+        {
+          "key": "q40-8",
+          "type": "mcq",
+          "prompt": "What does an HTTP 404 status mean?",
+          "options": [
+            "Server error",
+            "Permission denied",
+            "Resource not found",
+            "Redirected"
+          ],
+          "answer": 2,
+          "explanation": "404 means the server understood the request but has nothing at that path."
+        },
+        {
+          "key": "q40-9",
+          "type": "mcq",
+          "prompt": "What does an HTTP 502 status usually indicate?",
+          "options": [
+            "The page does not exist",
+            "A proxy could not get a valid response from the backend",
+            "The request was unauthorised",
+            "The request was too large"
+          ],
+          "answer": 1,
+          "explanation": "A 502 means the gateway or proxy reached out to the backend and got nothing usable."
+        },
+        {
+          "key": "q40-10",
+          "type": "mcq",
+          "prompt": "What family do 3xx status codes belong to?",
+          "options": [
+            "Success",
+            "Redirection",
+            "Client error",
+            "Server error"
+          ],
+          "answer": 1,
+          "explanation": "Codes in the 300 range tell the client the resource is somewhere else."
+        },
+        {
+          "key": "q40-11",
+          "type": "mcq",
+          "prompt": "Which curl flag shows the full request and response headers?",
+          "options": [
+            "-s",
+            "-v",
+            "-o",
+            "-L"
+          ],
+          "answer": 1,
+          "explanation": "The -v flag turns on verbose mode and prints headers in both directions."
+        },
+        {
+          "key": "q40-12",
+          "type": "mcq",
+          "prompt": "What does tcpdump let you do that ping does not?",
+          "options": [
+            "Test if a host is up",
+            "Inspect the actual packets on the wire",
+            "Measure latency",
+            "Resolve names"
+          ],
+          "answer": 1,
+          "explanation": "tcpdump captures real traffic so you can see exactly what was sent and received."
+        },
+        {
+          "key": "q40-13",
+          "type": "true_false",
+          "prompt": "Traffic sent over plain HTTP can be read by anyone capturing packets on the path.",
+          "answer": true,
+          "explanation": "Without TLS the request and response travel in readable text, which a capture will show in full."
+        },
+        {
+          "key": "q40-14",
+          "type": "true_false",
+          "prompt": "Two services can listen on the same port on the same interface at the same time.",
+          "answer": false,
+          "explanation": "The second one fails to bind, which is why you get an address already in use error."
+        },
+        {
+          "key": "q40-15",
+          "type": "true_false",
+          "prompt": "A GET request is meant to retrieve data rather than change it.",
+          "answer": true,
+          "explanation": "GET is defined as a safe method, so changes should use POST, PUT, PATCH or DELETE instead."
+        }
+      ]
+    },
+    {
+      "afterDay": 45,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q45-1",
+          "type": "mcq",
+          "prompt": "What does a certificate authority actually vouch for?",
+          "options": [
+            "That a site is safe to use",
+            "That the certificate holder controls the named domain",
+            "That the site has no bugs",
+            "That the site is popular"
+          ],
+          "answer": 1,
+          "explanation": "A CA verifies control of the domain, not the quality or honesty of the site."
+        },
+        {
+          "key": "q45-2",
+          "type": "mcq",
+          "prompt": "Why does a browser warn about a self signed certificate?",
+          "options": [
+            "It is expired",
+            "No trusted authority vouches for it",
+            "It uses weak encryption",
+            "It has the wrong port"
+          ],
+          "answer": 1,
+          "explanation": "The browser has no chain of trust leading back to an authority it already trusts."
+        },
+        {
+          "key": "q45-3",
+          "type": "mcq",
+          "prompt": "Which tool inspects a live site certificate from the command line?",
+          "options": [
+            "curl -I",
+            "openssl s_client",
+            "dig +short",
+            "nmap -sV"
+          ],
+          "answer": 1,
+          "explanation": "openssl s_client connects and shows the presented certificate and its chain."
+        },
+        {
+          "key": "q45-4",
+          "type": "mcq",
+          "prompt": "What happens when a certificate expires?",
+          "options": [
+            "The site loads with no change",
+            "Clients refuse or warn about the connection",
+            "Traffic falls back to HTTP",
+            "The server stops running"
+          ],
+          "answer": 1,
+          "explanation": "Expiry breaks trust, so clients warn or refuse to continue."
+        },
+        {
+          "key": "q45-5",
+          "type": "mcq",
+          "prompt": "In an nginx config, which block defines how a particular URL path is handled?",
+          "options": [
+            "http",
+            "server",
+            "location",
+            "upstream"
+          ],
+          "answer": 2,
+          "explanation": "The location block matches request paths and sets the rules for them."
+        },
+        {
+          "key": "q45-6",
+          "type": "mcq",
+          "prompt": "What does nginx -t do?",
+          "options": [
+            "Restarts nginx",
+            "Tests the configuration for errors",
+            "Shows traffic statistics",
+            "Enables TLS"
+          ],
+          "answer": 1,
+          "explanation": "Testing the config first prevents a reload from taking the site offline."
+        },
+        {
+          "key": "q45-7",
+          "type": "mcq",
+          "prompt": "Which nginx log records requests that were served?",
+          "options": [
+            "error log",
+            "access log",
+            "journal",
+            "syslog only"
+          ],
+          "answer": 1,
+          "explanation": "The access log lists served requests, while the error log records failures."
+        },
+        {
+          "key": "q45-8",
+          "type": "mcq",
+          "prompt": "What is a sensible default firewall policy for a server?",
+          "options": [
+            "Allow all incoming",
+            "Deny incoming and allow outgoing",
+            "Deny everything both ways",
+            "Allow incoming and deny outgoing"
+          ],
+          "answer": 1,
+          "explanation": "Blocking inbound by default and opening only what you need is the standard safe posture."
+        },
+        {
+          "key": "q45-9",
+          "type": "mcq",
+          "prompt": "What is the danger of enabling a firewall over an SSH session?",
+          "options": [
+            "Nothing, it is safe",
+            "You can block SSH and lock yourself out",
+            "It disables the network card",
+            "It clears the routing table"
+          ],
+          "answer": 1,
+          "explanation": "If SSH is not explicitly allowed, enabling the firewall cuts your own connection."
+        },
+        {
+          "key": "q45-10",
+          "type": "mcq",
+          "prompt": "Which iptables chain handles traffic arriving for the local machine?",
+          "options": [
+            "OUTPUT",
+            "FORWARD",
+            "INPUT",
+            "POSTROUTING"
+          ],
+          "answer": 2,
+          "explanation": "INPUT covers packets destined for the machine itself."
+        },
+        {
+          "key": "q45-11",
+          "type": "mcq",
+          "prompt": "What problem does NAT solve?",
+          "options": [
+            "Slow DNS",
+            "Many devices sharing one public IP address",
+            "Certificate expiry",
+            "Packet loss"
+          ],
+          "answer": 1,
+          "explanation": "NAT translates private addresses to a shared public one so many devices can reach the internet."
+        },
+        {
+          "key": "q45-12",
+          "type": "mcq",
+          "prompt": "Which tool would you use to read a saved pcap file with a graphical interface?",
+          "options": [
+            "tcpdump",
+            "Wireshark",
+            "nmap",
+            "mtr"
+          ],
+          "answer": 1,
+          "explanation": "Wireshark opens capture files and makes filtering and stream following much easier."
+        },
+        {
+          "key": "q45-13",
+          "type": "true_false",
+          "prompt": "Firewall rules are evaluated in order and the first match usually decides the outcome.",
+          "answer": true,
+          "explanation": "Because the first matching rule wins, putting a broad deny above a specific allow blocks the traffic."
+        },
+        {
+          "key": "q45-14",
+          "type": "true_false",
+          "prompt": "Terminating TLS at a reverse proxy means the connection behind the proxy can be plain HTTP.",
+          "answer": true,
+          "explanation": "The proxy handles encryption with the client and can speak unencrypted to a backend on a trusted network."
+        },
+        {
+          "key": "q45-15",
+          "type": "true_false",
+          "prompt": "A self signed certificate encrypts traffic just as strongly as one from a public authority.",
+          "answer": true,
+          "explanation": "The encryption is the same, and what is missing is the trust chain that stops impersonation."
+        }
+      ]
+    },
+    {
+      "afterDay": 50,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q50-1",
+          "type": "mcq",
+          "prompt": "What does proxy_pass do in an nginx config?",
+          "options": [
+            "Redirects the browser",
+            "Forwards the request to a backend server",
+            "Caches the response",
+            "Blocks the request"
+          ],
+          "answer": 1,
+          "explanation": "proxy_pass sends the request onward to the backend and returns its response to the client."
+        },
+        {
+          "key": "q50-2",
+          "type": "mcq",
+          "prompt": "Why close the backend port after putting a reverse proxy in front of it?",
+          "options": [
+            "It saves memory",
+            "So the backend can only be reached through the proxy",
+            "It speeds up TLS",
+            "It is required by nginx"
+          ],
+          "answer": 1,
+          "explanation": "Closing the direct route forces all traffic through the proxy, where your rules and TLS live."
+        },
+        {
+          "key": "q50-3",
+          "type": "mcq",
+          "prompt": "You get a 502 from your proxy. What should you check first?",
+          "options": [
+            "Your DNS records",
+            "Whether the backend service is running",
+            "Your certificate expiry",
+            "The client browser version"
+          ],
+          "answer": 1,
+          "explanation": "A 502 means the proxy could not get a usable response, so the backend is the first suspect."
+        },
+        {
+          "key": "q50-4",
+          "type": "mcq",
+          "prompt": "What does an upstream block define in nginx?",
+          "options": [
+            "Allowed client IPs",
+            "A group of backend servers to send traffic to",
+            "TLS settings",
+            "Log formats"
+          ],
+          "answer": 1,
+          "explanation": "The upstream block names the backends that nginx can balance requests across."
+        },
+        {
+          "key": "q50-5",
+          "type": "mcq",
+          "prompt": "What is the default way nginx distributes requests across an upstream group?",
+          "options": [
+            "Random",
+            "Round robin",
+            "By client IP",
+            "By response time"
+          ],
+          "answer": 1,
+          "explanation": "Round robin sends each new request to the next backend in the list."
+        },
+        {
+          "key": "q50-6",
+          "type": "mcq",
+          "prompt": "Why does a reverse proxy need to forward the original client IP?",
+          "options": [
+            "To speed up routing",
+            "Because otherwise the backend only sees the proxy address",
+            "To enable TLS",
+            "To reduce log size"
+          ],
+          "answer": 1,
+          "explanation": "Without the forwarded header, every request in the backend logs looks like it came from the proxy."
+        },
+        {
+          "key": "q50-7",
+          "type": "mcq",
+          "prompt": "What does an SSH local port forward achieve?",
+          "options": [
+            "It opens a port on the internet",
+            "It makes a remote service reachable on a local port through the tunnel",
+            "It speeds up SSH",
+            "It shares your screen"
+          ],
+          "answer": 1,
+          "explanation": "The tunnel carries traffic from a local port to a service reachable from the SSH server."
+        },
+        {
+          "key": "q50-8",
+          "type": "mcq",
+          "prompt": "Why is tunnelling a database port over SSH safer than opening it publicly?",
+          "options": [
+            "It is faster",
+            "The port is never exposed to the internet",
+            "It compresses the data",
+            "It avoids DNS"
+          ],
+          "answer": 1,
+          "explanation": "Nothing is listening publicly, so attackers have no port to reach in the first place."
+        },
+        {
+          "key": "q50-9",
+          "type": "mcq",
+          "prompt": "What is a jump host used for?",
+          "options": [
+            "Load balancing",
+            "Reaching a machine you cannot connect to directly",
+            "Storing backups",
+            "Serving DNS"
+          ],
+          "answer": 1,
+          "explanation": "You connect through an intermediate machine that does have access to the target."
+        },
+        {
+          "key": "q50-10",
+          "type": "mcq",
+          "prompt": "You can ping a server but cannot load its website. What is the most likely cause?",
+          "options": [
+            "DNS is broken",
+            "The route is missing",
+            "The service or the port is blocked or down",
+            "The cable is unplugged"
+          ],
+          "answer": 2,
+          "explanation": "Successful pings prove the network path works, so the problem sits at the service or firewall level."
+        },
+        {
+          "key": "q50-11",
+          "type": "mcq",
+          "prompt": "In a redirect from HTTP to HTTPS, which status code is normally used?",
+          "options": [
+            "200",
+            "301",
+            "404",
+            "502"
+          ],
+          "answer": 1,
+          "explanation": "A 301 tells the client the resource has permanently moved to the secure address."
+        },
+        {
+          "key": "q50-12",
+          "type": "mcq",
+          "prompt": "When diagnosing a fault, why start from your own machine and work outwards?",
+          "options": [
+            "It is faster to type",
+            "It narrows the problem down one layer at a time",
+            "Remote tools are unreliable",
+            "It avoids using logs"
+          ],
+          "answer": 1,
+          "explanation": "Checking locally first eliminates whole categories of cause before you look further away."
+        },
+        {
+          "key": "q50-13",
+          "type": "true_false",
+          "prompt": "If one backend in a load balanced pair stops, nginx can keep serving from the other one.",
+          "answer": true,
+          "explanation": "Requests are directed to the remaining healthy backend, which is the main reason for running more than one."
+        },
+        {
+          "key": "q50-14",
+          "type": "true_false",
+          "prompt": "A reverse proxy sits in front of your servers, while a forward proxy sits in front of clients.",
+          "answer": true,
+          "explanation": "The direction of the traffic it represents is what separates the two."
+        },
+        {
+          "key": "q50-15",
+          "type": "true_false",
+          "prompt": "Writing up how you diagnosed a fault is a waste of time once the fault is fixed.",
+          "answer": false,
+          "explanation": "The write up is what turns a one off fix into a repeatable skill, and it is standard practice in operations work."
+        }
+      ]
+    }
+  ]
+}

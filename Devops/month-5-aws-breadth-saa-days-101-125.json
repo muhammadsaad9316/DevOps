@@ -1,0 +1,1771 @@
+{
+  "days": [
+    {
+      "day": 101,
+      "title": "Route 53 And DNS In AWS",
+      "tasks": [
+        {
+          "key": "d101-hosted-zone",
+          "title": "Create a public hosted zone and look at the NS and SOA records AWS made for you.",
+          "required": true
+        },
+        {
+          "key": "d101-record-types",
+          "title": "Create A, CNAME and TXT records and resolve each one with dig, as you did on day 34.",
+          "required": true
+        },
+        {
+          "key": "d101-alias",
+          "title": "Learn what an alias record is and why it beats a CNAME for pointing at a load balancer.",
+          "required": true
+        },
+        {
+          "key": "d101-routing-policies",
+          "title": "Read what simple, weighted, latency and failover routing policies each do.",
+          "required": false
+        },
+        {
+          "key": "d101-health-check",
+          "title": "Create a Route 53 health check and see what it reports when the target goes down.",
+          "required": true
+        },
+        {
+          "key": "d101-cost-check",
+          "title": "Check the billing dashboard and note what a hosted zone costs per month.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 102,
+      "title": "Launch Templates And Repeatable Instances",
+      "tasks": [
+        {
+          "key": "d102-launch-template",
+          "title": "Create a launch template with your AMI, instance type, security group and user data.",
+          "required": true
+        },
+        {
+          "key": "d102-versions",
+          "title": "Create a second version of the template and switch between versions.",
+          "required": true
+        },
+        {
+          "key": "d102-vs-config",
+          "title": "Read why launch templates replaced the older launch configurations.",
+          "required": false
+        },
+        {
+          "key": "d102-launch-from",
+          "title": "Launch an instance directly from the template and confirm it boots configured.",
+          "required": true
+        },
+        {
+          "key": "d102-golden-image",
+          "title": "Decide what belongs in the AMI and what belongs in user data. Write your rule down.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 103,
+      "title": "Auto Scaling Groups",
+      "tasks": [
+        {
+          "key": "d103-create-asg",
+          "title": "Create an Auto Scaling group across two availability zones using your launch template.",
+          "required": true
+        },
+        {
+          "key": "d103-min-max-desired",
+          "title": "Set minimum, maximum and desired capacity and explain what each one controls.",
+          "required": true
+        },
+        {
+          "key": "d103-self-healing",
+          "title": "Terminate an instance manually and watch the group replace it automatically.",
+          "required": true
+        },
+        {
+          "key": "d103-attach-tg",
+          "title": "Attach the group to your target group so new instances join the load balancer.",
+          "required": true
+        },
+        {
+          "key": "d103-scaling-policy",
+          "title": "Add a target tracking policy on CPU and read what it will do under load.",
+          "required": true
+        },
+        {
+          "key": "d103-teardown",
+          "title": "Set desired capacity to zero at the end of the day.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 104,
+      "title": "High Availability Patterns",
+      "tasks": [
+        {
+          "key": "d104-single-points",
+          "title": "List every single point of failure in your day 74 architecture.",
+          "required": true
+        },
+        {
+          "key": "d104-multi-az",
+          "title": "Explain why two instances in one availability zone is not high availability.",
+          "required": true
+        },
+        {
+          "key": "d104-rds-multi-az",
+          "title": "Read how RDS Multi AZ failover works and what the standby does and does not do.",
+          "required": true
+        },
+        {
+          "key": "d104-read-replica",
+          "title": "Learn the difference between a Multi AZ standby and a read replica.",
+          "required": true
+        },
+        {
+          "key": "d104-zone-failure",
+          "title": "Break it: stop every instance in one zone and confirm the site still serves.",
+          "required": true
+        },
+        {
+          "key": "d104-write-up",
+          "title": "Write down what would still break your stack and what it would cost to fix.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 105,
+      "title": "Load Balancers In Depth",
+      "tasks": [
+        {
+          "key": "d105-alb-vs-nlb",
+          "title": "Learn when to use an Application Load Balancer and when a Network Load Balancer.",
+          "required": true
+        },
+        {
+          "key": "d105-path-routing",
+          "title": "Configure path based routing so two paths reach two different target groups.",
+          "required": true
+        },
+        {
+          "key": "d105-host-routing",
+          "title": "Add host based routing so two hostnames reach different backends.",
+          "required": true
+        },
+        {
+          "key": "d105-sticky-sessions",
+          "title": "Turn on stickiness, observe the effect, then explain why it limits scaling.",
+          "required": true
+        },
+        {
+          "key": "d105-access-logs",
+          "title": "Enable load balancer access logs to S3 and read one entry field by field.",
+          "required": true
+        },
+        {
+          "key": "d105-cleanup",
+          "title": "Delete the load balancer and check the bill.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 106,
+      "title": "CloudFront And Edge Caching",
+      "tasks": [
+        {
+          "key": "d106-distribution",
+          "title": "Create a CloudFront distribution in front of an S3 bucket.",
+          "required": true
+        },
+        {
+          "key": "d106-cache-behaviour",
+          "title": "Set a cache policy and confirm a cache hit with the response headers.",
+          "required": true
+        },
+        {
+          "key": "d106-invalidation",
+          "title": "Change a file, see the stale version, then invalidate the cache and see the new one.",
+          "required": true
+        },
+        {
+          "key": "d106-https-custom",
+          "title": "Attach an ACM certificate so the distribution serves your domain over HTTPS.",
+          "required": true
+        },
+        {
+          "key": "d106-oac",
+          "title": "Lock the bucket so it is reachable only through CloudFront, not directly.",
+          "required": true
+        },
+        {
+          "key": "d106-why-edge",
+          "title": "Write down two reasons to cache at the edge: latency and origin load.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 107,
+      "title": "Choosing Storage: EBS, EFS And S3",
+      "tasks": [
+        {
+          "key": "d107-ebs-types",
+          "title": "Compare gp3 and io2 volumes and learn what IOPS and throughput mean.",
+          "required": true
+        },
+        {
+          "key": "d107-efs-mount",
+          "title": "Create an EFS filesystem and mount it on two instances at the same time.",
+          "required": true
+        },
+        {
+          "key": "d107-shared-write",
+          "title": "Write a file from one instance and read it from the other to prove shared access.",
+          "required": true
+        },
+        {
+          "key": "d107-decision-table",
+          "title": "Write a table showing when to pick EBS, EFS or S3 and why.",
+          "required": true
+        },
+        {
+          "key": "d107-cost-compare",
+          "title": "Compare the price per gigabyte of the three options and record the numbers.",
+          "required": true
+        },
+        {
+          "key": "d107-cleanup",
+          "title": "Delete the EFS filesystem and the instances.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 108,
+      "title": "S3 Lifecycle, Replication And Durability",
+      "tasks": [
+        {
+          "key": "d108-lifecycle",
+          "title": "Create a lifecycle rule that moves objects to a cheaper class after 30 days.",
+          "required": true
+        },
+        {
+          "key": "d108-glacier",
+          "title": "Read the retrieval times for the archive classes and when the wait is acceptable.",
+          "required": false
+        },
+        {
+          "key": "d108-replication",
+          "title": "Set up cross region replication between two buckets and confirm an object copies over.",
+          "required": true
+        },
+        {
+          "key": "d108-durability",
+          "title": "Learn what eleven nines of durability means and why it is not the same as availability.",
+          "required": true
+        },
+        {
+          "key": "d108-mfa-delete",
+          "title": "Read how versioning and MFA delete protect against accidental or malicious deletion.",
+          "required": true
+        },
+        {
+          "key": "d108-cleanup",
+          "title": "Remove the replication rule and empty both buckets.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 109,
+      "title": "Encryption And KMS",
+      "tasks": [
+        {
+          "key": "d109-at-rest-transit",
+          "title": "Explain the difference between encryption at rest and encryption in transit.",
+          "required": true
+        },
+        {
+          "key": "d109-kms-key",
+          "title": "Create a KMS customer managed key and look at its key policy.",
+          "required": true
+        },
+        {
+          "key": "d109-encrypt-s3",
+          "title": "Enable encryption on a bucket using your own key and upload an object.",
+          "required": true
+        },
+        {
+          "key": "d109-encrypt-ebs",
+          "title": "Create an encrypted EBS volume and attach it to an instance.",
+          "required": true
+        },
+        {
+          "key": "d109-break-key",
+          "title": "Break it: deny your own access in the key policy, watch decryption fail, then recover.",
+          "required": true
+        },
+        {
+          "key": "d109-rotation",
+          "title": "Turn on automatic key rotation and read what it does and does not re encrypt.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 110,
+      "title": "Databases Beyond A Single RDS Instance",
+      "tasks": [
+        {
+          "key": "d110-multi-az-enable",
+          "title": "Enable Multi AZ on a test database and observe the failover behaviour.",
+          "required": true
+        },
+        {
+          "key": "d110-read-replica",
+          "title": "Create a read replica and send a read query to it instead of the primary.",
+          "required": true
+        },
+        {
+          "key": "d110-dynamodb",
+          "title": "Create a DynamoDB table, write items and read them back with the CLI.",
+          "required": true
+        },
+        {
+          "key": "d110-sql-vs-nosql",
+          "title": "Write down when you would choose DynamoDB over RDS, and when you would not.",
+          "required": true
+        },
+        {
+          "key": "d110-aurora",
+          "title": "Read what Aurora is and how it differs from standard RDS.",
+          "required": false
+        },
+        {
+          "key": "d110-cleanup",
+          "title": "Delete the replica, the table and any running databases.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 111,
+      "title": "Decoupling With SQS",
+      "tasks": [
+        {
+          "key": "d111-create-queue",
+          "title": "Create a standard SQS queue and send a message to it from the CLI.",
+          "required": true
+        },
+        {
+          "key": "d111-receive-delete",
+          "title": "Receive the message, process it, then delete it. Understand why deletion is separate.",
+          "required": true
+        },
+        {
+          "key": "d111-visibility",
+          "title": "Learn what the visibility timeout does and what happens if processing takes too long.",
+          "required": true
+        },
+        {
+          "key": "d111-dlq",
+          "title": "Attach a dead letter queue and force a message into it by failing repeatedly.",
+          "required": true
+        },
+        {
+          "key": "d111-fifo",
+          "title": "Read the difference between standard and FIFO queues and their ordering guarantees.",
+          "required": false
+        },
+        {
+          "key": "d111-why-decouple",
+          "title": "Write down what breaks in a tightly coupled system when one component slows down.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 112,
+      "title": "SNS And Event Driven Patterns",
+      "tasks": [
+        {
+          "key": "d112-topic-fanout",
+          "title": "Create an SNS topic with two subscribers and watch one message reach both.",
+          "required": true
+        },
+        {
+          "key": "d112-sns-to-sqs",
+          "title": "Subscribe an SQS queue to the topic to build a fan out into a durable queue.",
+          "required": true
+        },
+        {
+          "key": "d112-eventbridge",
+          "title": "Create an EventBridge rule that triggers on an AWS event and logs it.",
+          "required": true
+        },
+        {
+          "key": "d112-schedule",
+          "title": "Create a scheduled EventBridge rule and compare it to the cron jobs from day 24.",
+          "required": true
+        },
+        {
+          "key": "d112-choose",
+          "title": "Write down when to use SQS, when SNS and when EventBridge.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 113,
+      "title": "Lambda Basics",
+      "tasks": [
+        {
+          "key": "d113-first-function",
+          "title": "Write and deploy a small Lambda function and invoke it from the console.",
+          "required": true
+        },
+        {
+          "key": "d113-invoke-cli",
+          "title": "Invoke the same function from the CLI and read the response and the logs.",
+          "required": true
+        },
+        {
+          "key": "d113-iam-role",
+          "title": "Give the function a role with only the permissions it needs and test the boundary.",
+          "required": true
+        },
+        {
+          "key": "d113-trigger",
+          "title": "Trigger the function from an S3 upload and confirm it runs.",
+          "required": true
+        },
+        {
+          "key": "d113-cold-start",
+          "title": "Read what a cold start is and why it matters for some workloads.",
+          "required": false
+        },
+        {
+          "key": "d113-timeout",
+          "title": "Break it: set a timeout too low, watch the function fail, and find it in CloudWatch.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 114,
+      "title": "When Serverless Fits And When It Does Not",
+      "tasks": [
+        {
+          "key": "d114-cost-model",
+          "title": "Compare the cost model of Lambda against a small always on EC2 instance.",
+          "required": true
+        },
+        {
+          "key": "d114-limits",
+          "title": "List the practical limits of Lambda: duration, memory and package size.",
+          "required": true
+        },
+        {
+          "key": "d114-good-fits",
+          "title": "Write down three workloads that suit serverless and three that do not.",
+          "required": true
+        },
+        {
+          "key": "d114-cargo-thought",
+          "title": "Decide which parts of a cargo booking system could run serverless and which should not.",
+          "required": true
+        },
+        {
+          "key": "d114-operational-cost",
+          "title": "Write down what you give up operationally when you cannot SSH into anything.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 115,
+      "title": "Caching With ElastiCache",
+      "tasks": [
+        {
+          "key": "d115-why-cache",
+          "title": "Explain what a cache does for a database that is being read the same way repeatedly.",
+          "required": true
+        },
+        {
+          "key": "d115-redis-cluster",
+          "title": "Create a small Redis cluster in your private subnets.",
+          "required": true
+        },
+        {
+          "key": "d115-connect",
+          "title": "Connect from an EC2 instance and set and get a key.",
+          "required": true
+        },
+        {
+          "key": "d115-invalidation",
+          "title": "Read why cache invalidation is hard and what a TTL does about it.",
+          "required": true
+        },
+        {
+          "key": "d115-cleanup",
+          "title": "Delete the cluster and check the bill.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 116,
+      "title": "The Well Architected Framework",
+      "tasks": [
+        {
+          "key": "d116-six-pillars",
+          "title": "Learn the six pillars and write one sentence on what each one asks you to do.",
+          "required": true
+        },
+        {
+          "key": "d116-review-own",
+          "title": "Run your day 74 architecture against the operational excellence and reliability pillars.",
+          "required": true
+        },
+        {
+          "key": "d116-security-pillar",
+          "title": "Review the same architecture against the security pillar and list three gaps.",
+          "required": true
+        },
+        {
+          "key": "d116-cost-pillar",
+          "title": "Review it against cost optimisation and identify the most wasteful resource.",
+          "required": true
+        },
+        {
+          "key": "d116-tool",
+          "title": "Read what the Well Architected Tool does and why companies run these reviews.",
+          "required": false
+        },
+        {
+          "key": "d116-action-list",
+          "title": "Turn your findings into a prioritised list of five improvements.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 117,
+      "title": "Disaster Recovery Strategies",
+      "tasks": [
+        {
+          "key": "d117-four-strategies",
+          "title": "Learn backup and restore, pilot light, warm standby and multi site active active.",
+          "required": true
+        },
+        {
+          "key": "d117-rpo-rto-map",
+          "title": "Map each strategy to the RPO and RTO it achieves and the cost it carries.",
+          "required": true
+        },
+        {
+          "key": "d117-pick-one",
+          "title": "Choose the right strategy for a small cargo business and justify it in writing.",
+          "required": true
+        },
+        {
+          "key": "d117-backup-test",
+          "title": "Restore something from a backup and time how long the whole process took.",
+          "required": true
+        },
+        {
+          "key": "d117-runbook",
+          "title": "Write a one page recovery runbook someone else could follow without asking you.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 118,
+      "title": "Cost Optimisation",
+      "tasks": [
+        {
+          "key": "d118-pricing-models",
+          "title": "Compare on demand, reserved instances, savings plans and spot pricing.",
+          "required": true
+        },
+        {
+          "key": "d118-spot",
+          "title": "Launch a spot instance, see the discount, and read what happens when it is reclaimed.",
+          "required": true
+        },
+        {
+          "key": "d118-right-sizing",
+          "title": "Use CloudWatch metrics to find an instance that is larger than it needs to be.",
+          "required": true
+        },
+        {
+          "key": "d118-storage-savings",
+          "title": "Identify three storage savings: lifecycle rules, old snapshots and unused volumes.",
+          "required": true
+        },
+        {
+          "key": "d118-nat-cost",
+          "title": "Revisit the NAT gateway cost from day 58 and price a VPC endpoint alternative.",
+          "required": true
+        },
+        {
+          "key": "d118-monthly-estimate",
+          "title": "Estimate the monthly cost of running your capstone architecture properly.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 119,
+      "title": "Security Services And Guardrails",
+      "tasks": [
+        {
+          "key": "d119-guardduty",
+          "title": "Turn on GuardDuty and read what categories of finding it produces.",
+          "required": true
+        },
+        {
+          "key": "d119-config",
+          "title": "Read what AWS Config does and how it detects drift from a desired state.",
+          "required": false
+        },
+        {
+          "key": "d119-cloudtrail",
+          "title": "Enable CloudTrail and find the log entry for something you did yesterday.",
+          "required": true
+        },
+        {
+          "key": "d119-waf",
+          "title": "Learn what a WAF blocks and how it differs from a security group.",
+          "required": true
+        },
+        {
+          "key": "d119-shared-responsibility",
+          "title": "Write down what AWS secures and what remains your job, with three examples of each.",
+          "required": true
+        },
+        {
+          "key": "d119-cleanup",
+          "title": "Turn off anything that bills, and confirm on the cost page.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 120,
+      "title": "Hybrid, Migration And The Rest Of The Syllabus",
+      "tasks": [
+        {
+          "key": "d120-vpn-dx",
+          "title": "Learn the difference between a site to site VPN and Direct Connect.",
+          "required": true
+        },
+        {
+          "key": "d120-datasync",
+          "title": "Read what DataSync and Storage Gateway are for.",
+          "required": false
+        },
+        {
+          "key": "d120-vpc-peering",
+          "title": "Learn what VPC peering does and what its main limitation is.",
+          "required": true
+        },
+        {
+          "key": "d120-transit-gateway",
+          "title": "Read what a Transit Gateway solves that peering does not.",
+          "required": false
+        },
+        {
+          "key": "d120-org-accounts",
+          "title": "Learn why companies use multiple AWS accounts and what Organizations does.",
+          "required": true
+        },
+        {
+          "key": "d120-syllabus-check",
+          "title": "Go through the official SAA exam guide and tick off every topic you have now covered.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 121,
+      "title": "First Practice Exam And Gap Analysis",
+      "tasks": [
+        {
+          "key": "d121-check-version",
+          "title": "Check the official AWS page for the current exam version before you book anything.",
+          "required": true
+        },
+        {
+          "key": "d121-practice-one",
+          "title": "Sit a full timed practice exam with no notes and no pausing.",
+          "required": true
+        },
+        {
+          "key": "d121-score",
+          "title": "Record your score by domain, not just the total.",
+          "required": true
+        },
+        {
+          "key": "d121-review-wrong",
+          "title": "Review every wrong answer and write down why the correct one was correct.",
+          "required": true
+        },
+        {
+          "key": "d121-gap-list",
+          "title": "Rank your three weakest domains and plan the next two days around them.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 122,
+      "title": "Drilling Your Weak Domains",
+      "tasks": [
+        {
+          "key": "d122-weak-one",
+          "title": "Spend two hours on your weakest domain, reading the official documentation not videos.",
+          "required": true
+        },
+        {
+          "key": "d122-hands-on",
+          "title": "Build one small thing in that domain rather than only reading about it.",
+          "required": true
+        },
+        {
+          "key": "d122-weak-two",
+          "title": "Repeat for your second weakest domain.",
+          "required": true
+        },
+        {
+          "key": "d122-flashcards",
+          "title": "Write flashcards for the service limits and numbers that keep catching you out.",
+          "required": true
+        },
+        {
+          "key": "d122-explain",
+          "title": "Explain your weakest topic out loud as if teaching it. Note where you stumble.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 123,
+      "title": "Second Practice Exam",
+      "tasks": [
+        {
+          "key": "d123-practice-two",
+          "title": "Sit a second full timed practice exam from a different provider.",
+          "required": true
+        },
+        {
+          "key": "d123-compare",
+          "title": "Compare your domain scores to day 121 and confirm the gaps are closing.",
+          "required": true
+        },
+        {
+          "key": "d123-review-wrong",
+          "title": "Review every wrong answer again and add the reasoning to your notes.",
+          "required": true
+        },
+        {
+          "key": "d123-decision",
+          "title": "Decide honestly: if you are not scoring above eighty percent, move the exam date.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 124,
+      "title": "Final Review And Booking",
+      "tasks": [
+        {
+          "key": "d124-book-exam",
+          "title": "Book the exam for a date before Ramadan begins on 8 February.",
+          "required": true
+        },
+        {
+          "key": "d124-cheat-sheet",
+          "title": "Build a one page summary of the numbers, limits and service choices you keep forgetting.",
+          "required": true
+        },
+        {
+          "key": "d124-scenario-drill",
+          "title": "Do thirty scenario questions and read the reasoning on every one, right or wrong.",
+          "required": true
+        },
+        {
+          "key": "d124-logistics",
+          "title": "Confirm your ID, your test location or your online proctoring setup, and your start time.",
+          "required": true
+        },
+        {
+          "key": "d124-rest",
+          "title": "Stop studying by early evening. Sleep matters more than one more practice test.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 125,
+      "title": "Exam Day",
+      "tasks": [
+        {
+          "key": "d125-sit-exam",
+          "title": "Sit the AWS Solutions Architect Associate exam.",
+          "required": true
+        },
+        {
+          "key": "d125-record",
+          "title": "Record your result and your domain breakdown in your notes either way.",
+          "required": true
+        },
+        {
+          "key": "d125-linkedin",
+          "title": "If you passed, add the certification to LinkedIn and your CV the same day.",
+          "required": true
+        },
+        {
+          "key": "d125-retake-plan",
+          "title": "If you did not pass, write the retake plan today while the questions are fresh.",
+          "required": true
+        },
+        {
+          "key": "d125-repo-update",
+          "title": "Update your GitHub README to mention the certification and the projects behind it.",
+          "required": true
+        },
+        {
+          "key": "d125-next",
+          "title": "Read the Terraform Associate exam guide so you know what February and March are for.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 105,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q105-1",
+          "type": "mcq",
+          "prompt": "Why use a Route 53 alias record instead of a CNAME for a load balancer?",
+          "options": [
+            "It is encrypted",
+            "It works at the zone apex and costs nothing to resolve",
+            "It resolves faster always",
+            "CNAME is deprecated"
+          ],
+          "answer": 1,
+          "explanation": "A CNAME cannot exist at the root of a domain, and alias queries to AWS targets are not charged."
+        },
+        {
+          "key": "q105-2",
+          "type": "mcq",
+          "prompt": "Which routing policy sends traffic to a backup only when the primary fails?",
+          "options": [
+            "Weighted",
+            "Latency",
+            "Failover",
+            "Simple"
+          ],
+          "answer": 2,
+          "explanation": "Failover routing uses health checks to switch to the secondary record."
+        },
+        {
+          "key": "q105-3",
+          "type": "mcq",
+          "prompt": "What does a launch template define?",
+          "options": [
+            "Scaling rules",
+            "The configuration used when launching an instance",
+            "Load balancer rules",
+            "Billing alerts"
+          ],
+          "answer": 1,
+          "explanation": "It captures the AMI, type, security groups, user data and other launch settings in one reusable object."
+        },
+        {
+          "key": "q105-4",
+          "type": "mcq",
+          "prompt": "What do minimum, maximum and desired capacity control in an Auto Scaling group?",
+          "options": [
+            "Cost limits",
+            "The lower bound, upper bound and current target number of instances",
+            "Health check timing",
+            "Availability zones"
+          ],
+          "answer": 1,
+          "explanation": "Desired is what it aims for now, while minimum and maximum are the boundaries it will never cross."
+        },
+        {
+          "key": "q105-5",
+          "type": "mcq",
+          "prompt": "What happens when you manually terminate an instance in an Auto Scaling group?",
+          "options": [
+            "The group shrinks",
+            "The group launches a replacement",
+            "The group is deleted",
+            "Nothing"
+          ],
+          "answer": 1,
+          "explanation": "Self healing is one of the main reasons to use an Auto Scaling group at all."
+        },
+        {
+          "key": "q105-6",
+          "type": "mcq",
+          "prompt": "Why is running two instances in the same availability zone not high availability?",
+          "options": [
+            "It costs more",
+            "A single zone failure takes both of them down",
+            "Load balancers need three",
+            "It is not supported"
+          ],
+          "answer": 1,
+          "explanation": "The zone is the shared point of failure, so redundancy inside it does not protect you."
+        },
+        {
+          "key": "q105-7",
+          "type": "mcq",
+          "prompt": "What does an RDS Multi AZ standby do?",
+          "options": [
+            "Serves read traffic",
+            "Sits ready to take over on failover",
+            "Stores backups",
+            "Caches queries"
+          ],
+          "answer": 1,
+          "explanation": "The standby is not readable, and its job is availability rather than scaling reads."
+        },
+        {
+          "key": "q105-8",
+          "type": "mcq",
+          "prompt": "What is a read replica used for?",
+          "options": [
+            "Automatic failover",
+            "Serving read queries to reduce load on the primary",
+            "Encrypting data",
+            "Reducing storage cost"
+          ],
+          "answer": 1,
+          "explanation": "Replicas scale read capacity, which is a different problem from failover."
+        },
+        {
+          "key": "q105-9",
+          "type": "mcq",
+          "prompt": "When would you choose a Network Load Balancer over an Application Load Balancer?",
+          "options": [
+            "For path based routing",
+            "For very high throughput at layer four or non HTTP protocols",
+            "For HTTPS termination",
+            "For host based routing"
+          ],
+          "answer": 1,
+          "explanation": "The NLB works at the transport layer and handles extreme throughput and non HTTP traffic."
+        },
+        {
+          "key": "q105-10",
+          "type": "mcq",
+          "prompt": "What does path based routing on an ALB let you do?",
+          "options": [
+            "Route by client country",
+            "Send different URL paths to different target groups",
+            "Encrypt selected paths",
+            "Cache responses"
+          ],
+          "answer": 1,
+          "explanation": "One load balancer can front several services by matching on the request path."
+        },
+        {
+          "key": "q105-11",
+          "type": "mcq",
+          "prompt": "Why do sticky sessions limit scaling?",
+          "options": [
+            "They cost more",
+            "Requests are tied to one instance, so load spreads unevenly",
+            "They disable health checks",
+            "They block HTTPS"
+          ],
+          "answer": 1,
+          "explanation": "Pinning a user to one target undermines the even distribution a load balancer exists to provide."
+        },
+        {
+          "key": "q105-12",
+          "type": "mcq",
+          "prompt": "What is a Route 53 health check used for?",
+          "options": [
+            "Billing alerts",
+            "Deciding whether a record should receive traffic",
+            "Scanning for vulnerabilities",
+            "Rotating certificates"
+          ],
+          "answer": 1,
+          "explanation": "Health checks feed routing decisions, which is what makes failover routing work."
+        },
+        {
+          "key": "q105-13",
+          "type": "true_false",
+          "prompt": "Auto Scaling groups can span multiple availability zones.",
+          "answer": true,
+          "explanation": "Spreading across zones is exactly how they provide resilience to a zone failure."
+        },
+        {
+          "key": "q105-14",
+          "type": "true_false",
+          "prompt": "A target tracking scaling policy adds and removes instances to hold a metric near a target value.",
+          "answer": true,
+          "explanation": "You state the target, such as average CPU, and the group adjusts capacity to keep it there."
+        },
+        {
+          "key": "q105-15",
+          "type": "true_false",
+          "prompt": "Load balancer access logs can be delivered to an S3 bucket for later analysis.",
+          "answer": true,
+          "explanation": "Enabling them gives you a record of every request that reached the balancer."
+        }
+      ]
+    },
+    {
+      "afterDay": 110,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q110-1",
+          "type": "mcq",
+          "prompt": "What is the main benefit of CloudFront in front of an origin?",
+          "options": [
+            "Cheaper storage",
+            "Lower latency for users and less load on the origin",
+            "Automatic backups",
+            "Better encryption at rest"
+          ],
+          "answer": 1,
+          "explanation": "Content served from an edge location is closer to the user and never touches the origin."
+        },
+        {
+          "key": "q110-2",
+          "type": "mcq",
+          "prompt": "You changed a file but CloudFront still serves the old one. What do you do?",
+          "options": [
+            "Restart the distribution",
+            "Invalidate the cache or use a new object name",
+            "Delete the bucket",
+            "Disable HTTPS"
+          ],
+          "answer": 1,
+          "explanation": "Cached copies persist until they expire, so you invalidate or version the object name."
+        },
+        {
+          "key": "q110-3",
+          "type": "mcq",
+          "prompt": "Why lock an S3 bucket so it is reachable only through CloudFront?",
+          "options": [
+            "It is cheaper",
+            "So users cannot bypass the cache and hit the origin directly",
+            "It enables versioning",
+            "It speeds up uploads"
+          ],
+          "answer": 1,
+          "explanation": "Direct access defeats both the caching and any rules you enforce at the edge."
+        },
+        {
+          "key": "q110-4",
+          "type": "mcq",
+          "prompt": "Which storage option can be mounted by several instances at once?",
+          "options": [
+            "EBS",
+            "EFS",
+            "S3 Glacier",
+            "Instance store"
+          ],
+          "answer": 1,
+          "explanation": "EFS is a shared network filesystem, while an EBS volume attaches to one instance at a time."
+        },
+        {
+          "key": "q110-5",
+          "type": "mcq",
+          "prompt": "When is S3 the right choice over EBS?",
+          "options": [
+            "For a database volume",
+            "For objects like backups, images and static assets",
+            "For an operating system disk",
+            "For low latency block access"
+          ],
+          "answer": 1,
+          "explanation": "Object storage suits whole files accessed by key, not block level reads and writes."
+        },
+        {
+          "key": "q110-6",
+          "type": "mcq",
+          "prompt": "What does an S3 lifecycle rule do?",
+          "options": [
+            "Deletes buckets",
+            "Moves or expires objects automatically based on age",
+            "Encrypts objects",
+            "Replicates across regions"
+          ],
+          "answer": 1,
+          "explanation": "Lifecycle rules are the main tool for controlling long term storage cost."
+        },
+        {
+          "key": "q110-7",
+          "type": "mcq",
+          "prompt": "What is the trade off with archive storage classes?",
+          "options": [
+            "Lower durability",
+            "Much lower cost but slower retrieval",
+            "No encryption",
+            "No versioning"
+          ],
+          "answer": 1,
+          "explanation": "You accept a retrieval delay in exchange for a large reduction in storage price."
+        },
+        {
+          "key": "q110-8",
+          "type": "mcq",
+          "prompt": "What is the difference between durability and availability?",
+          "options": [
+            "Nothing",
+            "Durability is not losing data, availability is being able to reach it",
+            "Durability is uptime",
+            "Availability is backup frequency"
+          ],
+          "answer": 1,
+          "explanation": "Data can be perfectly durable and still be temporarily unreachable."
+        },
+        {
+          "key": "q110-9",
+          "type": "mcq",
+          "prompt": "What does encryption in transit protect against?",
+          "options": [
+            "Disk theft",
+            "Someone reading traffic on the network path",
+            "Accidental deletion",
+            "Billing errors"
+          ],
+          "answer": 1,
+          "explanation": "It protects data while it moves, which is a different problem from protecting it at rest."
+        },
+        {
+          "key": "q110-10",
+          "type": "mcq",
+          "prompt": "What controls who can use a KMS key?",
+          "options": [
+            "The bucket policy",
+            "The key policy and IAM permissions",
+            "The security group",
+            "The route table"
+          ],
+          "answer": 1,
+          "explanation": "The key policy is authoritative, and locking yourself out of it is a real risk."
+        },
+        {
+          "key": "q110-11",
+          "type": "mcq",
+          "prompt": "When would DynamoDB suit a workload better than RDS?",
+          "options": [
+            "Complex joins across many tables",
+            "Simple key based access at very high scale",
+            "Ad hoc reporting queries",
+            "Strict foreign key constraints"
+          ],
+          "answer": 1,
+          "explanation": "Key value access patterns at scale are what DynamoDB is designed for."
+        },
+        {
+          "key": "q110-12",
+          "type": "mcq",
+          "prompt": "What does enabling Multi AZ on RDS give you?",
+          "options": [
+            "Faster reads",
+            "Automatic failover to a standby in another zone",
+            "Cheaper storage",
+            "More connections"
+          ],
+          "answer": 1,
+          "explanation": "It is an availability feature, not a performance one."
+        },
+        {
+          "key": "q110-13",
+          "type": "true_false",
+          "prompt": "Cross region replication copies new objects to a bucket in another region.",
+          "answer": true,
+          "explanation": "It applies to objects created after the rule is in place, which surprises people who expect a backfill."
+        },
+        {
+          "key": "q110-14",
+          "type": "true_false",
+          "prompt": "Versioning combined with MFA delete makes accidental permanent deletion much harder.",
+          "answer": true,
+          "explanation": "The old version remains, and removing it permanently requires an extra authentication step."
+        },
+        {
+          "key": "q110-15",
+          "type": "true_false",
+          "prompt": "An encrypted EBS volume protects your data if someone gains access to the underlying physical disk.",
+          "answer": true,
+          "explanation": "Encryption at rest addresses physical and storage layer exposure, not application level access."
+        }
+      ]
+    },
+    {
+      "afterDay": 115,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q115-1",
+          "type": "mcq",
+          "prompt": "What problem does a message queue solve?",
+          "options": [
+            "Encryption",
+            "Letting one component keep working when another is slow or down",
+            "DNS resolution",
+            "Cost tracking"
+          ],
+          "answer": 1,
+          "explanation": "Decoupling means a slow consumer creates a backlog instead of a failure."
+        },
+        {
+          "key": "q115-2",
+          "type": "mcq",
+          "prompt": "Why is deleting an SQS message a separate step from receiving it?",
+          "options": [
+            "To save cost",
+            "So a failed consumer does not lose the message",
+            "To enforce ordering",
+            "To enable encryption"
+          ],
+          "answer": 1,
+          "explanation": "If processing fails, the message becomes visible again instead of vanishing."
+        },
+        {
+          "key": "q115-3",
+          "type": "mcq",
+          "prompt": "What does the visibility timeout control?",
+          "options": [
+            "Message retention",
+            "How long a received message is hidden from other consumers",
+            "Queue size",
+            "Delivery delay"
+          ],
+          "answer": 1,
+          "explanation": "If processing outlasts the timeout, another consumer can pick up the same message."
+        },
+        {
+          "key": "q115-4",
+          "type": "mcq",
+          "prompt": "What is a dead letter queue for?",
+          "options": [
+            "Faster delivery",
+            "Holding messages that repeatedly fail processing",
+            "Encrypting messages",
+            "Ordering messages"
+          ],
+          "answer": 1,
+          "explanation": "It isolates poison messages so they stop blocking the main queue."
+        },
+        {
+          "key": "q115-5",
+          "type": "mcq",
+          "prompt": "What does SNS do that SQS does not?",
+          "options": [
+            "Store messages durably",
+            "Push one message to many subscribers at once",
+            "Guarantee ordering",
+            "Provide a dead letter queue"
+          ],
+          "answer": 1,
+          "explanation": "SNS is a publish and subscribe fan out, while SQS is a queue with consumers pulling from it."
+        },
+        {
+          "key": "q115-6",
+          "type": "mcq",
+          "prompt": "Why subscribe an SQS queue to an SNS topic?",
+          "options": [
+            "To reduce cost",
+            "To fan out while keeping durable, retryable delivery",
+            "To enable FIFO",
+            "To encrypt the topic"
+          ],
+          "answer": 1,
+          "explanation": "The topic distributes and the queue absorbs, which combines both patterns."
+        },
+        {
+          "key": "q115-7",
+          "type": "mcq",
+          "prompt": "What is EventBridge mainly used for?",
+          "options": [
+            "Storing objects",
+            "Routing events between AWS services and applications by rule",
+            "Load balancing",
+            "Caching"
+          ],
+          "answer": 1,
+          "explanation": "It matches events against rules and delivers them to targets."
+        },
+        {
+          "key": "q115-8",
+          "type": "mcq",
+          "prompt": "What does a Lambda function need in order to access other AWS services?",
+          "options": [
+            "An access key",
+            "An execution role with the right permissions",
+            "A public IP",
+            "A security group"
+          ],
+          "answer": 1,
+          "explanation": "The execution role supplies temporary credentials, the same pattern as an EC2 instance role."
+        },
+        {
+          "key": "q115-9",
+          "type": "mcq",
+          "prompt": "What is a cold start?",
+          "options": [
+            "A failed invocation",
+            "The extra latency when a new execution environment is created",
+            "A timeout",
+            "A permission error"
+          ],
+          "answer": 1,
+          "explanation": "The first request into a fresh environment pays initialisation cost that warm ones do not."
+        },
+        {
+          "key": "q115-10",
+          "type": "mcq",
+          "prompt": "Which workload is a poor fit for Lambda?",
+          "options": [
+            "A short image resize on upload",
+            "A long running process that needs hours to complete",
+            "A scheduled cleanup task",
+            "A small API endpoint"
+          ],
+          "answer": 1,
+          "explanation": "Execution duration limits make long running work unsuitable."
+        },
+        {
+          "key": "q115-11",
+          "type": "mcq",
+          "prompt": "What is the operational trade off of serverless?",
+          "options": [
+            "Higher cost always",
+            "You give up direct access to the machine when debugging",
+            "It cannot scale",
+            "It has no logging"
+          ],
+          "answer": 1,
+          "explanation": "There is nothing to connect to, so observability has to be built in rather than added later."
+        },
+        {
+          "key": "q115-12",
+          "type": "mcq",
+          "prompt": "Why is cache invalidation considered hard?",
+          "options": [
+            "Caches are slow",
+            "Deciding when cached data has become wrong is genuinely difficult",
+            "It requires encryption",
+            "It needs a load balancer"
+          ],
+          "answer": 1,
+          "explanation": "Serving stale data and clearing too aggressively are both failures, and the line between them moves."
+        },
+        {
+          "key": "q115-13",
+          "type": "true_false",
+          "prompt": "A tightly coupled system fails as a whole when one component slows down.",
+          "answer": true,
+          "explanation": "Without a buffer between components, backpressure turns into outright failure."
+        },
+        {
+          "key": "q115-14",
+          "type": "true_false",
+          "prompt": "Standard SQS queues guarantee that messages arrive in the exact order they were sent.",
+          "answer": false,
+          "explanation": "Ordering is only guaranteed on FIFO queues, and standard queues trade order for throughput."
+        },
+        {
+          "key": "q115-15",
+          "type": "true_false",
+          "prompt": "A cache sits between the application and the database to reduce repeated identical reads.",
+          "answer": true,
+          "explanation": "The point is to answer common queries without touching the database every time."
+        }
+      ]
+    },
+    {
+      "afterDay": 120,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q120-1",
+          "type": "mcq",
+          "prompt": "How many pillars does the Well Architected Framework have?",
+          "options": [
+            "Four",
+            "Five",
+            "Six",
+            "Seven"
+          ],
+          "answer": 2,
+          "explanation": "The framework grew to six pillars with the addition of sustainability."
+        },
+        {
+          "key": "q120-2",
+          "type": "mcq",
+          "prompt": "Which disaster recovery strategy has the lowest cost and the slowest recovery?",
+          "options": [
+            "Multi site active active",
+            "Warm standby",
+            "Pilot light",
+            "Backup and restore"
+          ],
+          "answer": 3,
+          "explanation": "Backup and restore keeps nothing running, so it is cheapest and slowest to bring back."
+        },
+        {
+          "key": "q120-3",
+          "type": "mcq",
+          "prompt": "Which strategy keeps a scaled down but running copy of the environment?",
+          "options": [
+            "Backup and restore",
+            "Pilot light",
+            "Warm standby",
+            "Cold standby"
+          ],
+          "answer": 2,
+          "explanation": "Warm standby runs a smaller live version that can be scaled up when needed."
+        },
+        {
+          "key": "q120-4",
+          "type": "mcq",
+          "prompt": "What is the point of writing a recovery runbook?",
+          "options": [
+            "To satisfy auditors only",
+            "So someone else can recover the system without you",
+            "To reduce storage cost",
+            "To pass the exam"
+          ],
+          "answer": 1,
+          "explanation": "A recovery that depends on one person being available is not a recovery plan."
+        },
+        {
+          "key": "q120-5",
+          "type": "mcq",
+          "prompt": "What is a spot instance?",
+          "options": [
+            "A reserved instance",
+            "Spare capacity at a large discount that can be reclaimed",
+            "A dedicated host",
+            "A free tier instance"
+          ],
+          "answer": 1,
+          "explanation": "You get a steep discount in exchange for accepting interruption."
+        },
+        {
+          "key": "q120-6",
+          "type": "mcq",
+          "prompt": "Which pricing model suits a steady workload running for a year or more?",
+          "options": [
+            "Spot",
+            "On demand",
+            "Savings plan or reserved instances",
+            "Dedicated host"
+          ],
+          "answer": 2,
+          "explanation": "Committing to consistent usage buys a substantial discount over on demand."
+        },
+        {
+          "key": "q120-7",
+          "type": "mcq",
+          "prompt": "What is right sizing?",
+          "options": [
+            "Adding more instances",
+            "Matching instance size to actual measured usage",
+            "Buying reserved capacity",
+            "Deleting snapshots"
+          ],
+          "answer": 1,
+          "explanation": "Metrics tell you when a resource is bigger than the workload requires."
+        },
+        {
+          "key": "q120-8",
+          "type": "mcq",
+          "prompt": "What does CloudTrail record?",
+          "options": [
+            "Network packets",
+            "API calls made in your account",
+            "Application logs",
+            "Billing forecasts"
+          ],
+          "answer": 1,
+          "explanation": "It answers who did what and when, which is the audit trail for the account."
+        },
+        {
+          "key": "q120-9",
+          "type": "mcq",
+          "prompt": "How does a WAF differ from a security group?",
+          "options": [
+            "No difference",
+            "A WAF inspects application layer requests, a security group filters by IP and port",
+            "A WAF is cheaper",
+            "A security group inspects HTTP"
+          ],
+          "answer": 1,
+          "explanation": "One works on network attributes and the other on the content of the request."
+        },
+        {
+          "key": "q120-10",
+          "type": "mcq",
+          "prompt": "Under the shared responsibility model, who patches the guest operating system on EC2?",
+          "options": [
+            "AWS",
+            "You",
+            "Nobody",
+            "The load balancer"
+          ],
+          "answer": 1,
+          "explanation": "AWS secures the infrastructure, and everything you run on top of it remains yours."
+        },
+        {
+          "key": "q120-11",
+          "type": "mcq",
+          "prompt": "What is the main limitation of VPC peering?",
+          "options": [
+            "It is expensive",
+            "It is not transitive, so peered VPCs cannot route through each other",
+            "It only works in one region",
+            "It requires a VPN"
+          ],
+          "answer": 1,
+          "explanation": "Non transitivity is why Transit Gateway exists for larger networks."
+        },
+        {
+          "key": "q120-12",
+          "type": "mcq",
+          "prompt": "Why do organisations use multiple AWS accounts?",
+          "options": [
+            "To get more free tier",
+            "For isolation, blast radius control and clearer billing",
+            "Because one account has a resource cap",
+            "To use more regions"
+          ],
+          "answer": 1,
+          "explanation": "Separating environments limits how far a mistake or compromise can spread."
+        },
+        {
+          "key": "q120-13",
+          "type": "true_false",
+          "prompt": "A Direct Connect link provides a dedicated private connection rather than travelling over the public internet.",
+          "answer": true,
+          "explanation": "That is the main reason to choose it over a VPN, along with more predictable performance."
+        },
+        {
+          "key": "q120-14",
+          "type": "true_false",
+          "prompt": "Reviewing your own architecture against the pillars will usually reveal gaps you did not notice while building it.",
+          "answer": true,
+          "explanation": "Structured review catches what enthusiasm and momentum hide during the build."
+        },
+        {
+          "key": "q120-15",
+          "type": "true_false",
+          "prompt": "Cost is an operational concern that engineers are expected to understand, not just a finance issue.",
+          "answer": true,
+          "explanation": "Architectural choices drive the bill, so the person making them owns part of the cost outcome."
+        }
+      ]
+    },
+    {
+      "afterDay": 125,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q125-1",
+          "type": "mcq",
+          "prompt": "What is the most effective final stage of studying for this exam?",
+          "options": [
+            "Watching more video courses",
+            "Timed practice exams with full review of wrong answers",
+            "Reading the whole documentation",
+            "Rebuilding every lab"
+          ],
+          "answer": 1,
+          "explanation": "Practice exams reveal gaps and train the scenario reading that the real exam demands."
+        },
+        {
+          "key": "q125-2",
+          "type": "mcq",
+          "prompt": "Why record your practice scores by domain rather than only the total?",
+          "options": [
+            "It looks better",
+            "So you can target the weakest areas instead of revising evenly",
+            "The exam requires it",
+            "To track time"
+          ],
+          "answer": 1,
+          "explanation": "An even revision plan wastes time on what you already know."
+        },
+        {
+          "key": "q125-3",
+          "type": "mcq",
+          "prompt": "You are scoring sixty five percent on practice exams a week before the date. What is the sensible move?",
+          "options": [
+            "Sit it anyway and hope",
+            "Move the date and close the gaps",
+            "Study only the day before",
+            "Cancel permanently"
+          ],
+          "answer": 1,
+          "explanation": "A retake costs money and time, and moving the date is cheaper than failing."
+        },
+        {
+          "key": "q125-4",
+          "type": "mcq",
+          "prompt": "Why check the official AWS page before booking?",
+          "options": [
+            "To find discounts",
+            "Because exam versions change and unofficial sources go stale",
+            "To pick a region",
+            "To see your score"
+          ],
+          "answer": 1,
+          "explanation": "Blogs disagree about version numbers, so the vendor page is the only reliable source."
+        },
+        {
+          "key": "q125-5",
+          "type": "mcq",
+          "prompt": "What should you do the evening before the exam?",
+          "options": [
+            "One more full practice test",
+            "Stop studying and sleep properly",
+            "Rebuild a lab from scratch",
+            "Read the whole exam guide"
+          ],
+          "answer": 1,
+          "explanation": "Fatigue costs more marks than one extra hour of revision gains."
+        },
+        {
+          "key": "q125-6",
+          "type": "mcq",
+          "prompt": "Why add the certification to your CV and LinkedIn the same day you pass?",
+          "options": [
+            "It expires quickly",
+            "Because momentum matters and recruiters search on it",
+            "It is required by AWS",
+            "To get a discount"
+          ],
+          "answer": 1,
+          "explanation": "The credential only helps once it is visible where hiring people look."
+        },
+        {
+          "key": "q125-7",
+          "type": "mcq",
+          "prompt": "What does the certification actually prove to an employer?",
+          "options": [
+            "That you can run production systems",
+            "That you know the services and how they fit together",
+            "That you have work experience",
+            "That you can code"
+          ],
+          "answer": 1,
+          "explanation": "It signals knowledge, and your projects are what demonstrate application of it."
+        },
+        {
+          "key": "q125-8",
+          "type": "mcq",
+          "prompt": "Why is a certificate weaker on its own than a certificate plus a project?",
+          "options": [
+            "Certificates are unpopular",
+            "Anyone can memorise answers, but a working system shows judgement",
+            "Projects are cheaper",
+            "Employers ignore certificates"
+          ],
+          "answer": 1,
+          "explanation": "The project is evidence of doing, while the exam is evidence of knowing."
+        },
+        {
+          "key": "q125-9",
+          "type": "mcq",
+          "prompt": "If you do not pass, when should you write the retake plan?",
+          "options": [
+            "After a week off",
+            "The same day, while the questions are fresh",
+            "After the next practice exam",
+            "Only if you failed badly"
+          ],
+          "answer": 1,
+          "explanation": "Your memory of which domains hurt is most accurate immediately afterwards."
+        },
+        {
+          "key": "q125-10",
+          "type": "mcq",
+          "prompt": "What is the purpose of a one page cheat sheet in the final days?",
+          "options": [
+            "To take into the exam",
+            "To consolidate the numbers and choices you keep forgetting",
+            "To replace practice tests",
+            "To share online"
+          ],
+          "answer": 1,
+          "explanation": "Writing it is the revision, and it concentrates the facts that will not stick."
+        },
+        {
+          "key": "q125-11",
+          "type": "mcq",
+          "prompt": "Why explain a weak topic out loud as if teaching it?",
+          "options": [
+            "It is faster",
+            "Because stumbling reveals exactly where your understanding is thin",
+            "It replaces reading",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "You cannot fake fluency out loud, so the gaps become obvious."
+        },
+        {
+          "key": "q125-12",
+          "type": "mcq",
+          "prompt": "Why schedule the exam before Ramadan begins?",
+          "options": [
+            "The exam is cheaper",
+            "So the final push does not land in a month of reduced capacity",
+            "Exams are unavailable",
+            "It is a requirement"
+          ],
+          "answer": 1,
+          "explanation": "Planning around a known low energy month is better than pretending it will not happen."
+        },
+        {
+          "key": "q125-13",
+          "type": "true_false",
+          "prompt": "Passing the exam replaces the need for hands on projects.",
+          "answer": false,
+          "explanation": "Employers filter on the certificate and then hire on demonstrated ability, so the projects still carry the interview."
+        },
+        {
+          "key": "q125-14",
+          "type": "true_false",
+          "prompt": "Reviewing the questions you got right is less valuable than reviewing the ones you got wrong.",
+          "answer": true,
+          "explanation": "Wrong answers show your actual gaps, though checking that a right answer was not a lucky guess is still worth doing."
+        },
+        {
+          "key": "q125-15",
+          "type": "true_false",
+          "prompt": "Reading the next exam guide immediately gives the following months a clear target.",
+          "answer": true,
+          "explanation": "Knowing what February and March are for prevents the drift that follows finishing a big goal."
+        }
+      ]
+    }
+  ]
+}

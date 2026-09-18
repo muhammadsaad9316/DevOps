@@ -1,0 +1,1871 @@
+{
+  "schemaVersion": 1,
+  "title": "Month 1: Linux Fundamentals",
+  "description": "Month 1 of a nine month DevOps roadmap for complete beginners. Twenty six study days at three to six hours per day, six days per week. You will build a Linux virtual machine, live in the terminal, and deliberately break and fix things. Python and Bash practice runs as a separate daily course.",
+  "days": [
+    {
+      "day": 1,
+      "title": "First Contact With Linux",
+      "tasks": [
+        {
+          "key": "d1-install-vm",
+          "title": "Install VirtualBox and create an Ubuntu Server 24.04 virtual machine with 2 CPUs and 4GB RAM.",
+          "required": true
+        },
+        {
+          "key": "d1-first-boot",
+          "title": "Boot the VM, log in, and run whoami, hostname and date.",
+          "required": true
+        },
+        {
+          "key": "d1-what-is-shell",
+          "title": "Read what a shell is and how it is different from a terminal window.",
+          "required": false
+        },
+        {
+          "key": "d1-terminal-basics",
+          "title": "Run pwd, ls and clear. Say out loud what each one printed before moving on.",
+          "required": true
+        },
+        {
+          "key": "d1-history",
+          "title": "Use the up arrow and the history command to repeat commands you already ran.",
+          "required": true
+        },
+        {
+          "key": "d1-notes",
+          "title": "Start a notes file. Write down every new command you learn this month with one line about it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Moving Around The Filesystem",
+      "tasks": [
+        {
+          "key": "d2-absolute-relative",
+          "title": "Practise cd with absolute paths like /var/log and relative paths like ../bin until both feel normal.",
+          "required": true
+        },
+        {
+          "key": "d2-dots",
+          "title": "Learn what . and .. and ~ and / mean. Move between all four without looking anything up.",
+          "required": true
+        },
+        {
+          "key": "d2-ls-flags",
+          "title": "Run ls with -l, -a, -h and -R. Work out what every column in the long listing means.",
+          "required": true
+        },
+        {
+          "key": "d2-tab-complete",
+          "title": "Use tab completion for every single path you type today. Do not type a full path once.",
+          "required": true
+        },
+        {
+          "key": "d2-tree",
+          "title": "Install tree and print the first two levels of the filesystem to see the shape of it.",
+          "required": false
+        },
+        {
+          "key": "d2-drill",
+          "title": "Drill: from any random directory, get to /var/log in one command. Repeat ten times.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Creating And Deleting Things",
+      "tasks": [
+        {
+          "key": "d3-mkdir-touch",
+          "title": "Create a nested folder structure with mkdir -p and put empty files in it with touch.",
+          "required": true
+        },
+        {
+          "key": "d3-cp-mv",
+          "title": "Copy and move files and folders with cp and mv. Learn why cp needs -r for directories.",
+          "required": true
+        },
+        {
+          "key": "d3-wildcards",
+          "title": "Use wildcards to act on many files at once, for example rm *.log and cp report-*.txt backup/.",
+          "required": true
+        },
+        {
+          "key": "d3-rm-safety",
+          "title": "Learn why rm has no undo and no recycle bin. Read what rm -rf / does before you ever type it.",
+          "required": true
+        },
+        {
+          "key": "d3-break-rm",
+          "title": "Break it: delete a file you still needed. Sit with the fact that it is gone forever.",
+          "required": true
+        },
+        {
+          "key": "d3-practice-tree",
+          "title": "Rebuild a five level folder tree from memory using only mkdir and touch.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Reading Files",
+      "tasks": [
+        {
+          "key": "d4-cat-less",
+          "title": "Read a long file with cat, then with less. Learn to search inside less with slash and quit with q.",
+          "required": true
+        },
+        {
+          "key": "d4-head-tail",
+          "title": "Use head and tail to look at the start and end of /var/log/syslog.",
+          "required": true
+        },
+        {
+          "key": "d4-tail-follow",
+          "title": "Run tail -f on a log file, then trigger new lines in another terminal and watch them appear.",
+          "required": true
+        },
+        {
+          "key": "d4-wc",
+          "title": "Count lines, words and characters in a file with wc.",
+          "required": true
+        },
+        {
+          "key": "d4-nano-edit",
+          "title": "Edit a file with nano. Save it, close it, reopen it and confirm the change stuck.",
+          "required": true
+        },
+        {
+          "key": "d4-vim-survival",
+          "title": "Watch a short video on surviving vim, mainly how to quit it.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "title": "Helping Yourself Without Google",
+      "tasks": [
+        {
+          "key": "d5-man",
+          "title": "Read the man page for ls end to end. Find three flags you did not know about.",
+          "required": true
+        },
+        {
+          "key": "d5-man-sections",
+          "title": "Learn what the numbered man sections mean and try man 5 passwd.",
+          "required": true
+        },
+        {
+          "key": "d5-help-flag",
+          "title": "Compare the output of a tool with --help against its full man page.",
+          "required": true
+        },
+        {
+          "key": "d5-apropos",
+          "title": "Use apropos to find a command when you only know what it should do, not its name.",
+          "required": true
+        },
+        {
+          "key": "d5-tldr",
+          "title": "Install tldr and compare its examples to the official man page.",
+          "required": false
+        },
+        {
+          "key": "d5-no-google",
+          "title": "Challenge: solve three unfamiliar tasks today using only man and --help. No search engine.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "title": "The Filesystem Hierarchy",
+      "tasks": [
+        {
+          "key": "d6-fhs-read",
+          "title": "Read an overview of the Filesystem Hierarchy Standard.",
+          "required": false
+        },
+        {
+          "key": "d6-etc",
+          "title": "Explore /etc and open three config files in read only mode. Do not change anything yet.",
+          "required": true
+        },
+        {
+          "key": "d6-var-log",
+          "title": "Explore /var/log and identify which file records authentication attempts.",
+          "required": true
+        },
+        {
+          "key": "d6-home-root",
+          "title": "Compare /home and /root. Work out why root has its own home directory.",
+          "required": true
+        },
+        {
+          "key": "d6-tmp",
+          "title": "Find out what happens to files in /tmp when the machine reboots. Test it.",
+          "required": true
+        },
+        {
+          "key": "d6-usr-bin",
+          "title": "Look inside /usr/bin and /sbin. Explain to yourself why they are separate.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "title": "Finding Files",
+      "tasks": [
+        {
+          "key": "d7-find-name",
+          "title": "Use find with -name to locate every .conf file under /etc.",
+          "required": true
+        },
+        {
+          "key": "d7-find-type-size",
+          "title": "Combine find with -type and -size to list files over 10MB on the system.",
+          "required": true
+        },
+        {
+          "key": "d7-find-mtime",
+          "title": "Use find with -mtime to list files changed in the last two days.",
+          "required": true
+        },
+        {
+          "key": "d7-find-exec",
+          "title": "Use find with -exec to run a command on every file it matches.",
+          "required": true
+        },
+        {
+          "key": "d7-which-whereis",
+          "title": "Use which and whereis to find where an installed program actually lives.",
+          "required": true
+        },
+        {
+          "key": "d7-challenge",
+          "title": "Challenge: find the five largest files in /var and write the command in your notes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "title": "Searching Inside Files With grep",
+      "tasks": [
+        {
+          "key": "d8-grep-basic",
+          "title": "Search for a word inside a single file with grep.",
+          "required": true
+        },
+        {
+          "key": "d8-grep-flags",
+          "title": "Use grep with -i, -r, -n and -w. Know what each one changes.",
+          "required": true
+        },
+        {
+          "key": "d8-grep-v-c",
+          "title": "Use grep -v to exclude lines and grep -c to count matches.",
+          "required": true
+        },
+        {
+          "key": "d8-grep-logs",
+          "title": "Search /var/log for failed login attempts and count how many there were.",
+          "required": true
+        },
+        {
+          "key": "d8-regex-intro",
+          "title": "Read a beginner introduction to regular expressions, covering only dot, star, caret and dollar.",
+          "required": false
+        },
+        {
+          "key": "d8-challenge",
+          "title": "Challenge: find every line in /etc that mentions ssh, ignoring case, showing line numbers.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "title": "Pipes And Redirection",
+      "tasks": [
+        {
+          "key": "d9-stdout-redirect",
+          "title": "Send command output into a file with the greater than sign. Confirm the file was overwritten.",
+          "required": true
+        },
+        {
+          "key": "d9-append",
+          "title": "Append output to a file instead of overwriting it, and prove the difference.",
+          "required": true
+        },
+        {
+          "key": "d9-stderr",
+          "title": "Learn the difference between stdout and stderr, then redirect only errors to a file.",
+          "required": true
+        },
+        {
+          "key": "d9-pipes",
+          "title": "Chain three commands together with pipes, for example ls, grep and wc.",
+          "required": true
+        },
+        {
+          "key": "d9-tee",
+          "title": "Use tee to write output to a file and still see it on screen.",
+          "required": true
+        },
+        {
+          "key": "d9-devnull",
+          "title": "Send unwanted output to /dev/null and explain what /dev/null actually is.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "title": "Text Processing Tools",
+      "tasks": [
+        {
+          "key": "d10-sort-uniq",
+          "title": "Sort a file and remove duplicates with sort and uniq. Learn why uniq needs sorted input.",
+          "required": true
+        },
+        {
+          "key": "d10-cut",
+          "title": "Pull a single column out of /etc/passwd using cut with a colon delimiter.",
+          "required": true
+        },
+        {
+          "key": "d10-tr",
+          "title": "Use tr to change lowercase to uppercase and to delete characters.",
+          "required": true
+        },
+        {
+          "key": "d10-awk-taste",
+          "title": "Watch a short introduction to awk. Learn only how to print a chosen column.",
+          "required": false
+        },
+        {
+          "key": "d10-sed-taste",
+          "title": "Watch a short introduction to sed. Learn only how to replace text in a file.",
+          "required": false
+        },
+        {
+          "key": "d10-pipeline-build",
+          "title": "Build one pipeline that finds the ten most common commands in your shell history.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "title": "Users And Groups",
+      "tasks": [
+        {
+          "key": "d11-whoami-id",
+          "title": "Run whoami and id. Work out what the numbers next to your name mean.",
+          "required": true
+        },
+        {
+          "key": "d11-etc-passwd",
+          "title": "Read /etc/passwd and explain every field on your own line.",
+          "required": true
+        },
+        {
+          "key": "d11-shadow",
+          "title": "Look at /etc/shadow and find out why a normal user cannot read it.",
+          "required": true
+        },
+        {
+          "key": "d11-useradd",
+          "title": "Create a new user called testuser, set a password, and log in as them.",
+          "required": true
+        },
+        {
+          "key": "d11-groups",
+          "title": "Create a group, add testuser to it, and confirm with the groups command.",
+          "required": true
+        },
+        {
+          "key": "d11-su",
+          "title": "Switch between users with su and understand the difference between su and su dash.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "title": "File Permissions",
+      "tasks": [
+        {
+          "key": "d12-rwx-read",
+          "title": "Read how read, write and execute permissions work for owner, group and others.",
+          "required": false
+        },
+        {
+          "key": "d12-ls-l",
+          "title": "Decode the permission string in ls -l for ten different files without help.",
+          "required": true
+        },
+        {
+          "key": "d12-chmod-numeric",
+          "title": "Set permissions using numeric mode. Know what 755, 644 and 600 mean by heart.",
+          "required": true
+        },
+        {
+          "key": "d12-chmod-symbolic",
+          "title": "Set the same permissions again using symbolic mode with u, g, o and plus and minus.",
+          "required": true
+        },
+        {
+          "key": "d12-directory-x",
+          "title": "Work out why a directory needs execute permission to be entered at all.",
+          "required": true
+        },
+        {
+          "key": "d12-break-permissions",
+          "title": "Break it: chmod 000 a file you need, watch it fail, then fix it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "title": "Ownership And umask",
+      "tasks": [
+        {
+          "key": "d13-chown",
+          "title": "Change the owner of a file with chown and confirm with ls -l.",
+          "required": true
+        },
+        {
+          "key": "d13-chgrp",
+          "title": "Change the group of a file and set owner and group together in one chown command.",
+          "required": true
+        },
+        {
+          "key": "d13-umask",
+          "title": "Run umask, then create a file and work out how umask decided its permissions.",
+          "required": true
+        },
+        {
+          "key": "d13-shared-dir",
+          "title": "Build a directory that two users can both write to, and test it with testuser.",
+          "required": true
+        },
+        {
+          "key": "d13-special-bits",
+          "title": "Read what setuid, setgid and the sticky bit do. Look at the permissions on /tmp.",
+          "required": false
+        },
+        {
+          "key": "d13-fix-broken",
+          "title": "Fix a directory whose permissions you deliberately broke, without recreating it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "title": "sudo And Root",
+      "tasks": [
+        {
+          "key": "d14-sudo-basics",
+          "title": "Run a command that fails as a normal user, then run it again with sudo.",
+          "required": true
+        },
+        {
+          "key": "d14-root-danger",
+          "title": "Read why running everything as root is dangerous, even when it is convenient.",
+          "required": false
+        },
+        {
+          "key": "d14-sudo-log",
+          "title": "Find where sudo usage is logged and read your own entries from today.",
+          "required": true
+        },
+        {
+          "key": "d14-sudoers",
+          "title": "Look at /etc/sudoers using visudo. Read it, change nothing.",
+          "required": true
+        },
+        {
+          "key": "d14-least-privilege",
+          "title": "Write three sentences in your notes explaining least privilege in your own words.",
+          "required": true
+        },
+        {
+          "key": "d14-practice",
+          "title": "Give testuser sudo rights, test them, then take the rights away again.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "title": "SSH And Remote Access",
+      "tasks": [
+        {
+          "key": "d15-install-ssh",
+          "title": "Install and start the OpenSSH server on your VM.",
+          "required": true
+        },
+        {
+          "key": "d15-ssh-password",
+          "title": "Connect to the VM from your host machine using a password.",
+          "required": true
+        },
+        {
+          "key": "d15-keygen",
+          "title": "Generate an SSH key pair with ssh-keygen and look at both files it created.",
+          "required": true
+        },
+        {
+          "key": "d15-copy-id",
+          "title": "Copy your public key to the server with ssh-copy-id and log in without a password.",
+          "required": true
+        },
+        {
+          "key": "d15-disable-password",
+          "title": "Turn off password login in sshd_config, restart the service, and confirm keys still work.",
+          "required": true
+        },
+        {
+          "key": "d15-config-file",
+          "title": "Set up an entry in your local .ssh/config so you can connect by short name.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 16,
+      "title": "Processes",
+      "tasks": [
+        {
+          "key": "d16-ps",
+          "title": "List running processes with ps aux and read what each column tells you.",
+          "required": true
+        },
+        {
+          "key": "d16-top-htop",
+          "title": "Install htop and watch CPU and memory live while you load the machine.",
+          "required": true
+        },
+        {
+          "key": "d16-pid-parent",
+          "title": "Find a process ID and its parent process ID, and explain the relationship.",
+          "required": true
+        },
+        {
+          "key": "d16-kill",
+          "title": "Stop a process with kill, then with kill -9. Learn why -9 is a last resort.",
+          "required": true
+        },
+        {
+          "key": "d16-signals",
+          "title": "Read what SIGTERM, SIGKILL and SIGHUP mean and when each one is used.",
+          "required": false
+        },
+        {
+          "key": "d16-runaway",
+          "title": "Break it: start an infinite loop that eats CPU, find it in top, and kill it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 17,
+      "title": "Jobs And Background Work",
+      "tasks": [
+        {
+          "key": "d17-ampersand",
+          "title": "Run a long command in the background using an ampersand at the end.",
+          "required": true
+        },
+        {
+          "key": "d17-ctrl-z",
+          "title": "Suspend a running command with Ctrl and Z, then check it with jobs.",
+          "required": true
+        },
+        {
+          "key": "d17-fg-bg",
+          "title": "Move a suspended job to the background with bg and back to the front with fg.",
+          "required": true
+        },
+        {
+          "key": "d17-nohup",
+          "title": "Start a process with nohup, close the terminal, and confirm it is still running.",
+          "required": true
+        },
+        {
+          "key": "d17-tmux",
+          "title": "Install tmux and learn only three things: new session, detach, and reattach.",
+          "required": false
+        },
+        {
+          "key": "d17-practice",
+          "title": "Run three background jobs at once and manage all of them from one terminal.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 18,
+      "title": "systemd And Services",
+      "tasks": [
+        {
+          "key": "d18-nginx-install",
+          "title": "Install nginx and confirm you can load its default page in a browser.",
+          "required": true
+        },
+        {
+          "key": "d18-systemctl-status",
+          "title": "Read the full output of systemctl status nginx and understand every line.",
+          "required": true
+        },
+        {
+          "key": "d18-start-stop",
+          "title": "Start, stop and restart nginx and watch the status change each time.",
+          "required": true
+        },
+        {
+          "key": "d18-enable-boot",
+          "title": "Enable nginx to start at boot, then reboot the VM and confirm it came back up.",
+          "required": true
+        },
+        {
+          "key": "d18-break-service",
+          "title": "Break it: put a syntax error in the nginx config, watch the restart fail, then fix it.",
+          "required": true
+        },
+        {
+          "key": "d18-unit-file",
+          "title": "Read the nginx unit file and find out where systemd stores unit files.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 19,
+      "title": "Logs And Troubleshooting",
+      "tasks": [
+        {
+          "key": "d19-journalctl",
+          "title": "Read system logs with journalctl and page through them properly.",
+          "required": true
+        },
+        {
+          "key": "d19-journalctl-unit",
+          "title": "Filter logs to a single service with journalctl -u nginx.",
+          "required": true
+        },
+        {
+          "key": "d19-journalctl-follow",
+          "title": "Follow logs live with journalctl -f while you restart a service in another terminal.",
+          "required": true
+        },
+        {
+          "key": "d19-journalctl-time",
+          "title": "Filter logs by time using since and until.",
+          "required": true
+        },
+        {
+          "key": "d19-find-error",
+          "title": "Break nginx again, then find the exact error in the logs without asking anyone.",
+          "required": true
+        },
+        {
+          "key": "d19-log-rotation",
+          "title": "Read what logrotate does and why logs do not fill the disk forever.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 20,
+      "title": "Installing Software",
+      "tasks": [
+        {
+          "key": "d20-apt-update",
+          "title": "Run apt update and apt upgrade, and understand the difference between them.",
+          "required": true
+        },
+        {
+          "key": "d20-apt-install",
+          "title": "Install three tools you will use later: git, curl and tree.",
+          "required": true
+        },
+        {
+          "key": "d20-apt-search",
+          "title": "Search for a package with apt search and read its details with apt show.",
+          "required": true
+        },
+        {
+          "key": "d20-apt-remove",
+          "title": "Remove a package with apt remove, then compare it to apt purge.",
+          "required": true
+        },
+        {
+          "key": "d20-dpkg",
+          "title": "List installed packages with dpkg and find which package owns a specific file.",
+          "required": true
+        },
+        {
+          "key": "d20-repos",
+          "title": "Read where apt gets its packages from by looking at the sources list.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 21,
+      "title": "Disks And Filesystems",
+      "tasks": [
+        {
+          "key": "d21-df",
+          "title": "Check free disk space with df -h and read every column.",
+          "required": true
+        },
+        {
+          "key": "d21-du",
+          "title": "Find which directory is using the most space with du and sort.",
+          "required": true
+        },
+        {
+          "key": "d21-lsblk",
+          "title": "List block devices with lsblk and match them to what df shows.",
+          "required": true
+        },
+        {
+          "key": "d21-mount",
+          "title": "Add a second virtual disk to the VM, format it, and mount it to a folder.",
+          "required": true
+        },
+        {
+          "key": "d21-fstab",
+          "title": "Read /etc/fstab and find out how mounts survive a reboot.",
+          "required": false
+        },
+        {
+          "key": "d21-fill-disk",
+          "title": "Break it: fill the disk with a large dummy file, watch things fail, then clean up.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 22,
+      "title": "Archives And Copying Between Machines",
+      "tasks": [
+        {
+          "key": "d22-tar-create",
+          "title": "Create a tar archive of a folder and check its size.",
+          "required": true
+        },
+        {
+          "key": "d22-tar-extract",
+          "title": "Extract a tar archive into a different location and verify the contents match.",
+          "required": true
+        },
+        {
+          "key": "d22-gzip",
+          "title": "Compress with gzip and compare the file size before and after.",
+          "required": true
+        },
+        {
+          "key": "d22-scp",
+          "title": "Copy a file from your host machine to the VM using scp.",
+          "required": true
+        },
+        {
+          "key": "d22-rsync",
+          "title": "Sync a folder with rsync, then run it again and notice it only copies what changed.",
+          "required": true
+        },
+        {
+          "key": "d22-backup-plan",
+          "title": "Write down in plain English the steps of a nightly backup you could automate later.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 23,
+      "title": "Environment And Shell Config",
+      "tasks": [
+        {
+          "key": "d23-env",
+          "title": "Print all environment variables with env and pick out five you recognise.",
+          "required": true
+        },
+        {
+          "key": "d23-path",
+          "title": "Print your PATH and explain how the shell decides which program to run.",
+          "required": true
+        },
+        {
+          "key": "d23-export",
+          "title": "Create a variable, export it, and prove that a child process can see it.",
+          "required": true
+        },
+        {
+          "key": "d23-bashrc",
+          "title": "Edit .bashrc, add something, and reload it with source.",
+          "required": true
+        },
+        {
+          "key": "d23-alias",
+          "title": "Create three aliases that save you typing and make them permanent.",
+          "required": true
+        },
+        {
+          "key": "d23-path-break",
+          "title": "Break it: put a bad directory at the front of PATH, watch commands fail, then fix it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 24,
+      "title": "Scheduling Work With cron",
+      "tasks": [
+        {
+          "key": "d24-crontab-e",
+          "title": "Open your user crontab with crontab -e and look at the comments inside it.",
+          "required": true
+        },
+        {
+          "key": "d24-cron-syntax",
+          "title": "Learn the five time fields and write out three schedules on paper before typing them.",
+          "required": true
+        },
+        {
+          "key": "d24-cron-job",
+          "title": "Create a cron job that writes the date to a file every minute. Confirm it runs.",
+          "required": true
+        },
+        {
+          "key": "d24-cron-logs",
+          "title": "Find where cron logs its runs and read the entries from your test job.",
+          "required": true
+        },
+        {
+          "key": "d24-cron-gotchas",
+          "title": "Learn why cron jobs often fail because of PATH, then make one fail on purpose and fix it.",
+          "required": true
+        },
+        {
+          "key": "d24-cron-real",
+          "title": "Write a cron job that deletes files in a folder older than seven days.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 25,
+      "title": "Your First Bash Script",
+      "tasks": [
+        {
+          "key": "d25-shebang",
+          "title": "Create a script file, add a shebang line, and make it executable with chmod.",
+          "required": true
+        },
+        {
+          "key": "d25-variables",
+          "title": "Use variables in a script and print them with echo. Learn when to use quotes.",
+          "required": true
+        },
+        {
+          "key": "d25-arguments",
+          "title": "Read arguments passed to your script using dollar one and dollar two.",
+          "required": true
+        },
+        {
+          "key": "d25-if",
+          "title": "Add an if statement that checks whether a file exists before acting on it.",
+          "required": true
+        },
+        {
+          "key": "d25-loop",
+          "title": "Write a for loop that runs the same action on every file in a folder.",
+          "required": true
+        },
+        {
+          "key": "d25-real-script",
+          "title": "Write one useful script: back up a folder to a timestamped tar file.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 26,
+      "title": "Break It, Fix It, Write It Down",
+      "tasks": [
+        {
+          "key": "d26-snapshot",
+          "title": "Take a VM snapshot so you can recover if today goes badly.",
+          "required": true
+        },
+        {
+          "key": "d26-sabotage",
+          "title": "Have a friend break three things on your VM: a service, a permission and a config file.",
+          "required": true
+        },
+        {
+          "key": "d26-diagnose",
+          "title": "Diagnose all three faults using only logs, systemctl and your own notes.",
+          "required": true
+        },
+        {
+          "key": "d26-fix",
+          "title": "Fix all three without restoring the snapshot.",
+          "required": true
+        },
+        {
+          "key": "d26-write-up",
+          "title": "Write a short report on each fault: what broke, how you found it, how you fixed it.",
+          "required": true
+        },
+        {
+          "key": "d26-github-repo",
+          "title": "Create a GitHub repo for this journey and push your notes and your backup script.",
+          "required": true
+        },
+        {
+          "key": "d26-review",
+          "title": "Review your command notes from all 26 days and mark anything you still cannot do from memory.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 5,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "w1-q1",
+          "type": "mcq",
+          "prompt": "Which command prints the directory you are currently in?",
+          "options": [
+            "pwd",
+            "cd",
+            "ls",
+            "dir"
+          ],
+          "answer": 0,
+          "explanation": "pwd stands for print working directory and shows your current location."
+        },
+        {
+          "key": "w1-q2",
+          "type": "mcq",
+          "prompt": "What does the ls -a flag do?",
+          "options": [
+            "Sorts files by age",
+            "Shows hidden files",
+            "Shows file sizes in a readable form",
+            "Lists files one per line"
+          ],
+          "answer": 1,
+          "explanation": "The -a flag shows all files, including hidden ones whose names start with a dot."
+        },
+        {
+          "key": "w1-q3",
+          "type": "mcq",
+          "prompt": "What does the tilde character mean in a path?",
+          "options": [
+            "The root of the filesystem",
+            "The parent directory",
+            "Your home directory",
+            "The current directory"
+          ],
+          "answer": 2,
+          "explanation": "The tilde is a shortcut for the current user home directory."
+        },
+        {
+          "key": "w1-q4",
+          "type": "mcq",
+          "prompt": "Which command copies a whole directory and everything inside it?",
+          "options": [
+            "cp file dest",
+            "cp -r dir dest",
+            "mv dir dest",
+            "cat dir dest"
+          ],
+          "answer": 1,
+          "explanation": "Directories need the -r flag, which tells cp to work recursively."
+        },
+        {
+          "key": "w1-q5",
+          "type": "mcq",
+          "prompt": "What happens to a file deleted with rm?",
+          "options": [
+            "It moves to a trash folder",
+            "It is gone with no built in undo",
+            "It is archived for thirty days",
+            "It is renamed with a dot prefix"
+          ],
+          "answer": 1,
+          "explanation": "There is no recycle bin on the Linux command line, so rm is permanent."
+        },
+        {
+          "key": "w1-q6",
+          "type": "mcq",
+          "prompt": "Which command shows the last ten lines of a file?",
+          "options": [
+            "head",
+            "tail",
+            "less",
+            "wc"
+          ],
+          "answer": 1,
+          "explanation": "tail shows the end of a file, and head shows the beginning."
+        },
+        {
+          "key": "w1-q7",
+          "type": "mcq",
+          "prompt": "What does tail -f do?",
+          "options": [
+            "Finds text in a file",
+            "Formats the output",
+            "Follows the file and shows new lines as they arrive",
+            "Forces the file to close"
+          ],
+          "answer": 2,
+          "explanation": "The -f flag follows a file live, which is how you watch logs while something runs."
+        },
+        {
+          "key": "w1-q8",
+          "type": "mcq",
+          "prompt": "Which command counts the number of lines in a file?",
+          "options": [
+            "wc -l",
+            "count -l",
+            "lines",
+            "ls -l"
+          ],
+          "answer": 0,
+          "explanation": "wc counts words, lines and characters, and -l limits it to lines."
+        },
+        {
+          "key": "w1-q9",
+          "type": "mcq",
+          "prompt": "How do you leave the less pager?",
+          "options": [
+            "Press Escape",
+            "Press q",
+            "Press Ctrl and C twice",
+            "Type exit"
+          ],
+          "answer": 1,
+          "explanation": "Pressing q quits less and returns you to the prompt."
+        },
+        {
+          "key": "w1-q10",
+          "type": "mcq",
+          "prompt": "What does the .. path mean?",
+          "options": [
+            "The current directory",
+            "The parent directory",
+            "The root directory",
+            "A hidden directory"
+          ],
+          "answer": 1,
+          "explanation": "Two dots refer to the directory one level above the current one."
+        },
+        {
+          "key": "w1-q11",
+          "type": "mcq",
+          "prompt": "Which command shows the manual for a command?",
+          "options": [
+            "help",
+            "man",
+            "info -a",
+            "doc"
+          ],
+          "answer": 1,
+          "explanation": "man opens the manual page for a command."
+        },
+        {
+          "key": "w1-q12",
+          "type": "mcq",
+          "prompt": "What is apropos used for?",
+          "options": [
+            "Running a command as another user",
+            "Finding a command by what it does",
+            "Checking file permissions",
+            "Showing disk usage"
+          ],
+          "answer": 1,
+          "explanation": "apropos searches manual page descriptions, which helps when you know the task but not the command name."
+        },
+        {
+          "key": "w1-q13",
+          "type": "true_false",
+          "prompt": "The terminal and the shell are exactly the same thing.",
+          "answer": false,
+          "explanation": "The terminal is the window you type into, and the shell is the program that reads and runs your commands."
+        },
+        {
+          "key": "w1-q14",
+          "type": "true_false",
+          "prompt": "Tab completion can finish both command names and file paths.",
+          "answer": true,
+          "explanation": "Tab completion works for commands, paths and often arguments too, and it prevents a lot of typing mistakes."
+        },
+        {
+          "key": "w1-q15",
+          "type": "true_false",
+          "prompt": "The history command lets you see commands you ran earlier in the session.",
+          "answer": true,
+          "explanation": "history prints your recent command list, and you can rerun entries from it."
+        }
+      ]
+    },
+    {
+      "afterDay": 10,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "w2-q1",
+          "type": "mcq",
+          "prompt": "Which directory normally holds system wide configuration files?",
+          "options": [
+            "/var",
+            "/etc",
+            "/usr",
+            "/opt"
+          ],
+          "answer": 1,
+          "explanation": "/etc is the standard location for configuration files on a Linux system."
+        },
+        {
+          "key": "w2-q2",
+          "type": "mcq",
+          "prompt": "Where would you normally look for system log files?",
+          "options": [
+            "/var/log",
+            "/etc/log",
+            "/usr/log",
+            "/home/log"
+          ],
+          "answer": 0,
+          "explanation": "/var holds data that changes, and /var/log is where logs are written."
+        },
+        {
+          "key": "w2-q3",
+          "type": "mcq",
+          "prompt": "What usually happens to files in /tmp after a reboot?",
+          "options": [
+            "They are compressed",
+            "They are backed up",
+            "They are often cleared",
+            "They are moved to /var"
+          ],
+          "answer": 2,
+          "explanation": "/tmp is for temporary data and is commonly cleared on reboot."
+        },
+        {
+          "key": "w2-q4",
+          "type": "mcq",
+          "prompt": "Which find option searches by file name?",
+          "options": [
+            "-type",
+            "-name",
+            "-size",
+            "-exec"
+          ],
+          "answer": 1,
+          "explanation": "The -name option matches against the file name, and it accepts wildcards."
+        },
+        {
+          "key": "w2-q5",
+          "type": "mcq",
+          "prompt": "What does find with -exec do?",
+          "options": [
+            "Makes files executable",
+            "Runs a command on each matching file",
+            "Excludes files from results",
+            "Shows execution time"
+          ],
+          "answer": 1,
+          "explanation": "The -exec option runs a command against every file that find matched."
+        },
+        {
+          "key": "w2-q6",
+          "type": "mcq",
+          "prompt": "Which command tells you where an installed program lives?",
+          "options": [
+            "where",
+            "which",
+            "find -bin",
+            "locate -x"
+          ],
+          "answer": 1,
+          "explanation": "which searches your PATH and reports the program it would actually run."
+        },
+        {
+          "key": "w2-q7",
+          "type": "mcq",
+          "prompt": "What does grep -i do?",
+          "options": [
+            "Inverts the match",
+            "Ignores case",
+            "Shows line numbers",
+            "Includes subdirectories"
+          ],
+          "answer": 1,
+          "explanation": "The -i flag makes the search case insensitive."
+        },
+        {
+          "key": "w2-q8",
+          "type": "mcq",
+          "prompt": "What does grep -v do?",
+          "options": [
+            "Shows the version",
+            "Searches verbosely",
+            "Shows lines that do not match",
+            "Validates the pattern"
+          ],
+          "answer": 2,
+          "explanation": "The -v flag inverts the match and returns everything except the matching lines."
+        },
+        {
+          "key": "w2-q9",
+          "type": "mcq",
+          "prompt": "Which symbol appends output to a file without erasing it?",
+          "options": [
+            "Single greater than",
+            "Double greater than",
+            "Single less than",
+            "Pipe"
+          ],
+          "answer": 1,
+          "explanation": "One greater than sign overwrites the file, and two append to it."
+        },
+        {
+          "key": "w2-q10",
+          "type": "mcq",
+          "prompt": "What does a pipe do between two commands?",
+          "options": [
+            "Runs them at the same time",
+            "Sends the output of the first into the second",
+            "Saves both outputs to a file",
+            "Runs the second only if the first fails"
+          ],
+          "answer": 1,
+          "explanation": "A pipe connects the output of one command to the input of the next."
+        },
+        {
+          "key": "w2-q11",
+          "type": "mcq",
+          "prompt": "What is /dev/null used for?",
+          "options": [
+            "Storing temporary files",
+            "Throwing away unwanted output",
+            "Holding device drivers",
+            "Logging errors"
+          ],
+          "answer": 1,
+          "explanation": "/dev/null discards anything written to it, so it is used to silence output."
+        },
+        {
+          "key": "w2-q12",
+          "type": "mcq",
+          "prompt": "Why does uniq usually need sort before it?",
+          "options": [
+            "It runs faster",
+            "It only removes duplicates that sit next to each other",
+            "It cannot read large files",
+            "It needs a sorted index"
+          ],
+          "answer": 1,
+          "explanation": "uniq compares each line with the one before it, so duplicates must already be adjacent."
+        },
+        {
+          "key": "w2-q13",
+          "type": "mcq",
+          "prompt": "Which command extracts a single column from a delimited file?",
+          "options": [
+            "cut",
+            "tr",
+            "wc",
+            "sort"
+          ],
+          "answer": 0,
+          "explanation": "cut pulls out fields based on a delimiter you choose."
+        },
+        {
+          "key": "w2-q14",
+          "type": "true_false",
+          "prompt": "stdout and stderr are two separate output streams that can be redirected separately.",
+          "answer": true,
+          "explanation": "Normal output and error output are separate, which is why you can send errors to one file and results to another."
+        },
+        {
+          "key": "w2-q15",
+          "type": "true_false",
+          "prompt": "The tee command writes output to a file and also shows it on screen.",
+          "answer": true,
+          "explanation": "tee splits output in two directions, which is useful when you want a log and live feedback at once."
+        }
+      ]
+    },
+    {
+      "afterDay": 15,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "w3-q1",
+          "type": "mcq",
+          "prompt": "Which file stores basic user account information?",
+          "options": [
+            "/etc/shadow",
+            "/etc/passwd",
+            "/etc/users",
+            "/etc/group"
+          ],
+          "answer": 1,
+          "explanation": "/etc/passwd holds account details such as username, user ID and home directory."
+        },
+        {
+          "key": "w3-q2",
+          "type": "mcq",
+          "prompt": "Why can a normal user not read /etc/shadow?",
+          "options": [
+            "It is encrypted at rest",
+            "It holds password hashes and is restricted",
+            "It does not exist on modern systems",
+            "It is stored on a separate disk"
+          ],
+          "answer": 1,
+          "explanation": "The shadow file contains password hashes, so it is readable only by root."
+        },
+        {
+          "key": "w3-q3",
+          "type": "mcq",
+          "prompt": "What does the permission value 755 mean?",
+          "options": [
+            "Owner read and write, others nothing",
+            "Everyone can do everything",
+            "Owner full control, group and others read and execute",
+            "Owner read only, group write"
+          ],
+          "answer": 2,
+          "explanation": "7 gives the owner read, write and execute, and each 5 gives read and execute."
+        },
+        {
+          "key": "w3-q4",
+          "type": "mcq",
+          "prompt": "Which numeric mode gives the owner read and write and nobody else anything?",
+          "options": [
+            "600",
+            "644",
+            "700",
+            "666"
+          ],
+          "answer": 0,
+          "explanation": "6 is read plus write for the owner, and the two zeros remove all access for group and others."
+        },
+        {
+          "key": "w3-q5",
+          "type": "mcq",
+          "prompt": "Why does a directory need execute permission?",
+          "options": [
+            "To run scripts inside it",
+            "To be entered and have its contents accessed",
+            "To be deleted",
+            "To be compressed"
+          ],
+          "answer": 1,
+          "explanation": "On a directory the execute bit controls whether you can enter it and reach the files inside."
+        },
+        {
+          "key": "w3-q6",
+          "type": "mcq",
+          "prompt": "Which command changes the owner of a file?",
+          "options": [
+            "chmod",
+            "chown",
+            "chgrp",
+            "usermod"
+          ],
+          "answer": 1,
+          "explanation": "chown changes ownership, and it can set the group at the same time."
+        },
+        {
+          "key": "w3-q7",
+          "type": "mcq",
+          "prompt": "What does umask control?",
+          "options": [
+            "Which users can log in",
+            "The default permissions on newly created files",
+            "How the shell displays prompts",
+            "Which files are hidden"
+          ],
+          "answer": 1,
+          "explanation": "umask removes permission bits from the defaults when a new file is created."
+        },
+        {
+          "key": "w3-q8",
+          "type": "mcq",
+          "prompt": "What is the main risk of running everything as root?",
+          "options": [
+            "Commands run slower",
+            "A single mistake can damage the whole system",
+            "Logs are not written",
+            "Networking stops working"
+          ],
+          "answer": 1,
+          "explanation": "Root has no safety limits, so an error affects the entire machine rather than one account."
+        },
+        {
+          "key": "w3-q9",
+          "type": "mcq",
+          "prompt": "Which command should you use to edit the sudoers file safely?",
+          "options": [
+            "nano /etc/sudoers",
+            "visudo",
+            "sudoedit -f",
+            "vi -s"
+          ],
+          "answer": 1,
+          "explanation": "visudo checks the syntax before saving, which prevents you from locking yourself out."
+        },
+        {
+          "key": "w3-q10",
+          "type": "mcq",
+          "prompt": "What does ssh-keygen create?",
+          "options": [
+            "A password file",
+            "A public and private key pair",
+            "A server certificate",
+            "A firewall rule"
+          ],
+          "answer": 1,
+          "explanation": "It generates two matching keys, and only the public one is copied to the server."
+        },
+        {
+          "key": "w3-q11",
+          "type": "mcq",
+          "prompt": "Which key from your SSH pair goes on the remote server?",
+          "options": [
+            "The private key",
+            "The public key",
+            "Both keys",
+            "Neither key"
+          ],
+          "answer": 1,
+          "explanation": "The public key goes on the server, and the private key never leaves your machine."
+        },
+        {
+          "key": "w3-q12",
+          "type": "mcq",
+          "prompt": "What does ssh-copy-id do?",
+          "options": [
+            "Copies files over SSH",
+            "Installs your public key on the remote server",
+            "Copies a user account",
+            "Duplicates an SSH session"
+          ],
+          "answer": 1,
+          "explanation": "It appends your public key to the authorized keys file on the remote machine."
+        },
+        {
+          "key": "w3-q13",
+          "type": "true_false",
+          "prompt": "The principle of least privilege means giving an account only the access it actually needs.",
+          "answer": true,
+          "explanation": "Limiting access reduces how much damage a mistake or a compromised account can cause."
+        },
+        {
+          "key": "w3-q14",
+          "type": "true_false",
+          "prompt": "chmod symbolic mode and chmod numeric mode can produce the same result.",
+          "answer": true,
+          "explanation": "They are two ways of writing the same permission change, so 644 and the symbolic form can match."
+        },
+        {
+          "key": "w3-q15",
+          "type": "true_false",
+          "prompt": "Disabling password login for SSH and using keys instead makes a server harder to attack.",
+          "answer": true,
+          "explanation": "Keys cannot be guessed the way passwords can, which removes the most common brute force route in."
+        }
+      ]
+    },
+    {
+      "afterDay": 20,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "w4-q1",
+          "type": "mcq",
+          "prompt": "Which command shows a live view of running processes?",
+          "options": [
+            "ps",
+            "top",
+            "jobs",
+            "systemctl"
+          ],
+          "answer": 1,
+          "explanation": "top updates continuously, and htop is a friendlier version of the same idea."
+        },
+        {
+          "key": "w4-q2",
+          "type": "mcq",
+          "prompt": "What is a PID?",
+          "options": [
+            "A permission identifier",
+            "A process identifier",
+            "A package index",
+            "A partition ID"
+          ],
+          "answer": 1,
+          "explanation": "Every running process gets a numeric process ID that you use to control it."
+        },
+        {
+          "key": "w4-q3",
+          "type": "mcq",
+          "prompt": "What is the difference between kill and kill -9?",
+          "options": [
+            "No difference",
+            "kill asks the process to stop, kill -9 forces it",
+            "kill -9 is slower",
+            "kill only works on your own processes"
+          ],
+          "answer": 1,
+          "explanation": "Plain kill sends a polite termination signal, while -9 cannot be caught or ignored."
+        },
+        {
+          "key": "w4-q4",
+          "type": "mcq",
+          "prompt": "Why is kill -9 a last resort?",
+          "options": [
+            "It needs root",
+            "The process cannot clean up before dying",
+            "It kills the parent too",
+            "It reboots the machine"
+          ],
+          "answer": 1,
+          "explanation": "A forced kill gives no chance to save data or release resources properly."
+        },
+        {
+          "key": "w4-q5",
+          "type": "mcq",
+          "prompt": "What does adding an ampersand to the end of a command do?",
+          "options": [
+            "Repeats the command",
+            "Runs it in the background",
+            "Chains two commands",
+            "Redirects output"
+          ],
+          "answer": 1,
+          "explanation": "The ampersand starts the command in the background and gives you your prompt back."
+        },
+        {
+          "key": "w4-q6",
+          "type": "mcq",
+          "prompt": "What does nohup protect a process from?",
+          "options": [
+            "Running out of memory",
+            "Being stopped when the terminal closes",
+            "Being killed by root",
+            "Filling the disk"
+          ],
+          "answer": 1,
+          "explanation": "nohup shields a process from the hangup signal sent when a terminal session ends."
+        },
+        {
+          "key": "w4-q7",
+          "type": "mcq",
+          "prompt": "Which command starts a service immediately?",
+          "options": [
+            "systemctl enable",
+            "systemctl start",
+            "systemctl status",
+            "systemctl daemon-reload"
+          ],
+          "answer": 1,
+          "explanation": "start runs the service now, while enable only sets it to launch at boot."
+        },
+        {
+          "key": "w4-q8",
+          "type": "mcq",
+          "prompt": "What does systemctl enable do?",
+          "options": [
+            "Starts the service now",
+            "Sets the service to start at boot",
+            "Turns on logging",
+            "Grants the service root access"
+          ],
+          "answer": 1,
+          "explanation": "enable creates the link that makes systemd start the service on every boot."
+        },
+        {
+          "key": "w4-q9",
+          "type": "mcq",
+          "prompt": "Which command reads logs for one specific service?",
+          "options": [
+            "journalctl -f",
+            "journalctl -u servicename",
+            "tail /var/log",
+            "systemctl log"
+          ],
+          "answer": 1,
+          "explanation": "The -u flag filters the journal down to a single unit."
+        },
+        {
+          "key": "w4-q10",
+          "type": "mcq",
+          "prompt": "What does journalctl -f do?",
+          "options": [
+            "Formats the output",
+            "Follows the log live",
+            "Filters by date",
+            "Forces a log rotation"
+          ],
+          "answer": 1,
+          "explanation": "The -f flag streams new log entries as they are written."
+        },
+        {
+          "key": "w4-q11",
+          "type": "mcq",
+          "prompt": "What is the difference between apt update and apt upgrade?",
+          "options": [
+            "No difference",
+            "update refreshes the package list, upgrade installs newer versions",
+            "update installs packages, upgrade removes them",
+            "update needs root, upgrade does not"
+          ],
+          "answer": 1,
+          "explanation": "update only refreshes what is available, and upgrade actually installs the newer packages."
+        },
+        {
+          "key": "w4-q12",
+          "type": "mcq",
+          "prompt": "What does apt purge do that apt remove does not?",
+          "options": [
+            "Removes dependencies",
+            "Also removes configuration files",
+            "Clears the download cache",
+            "Reinstalls the package"
+          ],
+          "answer": 1,
+          "explanation": "purge deletes the configuration files as well as the package itself."
+        },
+        {
+          "key": "w4-q13",
+          "type": "true_false",
+          "prompt": "A service that is running right now will automatically start again after a reboot.",
+          "answer": false,
+          "explanation": "Running and enabled are separate states, so a running service still needs to be enabled to survive a reboot."
+        },
+        {
+          "key": "w4-q14",
+          "type": "true_false",
+          "prompt": "Logs are usually the fastest way to find out why a service failed to start.",
+          "answer": true,
+          "explanation": "systemctl status and journalctl normally point straight at the error, which is faster than guessing."
+        },
+        {
+          "key": "w4-q15",
+          "type": "true_false",
+          "prompt": "You can find which installed package a file belongs to using dpkg.",
+          "answer": true,
+          "explanation": "dpkg can search its database and report the package that owns a given file."
+        }
+      ]
+    },
+    {
+      "afterDay": 25,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "w5-q1",
+          "type": "mcq",
+          "prompt": "Which command shows free disk space in a readable format?",
+          "options": [
+            "du -h",
+            "df -h",
+            "lsblk -f",
+            "free -h"
+          ],
+          "answer": 1,
+          "explanation": "df reports filesystem usage, and -h prints the sizes in human readable units."
+        },
+        {
+          "key": "w5-q2",
+          "type": "mcq",
+          "prompt": "What does du measure?",
+          "options": [
+            "Free space on a disk",
+            "Space used by files and directories",
+            "Disk read speed",
+            "Number of inodes left"
+          ],
+          "answer": 1,
+          "explanation": "du reports how much space specific files and folders are consuming."
+        },
+        {
+          "key": "w5-q3",
+          "type": "mcq",
+          "prompt": "What is /etc/fstab used for?",
+          "options": [
+            "Storing user accounts",
+            "Defining filesystems mounted at boot",
+            "Listing running services",
+            "Setting file permissions"
+          ],
+          "answer": 1,
+          "explanation": "fstab tells the system which filesystems to mount automatically at startup."
+        },
+        {
+          "key": "w5-q4",
+          "type": "mcq",
+          "prompt": "Which command creates a tar archive?",
+          "options": [
+            "tar -xf",
+            "tar -cf",
+            "tar -tf",
+            "tar -rf"
+          ],
+          "answer": 1,
+          "explanation": "The c flag creates an archive, while x extracts one."
+        },
+        {
+          "key": "w5-q5",
+          "type": "mcq",
+          "prompt": "What advantage does rsync have over scp for repeated copies?",
+          "options": [
+            "It is encrypted",
+            "It only transfers what changed",
+            "It compresses better",
+            "It works without SSH"
+          ],
+          "answer": 1,
+          "explanation": "rsync compares source and destination and sends only the differences."
+        },
+        {
+          "key": "w5-q6",
+          "type": "mcq",
+          "prompt": "What does the PATH variable control?",
+          "options": [
+            "Where files are saved",
+            "Which directories the shell searches for commands",
+            "Which user owns a process",
+            "Where logs are written"
+          ],
+          "answer": 1,
+          "explanation": "The shell walks through the PATH directories in order to find the program you typed."
+        },
+        {
+          "key": "w5-q7",
+          "type": "mcq",
+          "prompt": "How do you apply changes to .bashrc without opening a new terminal?",
+          "options": [
+            "reboot",
+            "source .bashrc",
+            "export .bashrc",
+            "bash -r"
+          ],
+          "answer": 1,
+          "explanation": "source reruns the file in your current shell so the changes take effect immediately."
+        },
+        {
+          "key": "w5-q8",
+          "type": "mcq",
+          "prompt": "How many time fields does a standard cron schedule have?",
+          "options": [
+            "Three",
+            "Four",
+            "Five",
+            "Six"
+          ],
+          "answer": 2,
+          "explanation": "Cron uses minute, hour, day of month, month and day of week."
+        },
+        {
+          "key": "w5-q9",
+          "type": "mcq",
+          "prompt": "Why do cron jobs often fail even when the command works in your terminal?",
+          "options": [
+            "Cron runs as root",
+            "Cron has a very limited PATH and environment",
+            "Cron cannot run scripts",
+            "Cron only runs at night"
+          ],
+          "answer": 1,
+          "explanation": "Cron starts with a minimal environment, so full paths are usually needed."
+        },
+        {
+          "key": "w5-q10",
+          "type": "mcq",
+          "prompt": "What is a shebang line?",
+          "options": [
+            "A comment at the end of a script",
+            "The first line that tells the system which interpreter to use",
+            "A way to import other scripts",
+            "A permission setting"
+          ],
+          "answer": 1,
+          "explanation": "The shebang at the top of the file points to the interpreter that should run the script."
+        },
+        {
+          "key": "w5-q11",
+          "type": "mcq",
+          "prompt": "What must you do before running a script directly by its filename?",
+          "options": [
+            "Compile it",
+            "Make it executable with chmod",
+            "Move it to /bin",
+            "Run it as root"
+          ],
+          "answer": 1,
+          "explanation": "A script needs the execute permission before it can be run as a program."
+        },
+        {
+          "key": "w5-q12",
+          "type": "mcq",
+          "prompt": "How do you read the first argument passed to a bash script?",
+          "options": [
+            "dollar zero",
+            "dollar one",
+            "arg1",
+            "input 1"
+          ],
+          "answer": 1,
+          "explanation": "Dollar one holds the first argument, and dollar zero holds the script name itself."
+        },
+        {
+          "key": "w5-q13",
+          "type": "true_false",
+          "prompt": "Filling a disk to one hundred percent can stop services from working correctly.",
+          "answer": true,
+          "explanation": "Many programs need to write temporary files or logs, so a full disk causes failures across the system."
+        },
+        {
+          "key": "w5-q14",
+          "type": "true_false",
+          "prompt": "An alias defined in the terminal disappears when you close it unless you save it in a config file.",
+          "answer": true,
+          "explanation": "Aliases only last for the session unless they are added to a file such as .bashrc."
+        },
+        {
+          "key": "w5-q15",
+          "type": "true_false",
+          "prompt": "Writing down what broke and how you fixed it is a normal part of professional operations work.",
+          "answer": true,
+          "explanation": "Written incident notes are standard practice, and they are what turn one fix into a repeatable skill."
+        }
+      ]
+    }
+  ]
+}

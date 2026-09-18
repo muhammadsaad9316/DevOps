@@ -1,0 +1,1726 @@
+{
+  "days": [
+    {
+      "day": 166,
+      "title": "HCP Terraform: Workspaces And Remote Runs",
+      "tasks": [
+        {
+          "key": "d166-account",
+          "title": "Create an HCP Terraform account and a workspace for one of your environments.",
+          "required": true
+        },
+        {
+          "key": "d166-remote-state",
+          "title": "Migrate that environment's state from your S3 backend into the workspace.",
+          "required": true
+        },
+        {
+          "key": "d166-remote-run",
+          "title": "Trigger a remote plan and apply, and watch it execute on their runners rather than your machine.",
+          "required": true
+        },
+        {
+          "key": "d166-vs-s3",
+          "title": "Write down what HCP Terraform gives you that an S3 backend with DynamoDB does not.",
+          "required": true
+        },
+        {
+          "key": "d166-exam-note",
+          "title": "Note that this area appears on the exam even though you may never use it at work.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 167,
+      "title": "HCP Terraform: VCS Integration And Variables",
+      "tasks": [
+        {
+          "key": "d167-vcs-connect",
+          "title": "Connect the workspace to your GitHub repository so pushes trigger runs.",
+          "required": true
+        },
+        {
+          "key": "d167-speculative",
+          "title": "Open a pull request and observe the speculative plan that appears without applying.",
+          "required": true
+        },
+        {
+          "key": "d167-workspace-vars",
+          "title": "Set workspace variables, including a sensitive one, and use them in a run.",
+          "required": true
+        },
+        {
+          "key": "d167-variable-sets",
+          "title": "Create a variable set shared across two workspaces.",
+          "required": true
+        },
+        {
+          "key": "d167-run-triggers",
+          "title": "Read how one workspace can trigger another after a successful apply.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 168,
+      "title": "HCP Terraform: Registry And Policy",
+      "tasks": [
+        {
+          "key": "d168-private-registry",
+          "title": "Publish one of your own modules to the private registry and consume it from a workspace.",
+          "required": true
+        },
+        {
+          "key": "d168-sentinel",
+          "title": "Read what Sentinel policies do and where they sit in the run lifecycle.",
+          "required": true
+        },
+        {
+          "key": "d168-policy-example",
+          "title": "Read one example policy and work out exactly which plans it would block.",
+          "required": true
+        },
+        {
+          "key": "d168-tiers",
+          "title": "Learn which capabilities are free and which need a paid tier, since the exam asks.",
+          "required": true
+        },
+        {
+          "key": "d168-compare-oss",
+          "title": "Compare an HCP Terraform workflow against the GitHub Actions pipeline you built on day 152.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 169,
+      "title": "Exam Objectives Sweep, Part One",
+      "tasks": [
+        {
+          "key": "d169-iac-concepts",
+          "title": "Revise infrastructure as code concepts and the specific advantages the exam expects you to name.",
+          "required": true
+        },
+        {
+          "key": "d169-multicloud",
+          "title": "Revise why Terraform is described as cloud agnostic and what that means in practice.",
+          "required": true
+        },
+        {
+          "key": "d169-plugins",
+          "title": "Revise providers, plugin installation, the registry, and where plugins are cached locally.",
+          "required": true
+        },
+        {
+          "key": "d169-cli-commands",
+          "title": "Revise every core CLI command and its main flags, including init, plan, apply, destroy and output.",
+          "required": true
+        },
+        {
+          "key": "d169-non-core",
+          "title": "Revise the commands outside the core workflow: import, state, taint, refresh and console.",
+          "required": true
+        },
+        {
+          "key": "d169-self-test",
+          "title": "Explain five of these topics out loud without notes and mark where you hesitated.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 170,
+      "title": "Exam Objectives Sweep, Part Two",
+      "tasks": [
+        {
+          "key": "d170-state-objectives",
+          "title": "Revise state: local versus remote, locking, sensitive data, and the state subcommands.",
+          "required": true
+        },
+        {
+          "key": "d170-module-objectives",
+          "title": "Revise modules: sources, versions, inputs, outputs and the public registry.",
+          "required": true
+        },
+        {
+          "key": "d170-config-objectives",
+          "title": "Revise configuration: variables, outputs, locals, data sources, functions and expressions.",
+          "required": true
+        },
+        {
+          "key": "d170-resource-behaviour",
+          "title": "Revise dependencies, lifecycle meta arguments, count, for_each and provisioners.",
+          "required": true
+        },
+        {
+          "key": "d170-provisioners",
+          "title": "Read why provisioners are described as a last resort in the documentation.",
+          "required": false
+        },
+        {
+          "key": "d170-map-guide",
+          "title": "Tick off every exam objective you can now explain and circle the ones you cannot.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 171,
+      "title": "First Practice Exam",
+      "tasks": [
+        {
+          "key": "d171-practice-one",
+          "title": "Sit a full timed Terraform Associate practice exam with no notes.",
+          "required": true
+        },
+        {
+          "key": "d171-score-domains",
+          "title": "Record your score broken down by objective, not just the total.",
+          "required": true
+        },
+        {
+          "key": "d171-review-wrong",
+          "title": "Review every wrong answer and write down why the correct answer was correct.",
+          "required": true
+        },
+        {
+          "key": "d171-gap-list",
+          "title": "Rank your three weakest objectives and plan tomorrow around them.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 172,
+      "title": "Drilling The Gaps",
+      "tasks": [
+        {
+          "key": "d172-weak-one",
+          "title": "Spend two hours on your weakest objective using the official documentation.",
+          "required": true
+        },
+        {
+          "key": "d172-hands-on-gap",
+          "title": "Build something small that exercises that objective rather than only reading.",
+          "required": true
+        },
+        {
+          "key": "d172-weak-two",
+          "title": "Repeat for the second weakest objective.",
+          "required": true
+        },
+        {
+          "key": "d172-command-flashcards",
+          "title": "Make flashcards for the commands and flags that keep catching you out.",
+          "required": true
+        },
+        {
+          "key": "d172-explain-aloud",
+          "title": "Explain your weakest topic out loud as if teaching it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 173,
+      "title": "Second Practice Exam",
+      "tasks": [
+        {
+          "key": "d173-practice-two",
+          "title": "Sit a second full timed practice exam from a different source.",
+          "required": true
+        },
+        {
+          "key": "d173-compare",
+          "title": "Compare your objective scores against day 171 and confirm the gaps are closing.",
+          "required": true
+        },
+        {
+          "key": "d173-review-again",
+          "title": "Review every wrong answer and add the reasoning to your notes.",
+          "required": true
+        },
+        {
+          "key": "d173-honest-call",
+          "title": "If you are below eighty percent, move the exam date rather than hoping.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 174,
+      "title": "Final Review And Logistics",
+      "tasks": [
+        {
+          "key": "d174-check-version",
+          "title": "Check the official HashiCorp page for the current exam version and format.",
+          "required": true
+        },
+        {
+          "key": "d174-cheat-sheet",
+          "title": "Build a one page sheet of commands, flags and behaviours you keep forgetting.",
+          "required": true
+        },
+        {
+          "key": "d174-scenario-drill",
+          "title": "Do thirty questions and read the reasoning on every one, right or wrong.",
+          "required": true
+        },
+        {
+          "key": "d174-logistics",
+          "title": "Confirm your ID, your proctoring setup and your start time.",
+          "required": true
+        },
+        {
+          "key": "d174-rest",
+          "title": "Stop studying by early evening. Sleep beats one more practice test.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 175,
+      "title": "Terraform Associate Exam Day",
+      "tasks": [
+        {
+          "key": "d175-sit-exam",
+          "title": "Sit the HashiCorp Terraform Associate exam.",
+          "required": true
+        },
+        {
+          "key": "d175-record",
+          "title": "Record the result and your objective breakdown either way.",
+          "required": true
+        },
+        {
+          "key": "d175-publish",
+          "title": "If you passed, add it to LinkedIn and your CV the same day.",
+          "required": true
+        },
+        {
+          "key": "d175-retake-plan",
+          "title": "If you did not pass, write the retake plan today while the questions are fresh.",
+          "required": true
+        },
+        {
+          "key": "d175-two-certs",
+          "title": "Note that you now hold two certifications backed by real projects, which is the point.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 176,
+      "title": "Observability: Deciding What To Measure",
+      "tasks": [
+        {
+          "key": "d176-three-signals",
+          "title": "Learn the difference between metrics, logs and traces and what each answers.",
+          "required": true
+        },
+        {
+          "key": "d176-golden-signals",
+          "title": "Learn the four golden signals: latency, traffic, errors and saturation.",
+          "required": true
+        },
+        {
+          "key": "d176-apply-to-stack",
+          "title": "Write down what each golden signal would mean for your own application.",
+          "required": true
+        },
+        {
+          "key": "d176-monitoring-vs-obs",
+          "title": "Write down the difference between monitoring known problems and investigating unknown ones.",
+          "required": true
+        },
+        {
+          "key": "d176-cargo-thought",
+          "title": "Decide the five numbers you would watch if the cargo system were live.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 177,
+      "title": "Dashboards And Structured Logging",
+      "tasks": [
+        {
+          "key": "d177-dashboard",
+          "title": "Build a CloudWatch dashboard showing the golden signals for your stack on one screen.",
+          "required": true
+        },
+        {
+          "key": "d177-structured-logs",
+          "title": "Change your application to log JSON instead of plain text lines.",
+          "required": true
+        },
+        {
+          "key": "d177-query-fields",
+          "title": "Query your structured logs by field with Logs Insights and prove it is easier than grep.",
+          "required": true
+        },
+        {
+          "key": "d177-request-id",
+          "title": "Add a request identifier to every log line so one request can be followed through.",
+          "required": true
+        },
+        {
+          "key": "d177-log-levels",
+          "title": "Set sensible log levels and explain why debug logging in production is expensive.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 178,
+      "title": "Alerts People Actually Act On",
+      "tasks": [
+        {
+          "key": "d178-symptom-alerts",
+          "title": "Write alerts on user visible symptoms rather than on internal causes.",
+          "required": true
+        },
+        {
+          "key": "d178-thresholds",
+          "title": "Set thresholds using your own baseline data rather than guessing round numbers.",
+          "required": true
+        },
+        {
+          "key": "d178-severity",
+          "title": "Split alerts into wake someone up and look at it tomorrow, and justify each one.",
+          "required": true
+        },
+        {
+          "key": "d178-runbook-link",
+          "title": "Attach a short runbook link to every alert saying what to check first.",
+          "required": true
+        },
+        {
+          "key": "d178-test-alerts",
+          "title": "Trigger each alert deliberately and confirm it fires and resolves correctly.",
+          "required": true
+        },
+        {
+          "key": "d178-noise-audit",
+          "title": "Delete any alert you would not act on. Noise is worse than no alert.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 179,
+      "title": "Tracing And Following A Request",
+      "tasks": [
+        {
+          "key": "d179-why-tracing",
+          "title": "Learn what distributed tracing solves that logs and metrics do not.",
+          "required": true
+        },
+        {
+          "key": "d179-xray-or-otel",
+          "title": "Read how AWS X Ray or OpenTelemetry instruments an application.",
+          "required": false
+        },
+        {
+          "key": "d179-correlate",
+          "title": "Follow one real request through load balancer logs, application logs and metrics.",
+          "required": true
+        },
+        {
+          "key": "d179-latency-hunt",
+          "title": "Find the slowest part of one request path and write down how you proved it.",
+          "required": true
+        },
+        {
+          "key": "d179-when-worth-it",
+          "title": "Write down when tracing is worth the setup cost and when it is overkill.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 180,
+      "title": "Instrumenting Your Own Stack",
+      "tasks": [
+        {
+          "key": "d180-metrics-in-code",
+          "title": "Emit one custom application metric and confirm it reaches CloudWatch.",
+          "required": true
+        },
+        {
+          "key": "d180-terraform-monitoring",
+          "title": "Define the dashboard, log groups and alarms in Terraform rather than the console.",
+          "required": true
+        },
+        {
+          "key": "d180-alarm-to-notification",
+          "title": "Wire alarms to a notification channel you will actually see.",
+          "required": true
+        },
+        {
+          "key": "d180-break-and-watch",
+          "title": "Break the application and confirm you learn about it from the alert, not by checking.",
+          "required": true
+        },
+        {
+          "key": "d180-slo",
+          "title": "Write one simple service level objective for your application and how you would measure it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 181,
+      "title": "Building The CV",
+      "tasks": [
+        {
+          "key": "d181-structure",
+          "title": "Write a one page CV: contact, summary, skills, projects, education, certifications.",
+          "required": true
+        },
+        {
+          "key": "d181-projects-first",
+          "title": "Put projects above education, since your projects are the strongest thing you have.",
+          "required": true
+        },
+        {
+          "key": "d181-measurable",
+          "title": "Write every bullet as an outcome with a number, not a list of tools.",
+          "required": true
+        },
+        {
+          "key": "d181-tailor",
+          "title": "Write a second version tailored to cloud support roles rather than DevOps roles.",
+          "required": true
+        },
+        {
+          "key": "d181-ats",
+          "title": "Read how applicant tracking systems parse CVs and remove anything that breaks parsing.",
+          "required": false
+        },
+        {
+          "key": "d181-review",
+          "title": "Have someone who has never seen your work read it and tell you what you do.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 182,
+      "title": "GitHub As A Portfolio",
+      "tasks": [
+        {
+          "key": "d182-profile-readme",
+          "title": "Write a profile README that says who you are and links your three best repositories.",
+          "required": true
+        },
+        {
+          "key": "d182-repo-readmes",
+          "title": "Rewrite each project README with a diagram, what it does, how to run it, and what you learned.",
+          "required": true
+        },
+        {
+          "key": "d182-clean-history",
+          "title": "Remove dead branches, junk files and anything that should never have been committed.",
+          "required": true
+        },
+        {
+          "key": "d182-pin-three",
+          "title": "Pin your pipeline, your Terraform environment and your capstone repository.",
+          "required": true
+        },
+        {
+          "key": "d182-fresh-clone",
+          "title": "Clone one repository to a clean machine and follow your own README exactly. Fix what breaks.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 183,
+      "title": "LinkedIn And The Search Itself",
+      "tasks": [
+        {
+          "key": "d183-headline",
+          "title": "Write a headline and about section that describe what you build, not what you are studying.",
+          "required": true
+        },
+        {
+          "key": "d183-experience",
+          "title": "Add your projects and certifications with the same outcome based wording as your CV.",
+          "required": true
+        },
+        {
+          "key": "d183-target-list",
+          "title": "Build a list of thirty target companies across the Gulf, Europe and remote roles.",
+          "required": true
+        },
+        {
+          "key": "d183-job-alerts",
+          "title": "Set job alerts for your six target role titles and read what the postings actually ask for.",
+          "required": true
+        },
+        {
+          "key": "d183-gap-check",
+          "title": "Compare twenty real postings against your skills and list the three most common gaps.",
+          "required": true
+        },
+        {
+          "key": "d183-outreach",
+          "title": "Write a short outreach message you could send to a person, not a job board.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 184,
+      "title": "Interview Prep: The Technical Questions",
+      "tasks": [
+        {
+          "key": "d184-url-question",
+          "title": "Answer out loud: what happens when you type a URL and press enter. Use your Month 2 knowledge.",
+          "required": true
+        },
+        {
+          "key": "d184-debug-502",
+          "title": "Answer out loud: a service returns 502, walk me through your diagnosis.",
+          "required": true
+        },
+        {
+          "key": "d184-sg-vs-nacl",
+          "title": "Answer out loud: explain security groups versus network ACLs and when each applies.",
+          "required": true
+        },
+        {
+          "key": "d184-state-question",
+          "title": "Answer out loud: what is Terraform state and what happens when two people apply at once.",
+          "required": true
+        },
+        {
+          "key": "d184-container-question",
+          "title": "Answer out loud: what is the difference between a container and a virtual machine.",
+          "required": true
+        },
+        {
+          "key": "d184-record-yourself",
+          "title": "Record one answer, watch it back, and cut the filler words.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 185,
+      "title": "Interview Prep: The Story Questions",
+      "tasks": [
+        {
+          "key": "d185-star",
+          "title": "Learn a simple structure for answering: situation, what you did, what the result was.",
+          "required": true
+        },
+        {
+          "key": "d185-break-fix-story",
+          "title": "Turn one of your break and fix write ups into a two minute spoken story.",
+          "required": true
+        },
+        {
+          "key": "d185-pipeline-story",
+          "title": "Turn your deployment time improvement into a story with a number in it.",
+          "required": true
+        },
+        {
+          "key": "d185-failure-story",
+          "title": "Prepare an honest story about something you got wrong and what you changed afterwards.",
+          "required": true
+        },
+        {
+          "key": "d185-why-devops",
+          "title": "Prepare a truthful answer for why you moved into this from a standing start.",
+          "required": true
+        },
+        {
+          "key": "d185-questions-back",
+          "title": "Prepare four questions to ask them that show you understand how systems are run.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 186,
+      "title": "Capstone: Scope And Architecture",
+      "tasks": [
+        {
+          "key": "d186-choose-scope",
+          "title": "Choose one realistic application to build and run. Keep it small and finishable.",
+          "required": true
+        },
+        {
+          "key": "d186-requirements",
+          "title": "Write down what it must do, who uses it, and what would count as an outage.",
+          "required": true
+        },
+        {
+          "key": "d186-architecture",
+          "title": "Draw the architecture: network, compute, database, load balancing and observability.",
+          "required": true
+        },
+        {
+          "key": "d186-decisions-doc",
+          "title": "Write down three design decisions and the alternative you rejected for each.",
+          "required": true
+        },
+        {
+          "key": "d186-cost-estimate",
+          "title": "Estimate the monthly cost before you build anything.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 187,
+      "title": "Capstone: Infrastructure From Code",
+      "tasks": [
+        {
+          "key": "d187-repo-setup",
+          "title": "Create the repository with your module structure, backend and pinned versions.",
+          "required": true
+        },
+        {
+          "key": "d187-network",
+          "title": "Build the network layer in Terraform with staging and production separated.",
+          "required": true
+        },
+        {
+          "key": "d187-compute-db",
+          "title": "Build the compute and database layers with security groups chained by tier.",
+          "required": true
+        },
+        {
+          "key": "d187-plan-review",
+          "title": "Read the full plan and count the resources before applying anything.",
+          "required": true
+        },
+        {
+          "key": "d187-apply-verify",
+          "title": "Apply to staging and verify the environment matches your diagram.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 188,
+      "title": "Capstone: The Pipeline",
+      "tasks": [
+        {
+          "key": "d188-app-container",
+          "title": "Containerise the application with a multi stage build and a non root user.",
+          "required": true
+        },
+        {
+          "key": "d188-ci-pipeline",
+          "title": "Build the pipeline: test, lint, scan, build, push to ECR.",
+          "required": true
+        },
+        {
+          "key": "d188-deploy-staging",
+          "title": "Deploy automatically to staging on merge to main.",
+          "required": true
+        },
+        {
+          "key": "d188-approval-prod",
+          "title": "Add the approval gate before production and test that it blocks.",
+          "required": true
+        },
+        {
+          "key": "d188-rollback-test",
+          "title": "Deploy a broken build deliberately, then roll back to the previous image tag.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 189,
+      "title": "Capstone: Observability",
+      "tasks": [
+        {
+          "key": "d189-dashboard-code",
+          "title": "Define the dashboard and alarms in Terraform using what you learned on day 180.",
+          "required": true
+        },
+        {
+          "key": "d189-structured-logs",
+          "title": "Ship structured application logs with request identifiers to CloudWatch.",
+          "required": true
+        },
+        {
+          "key": "d189-alerts",
+          "title": "Create two symptom based alerts with runbook links attached.",
+          "required": true
+        },
+        {
+          "key": "d189-verify-alerts",
+          "title": "Break the application and confirm you find out from the alert.",
+          "required": true
+        },
+        {
+          "key": "d189-slo-doc",
+          "title": "Write down the service level objective and how the dashboard proves it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 190,
+      "title": "Capstone: Prove It And Write It Up",
+      "tasks": [
+        {
+          "key": "d190-destroy-rebuild",
+          "title": "Destroy the whole environment and rebuild it from code alone. Time it.",
+          "required": true
+        },
+        {
+          "key": "d190-close-gaps",
+          "title": "List every manual step you needed, fix each one in code, then rebuild again.",
+          "required": true
+        },
+        {
+          "key": "d190-sabotage",
+          "title": "Have a friend break one thing anywhere in the stack without telling you what.",
+          "required": true
+        },
+        {
+          "key": "d190-diagnose-fix",
+          "title": "Diagnose and fix it using your dashboards, logs and checklists. Record how long it took.",
+          "required": true
+        },
+        {
+          "key": "d190-write-up",
+          "title": "Write the project up: architecture, decisions, pipeline, observability and measured outcomes.",
+          "required": true
+        },
+        {
+          "key": "d190-push-pin",
+          "title": "Push everything and pin the repository. This is the project you will be interviewed on.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 170,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q170-1",
+          "type": "mcq",
+          "prompt": "What is a workspace in HCP Terraform?",
+          "options": [
+            "A folder on your machine",
+            "A managed unit holding state, variables and run history for one environment",
+            "A provider setting",
+            "A module version"
+          ],
+          "answer": 1,
+          "explanation": "Each workspace owns its own state and configuration inputs, and runs execute against it."
+        },
+        {
+          "key": "q170-2",
+          "type": "mcq",
+          "prompt": "What is a speculative plan?",
+          "options": [
+            "A plan that applies automatically",
+            "A plan run for review, typically on a pull request, that never applies",
+            "A plan with no state",
+            "A plan that estimates cost"
+          ],
+          "answer": 1,
+          "explanation": "It shows the effect of a proposed change without changing anything."
+        },
+        {
+          "key": "q170-3",
+          "type": "mcq",
+          "prompt": "What does connecting a workspace to a version control repository achieve?",
+          "options": [
+            "Cheaper runs",
+            "Changes in the repository trigger runs automatically",
+            "Faster state locking",
+            "Automatic imports"
+          ],
+          "answer": 1,
+          "explanation": "The repository becomes the source of truth and pushes drive the workflow."
+        },
+        {
+          "key": "q170-4",
+          "type": "mcq",
+          "prompt": "What is a variable set used for?",
+          "options": [
+            "Storing state",
+            "Sharing the same variables across multiple workspaces",
+            "Defining outputs",
+            "Pinning providers"
+          ],
+          "answer": 1,
+          "explanation": "It avoids defining the same values separately in every workspace."
+        },
+        {
+          "key": "q170-5",
+          "type": "mcq",
+          "prompt": "What does Sentinel do?",
+          "options": [
+            "Scans images",
+            "Enforces policy rules against a plan before it can be applied",
+            "Estimates cost",
+            "Manages state locking"
+          ],
+          "answer": 1,
+          "explanation": "It sits between plan and apply so non compliant changes are stopped."
+        },
+        {
+          "key": "q170-6",
+          "type": "mcq",
+          "prompt": "What is the private module registry for?",
+          "options": [
+            "Public sharing",
+            "Publishing and versioning modules within your own organisation",
+            "Storing state",
+            "Storing container images"
+          ],
+          "answer": 1,
+          "explanation": "Teams reuse internal modules with proper versioning rather than copying code."
+        },
+        {
+          "key": "q170-7",
+          "type": "mcq",
+          "prompt": "Where does Terraform install provider plugins?",
+          "options": [
+            "In the state file",
+            "In a local directory during init",
+            "In the module registry",
+            "In the backend"
+          ],
+          "answer": 1,
+          "explanation": "Init downloads and caches the providers the configuration requires."
+        },
+        {
+          "key": "q170-8",
+          "type": "mcq",
+          "prompt": "Which command would you use to see the current value of an output?",
+          "options": [
+            "terraform show",
+            "terraform output",
+            "terraform state list",
+            "terraform console"
+          ],
+          "answer": 1,
+          "explanation": "The output command prints declared outputs from the current state."
+        },
+        {
+          "key": "q170-9",
+          "type": "mcq",
+          "prompt": "Which of these is outside the core write, plan, apply workflow?",
+          "options": [
+            "terraform apply",
+            "terraform import",
+            "terraform plan",
+            "terraform init"
+          ],
+          "answer": 1,
+          "explanation": "Import, state commands and console are tools you reach for in specific situations."
+        },
+        {
+          "key": "q170-10",
+          "type": "mcq",
+          "prompt": "Why does the documentation describe provisioners as a last resort?",
+          "options": [
+            "They are slow",
+            "They break the declarative model and are hard to make reliable",
+            "They cost money",
+            "They only work on Linux"
+          ],
+          "answer": 1,
+          "explanation": "They run imperative steps that Terraform cannot reason about or reconcile."
+        },
+        {
+          "key": "q170-11",
+          "type": "mcq",
+          "prompt": "What does terraform console let you do?",
+          "options": [
+            "Apply changes interactively",
+            "Evaluate expressions against the current state",
+            "Edit state",
+            "Run remote plans"
+          ],
+          "answer": 1,
+          "explanation": "It is the fastest way to check a function or interpolation before using it."
+        },
+        {
+          "key": "q170-12",
+          "type": "mcq",
+          "prompt": "What is one advantage of HCP Terraform over an S3 backend with DynamoDB?",
+          "options": [
+            "Lower cost",
+            "Remote execution, run history and policy enforcement in one place",
+            "Faster plans always",
+            "No need for providers"
+          ],
+          "answer": 1,
+          "explanation": "The managed service adds workflow features on top of state storage and locking."
+        },
+        {
+          "key": "q170-13",
+          "type": "true_false",
+          "prompt": "Terraform is described as cloud agnostic because provider plugins let it manage many platforms.",
+          "answer": true,
+          "explanation": "The core is the same regardless of target, and the provider handles the specific API."
+        },
+        {
+          "key": "q170-14",
+          "type": "true_false",
+          "prompt": "A speculative plan can change infrastructure if the plan succeeds.",
+          "answer": false,
+          "explanation": "It exists specifically to show the effect without applying anything."
+        },
+        {
+          "key": "q170-15",
+          "type": "true_false",
+          "prompt": "Knowing which HCP Terraform features are paid is worth revising because the exam asks about it.",
+          "answer": true,
+          "explanation": "Tier awareness appears in the objectives even though it rarely matters day to day."
+        }
+      ]
+    },
+    {
+      "afterDay": 175,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q175-1",
+          "type": "mcq",
+          "prompt": "What is the most effective final stage of exam preparation?",
+          "options": [
+            "More video courses",
+            "Timed practice exams with full review of every wrong answer",
+            "Rereading the documentation cover to cover",
+            "Rebuilding all your labs"
+          ],
+          "answer": 1,
+          "explanation": "Practice under time reveals both knowledge gaps and reading speed problems."
+        },
+        {
+          "key": "q175-2",
+          "type": "mcq",
+          "prompt": "Why record practice scores by objective?",
+          "options": [
+            "It is required",
+            "So you revise the weak areas instead of spreading effort evenly",
+            "To track exam time",
+            "To compare with others"
+          ],
+          "answer": 1,
+          "explanation": "Even revision wastes the limited time you have on things you already know."
+        },
+        {
+          "key": "q175-3",
+          "type": "mcq",
+          "prompt": "You are at sixty five percent a few days before the date. What is the sensible action?",
+          "options": [
+            "Sit it and hope",
+            "Move the date and close the gaps",
+            "Study only the night before",
+            "Give up on the certification"
+          ],
+          "answer": 1,
+          "explanation": "Moving a date costs less than a failed attempt in both money and confidence."
+        },
+        {
+          "key": "q175-4",
+          "type": "mcq",
+          "prompt": "Why check the vendor page rather than a blog for exam details?",
+          "options": [
+            "Blogs cost money",
+            "Exam versions and formats change and third party posts go stale",
+            "Blogs are blocked",
+            "Vendors give discounts"
+          ],
+          "answer": 1,
+          "explanation": "Only the vendor page is guaranteed to describe the exam you will actually sit."
+        },
+        {
+          "key": "q175-5",
+          "type": "mcq",
+          "prompt": "Why explain a weak topic out loud before the exam?",
+          "options": [
+            "It is faster than reading",
+            "Stumbling shows precisely where your understanding is thin",
+            "It replaces practice tests",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Spoken explanation exposes gaps that silent reading hides."
+        },
+        {
+          "key": "q175-6",
+          "type": "mcq",
+          "prompt": "What should you do the evening before an exam?",
+          "options": [
+            "One more full practice test",
+            "Stop studying and sleep",
+            "Rebuild a lab",
+            "Read the whole objectives list"
+          ],
+          "answer": 1,
+          "explanation": "Tiredness costs more marks than the last hour of revision could gain."
+        },
+        {
+          "key": "q175-7",
+          "type": "mcq",
+          "prompt": "What does a certification actually prove?",
+          "options": [
+            "That you can run production systems",
+            "That you know the concepts and vocabulary",
+            "That you have professional experience",
+            "That you can be hired without projects"
+          ],
+          "answer": 1,
+          "explanation": "It gets you past filters, and your projects carry the interview."
+        },
+        {
+          "key": "q175-8",
+          "type": "mcq",
+          "prompt": "Why publish a new certification the same day you earn it?",
+          "options": [
+            "It expires",
+            "Because recruiters search on it and momentum matters",
+            "It is a requirement",
+            "To claim a discount"
+          ],
+          "answer": 1,
+          "explanation": "An unlisted credential does nothing for you."
+        },
+        {
+          "key": "q175-9",
+          "type": "mcq",
+          "prompt": "If you fail, when should you write the retake plan?",
+          "options": [
+            "After a break",
+            "The same day, while you remember which areas hurt",
+            "After more study",
+            "Only if the score was close"
+          ],
+          "answer": 1,
+          "explanation": "Your recall of the weak areas is most accurate immediately afterwards."
+        },
+        {
+          "key": "q175-10",
+          "type": "mcq",
+          "prompt": "Why is a certification stronger when paired with a public project?",
+          "options": [
+            "Projects are required",
+            "The exam shows knowledge and the project shows application",
+            "Projects replace interviews",
+            "Employers ignore certificates"
+          ],
+          "answer": 1,
+          "explanation": "Together they answer both what you know and what you have actually done."
+        },
+        {
+          "key": "q175-11",
+          "type": "mcq",
+          "prompt": "What is the purpose of a one page cheat sheet in the final days?",
+          "options": [
+            "To use during the exam",
+            "To consolidate the facts that keep slipping",
+            "To share with others",
+            "To replace practice"
+          ],
+          "answer": 1,
+          "explanation": "The act of writing it is the revision, and it concentrates what will not stick."
+        },
+        {
+          "key": "q175-12",
+          "type": "mcq",
+          "prompt": "What should you do with a practice question you got right by guessing?",
+          "options": [
+            "Nothing",
+            "Review it as if you got it wrong",
+            "Skip it",
+            "Mark it as known"
+          ],
+          "answer": 1,
+          "explanation": "A lucky guess is an unmarked gap that will reappear in the real exam."
+        },
+        {
+          "key": "q175-13",
+          "type": "true_false",
+          "prompt": "Two certifications backed by real projects is a stronger position than four certifications with none.",
+          "answer": true,
+          "explanation": "Employers discount certificate stacking without evidence of application."
+        },
+        {
+          "key": "q175-14",
+          "type": "true_false",
+          "prompt": "Reviewing wrong answers matters more than repeating practice exams endlessly.",
+          "answer": true,
+          "explanation": "The learning is in understanding the reasoning, not in accumulating attempt counts."
+        },
+        {
+          "key": "q175-15",
+          "type": "true_false",
+          "prompt": "Booking the exam only once you are consistently scoring above eighty percent is a reasonable rule.",
+          "answer": true,
+          "explanation": "It converts a hopeful attempt into a likely pass, and the rule protects you from optimism."
+        }
+      ]
+    },
+    {
+      "afterDay": 180,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q180-1",
+          "type": "mcq",
+          "prompt": "What question do metrics answer that logs do not?",
+          "options": [
+            "Why did this specific request fail",
+            "How is the system behaving over time",
+            "What did the user send",
+            "Which line of code ran"
+          ],
+          "answer": 1,
+          "explanation": "Metrics show trends and aggregates, while logs explain individual events."
+        },
+        {
+          "key": "q180-2",
+          "type": "mcq",
+          "prompt": "What are the four golden signals?",
+          "options": [
+            "CPU, memory, disk, network",
+            "Latency, traffic, errors, saturation",
+            "Uptime, cost, users, requests",
+            "Logs, metrics, traces, alerts"
+          ],
+          "answer": 1,
+          "explanation": "They describe user visible health rather than machine internals."
+        },
+        {
+          "key": "q180-3",
+          "type": "mcq",
+          "prompt": "Why alert on symptoms rather than causes?",
+          "options": [
+            "Symptoms are easier to measure",
+            "Because users experience symptoms, and causes vary",
+            "Causes cannot be measured",
+            "It reduces cost"
+          ],
+          "answer": 1,
+          "explanation": "High CPU may be fine, while slow responses are always a problem worth waking up for."
+        },
+        {
+          "key": "q180-4",
+          "type": "mcq",
+          "prompt": "Why is structured logging better than plain text lines?",
+          "options": [
+            "It is smaller",
+            "You can query by field instead of matching text patterns",
+            "It is encrypted",
+            "It is required by CloudWatch"
+          ],
+          "answer": 1,
+          "explanation": "Fields make filtering and aggregation reliable instead of fragile."
+        },
+        {
+          "key": "q180-5",
+          "type": "mcq",
+          "prompt": "What does a request identifier in every log line give you?",
+          "options": [
+            "Smaller logs",
+            "The ability to follow one request across components",
+            "Faster writes",
+            "Automatic alerts"
+          ],
+          "answer": 1,
+          "explanation": "Correlation is what turns scattered lines into a single story."
+        },
+        {
+          "key": "q180-6",
+          "type": "mcq",
+          "prompt": "Why is debug level logging expensive in production?",
+          "options": [
+            "It is slower to write",
+            "Volume drives storage and query costs, and hides the important lines",
+            "It is insecure",
+            "It breaks dashboards"
+          ],
+          "answer": 1,
+          "explanation": "Both the bill and the signal to noise ratio suffer."
+        },
+        {
+          "key": "q180-7",
+          "type": "mcq",
+          "prompt": "How should you choose an alert threshold?",
+          "options": [
+            "Pick a round number",
+            "Base it on your own observed baseline",
+            "Copy another team",
+            "Use the service default"
+          ],
+          "answer": 1,
+          "explanation": "A threshold that does not reflect your normal behaviour produces noise or silence."
+        },
+        {
+          "key": "q180-8",
+          "type": "mcq",
+          "prompt": "What should be attached to every alert?",
+          "options": [
+            "The full log output",
+            "A short runbook saying what to check first",
+            "The cost estimate",
+            "The architecture diagram"
+          ],
+          "answer": 1,
+          "explanation": "The person woken at 3am needs a starting point, not a puzzle."
+        },
+        {
+          "key": "q180-9",
+          "type": "mcq",
+          "prompt": "What should you do with an alert you would not act on?",
+          "options": [
+            "Lower its threshold",
+            "Delete it",
+            "Route it to email",
+            "Increase its severity"
+          ],
+          "answer": 1,
+          "explanation": "Alerts nobody acts on train people to ignore all alerts, including the real ones."
+        },
+        {
+          "key": "q180-10",
+          "type": "mcq",
+          "prompt": "What does distributed tracing add beyond logs and metrics?",
+          "options": [
+            "Cheaper storage",
+            "The path and timing of one request across multiple services",
+            "Longer retention",
+            "Automatic remediation"
+          ],
+          "answer": 1,
+          "explanation": "It shows where the time went when several components are involved."
+        },
+        {
+          "key": "q180-11",
+          "type": "mcq",
+          "prompt": "Why define dashboards and alarms in Terraform?",
+          "options": [
+            "They render faster",
+            "So monitoring is versioned and rebuilt with the environment",
+            "It is cheaper",
+            "The console cannot create them"
+          ],
+          "answer": 1,
+          "explanation": "Monitoring created by hand disappears the next time the environment is rebuilt."
+        },
+        {
+          "key": "q180-12",
+          "type": "mcq",
+          "prompt": "What is a service level objective?",
+          "options": [
+            "A cost target",
+            "A stated target for a measurable aspect of service quality",
+            "An alert threshold",
+            "A team policy"
+          ],
+          "answer": 1,
+          "explanation": "It defines what good looks like in numbers, which is what alerts should protect."
+        },
+        {
+          "key": "q180-13",
+          "type": "true_false",
+          "prompt": "Learning about an outage from your alert rather than by checking manually is the goal.",
+          "answer": true,
+          "explanation": "If you find problems by looking, your monitoring is not doing its job."
+        },
+        {
+          "key": "q180-14",
+          "type": "true_false",
+          "prompt": "You should test that an alert fires by deliberately causing the condition.",
+          "answer": true,
+          "explanation": "An untested alert is an assumption, and it usually fails on the day it matters."
+        },
+        {
+          "key": "q180-15",
+          "type": "true_false",
+          "prompt": "Monitoring answers known questions, while observability helps investigate problems you did not anticipate.",
+          "answer": true,
+          "explanation": "The distinction matters because you cannot build a dashboard for a failure you have never seen."
+        }
+      ]
+    },
+    {
+      "afterDay": 185,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q185-1",
+          "type": "mcq",
+          "prompt": "Where should projects sit on your CV given your background?",
+          "options": [
+            "After education",
+            "Above education, near the top",
+            "In an appendix",
+            "Only on GitHub"
+          ],
+          "answer": 1,
+          "explanation": "Projects are your strongest evidence, so they should be read first."
+        },
+        {
+          "key": "q185-2",
+          "type": "mcq",
+          "prompt": "Which CV bullet is strongest?",
+          "options": [
+            "Experience with Docker and CI/CD",
+            "Cut deployment time from 20 minutes to under 2 by automating the release pipeline",
+            "Familiar with AWS",
+            "Completed a cloud course"
+          ],
+          "answer": 1,
+          "explanation": "An outcome with a number shows what changed because you were there."
+        },
+        {
+          "key": "q185-3",
+          "type": "mcq",
+          "prompt": "Why tailor a second CV for cloud support roles?",
+          "options": [
+            "To apply more times",
+            "Because different roles emphasise different evidence from the same work",
+            "It is required",
+            "To hide gaps"
+          ],
+          "answer": 1,
+          "explanation": "The same projects can be framed toward troubleshooting or toward building."
+        },
+        {
+          "key": "q185-4",
+          "type": "mcq",
+          "prompt": "What should a project README contain?",
+          "options": [
+            "Only the code",
+            "A diagram, what it does, how to run it, and what you learned",
+            "Your CV",
+            "A list of commits"
+          ],
+          "answer": 1,
+          "explanation": "A reviewer decides in under a minute, and the README is what they read."
+        },
+        {
+          "key": "q185-5",
+          "type": "mcq",
+          "prompt": "Why clone your own repository to a clean machine and follow your README?",
+          "options": [
+            "To test git",
+            "Because the instructions almost always assume something only your machine has",
+            "To reduce size",
+            "To check licences"
+          ],
+          "answer": 1,
+          "explanation": "It is the same lesson as the works on my machine problem, applied to documentation."
+        },
+        {
+          "key": "q185-6",
+          "type": "mcq",
+          "prompt": "What should a LinkedIn headline say?",
+          "options": [
+            "That you are studying",
+            "What you build and the roles you are targeting",
+            "Your GPA",
+            "Your certifications only"
+          ],
+          "answer": 1,
+          "explanation": "Recruiters search for what you do, not for what you are currently learning."
+        },
+        {
+          "key": "q185-7",
+          "type": "mcq",
+          "prompt": "Why read twenty real job postings before applying?",
+          "options": [
+            "To count salaries",
+            "To find the most common requirements you do not yet meet",
+            "To copy the wording",
+            "To pick a country"
+          ],
+          "answer": 1,
+          "explanation": "The postings tell you what the gap actually is, rather than what you assume it is."
+        },
+        {
+          "key": "q185-8",
+          "type": "mcq",
+          "prompt": "Why send a message to a person rather than only applying through job boards?",
+          "options": [
+            "It is faster to write",
+            "Applications from a real conversation get read far more often",
+            "Job boards are fake",
+            "It avoids interviews"
+          ],
+          "answer": 1,
+          "explanation": "A named contact moves you out of a pile of hundreds."
+        },
+        {
+          "key": "q185-9",
+          "type": "mcq",
+          "prompt": "How should you answer a walk me through your diagnosis question?",
+          "options": [
+            "Name the tools you know",
+            "Describe your checks in order, from your machine outwards",
+            "Say you would search online",
+            "Give the answer immediately"
+          ],
+          "answer": 1,
+          "explanation": "Interviewers are testing your method, not whether you guess the cause."
+        },
+        {
+          "key": "q185-10",
+          "type": "mcq",
+          "prompt": "What makes a good failure story in an interview?",
+          "options": [
+            "A failure that was someone else's fault",
+            "An honest mistake and the specific change you made afterwards",
+            "A trivial failure",
+            "Refusing to answer"
+          ],
+          "answer": 1,
+          "explanation": "The change you made is the part they are actually assessing."
+        },
+        {
+          "key": "q185-11",
+          "type": "mcq",
+          "prompt": "Why record yourself answering a technical question?",
+          "options": [
+            "To share it online",
+            "To hear the filler and the parts where you lose the thread",
+            "To time it",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "You cannot hear your own hesitation while you are speaking."
+        },
+        {
+          "key": "q185-12",
+          "type": "mcq",
+          "prompt": "Why prepare questions to ask the interviewer?",
+          "options": [
+            "To fill time",
+            "Because what you ask shows how you think about running systems",
+            "It is polite only",
+            "To negotiate salary"
+          ],
+          "answer": 1,
+          "explanation": "Good questions about on call, deployment and incidents signal real understanding."
+        },
+        {
+          "key": "q185-13",
+          "type": "true_false",
+          "prompt": "Preparing job materials in April rather than the final week is a deliberate protection against running out of time.",
+          "answer": true,
+          "explanation": "The job hunt work is always what gets squeezed, so it is moved earlier on purpose."
+        },
+        {
+          "key": "q185-14",
+          "type": "true_false",
+          "prompt": "A CV listing tools without outcomes is weaker than one listing fewer tools with measured results.",
+          "answer": true,
+          "explanation": "Anyone can list tools, and outcomes are what distinguish candidates."
+        },
+        {
+          "key": "q185-15",
+          "type": "true_false",
+          "prompt": "Having someone unfamiliar with your work read your CV is a useful test of whether it communicates.",
+          "answer": true,
+          "explanation": "If they cannot say what you do after one read, the CV has failed its main job."
+        }
+      ]
+    },
+    {
+      "afterDay": 190,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q190-1",
+          "type": "mcq",
+          "prompt": "What should you do before building the capstone?",
+          "options": [
+            "Start coding immediately",
+            "Define requirements, draw the architecture and estimate the cost",
+            "Buy reserved instances",
+            "Set up monitoring"
+          ],
+          "answer": 1,
+          "explanation": "Design decisions are far cheaper to change on paper than in a running environment."
+        },
+        {
+          "key": "q190-2",
+          "type": "mcq",
+          "prompt": "Why write down the alternatives you rejected?",
+          "options": [
+            "To fill the README",
+            "Because interviewers ask why you chose one approach over another",
+            "It is required",
+            "To increase word count"
+          ],
+          "answer": 1,
+          "explanation": "Explaining a trade off is what separates a builder from someone following a tutorial."
+        },
+        {
+          "key": "q190-3",
+          "type": "mcq",
+          "prompt": "Why keep the capstone small?",
+          "options": [
+            "Small projects impress more",
+            "Because a finished small project beats an abandoned large one",
+            "It costs less",
+            "It is easier to explain"
+          ],
+          "answer": 1,
+          "explanation": "Scope is the most common reason a portfolio project never gets finished."
+        },
+        {
+          "key": "q190-4",
+          "type": "mcq",
+          "prompt": "How should staging and production differ in the capstone?",
+          "options": [
+            "Different code",
+            "Same code and modules, different variable values and sizes",
+            "Different providers",
+            "Different regions only"
+          ],
+          "answer": 1,
+          "explanation": "Reusing the code with different inputs is what makes promotion trustworthy."
+        },
+        {
+          "key": "q190-5",
+          "type": "mcq",
+          "prompt": "What does a rollback test prove?",
+          "options": [
+            "That the build works",
+            "That you can recover from a bad release quickly",
+            "That tests pass",
+            "That costs are controlled"
+          ],
+          "answer": 1,
+          "explanation": "Deploying is easy, and recovering is what actually matters under pressure."
+        },
+        {
+          "key": "q190-6",
+          "type": "mcq",
+          "prompt": "Why deploy a deliberately broken build during the capstone?",
+          "options": [
+            "To test the linter",
+            "To prove the rollback path works before you need it",
+            "To measure cost",
+            "To fill a day"
+          ],
+          "answer": 1,
+          "explanation": "An untested rollback is a plan, not a capability."
+        },
+        {
+          "key": "q190-7",
+          "type": "mcq",
+          "prompt": "Why define alarms and dashboards in Terraform for the capstone?",
+          "options": [
+            "They look better",
+            "So they are rebuilt automatically with the environment",
+            "It is cheaper",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Monitoring built by hand disappears on the next rebuild and is never noticed until an incident."
+        },
+        {
+          "key": "q190-8",
+          "type": "mcq",
+          "prompt": "What does the destroy and rebuild exercise reveal?",
+          "options": [
+            "Apply speed",
+            "Every manual step still hidden in your process",
+            "Cost per hour",
+            "State size"
+          ],
+          "answer": 1,
+          "explanation": "Anything you had to click is a gap, and this is the only reliable way to find them."
+        },
+        {
+          "key": "q190-9",
+          "type": "mcq",
+          "prompt": "After finding manual steps, what is the correct next action?",
+          "options": [
+            "Document them",
+            "Fix each in code and rebuild again to confirm",
+            "Ignore minor ones",
+            "Note them in the README"
+          ],
+          "answer": 1,
+          "explanation": "The second clean rebuild is the proof, and documentation alone makes them permanent."
+        },
+        {
+          "key": "q190-10",
+          "type": "mcq",
+          "prompt": "Why time your diagnosis during the sabotage exercise?",
+          "options": [
+            "To compete",
+            "Because time to recovery is a real operational metric you can quote",
+            "It is required",
+            "To fill the write up"
+          ],
+          "answer": 1,
+          "explanation": "A measured recovery time is far more convincing than saying you fixed it."
+        },
+        {
+          "key": "q190-11",
+          "type": "mcq",
+          "prompt": "What belongs in the capstone write up?",
+          "options": [
+            "Only the code",
+            "Architecture, decisions, pipeline, observability and measured outcomes",
+            "A list of AWS services",
+            "The full plan output"
+          ],
+          "answer": 1,
+          "explanation": "Those five sections answer every question an interviewer is likely to ask."
+        },
+        {
+          "key": "q190-12",
+          "type": "mcq",
+          "prompt": "Why is this the project you will be interviewed on?",
+          "options": [
+            "It is the newest",
+            "It is the only one covering design, automation, deployment and operations together",
+            "It is the largest",
+            "It uses the most services"
+          ],
+          "answer": 1,
+          "explanation": "It demonstrates the whole loop, which no single earlier project does on its own."
+        },
+        {
+          "key": "q190-13",
+          "type": "true_false",
+          "prompt": "Estimating monthly cost before building is part of designing responsibly.",
+          "answer": true,
+          "explanation": "Architecture drives the bill, so the estimate belongs at design time, not after the invoice."
+        },
+        {
+          "key": "q190-14",
+          "type": "true_false",
+          "prompt": "A capstone with no monitoring can still demonstrate that you can operate a system.",
+          "answer": false,
+          "explanation": "Operating means knowing when something breaks, and without monitoring you would find out from a user."
+        },
+        {
+          "key": "q190-15",
+          "type": "true_false",
+          "prompt": "Following your own README on a clean machine is a fair test of whether the project is genuinely reproducible.",
+          "answer": true,
+          "explanation": "If you cannot reproduce it from your own instructions, nobody else can either."
+        }
+      ]
+    }
+  ]
+}

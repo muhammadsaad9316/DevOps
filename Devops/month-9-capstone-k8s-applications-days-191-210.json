@@ -1,0 +1,1338 @@
+{
+  "days": [
+    {
+      "day": 191,
+      "title": "Capstone: Production Environment",
+      "tasks": [
+        {
+          "key": "d191-promote-prod",
+          "title": "Promote the capstone to production using the same modules with production variables.",
+          "required": true
+        },
+        {
+          "key": "d191-prod-differences",
+          "title": "List every way production differs from staging and confirm each difference is deliberate.",
+          "required": true
+        },
+        {
+          "key": "d191-backups-on",
+          "title": "Enable backups on the database and confirm the retention period is what you intended.",
+          "required": true
+        },
+        {
+          "key": "d191-prevent-destroy",
+          "title": "Add prevent_destroy to the resources that must never be removed by accident.",
+          "required": true
+        },
+        {
+          "key": "d191-verify-live",
+          "title": "Load the production site over HTTPS and confirm every alarm is green.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 192,
+      "title": "Capstone: Security Review",
+      "tasks": [
+        {
+          "key": "d192-scan-all",
+          "title": "Run your static analysis and policy checks across the whole configuration and read every finding.",
+          "required": true
+        },
+        {
+          "key": "d192-public-surface",
+          "title": "List every resource reachable from the internet and justify each one in writing.",
+          "required": true
+        },
+        {
+          "key": "d192-iam-audit",
+          "title": "Review every IAM policy in the project and remove any permission you cannot justify.",
+          "required": true
+        },
+        {
+          "key": "d192-secrets-audit",
+          "title": "Confirm no secret exists in the repository, the state file or an environment variable default.",
+          "required": true
+        },
+        {
+          "key": "d192-encryption-check",
+          "title": "Confirm encryption at rest on storage and databases, and TLS everywhere in transit.",
+          "required": true
+        },
+        {
+          "key": "d192-fix-three",
+          "title": "Fix the three most serious findings and rerun the checks until they pass.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 193,
+      "title": "Capstone: Cost And Efficiency",
+      "tasks": [
+        {
+          "key": "d193-actual-cost",
+          "title": "Look at the real cost of the running environment and compare it to your day 186 estimate.",
+          "required": true
+        },
+        {
+          "key": "d193-explain-gap",
+          "title": "Explain every difference between the estimate and reality in writing.",
+          "required": true
+        },
+        {
+          "key": "d193-right-size",
+          "title": "Use your own metrics to right size at least one resource, then confirm nothing broke.",
+          "required": true
+        },
+        {
+          "key": "d193-cheaper-staging",
+          "title": "Reduce the staging environment cost through variables alone, changing no code.",
+          "required": true
+        },
+        {
+          "key": "d193-cost-in-readme",
+          "title": "Record the monthly cost of each environment in the README.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 194,
+      "title": "Capstone: Documentation",
+      "tasks": [
+        {
+          "key": "d194-architecture-final",
+          "title": "Finalise the architecture diagram so it matches exactly what the code creates.",
+          "required": true
+        },
+        {
+          "key": "d194-decisions",
+          "title": "Write up five design decisions with the alternative you rejected and why.",
+          "required": true
+        },
+        {
+          "key": "d194-runbook",
+          "title": "Write a runbook covering deploy, rollback, restore from backup and the three most likely failures.",
+          "required": true
+        },
+        {
+          "key": "d194-getting-started",
+          "title": "Write instructions that let a stranger deploy the whole thing from a clean machine.",
+          "required": true
+        },
+        {
+          "key": "d194-outcomes",
+          "title": "Write the measured outcomes: build time, deploy time, recovery time and monthly cost.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 195,
+      "title": "Capstone: Final Proof",
+      "tasks": [
+        {
+          "key": "d195-clean-clone",
+          "title": "Clone the repository onto a clean machine and follow your own instructions exactly.",
+          "required": true
+        },
+        {
+          "key": "d195-fix-instructions",
+          "title": "Fix every instruction that failed, then repeat until a clean run works first time.",
+          "required": true
+        },
+        {
+          "key": "d195-destroy-rebuild",
+          "title": "Destroy production and rebuild it entirely from code. Record the time it took.",
+          "required": true
+        },
+        {
+          "key": "d195-final-sabotage",
+          "title": "Have a friend break one thing anywhere in the stack without telling you what.",
+          "required": true
+        },
+        {
+          "key": "d195-timed-recovery",
+          "title": "Diagnose and fix it, and record your time to recovery as a real number.",
+          "required": true
+        },
+        {
+          "key": "d195-publish",
+          "title": "Push everything, pin the repository, and treat it as finished.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 196,
+      "title": "Kubernetes: What It Actually Does",
+      "tasks": [
+        {
+          "key": "d196-why-k8s",
+          "title": "Read what Kubernetes solves that running containers on a single machine does not.",
+          "required": true
+        },
+        {
+          "key": "d196-control-plane",
+          "title": "Learn the parts: control plane, nodes, scheduler and the desired state loop.",
+          "required": true
+        },
+        {
+          "key": "d196-declarative",
+          "title": "Write down how the desired state model compares to Terraform's approach.",
+          "required": true
+        },
+        {
+          "key": "d196-honest-scope",
+          "title": "Accept in writing that this week is exposure, not competence, and that is the plan.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 197,
+      "title": "Kubernetes: Pods, Deployments And Services",
+      "tasks": [
+        {
+          "key": "d197-local-cluster",
+          "title": "Start a local cluster with kind or minikube and confirm kubectl connects.",
+          "required": true
+        },
+        {
+          "key": "d197-first-pod",
+          "title": "Run a single pod and inspect it with kubectl get and kubectl describe.",
+          "required": true
+        },
+        {
+          "key": "d197-deployment",
+          "title": "Create a deployment with three replicas and watch it maintain that count.",
+          "required": true
+        },
+        {
+          "key": "d197-kill-pod",
+          "title": "Delete a pod and watch the deployment replace it automatically.",
+          "required": true
+        },
+        {
+          "key": "d197-service",
+          "title": "Expose the deployment with a service and reach it from inside the cluster.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 198,
+      "title": "Kubernetes: A Managed Cluster",
+      "tasks": [
+        {
+          "key": "d198-eks-cluster",
+          "title": "Create a small managed cluster and connect kubectl to it.",
+          "required": true
+        },
+        {
+          "key": "d198-deploy-your-image",
+          "title": "Deploy your own container image from ECR into the cluster.",
+          "required": true
+        },
+        {
+          "key": "d198-expose-external",
+          "title": "Expose it through a load balancer and reach it from the internet.",
+          "required": true
+        },
+        {
+          "key": "d198-config-secrets",
+          "title": "Use a ConfigMap and a Secret to pass configuration into your pods.",
+          "required": true
+        },
+        {
+          "key": "d198-delete-cluster",
+          "title": "Delete the cluster the same day. Managed clusters are expensive to leave running.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 199,
+      "title": "Kubernetes: Debugging",
+      "tasks": [
+        {
+          "key": "d199-read-logs",
+          "title": "Read pod logs and follow them live with kubectl.",
+          "required": true
+        },
+        {
+          "key": "d199-exec-in",
+          "title": "Exec into a pod and check its network from inside using your Month 2 tools.",
+          "required": true
+        },
+        {
+          "key": "d199-crashloop",
+          "title": "Break it: cause a crash loop and diagnose it from describe and logs alone.",
+          "required": true
+        },
+        {
+          "key": "d199-pending-pod",
+          "title": "Break it: create a pod that cannot be scheduled and find out why from the events.",
+          "required": true
+        },
+        {
+          "key": "d199-checklist",
+          "title": "Write a short Kubernetes debugging checklist and add it to your notes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 200,
+      "title": "Kubernetes: Deciding When To Use It",
+      "tasks": [
+        {
+          "key": "d200-vs-ecs",
+          "title": "Write down when you would choose ECS over Kubernetes for a small team.",
+          "required": true
+        },
+        {
+          "key": "d200-complexity-cost",
+          "title": "List the operational costs Kubernetes adds that a single container host does not have.",
+          "required": true
+        },
+        {
+          "key": "d200-interview-answer",
+          "title": "Prepare an honest interview answer about your Kubernetes level. Do not overclaim.",
+          "required": true
+        },
+        {
+          "key": "d200-phase-two",
+          "title": "Write the Phase 2 Kubernetes plan: what to learn, in what order, and roughly when.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 201,
+      "title": "Applications: Final Preparation",
+      "tasks": [
+        {
+          "key": "d201-cv-final",
+          "title": "Update both CV versions with the capstone and its measured outcomes.",
+          "required": true
+        },
+        {
+          "key": "d201-portfolio-final",
+          "title": "Confirm your three pinned repositories all have diagrams, READMEs and clean history.",
+          "required": true
+        },
+        {
+          "key": "d201-tracker",
+          "title": "Build a tracker with company, role, date applied, contact and status.",
+          "required": true
+        },
+        {
+          "key": "d201-cover-template",
+          "title": "Write a short cover message template you can adapt per role in five minutes.",
+          "required": true
+        },
+        {
+          "key": "d201-references",
+          "title": "Line up two people who could speak for your work, and ask them properly.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 202,
+      "title": "Applications: First Batch",
+      "tasks": [
+        {
+          "key": "d202-shortlist",
+          "title": "Shortlist fifteen roles across trainee, cloud support and junior cloud titles.",
+          "required": true
+        },
+        {
+          "key": "d202-tailor-each",
+          "title": "Tailor the CV summary and cover message for each one. No copy and paste applications.",
+          "required": true
+        },
+        {
+          "key": "d202-apply-fifteen",
+          "title": "Submit all fifteen and log every one in your tracker.",
+          "required": true
+        },
+        {
+          "key": "d202-record-gaps",
+          "title": "Note any requirement that appeared repeatedly and that you do not meet.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 203,
+      "title": "Applications: Reaching People Directly",
+      "tasks": [
+        {
+          "key": "d203-find-people",
+          "title": "Find ten people who work in these teams, not recruiters.",
+          "required": true
+        },
+        {
+          "key": "d203-message",
+          "title": "Send a short honest message referencing something specific about their work.",
+          "required": true
+        },
+        {
+          "key": "d203-communities",
+          "title": "Join two communities where this work is discussed and read before posting.",
+          "required": true
+        },
+        {
+          "key": "d203-local-first",
+          "title": "Identify five local companies where a first job could realistically start.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 204,
+      "title": "Mock Interviews",
+      "tasks": [
+        {
+          "key": "d204-technical-round",
+          "title": "Have someone run a forty five minute technical interview on you and take notes on the gaps.",
+          "required": true
+        },
+        {
+          "key": "d204-project-walkthrough",
+          "title": "Present your capstone in ten minutes with the diagram, unprompted.",
+          "required": true
+        },
+        {
+          "key": "d204-fix-weak-answers",
+          "title": "Rewrite your three weakest answers and say them out loud until they are clean.",
+          "required": true
+        },
+        {
+          "key": "d204-rejection-plan",
+          "title": "Write down what you will do after the first rejection, before it happens.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 205,
+      "title": "Applications: Second Batch And Follow Up",
+      "tasks": [
+        {
+          "key": "d205-apply-fifteen-more",
+          "title": "Submit fifteen more applications and log them all.",
+          "required": true
+        },
+        {
+          "key": "d205-follow-up",
+          "title": "Follow up politely on anything from batch one that is over a week old.",
+          "required": true
+        },
+        {
+          "key": "d205-close-gaps",
+          "title": "Take the most common gap from your notes and plan how to close it in June.",
+          "required": true
+        },
+        {
+          "key": "d205-weekly-rhythm",
+          "title": "Set a weekly rhythm for applications so this continues after the course ends.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 206,
+      "title": "Retention Audit",
+      "tasks": [
+        {
+          "key": "d206-month-one",
+          "title": "Without notes, do ten Linux tasks from Month 1. Mark every one you could not do.",
+          "required": true
+        },
+        {
+          "key": "d206-month-two",
+          "title": "Without notes, subnet a network and explain a TCP handshake out loud.",
+          "required": true
+        },
+        {
+          "key": "d206-month-three",
+          "title": "Without notes, describe how traffic reaches a private instance behind a load balancer.",
+          "required": true
+        },
+        {
+          "key": "d206-month-four",
+          "title": "Without notes, write a Dockerfile with a multi stage build and a non root user.",
+          "required": true
+        },
+        {
+          "key": "d206-gap-list",
+          "title": "Write the honest list of what you have forgotten. This list is the point of the day.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 207,
+      "title": "Rebuild From Memory",
+      "tasks": [
+        {
+          "key": "d207-blank-start",
+          "title": "Start from an empty directory and rebuild a working environment with as few lookups as possible.",
+          "required": true
+        },
+        {
+          "key": "d207-count-lookups",
+          "title": "Count every time you had to look something up and write down what it was.",
+          "required": true
+        },
+        {
+          "key": "d207-drill-those",
+          "title": "Drill the three things you looked up most until you can write them unaided.",
+          "required": true
+        },
+        {
+          "key": "d207-honest-level",
+          "title": "Write one honest paragraph describing your actual current level. No inflation either way.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 208,
+      "title": "Interviews In Progress",
+      "tasks": [
+        {
+          "key": "d208-second-mock",
+          "title": "Run a second mock interview covering the areas you were weakest on during day 204.",
+          "required": true
+        },
+        {
+          "key": "d208-whiteboard",
+          "title": "Practise drawing your capstone architecture from memory in under three minutes.",
+          "required": true
+        },
+        {
+          "key": "d208-scenario-questions",
+          "title": "Practise five scenario questions: an outage, a bad deploy, a cost spike, drift, a leaked key.",
+          "required": true
+        },
+        {
+          "key": "d208-salary-research",
+          "title": "Research realistic entry salary ranges in your target markets so you are not caught out.",
+          "required": true
+        },
+        {
+          "key": "d208-questions-list",
+          "title": "Finalise the questions you will ask them about on call, deployment and how they handle incidents.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 209,
+      "title": "Phase Two Roadmap",
+      "tasks": [
+        {
+          "key": "d209-what-next",
+          "title": "Write the Phase 2 plan: Kubernetes properly, Prometheus and Grafana, and one deeper cert.",
+          "required": true
+        },
+        {
+          "key": "d209-keep-habit",
+          "title": "Set a sustainable pace for after this course ends, smaller than 3 hours but never zero.",
+          "required": true
+        },
+        {
+          "key": "d209-next-project",
+          "title": "Choose the next project before you finish this one, so there is no empty week.",
+          "required": true
+        },
+        {
+          "key": "d209-contribute",
+          "title": "Find one open source repository in this space and read its issues to see how work is discussed.",
+          "required": true
+        },
+        {
+          "key": "d209-review-cadence",
+          "title": "Set a monthly date to re-audit retention the way you did on day 206.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 210,
+      "title": "Close The Loop",
+      "tasks": [
+        {
+          "key": "d210-write-the-story",
+          "title": "Write the honest story of these 210 days: where you started, what you built, what you still cannot do.",
+          "required": true
+        },
+        {
+          "key": "d210-publish",
+          "title": "Publish it. A truthful account from a beginner is more useful than another tutorial.",
+          "required": true
+        },
+        {
+          "key": "d210-final-repo",
+          "title": "Make sure every project, note and diagram is committed and reachable from your profile.",
+          "required": true
+        },
+        {
+          "key": "d210-thank",
+          "title": "Thank the friend who kept breaking your systems. That exercise taught you the most.",
+          "required": true
+        },
+        {
+          "key": "d210-expect-reality",
+          "title": "Write down the honest timeline ahead: applications now, first role likely a year or more away.",
+          "required": true
+        },
+        {
+          "key": "d210-day-211",
+          "title": "Decide exactly what you do tomorrow. The plan ending is not the same as the work ending.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 195,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q195-1",
+          "type": "mcq",
+          "prompt": "How should production differ from staging in a well built setup?",
+          "options": [
+            "Different code",
+            "Same code with different variable values",
+            "Different providers",
+            "Different modules"
+          ],
+          "answer": 1,
+          "explanation": "Reusing the code is what makes a staging test meaningful for production."
+        },
+        {
+          "key": "q195-2",
+          "type": "mcq",
+          "prompt": "What does prevent_destroy protect against?",
+          "options": [
+            "Configuration drift",
+            "Accidental removal of a resource that must not be deleted",
+            "Cost overruns",
+            "State corruption"
+          ],
+          "answer": 1,
+          "explanation": "It is the guardrail for things like a production database."
+        },
+        {
+          "key": "q195-3",
+          "type": "mcq",
+          "prompt": "Why list every internet reachable resource and justify each one?",
+          "options": [
+            "For documentation",
+            "Because anything reachable is attack surface that must be intentional",
+            "It is required by AWS",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "Exposure that nobody decided on is the most common way systems get compromised."
+        },
+        {
+          "key": "q195-4",
+          "type": "mcq",
+          "prompt": "What should you do with an IAM permission you cannot justify?",
+          "options": [
+            "Document it",
+            "Remove it and confirm nothing broke",
+            "Leave it for later",
+            "Move it to a group"
+          ],
+          "answer": 1,
+          "explanation": "Unjustified permissions accumulate until a small compromise becomes a large one."
+        },
+        {
+          "key": "q195-5",
+          "type": "mcq",
+          "prompt": "Where can secrets end up even when they are not in your code?",
+          "options": [
+            "The README",
+            "The state file",
+            "The diagram",
+            "The plan comment"
+          ],
+          "answer": 1,
+          "explanation": "State stores real attribute values, which is why the backend must be protected."
+        },
+        {
+          "key": "q195-6",
+          "type": "mcq",
+          "prompt": "Why compare your real cost against your original estimate?",
+          "options": [
+            "To satisfy finance",
+            "Because the gap teaches you where your architectural intuition is wrong",
+            "It is required",
+            "To pick a region"
+          ],
+          "answer": 1,
+          "explanation": "Estimating badly is normal, and only the comparison improves it."
+        },
+        {
+          "key": "q195-7",
+          "type": "mcq",
+          "prompt": "How should you right size a resource?",
+          "options": [
+            "Guess a smaller size",
+            "Use your own observed metrics",
+            "Copy a blog recommendation",
+            "Always use the smallest"
+          ],
+          "answer": 1,
+          "explanation": "Right sizing without data is just a different guess."
+        },
+        {
+          "key": "q195-8",
+          "type": "mcq",
+          "prompt": "Why must the architecture diagram match the code exactly?",
+          "options": [
+            "It looks better",
+            "Because people make decisions from the diagram and a stale one misleads them",
+            "It is required",
+            "To pass review"
+          ],
+          "answer": 1,
+          "explanation": "An inaccurate diagram is worse than none, because it is trusted."
+        },
+        {
+          "key": "q195-9",
+          "type": "mcq",
+          "prompt": "What should a runbook cover?",
+          "options": [
+            "The full architecture",
+            "Deploy, rollback, restore and the most likely failures",
+            "Every AWS service used",
+            "The cost breakdown"
+          ],
+          "answer": 1,
+          "explanation": "It exists to be followed under pressure by someone who is not you."
+        },
+        {
+          "key": "q195-10",
+          "type": "mcq",
+          "prompt": "Why clone your own repository to a clean machine before calling it finished?",
+          "options": [
+            "To test git",
+            "Because your instructions almost certainly assume something only your machine has",
+            "To check the licence",
+            "To measure size"
+          ],
+          "answer": 1,
+          "explanation": "It is the same works on my machine problem applied to documentation."
+        },
+        {
+          "key": "q195-11",
+          "type": "mcq",
+          "prompt": "What number makes the strongest impression in a project write up?",
+          "options": [
+            "Lines of code",
+            "Time to recovery after a deliberate failure",
+            "Number of AWS services",
+            "Repository size"
+          ],
+          "answer": 1,
+          "explanation": "Recovery time shows you can operate a system, not just build one."
+        },
+        {
+          "key": "q195-12",
+          "type": "mcq",
+          "prompt": "Why record the monthly cost in the README?",
+          "options": [
+            "To justify the project",
+            "Because knowing what your architecture costs is part of the job",
+            "It is required",
+            "To compare regions"
+          ],
+          "answer": 1,
+          "explanation": "Engineers who cannot answer what it costs get caught out in interviews and at work."
+        },
+        {
+          "key": "q195-13",
+          "type": "true_false",
+          "prompt": "A design decision is more valuable in a write up when you also state what you rejected.",
+          "answer": true,
+          "explanation": "The rejected alternative is what shows you considered trade offs rather than followed a tutorial."
+        },
+        {
+          "key": "q195-14",
+          "type": "true_false",
+          "prompt": "If a clean clone cannot follow your instructions, the project is not actually finished.",
+          "answer": true,
+          "explanation": "Reproducibility by someone else is the standard, not reproducibility by you."
+        },
+        {
+          "key": "q195-15",
+          "type": "true_false",
+          "prompt": "Encryption at rest and encryption in transit are the same protection.",
+          "answer": false,
+          "explanation": "One protects stored data and the other protects data moving across a network, and you need both."
+        }
+      ]
+    },
+    {
+      "afterDay": 200,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q200-1",
+          "type": "mcq",
+          "prompt": "What does Kubernetes provide that a single container host does not?",
+          "options": [
+            "Smaller images",
+            "Scheduling, self healing and declarative desired state across many machines",
+            "Faster builds",
+            "Cheaper storage"
+          ],
+          "answer": 1,
+          "explanation": "It manages containers across a fleet rather than on one box."
+        },
+        {
+          "key": "q200-2",
+          "type": "mcq",
+          "prompt": "What is the desired state loop?",
+          "options": [
+            "A build pipeline",
+            "The controller continuously reconciling actual state toward what you declared",
+            "A logging system",
+            "A scaling policy"
+          ],
+          "answer": 1,
+          "explanation": "You declare what you want and the system keeps working to make reality match."
+        },
+        {
+          "key": "q200-3",
+          "type": "mcq",
+          "prompt": "What happens when you delete a pod managed by a deployment?",
+          "options": [
+            "It stays deleted",
+            "The deployment creates a replacement",
+            "The cluster restarts",
+            "The service fails"
+          ],
+          "answer": 1,
+          "explanation": "The deployment holds the replica count, so it restores it."
+        },
+        {
+          "key": "q200-4",
+          "type": "mcq",
+          "prompt": "What is a service in Kubernetes?",
+          "options": [
+            "A running container",
+            "A stable way to reach a changing set of pods",
+            "A storage volume",
+            "A build job"
+          ],
+          "answer": 1,
+          "explanation": "Pods come and go, so the service provides a consistent address."
+        },
+        {
+          "key": "q200-5",
+          "type": "mcq",
+          "prompt": "What is the purpose of a ConfigMap?",
+          "options": [
+            "Storing secrets securely",
+            "Passing non sensitive configuration into pods",
+            "Defining replicas",
+            "Managing nodes"
+          ],
+          "answer": 1,
+          "explanation": "It keeps configuration out of the image, the same principle you learned on day 88."
+        },
+        {
+          "key": "q200-6",
+          "type": "mcq",
+          "prompt": "Where would you look first for a pod stuck in a crash loop?",
+          "options": [
+            "The node metrics",
+            "The pod logs and describe output",
+            "The service definition",
+            "The cluster version"
+          ],
+          "answer": 1,
+          "explanation": "Describe shows events and logs show why the process exited."
+        },
+        {
+          "key": "q200-7",
+          "type": "mcq",
+          "prompt": "A pod is stuck in pending. What is the usual cause?",
+          "options": [
+            "A bad image",
+            "It cannot be scheduled, often for lack of resources",
+            "A network error",
+            "A crashed container"
+          ],
+          "answer": 1,
+          "explanation": "Pending means the scheduler has not placed it, and the events explain why."
+        },
+        {
+          "key": "q200-8",
+          "type": "mcq",
+          "prompt": "When would ECS be a better choice than Kubernetes for a small team?",
+          "options": [
+            "Never",
+            "When you want containers running without the operational overhead of a cluster",
+            "When you need more scale",
+            "When you use multiple clouds"
+          ],
+          "answer": 1,
+          "explanation": "Kubernetes brings real capability and real complexity, and small teams often need only the first part."
+        },
+        {
+          "key": "q200-9",
+          "type": "mcq",
+          "prompt": "Why delete a managed cluster the same day you create it?",
+          "options": [
+            "It expires",
+            "Because the control plane and nodes bill continuously",
+            "It becomes insecure",
+            "It cannot be reused"
+          ],
+          "answer": 1,
+          "explanation": "A forgotten cluster is one of the more expensive things to leave running."
+        },
+        {
+          "key": "q200-10",
+          "type": "mcq",
+          "prompt": "How should you describe your Kubernetes level in an interview after one week?",
+          "options": [
+            "Proficient",
+            "Honestly, as exposure with a plan to go deeper",
+            "Expert",
+            "Avoid the topic"
+          ],
+          "answer": 1,
+          "explanation": "Overclaiming collapses on the first follow up question, and honesty with a plan reads well."
+        },
+        {
+          "key": "q200-11",
+          "type": "mcq",
+          "prompt": "What operational cost does Kubernetes add?",
+          "options": [
+            "Higher image sizes",
+            "Cluster upgrades, networking complexity and more moving parts to monitor",
+            "Slower builds",
+            "More expensive storage"
+          ],
+          "answer": 1,
+          "explanation": "The platform itself becomes something you have to run and maintain."
+        },
+        {
+          "key": "q200-12",
+          "type": "mcq",
+          "prompt": "Which earlier skill transfers directly to debugging inside a pod?",
+          "options": [
+            "Terraform state commands",
+            "Your Linux and networking troubleshooting from Months 1 and 2",
+            "Cost optimisation",
+            "IAM policies"
+          ],
+          "answer": 1,
+          "explanation": "A container is a normal Linux environment, so the same tools and method apply."
+        },
+        {
+          "key": "q200-13",
+          "type": "true_false",
+          "prompt": "One week is enough to become competent at Kubernetes.",
+          "answer": false,
+          "explanation": "One week gives you working familiarity, and real competence takes months of use."
+        },
+        {
+          "key": "q200-14",
+          "type": "true_false",
+          "prompt": "The declarative model in Kubernetes is conceptually similar to how Terraform works.",
+          "answer": true,
+          "explanation": "Both take a desired state and work to make reality match it."
+        },
+        {
+          "key": "q200-15",
+          "type": "true_false",
+          "prompt": "Writing an honest Phase 2 plan is more useful than pretending the week made you job ready on Kubernetes.",
+          "answer": true,
+          "explanation": "A clear plan shows self awareness, which interviewers read as maturity."
+        }
+      ]
+    },
+    {
+      "afterDay": 205,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q205-1",
+          "type": "mcq",
+          "prompt": "What should you do before sending the first application?",
+          "options": [
+            "Apply widely and fast",
+            "Update the CV and portfolio with your capstone and its outcomes",
+            "Wait for a referral",
+            "Learn one more tool"
+          ],
+          "answer": 1,
+          "explanation": "The materials are what every application depends on, so they come first."
+        },
+        {
+          "key": "q205-2",
+          "type": "mcq",
+          "prompt": "Why keep an application tracker?",
+          "options": [
+            "It looks organised",
+            "Because follow ups and patterns are impossible to manage from memory",
+            "It is required",
+            "To count rejections"
+          ],
+          "answer": 1,
+          "explanation": "Without a record you will forget who to chase and what worked."
+        },
+        {
+          "key": "q205-3",
+          "type": "mcq",
+          "prompt": "Why tailor each application rather than sending the same CV everywhere?",
+          "options": [
+            "It takes longer",
+            "Because a targeted application is read and a generic one is filtered",
+            "It is polite",
+            "To avoid duplicates"
+          ],
+          "answer": 1,
+          "explanation": "Volume without relevance produces silence, which people then mistake for a skills problem."
+        },
+        {
+          "key": "q205-4",
+          "type": "mcq",
+          "prompt": "What is the value of messaging a person rather than only applying online?",
+          "options": [
+            "It skips interviews",
+            "Applications attached to a real conversation get read far more often",
+            "Job boards are fake",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "A human contact moves you out of an anonymous pile."
+        },
+        {
+          "key": "q205-5",
+          "type": "mcq",
+          "prompt": "What should you do when the same requirement appears in many postings and you lack it?",
+          "options": [
+            "Ignore it",
+            "Note it and plan how to close that gap next",
+            "Apply anyway and hope",
+            "Stop applying"
+          ],
+          "answer": 1,
+          "explanation": "The postings are free market research about what to learn next."
+        },
+        {
+          "key": "q205-6",
+          "type": "mcq",
+          "prompt": "Why present your capstone in ten minutes with a diagram?",
+          "options": [
+            "To fill time",
+            "Because you will be asked to explain a project and rambling loses the room",
+            "It is required",
+            "To show tool count"
+          ],
+          "answer": 1,
+          "explanation": "A rehearsed, structured walkthrough is one of the highest value things you can practise."
+        },
+        {
+          "key": "q205-7",
+          "type": "mcq",
+          "prompt": "Why decide your response to rejection before it happens?",
+          "options": [
+            "Rejection is unlikely",
+            "Because deciding in advance stops one rejection from ending the search",
+            "It speeds up applications",
+            "It impresses employers"
+          ],
+          "answer": 1,
+          "explanation": "The plan protects you at the moment your judgement is worst."
+        },
+        {
+          "key": "q205-8",
+          "type": "mcq",
+          "prompt": "What makes a good outreach message?",
+          "options": [
+            "A long summary of your CV",
+            "Something short and specific about their work",
+            "A request for a job",
+            "A list of your certifications"
+          ],
+          "answer": 1,
+          "explanation": "Specific and brief gets replies, while generic and long does not."
+        },
+        {
+          "key": "q205-9",
+          "type": "mcq",
+          "prompt": "Why research salary ranges before interviews?",
+          "options": [
+            "To negotiate hard",
+            "So you are not caught unprepared by the question",
+            "To compare with friends",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Being asked with no answer prepared puts you in a weak position immediately."
+        },
+        {
+          "key": "q205-10",
+          "type": "mcq",
+          "prompt": "Which roles should be in your first batch of applications?",
+          "options": [
+            "Only senior DevOps roles",
+            "Trainee, cloud support and junior cloud titles",
+            "Only remote roles",
+            "Only roles requiring no experience"
+          ],
+          "answer": 1,
+          "explanation": "These are the doors that genuinely open at this stage, as established earlier."
+        },
+        {
+          "key": "q205-11",
+          "type": "mcq",
+          "prompt": "Why set a weekly application rhythm rather than applying in bursts?",
+          "options": [
+            "It is less work",
+            "Because the search continues past the end of the plan and needs a sustainable pace",
+            "Employers prefer it",
+            "It avoids duplicates"
+          ],
+          "answer": 1,
+          "explanation": "A burst then silence is the pattern that produces nothing."
+        },
+        {
+          "key": "q205-12",
+          "type": "mcq",
+          "prompt": "What questions are worth asking an interviewer?",
+          "options": [
+            "About holidays only",
+            "How they deploy, how they handle incidents, and how on call works",
+            "Nothing, to seem agreeable",
+            "Salary only"
+          ],
+          "answer": 1,
+          "explanation": "Those questions show you understand that systems have to be run, not just built."
+        },
+        {
+          "key": "q205-13",
+          "type": "true_false",
+          "prompt": "Preparing references properly before you need them is part of an organised search.",
+          "answer": true,
+          "explanation": "Being asked for references and having none ready costs you time at the worst moment."
+        },
+        {
+          "key": "q205-14",
+          "type": "true_false",
+          "prompt": "Sending thirty tailored applications is likely to outperform sending three hundred generic ones.",
+          "answer": true,
+          "explanation": "Relevance beats volume, and generic applications rarely get past the first filter."
+        },
+        {
+          "key": "q205-15",
+          "type": "true_false",
+          "prompt": "Following up politely on an old application is unprofessional.",
+          "answer": false,
+          "explanation": "A brief, polite follow up is normal and sometimes the reason an application gets seen at all."
+        }
+      ]
+    },
+    {
+      "afterDay": 210,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q210-1",
+          "type": "mcq",
+          "prompt": "What is the point of doing a retention audit with no notes?",
+          "options": [
+            "To feel confident",
+            "To find out what you actually retained rather than what you completed",
+            "To finish the course",
+            "To pass a quiz"
+          ],
+          "answer": 1,
+          "explanation": "Completion and retention are different things, and only one of them shows up in an interview."
+        },
+        {
+          "key": "q210-2",
+          "type": "mcq",
+          "prompt": "What should you do with the list of things you have forgotten?",
+          "options": [
+            "Accept it",
+            "Drill the most important items until you can do them unaided",
+            "Restart the course",
+            "Ignore the small ones"
+          ],
+          "answer": 1,
+          "explanation": "The list is the whole value of the exercise, and acting on it is the point."
+        },
+        {
+          "key": "q210-3",
+          "type": "mcq",
+          "prompt": "Why rebuild an environment from an empty directory?",
+          "options": [
+            "To test your machine",
+            "Because it measures what you can do without lookups",
+            "To save cost",
+            "To check the provider"
+          ],
+          "answer": 1,
+          "explanation": "Counting the lookups gives you an honest measure of real fluency."
+        },
+        {
+          "key": "q210-4",
+          "type": "mcq",
+          "prompt": "Why write an honest paragraph about your current level?",
+          "options": [
+            "For your CV",
+            "Because both overclaiming and underclaiming cost you in interviews",
+            "It is required",
+            "To compare with others"
+          ],
+          "answer": 1,
+          "explanation": "Accurate self assessment is what lets you target the right roles and answer questions credibly."
+        },
+        {
+          "key": "q210-5",
+          "type": "mcq",
+          "prompt": "Why choose your next project before finishing this one?",
+          "options": [
+            "To stay busy",
+            "So there is no empty week where the habit dies",
+            "To impress employers",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "The gap after a big finish is where momentum is usually lost."
+        },
+        {
+          "key": "q210-6",
+          "type": "mcq",
+          "prompt": "What is a sustainable pace after an intensive plan ends?",
+          "options": [
+            "The same six hours a day",
+            "Smaller than before, but never zero",
+            "Nothing until a job starts",
+            "Weekends only"
+          ],
+          "answer": 1,
+          "explanation": "Skills decay, and a small daily floor preserves far more than sporadic bursts."
+        },
+        {
+          "key": "q210-7",
+          "type": "mcq",
+          "prompt": "Why set a monthly date to re-audit retention?",
+          "options": [
+            "To fill the calendar",
+            "Because unused skills fade and you need to know which ones are fading",
+            "It is required",
+            "To track applications"
+          ],
+          "answer": 1,
+          "explanation": "A scheduled check catches decay before an interview does."
+        },
+        {
+          "key": "q210-8",
+          "type": "mcq",
+          "prompt": "What makes a beginner's honest account worth publishing?",
+          "options": [
+            "It ranks well",
+            "Because a truthful record of struggle is more useful than another polished tutorial",
+            "It is required",
+            "It replaces a CV"
+          ],
+          "answer": 1,
+          "explanation": "People starting where you started need it, and it demonstrates communication as well."
+        },
+        {
+          "key": "q210-9",
+          "type": "mcq",
+          "prompt": "What is a realistic expectation after finishing this plan?",
+          "options": [
+            "A senior role",
+            "Trainee or support level opportunities, with a real role likely further out",
+            "Immediate remote work abroad",
+            "No job for years"
+          ],
+          "answer": 1,
+          "explanation": "This matches the honest assessment made at the start, and expecting it prevents quitting."
+        },
+        {
+          "key": "q210-10",
+          "type": "mcq",
+          "prompt": "Why did the deliberate breakage exercises matter most?",
+          "options": [
+            "They were quick",
+            "Because diagnosing real faults is the skill employers actually test",
+            "They were easy to schedule",
+            "They filled the plan"
+          ],
+          "answer": 1,
+          "explanation": "Anyone can follow a tutorial, and very few candidates can debug something they did not expect."
+        },
+        {
+          "key": "q210-11",
+          "type": "mcq",
+          "prompt": "What should be reachable from your GitHub profile at the end?",
+          "options": [
+            "Every file you ever wrote",
+            "Your best projects with diagrams, READMEs and clean history",
+            "Your CV only",
+            "Your notes only"
+          ],
+          "answer": 1,
+          "explanation": "A reviewer spends minutes, so the best work must be immediately visible."
+        },
+        {
+          "key": "q210-12",
+          "type": "mcq",
+          "prompt": "What does finishing the plan actually mean?",
+          "options": [
+            "The work is complete",
+            "One stage is complete and the next one starts tomorrow",
+            "You are job ready for any role",
+            "You can stop practising"
+          ],
+          "answer": 1,
+          "explanation": "The plan ending and the work ending are not the same thing."
+        },
+        {
+          "key": "q210-13",
+          "type": "true_false",
+          "prompt": "Being able to complete a task with notes is the same as being able to do it in an interview.",
+          "answer": false,
+          "explanation": "Interviews and incidents happen without your notes, which is why unaided drilling matters."
+        },
+        {
+          "key": "q210-14",
+          "type": "true_false",
+          "prompt": "Deciding exactly what you will do the day after the plan ends protects the habit you built.",
+          "answer": true,
+          "explanation": "The undefined day after a finish line is where most people stop."
+        },
+        {
+          "key": "q210-15",
+          "type": "true_false",
+          "prompt": "An honest account of what you still cannot do makes your claims about what you can do more credible.",
+          "answer": true,
+          "explanation": "Calibrated self assessment is read as maturity, and it is rare enough to stand out."
+        }
+      ]
+    }
+  ]
+}

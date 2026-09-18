@@ -1,0 +1,1446 @@
+{
+  "days": [
+    {
+      "day": 166,
+      "title": "Structured Logging In Python",
+      "tasks": [
+        {
+          "key": "p166-json-logs",
+          "title": "Configure logging to emit JSON objects instead of plain text lines.",
+          "required": true
+        },
+        {
+          "key": "p166-extra-fields",
+          "title": "Attach extra fields such as service name and environment to every log line.",
+          "required": true
+        },
+        {
+          "key": "p166-query-them",
+          "title": "Send them to a file and query by field with jq to prove the format is useful.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 167,
+      "title": "Correlation IDs",
+      "tasks": [
+        {
+          "key": "p167-generate-id",
+          "title": "Generate a unique identifier at the start of a run and include it in every log line.",
+          "required": true
+        },
+        {
+          "key": "p167-pass-through",
+          "title": "Pass that identifier into every function so one run can be followed end to end.",
+          "required": true
+        },
+        {
+          "key": "p167-why-correlate",
+          "title": "Write down why this matters when several runs write to the same log at once.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 168,
+      "title": "Measuring Your Own Code",
+      "tasks": [
+        {
+          "key": "p168-time-block",
+          "title": "Time how long one section of code takes and log the result.",
+          "required": true
+        },
+        {
+          "key": "p168-context-manager",
+          "title": "Wrap the timing in a reusable helper so any block can be measured with one line.",
+          "required": true
+        },
+        {
+          "key": "p168-slowest-part",
+          "title": "Measure three parts of your audit tool and find which one is slowest.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 169,
+      "title": "Custom Metrics",
+      "tasks": [
+        {
+          "key": "p169-emit-metric",
+          "title": "Send one custom metric from Python to CloudWatch.",
+          "required": true
+        },
+        {
+          "key": "p169-dimensions",
+          "title": "Add a dimension such as environment so the metric can be split later.",
+          "required": true
+        },
+        {
+          "key": "p169-what-to-measure",
+          "title": "Decide the three numbers about your tool that are actually worth tracking.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 170,
+      "title": "A Health Check",
+      "tasks": [
+        {
+          "key": "p170-health-function",
+          "title": "Write a function that checks your tool's dependencies and returns a clear status.",
+          "required": true
+        },
+        {
+          "key": "p170-exit-status",
+          "title": "Make it usable from the command line with an exit code that reflects health.",
+          "required": true
+        },
+        {
+          "key": "p170-fail-clearly",
+          "title": "Break one dependency and confirm the health check reports exactly what is wrong.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 171,
+      "title": "Exam Week: Light Review Of Data Handling",
+      "tasks": [
+        {
+          "key": "p171-light-nested",
+          "title": "Pull a value from a nested dictionary from memory. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p171-light-comprehension",
+          "title": "Write one list comprehension with a condition.",
+          "required": true
+        },
+        {
+          "key": "p171-stop-early-four",
+          "title": "Stop after fifteen minutes. The Terraform exam matters more this week.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 172,
+      "title": "Exam Week: Light Review Of boto3",
+      "tasks": [
+        {
+          "key": "p172-light-client",
+          "title": "Create a boto3 client and make one read only call. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p172-light-paginator",
+          "title": "Write a paginator loop from memory.",
+          "required": true
+        },
+        {
+          "key": "p172-stop-early-five",
+          "title": "Stop after fifteen minutes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 173,
+      "title": "Exam Week: Light Review Of Tools",
+      "tasks": [
+        {
+          "key": "p173-light-argparse",
+          "title": "Write an argparse block with one flag from memory. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p173-light-logging",
+          "title": "Add one structured log line to it.",
+          "required": true
+        },
+        {
+          "key": "p173-stop-early-six",
+          "title": "Stop after fifteen minutes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 174,
+      "title": "Exam Week: Read Your Own Code",
+      "tasks": [
+        {
+          "key": "p174-reread-audit",
+          "title": "Read your audit tool and find one thing you would now write differently.",
+          "required": true
+        },
+        {
+          "key": "p174-one-improvement",
+          "title": "Make that single change. Nothing more.",
+          "required": true
+        },
+        {
+          "key": "p174-rest-again",
+          "title": "Close the laptop early. Sleep beats one more commit.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 175,
+      "title": "Exam Day: Keep The Streak",
+      "tasks": [
+        {
+          "key": "p175-tiny-after-exam",
+          "title": "After the exam, write one short script. Anything at all.",
+          "required": true
+        },
+        {
+          "key": "p175-commit-streak",
+          "title": "Commit it so the daily habit survives the disruption.",
+          "required": true
+        },
+        {
+          "key": "p175-read-observability",
+          "title": "Read one page about the golden signals so tomorrow starts with context.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 176,
+      "title": "Instrumenting Your Audit Tool",
+      "tasks": [
+        {
+          "key": "p176-count-findings",
+          "title": "Emit a metric for how many findings each run produced, split by severity.",
+          "required": true
+        },
+        {
+          "key": "p176-run-duration",
+          "title": "Emit a metric for how long the run took.",
+          "required": true
+        },
+        {
+          "key": "p176-success-metric",
+          "title": "Emit a metric recording whether the run completed successfully.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 177,
+      "title": "Shipping Logs",
+      "tasks": [
+        {
+          "key": "p177-to-cloudwatch",
+          "title": "Send your structured Python logs to a CloudWatch log group.",
+          "required": true
+        },
+        {
+          "key": "p177-query-insights",
+          "title": "Query them with Logs Insights by one of your custom fields.",
+          "required": true
+        },
+        {
+          "key": "p177-retention-set",
+          "title": "Set a retention period on the log group and explain why forever is expensive.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 178,
+      "title": "Making Metrics Actionable",
+      "tasks": [
+        {
+          "key": "p178-alarm-on-failure",
+          "title": "Create an alarm on your success metric so a failed run alerts you.",
+          "required": true
+        },
+        {
+          "key": "p178-alarm-on-duration",
+          "title": "Create an alarm for when a run takes far longer than its normal time.",
+          "required": true
+        },
+        {
+          "key": "p178-baseline-first",
+          "title": "Set both thresholds from your own observed baseline rather than guessing.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 179,
+      "title": "Following One Run End To End",
+      "tasks": [
+        {
+          "key": "p179-trace-run",
+          "title": "Use your correlation identifier to follow one complete run through the logs.",
+          "required": true
+        },
+        {
+          "key": "p179-find-slow",
+          "title": "Identify the slowest step from your own timing logs.",
+          "required": true
+        },
+        {
+          "key": "p179-improve-one",
+          "title": "Make one improvement to that step and measure the difference.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 180,
+      "title": "Everything In Code",
+      "tasks": [
+        {
+          "key": "p180-terraform-logs",
+          "title": "Define your log group and its retention in Terraform rather than the console.",
+          "required": true
+        },
+        {
+          "key": "p180-terraform-alarms",
+          "title": "Define your two alarms in Terraform so they rebuild with the environment.",
+          "required": true
+        },
+        {
+          "key": "p180-verify-rebuild",
+          "title": "Destroy and rebuild to confirm the monitoring comes back with everything else.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 181,
+      "title": "Cleaning The Code Portfolio",
+      "tasks": [
+        {
+          "key": "p181-pick-three",
+          "title": "Choose the three Python repositories worth showing and archive or delete the rest.",
+          "required": true
+        },
+        {
+          "key": "p181-remove-junk",
+          "title": "Remove dead files, commented out code and anything you would not want reviewed.",
+          "required": true
+        },
+        {
+          "key": "p181-consistent-style",
+          "title": "Run your formatter and linter across all three until they are clean.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 182,
+      "title": "Writing About Your Code",
+      "tasks": [
+        {
+          "key": "p182-what-and-why",
+          "title": "For each repository, write what the tool does and what problem it solved.",
+          "required": true
+        },
+        {
+          "key": "p182-decisions",
+          "title": "Add a short section on one design decision and the alternative you rejected.",
+          "required": true
+        },
+        {
+          "key": "p182-example-run",
+          "title": "Include a real example of running it, with its output.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 183,
+      "title": "Explaining Your Code Out Loud",
+      "tasks": [
+        {
+          "key": "p183-walk-through",
+          "title": "Talk through your audit tool for five minutes without notes.",
+          "required": true
+        },
+        {
+          "key": "p183-why-questions",
+          "title": "Answer out loud: why a class here, why that error handling, why those exit codes.",
+          "required": true
+        },
+        {
+          "key": "p183-record-listen",
+          "title": "Record one explanation, listen back, and cut the parts where you waffled.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 184,
+      "title": "Interview Questions For These Roles",
+      "tasks": [
+        {
+          "key": "p184-parse-log",
+          "title": "Practise: given a log file, count errors by type. Write it in under fifteen minutes.",
+          "required": true
+        },
+        {
+          "key": "p184-call-api",
+          "title": "Practise: fetch data from an API, handle failure, and print a summary.",
+          "required": true
+        },
+        {
+          "key": "p184-data-structures",
+          "title": "Answer out loud: when would you use a list, a dictionary and a set.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 185,
+      "title": "Working Under Time",
+      "tasks": [
+        {
+          "key": "p185-timed-one",
+          "title": "Set a twenty minute timer and write a script that filters a CSV by a column value.",
+          "required": true
+        },
+        {
+          "key": "p185-timed-two",
+          "title": "Set a twenty minute timer and write a script that reports the largest files in a folder.",
+          "required": true
+        },
+        {
+          "key": "p185-review-both",
+          "title": "Review both afterwards and note what slowed you down most.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 186,
+      "title": "Capstone: The Python Part",
+      "tasks": [
+        {
+          "key": "p186-decide-role",
+          "title": "Decide exactly what Python does in your capstone, and keep the scope small.",
+          "required": true
+        },
+        {
+          "key": "p186-interface",
+          "title": "Define its inputs, its outputs and how the rest of the system calls it.",
+          "required": true
+        },
+        {
+          "key": "p186-skeleton",
+          "title": "Create the project skeleton with argparse, logging and a test file in place.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 187,
+      "title": "Capstone: Build It",
+      "tasks": [
+        {
+          "key": "p187-core-logic",
+          "title": "Write the core logic as functions that return data rather than printing.",
+          "required": true
+        },
+        {
+          "key": "p187-error-paths",
+          "title": "Handle the three most likely failures explicitly with clear messages.",
+          "required": true
+        },
+        {
+          "key": "p187-config",
+          "title": "Take configuration from the environment with sensible defaults.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 188,
+      "title": "Capstone: Test It",
+      "tasks": [
+        {
+          "key": "p188-happy-path",
+          "title": "Write tests for the normal case using fake data rather than live calls.",
+          "required": true
+        },
+        {
+          "key": "p188-failure-path",
+          "title": "Write tests for the failure cases, which is where the real bugs are.",
+          "required": true
+        },
+        {
+          "key": "p188-ci-runs-them",
+          "title": "Make the capstone pipeline run these tests on every push.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 189,
+      "title": "Capstone: Instrument It",
+      "tasks": [
+        {
+          "key": "p189-structured-logs",
+          "title": "Emit structured logs with a correlation identifier for every run.",
+          "required": true
+        },
+        {
+          "key": "p189-metrics",
+          "title": "Emit one metric that would tell you the component is unhealthy.",
+          "required": true
+        },
+        {
+          "key": "p189-alarm-it",
+          "title": "Add the alarm in Terraform and trigger it deliberately to confirm it works.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 190,
+      "title": "Capstone: Document And Integrate",
+      "tasks": [
+        {
+          "key": "p190-readme-capstone",
+          "title": "Write the README: purpose, install, usage, configuration and exit codes.",
+          "required": true
+        },
+        {
+          "key": "p190-fresh-run",
+          "title": "Follow your own instructions on a clean environment and fix whatever breaks.",
+          "required": true
+        },
+        {
+          "key": "p190-commit-final",
+          "title": "Commit it into the capstone repository and confirm the pipeline is green.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 170,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq170-1",
+          "type": "mcq",
+          "prompt": "What is the main advantage of JSON logs over plain text?",
+          "options": [
+            "Smaller files",
+            "You can query by field instead of matching text patterns",
+            "They are encrypted",
+            "They are faster to write"
+          ],
+          "answer": 1,
+          "explanation": "Field based queries are reliable, while text matching breaks whenever a message changes."
+        },
+        {
+          "key": "pq170-2",
+          "type": "mcq",
+          "prompt": "Why attach the service name and environment to every log line?",
+          "options": [
+            "To make lines longer",
+            "So logs from different sources can be told apart once combined",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Once several services log to one place, context is the only way to filter."
+        },
+        {
+          "key": "pq170-3",
+          "type": "mcq",
+          "prompt": "What problem does a correlation identifier solve?",
+          "options": [
+            "Log size",
+            "Following one run when several are writing to the same log",
+            "Encryption",
+            "Retention"
+          ],
+          "answer": 1,
+          "explanation": "Without it, interleaved lines from concurrent runs are impossible to separate."
+        },
+        {
+          "key": "pq170-4",
+          "type": "mcq",
+          "prompt": "Where should the correlation identifier be generated?",
+          "options": [
+            "In every function",
+            "Once at the start of the run, then passed through",
+            "In the log config",
+            "By CloudWatch"
+          ],
+          "answer": 1,
+          "explanation": "One identifier per run is the whole point, so it is created once."
+        },
+        {
+          "key": "pq170-5",
+          "type": "mcq",
+          "prompt": "Why measure how long parts of your code take?",
+          "options": [
+            "It is required",
+            "Because you cannot improve what you have not measured",
+            "It reduces cost",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Guessing which part is slow is usually wrong, and measuring is cheap."
+        },
+        {
+          "key": "pq170-6",
+          "type": "mcq",
+          "prompt": "Why wrap timing in a reusable helper?",
+          "options": [
+            "It is faster",
+            "So measuring any block costs one line instead of repeated boilerplate",
+            "It is required",
+            "It reduces memory"
+          ],
+          "answer": 1,
+          "explanation": "Instrumentation that is awkward to add does not get added."
+        },
+        {
+          "key": "pq170-7",
+          "type": "mcq",
+          "prompt": "What does a metric dimension let you do?",
+          "options": [
+            "Store more data",
+            "Split one metric by a category such as environment",
+            "Compress it",
+            "Retain it longer"
+          ],
+          "answer": 1,
+          "explanation": "It is the difference between one number and a number you can break down."
+        },
+        {
+          "key": "pq170-8",
+          "type": "mcq",
+          "prompt": "What makes a good metric to track for a tool?",
+          "options": [
+            "Every internal value",
+            "A small number that tell you whether it is working and how hard",
+            "Only errors",
+            "Only duration"
+          ],
+          "answer": 1,
+          "explanation": "Too many metrics is the same problem as too many alerts."
+        },
+        {
+          "key": "pq170-9",
+          "type": "mcq",
+          "prompt": "What should a health check return?",
+          "options": [
+            "A full report",
+            "A clear status and an exit code reflecting it",
+            "The log file",
+            "Nothing"
+          ],
+          "answer": 1,
+          "explanation": "Something automated has to be able to act on the answer."
+        },
+        {
+          "key": "pq170-10",
+          "type": "mcq",
+          "prompt": "Why break a dependency deliberately when testing a health check?",
+          "options": [
+            "To practise fixing",
+            "To confirm the check actually detects the problem",
+            "It is required",
+            "To measure speed"
+          ],
+          "answer": 1,
+          "explanation": "An untested check is an assumption, exactly like an untested alarm."
+        },
+        {
+          "key": "pq170-11",
+          "type": "mcq",
+          "prompt": "What connects structured logging here to your Month 3 bash work?",
+          "options": [
+            "Nothing",
+            "Both aim to produce output another tool can consume reliably",
+            "Bash cannot log",
+            "Python replaces bash logs"
+          ],
+          "answer": 1,
+          "explanation": "Consistent, parseable output has been the theme since your first toolkit."
+        },
+        {
+          "key": "pq170-12",
+          "type": "mcq",
+          "prompt": "Why does instrumentation matter for a tool you wrote yourself?",
+          "options": [
+            "It looks professional",
+            "Because you will need to debug it when it fails unattended",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Your scheduled audit is exactly the kind of thing that fails quietly."
+        },
+        {
+          "key": "pq170-13",
+          "type": "true_false",
+          "prompt": "Text matching on log messages is fragile because messages change.",
+          "answer": true,
+          "explanation": "A field name is stable in a way a sentence in a log message is not."
+        },
+        {
+          "key": "pq170-14",
+          "type": "true_false",
+          "prompt": "A correlation identifier is only useful in large distributed systems.",
+          "answer": false,
+          "explanation": "Two concurrent runs of your own script produce the same interleaving problem."
+        },
+        {
+          "key": "pq170-15",
+          "type": "true_false",
+          "prompt": "Measuring your code before optimising it is more reliable than guessing.",
+          "answer": true,
+          "explanation": "The slow part is frequently not where you expect it to be."
+        }
+      ]
+    },
+    {
+      "afterDay": 175,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq175-1",
+          "type": "mcq",
+          "prompt": "Why is this track reduced again during exam week?",
+          "options": [
+            "The material ran out",
+            "Because split attention during an exam week hurts both",
+            "It is a holiday",
+            "The app requires it"
+          ],
+          "answer": 1,
+          "explanation": "The same protection as SAA week, for the same reason."
+        },
+        {
+          "key": "pq175-2",
+          "type": "mcq",
+          "prompt": "Why keep doing fifteen minutes rather than stopping?",
+          "options": [
+            "To finish the course",
+            "Because restarting a broken habit is harder than maintaining a small one",
+            "It is required",
+            "To pass a quiz"
+          ],
+          "answer": 1,
+          "explanation": "The streak is the asset worth protecting."
+        },
+        {
+          "key": "pq175-3",
+          "type": "mcq",
+          "prompt": "Why review rather than learn new material during exam week?",
+          "options": [
+            "It is easier",
+            "Because review consolidates without adding cognitive load",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "New concepts compete for exactly the attention the exam needs."
+        },
+        {
+          "key": "pq175-4",
+          "type": "mcq",
+          "prompt": "What should you do the evening before an exam?",
+          "options": [
+            "One more project",
+            "Stop early and sleep",
+            "Read documentation",
+            "Write tests"
+          ],
+          "answer": 1,
+          "explanation": "The same advice as SAA week, and it was right then too."
+        },
+        {
+          "key": "pq175-5",
+          "type": "mcq",
+          "prompt": "Why write a small script immediately after the exam?",
+          "options": [
+            "To revise",
+            "So the habit survives the disruption of a big event",
+            "It is required",
+            "To celebrate"
+          ],
+          "answer": 1,
+          "explanation": "The day after a milestone is where routines usually collapse."
+        },
+        {
+          "key": "pq175-6",
+          "type": "mcq",
+          "prompt": "What is a paginator loop for?",
+          "options": [
+            "Sorting",
+            "Collecting every page of results rather than only the first",
+            "Filtering",
+            "Caching"
+          ],
+          "answer": 1,
+          "explanation": "Reading only the first page is the silent bug that makes an audit tool lie."
+        },
+        {
+          "key": "pq175-7",
+          "type": "mcq",
+          "prompt": "What should you check before using data from a boto3 response?",
+          "options": [
+            "Its length",
+            "That the keys you need are actually present",
+            "The region",
+            "The profile"
+          ],
+          "answer": 1,
+          "explanation": "Optional fields are common, and assuming them causes a KeyError in production."
+        },
+        {
+          "key": "pq175-8",
+          "type": "mcq",
+          "prompt": "Why re read your own older code?",
+          "options": [
+            "To find bugs only",
+            "Because noticing what you would now write differently measures your progress",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Being able to criticise your own past code is a real sign of growth."
+        },
+        {
+          "key": "pq175-9",
+          "type": "mcq",
+          "prompt": "Why make only one improvement during a review day?",
+          "options": [
+            "It is faster",
+            "Because a large refactor during exam week is exactly the wrong use of attention",
+            "It is required",
+            "One is enough"
+          ],
+          "answer": 1,
+          "explanation": "Scope control is the whole point of a light week."
+        },
+        {
+          "key": "pq175-10",
+          "type": "mcq",
+          "prompt": "What are the golden signals?",
+          "options": [
+            "CPU, memory, disk, network",
+            "Latency, traffic, errors, saturation",
+            "Logs, metrics, traces, alerts",
+            "Cost, uptime, users, requests"
+          ],
+          "answer": 1,
+          "explanation": "They describe what users experience rather than what machines are doing."
+        },
+        {
+          "key": "pq175-11",
+          "type": "mcq",
+          "prompt": "How should you describe your Python level after eight months of half hour days?",
+          "options": [
+            "Expert",
+            "Able to write, test and package small tools that handle real data",
+            "Beginner",
+            "Ready for algorithm interviews"
+          ],
+          "answer": 1,
+          "explanation": "Accurate self assessment is what you can actually defend under questioning."
+        },
+        {
+          "key": "pq175-12",
+          "type": "mcq",
+          "prompt": "What is the risk of trying to do both tracks at full intensity during an exam week?",
+          "options": [
+            "Nothing",
+            "You do both badly rather than one well",
+            "It costs more",
+            "It takes longer"
+          ],
+          "answer": 1,
+          "explanation": "This is the same reasoning that shaped Ramadan and both exam weeks."
+        },
+        {
+          "key": "pq175-13",
+          "type": "true_false",
+          "prompt": "Reducing a secondary track during a high pressure week is planning rather than laziness.",
+          "answer": true,
+          "explanation": "Every long plan that survives has this built into it deliberately."
+        },
+        {
+          "key": "pq175-14",
+          "type": "true_false",
+          "prompt": "Reading your own old code is a waste of study time.",
+          "answer": false,
+          "explanation": "It is one of the cheapest ways to see how far you have come and what to fix next."
+        },
+        {
+          "key": "pq175-15",
+          "type": "true_false",
+          "prompt": "A short script on exam day is enough to keep the habit intact.",
+          "answer": true,
+          "explanation": "Continuity matters more than volume on a disrupted day."
+        }
+      ]
+    },
+    {
+      "afterDay": 180,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq180-1",
+          "type": "mcq",
+          "prompt": "Why emit a metric for findings split by severity?",
+          "options": [
+            "It looks good",
+            "Because the trend in serious findings matters more than the total count",
+            "It is required",
+            "It reduces cost"
+          ],
+          "answer": 1,
+          "explanation": "Twenty low findings and one critical are not the same situation."
+        },
+        {
+          "key": "pq180-2",
+          "type": "mcq",
+          "prompt": "Why emit a metric for whether a run succeeded?",
+          "options": [
+            "To count runs",
+            "Because a run that never completes produces no findings and looks clean",
+            "It is required",
+            "To measure speed"
+          ],
+          "answer": 1,
+          "explanation": "Silence and success look identical without this metric."
+        },
+        {
+          "key": "pq180-3",
+          "type": "mcq",
+          "prompt": "Why alarm on run duration?",
+          "options": [
+            "It is required",
+            "Because a run taking far longer than usual signals something has changed",
+            "To reduce cost",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Duration is a leading indicator of problems that have not surfaced yet."
+        },
+        {
+          "key": "pq180-4",
+          "type": "mcq",
+          "prompt": "Where should alarm thresholds come from?",
+          "options": [
+            "Round numbers",
+            "Your own observed baseline",
+            "Service defaults",
+            "The documentation"
+          ],
+          "answer": 1,
+          "explanation": "A threshold unrelated to your normal behaviour produces noise or silence."
+        },
+        {
+          "key": "pq180-5",
+          "type": "mcq",
+          "prompt": "Why set retention on your log group?",
+          "options": [
+            "It is required",
+            "Because storing logs forever quietly becomes a real cost",
+            "It speeds up queries",
+            "It improves security"
+          ],
+          "answer": 1,
+          "explanation": "It was a finding in your own audit tool, so applying it to yourself is consistent."
+        },
+        {
+          "key": "pq180-6",
+          "type": "mcq",
+          "prompt": "What does Logs Insights let you do with structured logs?",
+          "options": [
+            "Compress them",
+            "Query and aggregate by field",
+            "Encrypt them",
+            "Delete them"
+          ],
+          "answer": 1,
+          "explanation": "This is the payoff for emitting JSON rather than plain text lines."
+        },
+        {
+          "key": "pq180-7",
+          "type": "mcq",
+          "prompt": "Why define log groups and alarms in Terraform?",
+          "options": [
+            "It is faster",
+            "So monitoring is rebuilt automatically with the environment",
+            "It is required",
+            "It reduces cost"
+          ],
+          "answer": 1,
+          "explanation": "Monitoring created by hand disappears on the next rebuild and is missed during the next incident."
+        },
+        {
+          "key": "pq180-8",
+          "type": "mcq",
+          "prompt": "How do you prove monitoring is properly codified?",
+          "options": [
+            "Read the code",
+            "Destroy and rebuild, then confirm it came back",
+            "Run the tests",
+            "Check the console"
+          ],
+          "answer": 1,
+          "explanation": "The same destroy and rebuild proof used throughout the DevOps track."
+        },
+        {
+          "key": "pq180-9",
+          "type": "mcq",
+          "prompt": "What does following one correlation identifier through the logs give you?",
+          "options": [
+            "Smaller logs",
+            "The complete story of a single run",
+            "Faster queries",
+            "Encryption"
+          ],
+          "answer": 1,
+          "explanation": "It turns scattered lines into a sequence you can reason about."
+        },
+        {
+          "key": "pq180-10",
+          "type": "mcq",
+          "prompt": "Why measure again after improving a slow step?",
+          "options": [
+            "It is required",
+            "Because an assumed improvement is not an improvement",
+            "To fill the log",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Without the second measurement you have a belief, not a result."
+        },
+        {
+          "key": "pq180-11",
+          "type": "mcq",
+          "prompt": "What makes an improvement worth putting on a CV?",
+          "options": [
+            "That it was difficult",
+            "That you can state the before and after numbers",
+            "That it used a new tool",
+            "That it took a long time"
+          ],
+          "answer": 1,
+          "explanation": "A measured change is evidence, and a claimed change is an opinion."
+        },
+        {
+          "key": "pq180-12",
+          "type": "mcq",
+          "prompt": "Why instrument a tool you wrote for yourself?",
+          "options": [
+            "It is required",
+            "Because it runs unattended and will eventually fail quietly",
+            "To look professional",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "The scheduled audit is precisely the kind of automation nobody notices breaking."
+        },
+        {
+          "key": "pq180-13",
+          "type": "true_false",
+          "prompt": "A successful run metric protects you from the failure mode where the tool stops running entirely.",
+          "answer": true,
+          "explanation": "No findings and no runs look identical without it."
+        },
+        {
+          "key": "pq180-14",
+          "type": "true_false",
+          "prompt": "Monitoring defined in the console survives a destroy and rebuild.",
+          "answer": false,
+          "explanation": "It disappears with everything else, which is why it belongs in code."
+        },
+        {
+          "key": "pq180-15",
+          "type": "true_false",
+          "prompt": "Applying your own audit findings to your own tooling is consistent rather than pedantic.",
+          "answer": true,
+          "explanation": "A tool that flags missing log retention while having none itself is hard to defend."
+        }
+      ]
+    },
+    {
+      "afterDay": 185,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq185-1",
+          "type": "mcq",
+          "prompt": "Why archive or delete weak repositories rather than leaving them?",
+          "options": [
+            "To save space",
+            "Because a reviewer judges you by the worst thing they open",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Three strong repositories beat twelve where nine are abandoned exercises."
+        },
+        {
+          "key": "pq185-2",
+          "type": "mcq",
+          "prompt": "Why remove commented out code before showing a repository?",
+          "options": [
+            "It slows execution",
+            "Because it signals uncertainty and clutters the review",
+            "It is required",
+            "It increases size"
+          ],
+          "answer": 1,
+          "explanation": "Version control already keeps the old version, so there is no reason to keep it in the file."
+        },
+        {
+          "key": "pq185-3",
+          "type": "mcq",
+          "prompt": "What should a repository README explain first?",
+          "options": [
+            "The installation",
+            "What the tool does and what problem it solved",
+            "The dependencies",
+            "The tests"
+          ],
+          "answer": 1,
+          "explanation": "A reviewer decides whether to keep reading in the first two sentences."
+        },
+        {
+          "key": "pq185-4",
+          "type": "mcq",
+          "prompt": "Why include one design decision and the rejected alternative?",
+          "options": [
+            "To fill space",
+            "Because it shows judgement rather than just execution",
+            "It is required",
+            "To increase length"
+          ],
+          "answer": 1,
+          "explanation": "Interviewers ask why you chose an approach, and the README can answer it first."
+        },
+        {
+          "key": "pq185-5",
+          "type": "mcq",
+          "prompt": "Why include example output in a README?",
+          "options": [
+            "To make it longer",
+            "So a reader knows what the tool produces without running it",
+            "It is required",
+            "For search ranking"
+          ],
+          "answer": 1,
+          "explanation": "Showing the result answers half the questions before they are asked."
+        },
+        {
+          "key": "pq185-6",
+          "type": "mcq",
+          "prompt": "Why practise explaining your code out loud?",
+          "options": [
+            "It is required",
+            "Because writing it and explaining it are different skills",
+            "It is faster",
+            "To find bugs"
+          ],
+          "answer": 1,
+          "explanation": "Fluency in explanation cannot be faked when you are asked to walk through your work."
+        },
+        {
+          "key": "pq185-7",
+          "type": "mcq",
+          "prompt": "What kind of Python question is typical for these roles?",
+          "options": [
+            "Algorithm puzzles",
+            "Parse a log, call an API, handle a failure",
+            "Compiler theory",
+            "Web framework internals"
+          ],
+          "answer": 1,
+          "explanation": "Practical data and automation tasks are what infrastructure roles actually test."
+        },
+        {
+          "key": "pq185-8",
+          "type": "mcq",
+          "prompt": "When would you use a set rather than a list?",
+          "options": [
+            "Always",
+            "When you need unique values or to compare two collections",
+            "For ordered data",
+            "For key value pairs"
+          ],
+          "answer": 1,
+          "explanation": "It is a question you will be asked, and your firewall audit is the example to give."
+        },
+        {
+          "key": "pq185-9",
+          "type": "mcq",
+          "prompt": "Why practise writing scripts under a timer?",
+          "options": [
+            "To go faster permanently",
+            "Because interview tasks are timed and hesitation costs you",
+            "It is required",
+            "To reduce errors"
+          ],
+          "answer": 1,
+          "explanation": "Working under mild time pressure is a separate skill from working correctly."
+        },
+        {
+          "key": "pq185-10",
+          "type": "mcq",
+          "prompt": "What should you do after a timed exercise?",
+          "options": [
+            "Move on",
+            "Review what slowed you down most",
+            "Delete it",
+            "Repeat it immediately"
+          ],
+          "answer": 1,
+          "explanation": "The review is where the improvement comes from, not the attempt itself."
+        },
+        {
+          "key": "pq185-11",
+          "type": "mcq",
+          "prompt": "Why record yourself explaining a project?",
+          "options": [
+            "To share it",
+            "Because you cannot hear your own hesitation while speaking",
+            "It is required",
+            "To time it"
+          ],
+          "answer": 1,
+          "explanation": "The recording shows what the interviewer will actually experience."
+        },
+        {
+          "key": "pq185-12",
+          "type": "mcq",
+          "prompt": "What is the strongest thing your Python repositories demonstrate?",
+          "options": [
+            "That you know syntax",
+            "That you built usable tools that handle real data and real failure",
+            "That you finished a course",
+            "That you can write tests"
+          ],
+          "answer": 1,
+          "explanation": "Usable software is a different and rarer signal than working code."
+        },
+        {
+          "key": "pq185-13",
+          "type": "true_false",
+          "prompt": "A reviewer forms an impression from the worst repository they open, not the best.",
+          "answer": true,
+          "explanation": "Which is why curating down to three strong ones is worth doing deliberately."
+        },
+        {
+          "key": "pq185-14",
+          "type": "true_false",
+          "prompt": "Interview Python for infrastructure roles is usually algorithm heavy.",
+          "answer": false,
+          "explanation": "It is normally practical: parsing, APIs, data handling and error cases."
+        },
+        {
+          "key": "pq185-15",
+          "type": "true_false",
+          "prompt": "Being able to explain why you made a design choice matters as much as the choice itself.",
+          "answer": true,
+          "explanation": "A defensible reason is what separates a decision from a coincidence."
+        }
+      ]
+    },
+    {
+      "afterDay": 190,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq190-1",
+          "type": "mcq",
+          "prompt": "Why keep the Python part of the capstone small?",
+          "options": [
+            "Python is limited",
+            "Because a finished small component beats an unfinished large one",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Scope is the usual reason a portfolio project never gets completed."
+        },
+        {
+          "key": "pq190-2",
+          "type": "mcq",
+          "prompt": "Why define the interface before writing the logic?",
+          "options": [
+            "It is faster",
+            "Because how the rest of the system calls it constrains everything else",
+            "It is required",
+            "To reduce code"
+          ],
+          "answer": 1,
+          "explanation": "Interfaces are expensive to change later and cheap to decide first."
+        },
+        {
+          "key": "pq190-3",
+          "type": "mcq",
+          "prompt": "Why write core logic as functions that return data?",
+          "options": [
+            "It is faster",
+            "So it can be tested and reused rather than only printed",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "A function that prints has already decided the output format for every caller."
+        },
+        {
+          "key": "pq190-4",
+          "type": "mcq",
+          "prompt": "Why handle the three most likely failures explicitly?",
+          "options": [
+            "To cover everything",
+            "Because those are the ones that will actually happen",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Exhaustive error handling is impossible, and the likely cases are where the value is."
+        },
+        {
+          "key": "pq190-5",
+          "type": "mcq",
+          "prompt": "Why take configuration from the environment?",
+          "options": [
+            "It is faster",
+            "So the same code runs in staging and production unchanged",
+            "It is required",
+            "It reduces size"
+          ],
+          "answer": 1,
+          "explanation": "The same principle you applied to containers and Terraform variables."
+        },
+        {
+          "key": "pq190-6",
+          "type": "mcq",
+          "prompt": "Why are failure path tests more valuable than happy path tests?",
+          "options": [
+            "They are quicker",
+            "Because the normal case usually works and the error path is untested",
+            "It is required",
+            "They are shorter"
+          ],
+          "answer": 1,
+          "explanation": "Most real bugs live in code nobody exercises."
+        },
+        {
+          "key": "pq190-7",
+          "type": "mcq",
+          "prompt": "Why make the capstone pipeline run your Python tests?",
+          "options": [
+            "It is required",
+            "So a change that breaks the component is caught before it deploys",
+            "It is faster",
+            "To fill the log"
+          ],
+          "answer": 1,
+          "explanation": "A test that only runs when you remember is not a gate."
+        },
+        {
+          "key": "pq190-8",
+          "type": "mcq",
+          "prompt": "Why emit a correlation identifier in the capstone component?",
+          "options": [
+            "It looks professional",
+            "So one run can be followed through the logs during an incident",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "You will need it on day 190 when someone breaks the system deliberately."
+        },
+        {
+          "key": "pq190-9",
+          "type": "mcq",
+          "prompt": "Why trigger the capstone alarm on purpose?",
+          "options": [
+            "To practise",
+            "To confirm it fires and reaches you before you need it",
+            "It is required",
+            "To generate metrics"
+          ],
+          "answer": 1,
+          "explanation": "An untested alarm has failed every time it has been counted on."
+        },
+        {
+          "key": "pq190-10",
+          "type": "mcq",
+          "prompt": "What belongs in the capstone component README?",
+          "options": [
+            "The full source",
+            "Purpose, install, usage, configuration and exit codes",
+            "Only the purpose",
+            "The test output"
+          ],
+          "answer": 1,
+          "explanation": "Someone should be able to run it correctly without asking you anything."
+        },
+        {
+          "key": "pq190-11",
+          "type": "mcq",
+          "prompt": "Why run through your own instructions on a clean environment?",
+          "options": [
+            "To test speed",
+            "Because your machine has setup that your instructions do not mention",
+            "It is required",
+            "To check licences"
+          ],
+          "answer": 1,
+          "explanation": "It is the same works on my machine problem, applied to documentation."
+        },
+        {
+          "key": "pq190-12",
+          "type": "mcq",
+          "prompt": "What has this month added to your capstone?",
+          "options": [
+            "More code",
+            "A tested, instrumented, documented component with alarms defined in code",
+            "A certificate",
+            "More services"
+          ],
+          "answer": 1,
+          "explanation": "That combination is what makes it evidence of operating software rather than writing it."
+        },
+        {
+          "key": "pq190-13",
+          "type": "true_false",
+          "prompt": "A component with no monitoring can still be part of a system you claim to operate.",
+          "answer": false,
+          "explanation": "Operating means knowing when it breaks, and without monitoring you find out from a user."
+        },
+        {
+          "key": "pq190-14",
+          "type": "true_false",
+          "prompt": "Testing the failure paths is where most of the real value of a test suite comes from.",
+          "answer": true,
+          "explanation": "The happy path is exercised constantly, and the error path almost never is."
+        },
+        {
+          "key": "pq190-15",
+          "type": "true_false",
+          "prompt": "Following your own README on a clean environment is a fair test of whether it is complete.",
+          "answer": true,
+          "explanation": "If you cannot follow it, nobody else has a chance."
+        }
+      ]
+    }
+  ]
+}

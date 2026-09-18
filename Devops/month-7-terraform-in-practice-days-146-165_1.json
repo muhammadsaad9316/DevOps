@@ -1,0 +1,1328 @@
+{
+  "days": [
+    {
+      "day": 146,
+      "title": "Module Design Patterns",
+      "tasks": [
+        {
+          "key": "d146-single-purpose",
+          "title": "Read three well rated registry modules and note what each one deliberately does not do.",
+          "required": false
+        },
+        {
+          "key": "d146-interface-first",
+          "title": "Design a module by writing its variables and outputs before writing any resource.",
+          "required": true
+        },
+        {
+          "key": "d146-composition",
+          "title": "Compose two of your own modules together rather than nesting one inside the other.",
+          "required": true
+        },
+        {
+          "key": "d146-versioning",
+          "title": "Tag a version of your module in git and reference that tag from a caller.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 147,
+      "title": "Dynamic Blocks And Complex Types",
+      "tasks": [
+        {
+          "key": "d147-object-type",
+          "title": "Declare a variable with an object type and use it to configure a resource.",
+          "required": true
+        },
+        {
+          "key": "d147-list-of-objects",
+          "title": "Take a list of objects and create one resource per entry with for_each.",
+          "required": true
+        },
+        {
+          "key": "d147-dynamic-block",
+          "title": "Use a dynamic block to generate repeated nested blocks such as security group rules.",
+          "required": true
+        },
+        {
+          "key": "d147-readability",
+          "title": "Rewrite one dynamic block as plain repetition and decide which version you would rather maintain.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 148,
+      "title": "Refactoring Without Destroying",
+      "tasks": [
+        {
+          "key": "d148-rename-safely",
+          "title": "Rename several resources and use moved blocks so nothing is destroyed.",
+          "required": true
+        },
+        {
+          "key": "d148-extract-module",
+          "title": "Move existing resources into a module and confirm the plan reports no changes.",
+          "required": true
+        },
+        {
+          "key": "d148-plan-is-proof",
+          "title": "Treat a no changes plan as the only proof a refactor was safe. Write that rule down.",
+          "required": true
+        },
+        {
+          "key": "d148-break-refactor",
+          "title": "Break it: refactor without moved blocks, read the destroy plan, then undo it before applying.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 149,
+      "title": "Reviewing Infrastructure Code",
+      "tasks": [
+        {
+          "key": "d149-review-checklist",
+          "title": "Write a review checklist covering hardcoded values, missing tags, open security groups and replacements.",
+          "required": true
+        },
+        {
+          "key": "d149-review-own",
+          "title": "Review your own configuration against that checklist and fix three findings.",
+          "required": true
+        },
+        {
+          "key": "d149-plan-in-review",
+          "title": "Learn why a reviewer needs the plan output, not just the code diff.",
+          "required": true
+        },
+        {
+          "key": "d149-naming",
+          "title": "Standardise naming across every resource using the locals pattern from day 133.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 150,
+      "title": "Documenting Infrastructure",
+      "tasks": [
+        {
+          "key": "d150-terraform-docs",
+          "title": "Generate module documentation automatically and commit the result.",
+          "required": true
+        },
+        {
+          "key": "d150-architecture-doc",
+          "title": "Write a short document explaining what the configuration builds and why.",
+          "required": true
+        },
+        {
+          "key": "d150-runbook-link",
+          "title": "Link your day 117 recovery runbook to the code that would rebuild the environment.",
+          "required": true
+        },
+        {
+          "key": "d150-diagram-update",
+          "title": "Update your architecture diagram so it matches what the code actually creates.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 151,
+      "title": "Terraform In CI: Plan On Pull Request",
+      "tasks": [
+        {
+          "key": "d151-ci-credentials",
+          "title": "Give the workflow AWS credentials using the least privilege approach from day 98.",
+          "required": true
+        },
+        {
+          "key": "d151-fmt-validate-ci",
+          "title": "Add fmt check and validate steps that fail the build on bad formatting or syntax.",
+          "required": true
+        },
+        {
+          "key": "d151-plan-step",
+          "title": "Run terraform plan in the workflow on every pull request.",
+          "required": true
+        },
+        {
+          "key": "d151-plan-comment",
+          "title": "Post the plan output as a comment on the pull request so a reviewer can read it.",
+          "required": true
+        },
+        {
+          "key": "d151-no-apply-on-pr",
+          "title": "Confirm the pull request workflow never applies, only plans.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 152,
+      "title": "Terraform In CI: Apply On Merge",
+      "tasks": [
+        {
+          "key": "d152-apply-workflow",
+          "title": "Add a workflow that applies on merge to main, targeting staging only.",
+          "required": true
+        },
+        {
+          "key": "d152-saved-plan",
+          "title": "Save the plan as an artifact and apply that exact plan rather than replanning.",
+          "required": true
+        },
+        {
+          "key": "d152-approval-gate",
+          "title": "Require manual approval before the production apply, reusing the pattern from day 96.",
+          "required": true
+        },
+        {
+          "key": "d152-lock-in-ci",
+          "title": "Confirm state locking prevents two workflow runs from applying at the same time.",
+          "required": true
+        },
+        {
+          "key": "d152-break-ci",
+          "title": "Break it: push a change that fails validate and confirm nothing reaches AWS.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 153,
+      "title": "Scanning Infrastructure For Security Problems",
+      "tasks": [
+        {
+          "key": "d153-install-scanner",
+          "title": "Install a static analysis tool for Terraform and run it against your configuration.",
+          "required": true
+        },
+        {
+          "key": "d153-read-findings",
+          "title": "Read every finding and classify each as real, low priority or a false positive.",
+          "required": true
+        },
+        {
+          "key": "d153-fix-three",
+          "title": "Fix the three most serious findings and rerun the scan.",
+          "required": true
+        },
+        {
+          "key": "d153-scan-in-ci",
+          "title": "Add the scanner to the pipeline so high severity findings fail the build.",
+          "required": true
+        },
+        {
+          "key": "d153-open-sg",
+          "title": "Break it: open a security group to the whole internet and confirm the scanner catches it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 154,
+      "title": "Policy As Code",
+      "tasks": [
+        {
+          "key": "d154-what-policy",
+          "title": "Read what policy as code means and how it differs from a static scan.",
+          "required": false
+        },
+        {
+          "key": "d154-write-rule",
+          "title": "Write one rule that blocks any resource missing a required tag.",
+          "required": true
+        },
+        {
+          "key": "d154-enforce",
+          "title": "Wire the rule into the pipeline so a non compliant plan cannot be applied.",
+          "required": true
+        },
+        {
+          "key": "d154-guardrails",
+          "title": "List five guardrails a real team would want enforced automatically.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 155,
+      "title": "Secrets And Terraform",
+      "tasks": [
+        {
+          "key": "d155-state-secrets",
+          "title": "Find a sensitive value inside your state file and understand why state must be protected.",
+          "required": true
+        },
+        {
+          "key": "d155-no-plaintext",
+          "title": "Confirm no secret appears in your repository, your tfvars or your variable defaults.",
+          "required": true
+        },
+        {
+          "key": "d155-secrets-manager",
+          "title": "Read a secret from AWS Secrets Manager with a data source instead of hardcoding it.",
+          "required": true
+        },
+        {
+          "key": "d155-rotation",
+          "title": "Write down what breaks when a secret rotates and how the configuration should handle it.",
+          "required": true
+        },
+        {
+          "key": "d155-leak-drill",
+          "title": "Break it: commit a fake secret, then practise the full response of rotating and cleaning up.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 156,
+      "title": "Troubleshooting Terraform",
+      "tasks": [
+        {
+          "key": "d156-read-errors",
+          "title": "Collect three real Terraform errors and write what each one actually means.",
+          "required": true
+        },
+        {
+          "key": "d156-tf-log",
+          "title": "Turn on debug logging with TF_LOG and read what the provider is really doing.",
+          "required": true
+        },
+        {
+          "key": "d156-targeted-plan",
+          "title": "Use a targeted plan to isolate one resource, and read why targeting is a last resort.",
+          "required": true
+        },
+        {
+          "key": "d156-taint-replace",
+          "title": "Force replacement of a single resource and explain when you would want that.",
+          "required": true
+        },
+        {
+          "key": "d156-checklist",
+          "title": "Write a Terraform troubleshooting checklist and add it to your notes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 157,
+      "title": "Provider Behaviour And Eventual Consistency",
+      "tasks": [
+        {
+          "key": "d157-timing-errors",
+          "title": "Read why an apply sometimes fails on a resource that was created moments earlier.",
+          "required": true
+        },
+        {
+          "key": "d157-retry",
+          "title": "Configure timeouts on a slow resource and observe the difference.",
+          "required": true
+        },
+        {
+          "key": "d157-provider-docs",
+          "title": "Read the provider documentation for one resource end to end, including its import syntax.",
+          "required": true
+        },
+        {
+          "key": "d157-upgrade",
+          "title": "Upgrade a provider version deliberately and read the plan for unexpected changes.",
+          "required": true
+        },
+        {
+          "key": "d157-changelog",
+          "title": "Read a provider changelog and find one breaking change from a past release.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 158,
+      "title": "Multiple Accounts And Environments",
+      "tasks": [
+        {
+          "key": "d158-assume-role",
+          "title": "Configure Terraform to assume a role into a second account or a separate environment.",
+          "required": true
+        },
+        {
+          "key": "d158-blast-radius",
+          "title": "Split your configuration so one apply cannot touch both staging and production.",
+          "required": true
+        },
+        {
+          "key": "d158-shared-services",
+          "title": "Decide which resources belong in a shared configuration and which are per environment.",
+          "required": true
+        },
+        {
+          "key": "d158-remote-state-data",
+          "title": "Read an output from another configuration using the remote state data source.",
+          "required": true
+        },
+        {
+          "key": "d158-coupling-warning",
+          "title": "Write down the risk of one configuration depending on another one's state.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 159,
+      "title": "Cost Awareness In The Pipeline",
+      "tasks": [
+        {
+          "key": "d159-cost-tool",
+          "title": "Install a cost estimation tool and run it against a plan.",
+          "required": true
+        },
+        {
+          "key": "d159-cost-in-ci",
+          "title": "Add the estimate to the pull request comment so cost is visible at review time.",
+          "required": true
+        },
+        {
+          "key": "d159-expensive-change",
+          "title": "Write a change that adds a NAT gateway and read what the estimate says.",
+          "required": true
+        },
+        {
+          "key": "d159-budget-rule",
+          "title": "Set a rule for what monthly increase requires a conversation before merging.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 160,
+      "title": "Bringing Hand Built Infrastructure Under Code",
+      "tasks": [
+        {
+          "key": "d160-inventory",
+          "title": "Pick a small set of resources you built by hand and list every one of them.",
+          "required": true
+        },
+        {
+          "key": "d160-write-configs",
+          "title": "Write configuration for all of them before importing anything.",
+          "required": true
+        },
+        {
+          "key": "d160-import-all",
+          "title": "Import them one at a time until the plan reports no changes.",
+          "required": true
+        },
+        {
+          "key": "d160-fix-mismatches",
+          "title": "Resolve every mismatch the plan reports rather than ignoring it.",
+          "required": true
+        },
+        {
+          "key": "d160-lessons",
+          "title": "Write down how long it took and what you would do differently on a larger estate.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 161,
+      "title": "Codifying The Container Platform",
+      "tasks": [
+        {
+          "key": "d161-ecr-in-code",
+          "title": "Create your ECR repository and its lifecycle policy in Terraform.",
+          "required": true
+        },
+        {
+          "key": "d161-iam-in-code",
+          "title": "Define the CI deployment role and its policy in Terraform instead of the console.",
+          "required": true
+        },
+        {
+          "key": "d161-compute-in-code",
+          "title": "Define the compute that runs your container, with the image tag as a variable.",
+          "required": true
+        },
+        {
+          "key": "d161-logs-in-code",
+          "title": "Create the CloudWatch log group and retention setting in Terraform.",
+          "required": true
+        },
+        {
+          "key": "d161-apply-verify",
+          "title": "Apply and confirm your Month 4 pipeline still deploys successfully into it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 162,
+      "title": "One Pipeline, Two Layers",
+      "tasks": [
+        {
+          "key": "d162-separate-repos",
+          "title": "Decide whether infrastructure and application live in one repository or two, and justify it.",
+          "required": true
+        },
+        {
+          "key": "d162-order",
+          "title": "Define what happens when infrastructure and application both change in one release.",
+          "required": true
+        },
+        {
+          "key": "d162-image-tag-flow",
+          "title": "Pass the built image tag from the application pipeline into the infrastructure apply.",
+          "required": true
+        },
+        {
+          "key": "d162-full-run",
+          "title": "Run the whole thing: commit, build, push, apply, deploy, verify.",
+          "required": true
+        },
+        {
+          "key": "d162-document",
+          "title": "Document the full flow in a diagram from commit to running container.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 163,
+      "title": "Destroy And Rebuild Everything",
+      "tasks": [
+        {
+          "key": "d163-record-state",
+          "title": "Record the working state and the URL that proves the system is up.",
+          "required": true
+        },
+        {
+          "key": "d163-destroy-all",
+          "title": "Destroy the entire environment from code.",
+          "required": true
+        },
+        {
+          "key": "d163-rebuild",
+          "title": "Rebuild it from code alone, with no console clicks, and time the whole process.",
+          "required": true
+        },
+        {
+          "key": "d163-gaps",
+          "title": "List every manual step you still needed and turn each one into a task to fix.",
+          "required": true
+        },
+        {
+          "key": "d163-second-run",
+          "title": "Fix the gaps, then destroy and rebuild once more to prove they are closed.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 164,
+      "title": "Break It, Fix It",
+      "tasks": [
+        {
+          "key": "d164-sabotage",
+          "title": "Have a friend break one thing in the Terraform layer without telling you what.",
+          "required": true
+        },
+        {
+          "key": "d164-diagnose",
+          "title": "Diagnose it using plan output, state inspection and your day 156 checklist.",
+          "required": true
+        },
+        {
+          "key": "d164-fix",
+          "title": "Fix it through code rather than by clicking in the console.",
+          "required": true
+        },
+        {
+          "key": "d164-drift-scenario",
+          "title": "Have them change something in the console instead, then detect and reconcile the drift.",
+          "required": true
+        },
+        {
+          "key": "d164-write-up",
+          "title": "Write both incidents up with what broke, how you found it and how long each took.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 165,
+      "title": "Consolidate And Prepare",
+      "tasks": [
+        {
+          "key": "d165-repo-tidy",
+          "title": "Tidy the repository: README, module docs, diagram, and a clear getting started section.",
+          "required": true
+        },
+        {
+          "key": "d165-pin-everything",
+          "title": "Confirm every provider and module version is pinned.",
+          "required": true
+        },
+        {
+          "key": "d165-portfolio",
+          "title": "Pin this repository on your GitHub profile alongside the Month 4 pipeline.",
+          "required": true
+        },
+        {
+          "key": "d165-exam-guide",
+          "title": "Read the Terraform Associate exam guide and map each objective to a day you have done.",
+          "required": true
+        },
+        {
+          "key": "d165-gap-plan",
+          "title": "List the exam objectives you have not covered and plan them into April.",
+          "required": true
+        },
+        {
+          "key": "d165-review",
+          "title": "Review your Terraform notes and mark what you still cannot write unaided.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 150,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q150-1",
+          "type": "mcq",
+          "prompt": "What is the sign of a well designed module?",
+          "options": [
+            "It handles every possible case",
+            "It has a clear purpose with sensible inputs and outputs",
+            "It contains one resource",
+            "It needs no documentation"
+          ],
+          "answer": 1,
+          "explanation": "Modules that try to do everything become harder to use than writing the resources directly."
+        },
+        {
+          "key": "q150-2",
+          "type": "mcq",
+          "prompt": "Why design a module interface before writing its resources?",
+          "options": [
+            "It is faster to type",
+            "Because the interface is what callers depend on and is hardest to change later",
+            "Terraform requires it",
+            "It reduces state size"
+          ],
+          "answer": 1,
+          "explanation": "Changing inputs and outputs later breaks every caller, while internals can be rewritten freely."
+        },
+        {
+          "key": "q150-3",
+          "type": "mcq",
+          "prompt": "What does a dynamic block generate?",
+          "options": [
+            "Multiple resources",
+            "Repeated nested blocks inside one resource",
+            "Multiple providers",
+            "Multiple states"
+          ],
+          "answer": 1,
+          "explanation": "It is for repeated nested configuration such as a list of ingress rules."
+        },
+        {
+          "key": "q150-4",
+          "type": "mcq",
+          "prompt": "When should you avoid a dynamic block?",
+          "options": [
+            "Always",
+            "When plain repetition would be easier to read and maintain",
+            "When using modules",
+            "When using for_each"
+          ],
+          "answer": 1,
+          "explanation": "Clever configuration that nobody can read is a maintenance cost, not a win."
+        },
+        {
+          "key": "q150-5",
+          "type": "mcq",
+          "prompt": "What does a moved block let you do?",
+          "options": [
+            "Move resources between regions",
+            "Rename or restructure code without destroying resources",
+            "Move state to S3",
+            "Move a module to the registry"
+          ],
+          "answer": 1,
+          "explanation": "It records the rename declaratively so Terraform does not see a delete and a create."
+        },
+        {
+          "key": "q150-6",
+          "type": "mcq",
+          "prompt": "What proves a refactor was safe?",
+          "options": [
+            "It applied without errors",
+            "The plan reports no changes",
+            "The code is shorter",
+            "The tests passed"
+          ],
+          "answer": 1,
+          "explanation": "If nothing in the real world changes, the refactor touched only the code."
+        },
+        {
+          "key": "q150-7",
+          "type": "mcq",
+          "prompt": "Why does a reviewer need the plan output and not just the code diff?",
+          "options": [
+            "Plans are shorter",
+            "Because the effect of a change is not always obvious from the code",
+            "Diffs are unreliable",
+            "Terraform requires it"
+          ],
+          "answer": 1,
+          "explanation": "A small code change can produce a destructive plan, and only the plan shows that."
+        },
+        {
+          "key": "q150-8",
+          "type": "mcq",
+          "prompt": "What should an infrastructure code review checklist include?",
+          "options": [
+            "Line length only",
+            "Hardcoded values, missing tags, open security groups and forced replacements",
+            "Comment density",
+            "File naming only"
+          ],
+          "answer": 1,
+          "explanation": "These are the categories where real damage and real cost come from."
+        },
+        {
+          "key": "q150-9",
+          "type": "mcq",
+          "prompt": "Why pin a module to a git tag rather than a branch?",
+          "options": [
+            "Tags download faster",
+            "So the code cannot change underneath you between runs",
+            "Branches are private",
+            "Tags support outputs"
+          ],
+          "answer": 1,
+          "explanation": "A branch moves, and moving infrastructure code is how surprise changes happen."
+        },
+        {
+          "key": "q150-10",
+          "type": "mcq",
+          "prompt": "What is the benefit of composing modules rather than deeply nesting them?",
+          "options": [
+            "Lower cost",
+            "Simpler dependency chains and easier debugging",
+            "Faster applies",
+            "Smaller state"
+          ],
+          "answer": 1,
+          "explanation": "Deep nesting hides what is actually being created and makes failures hard to trace."
+        },
+        {
+          "key": "q150-11",
+          "type": "mcq",
+          "prompt": "Why generate module documentation automatically?",
+          "options": [
+            "It is required",
+            "So the documentation stays accurate as the variables change",
+            "It improves performance",
+            "It replaces the README"
+          ],
+          "answer": 1,
+          "explanation": "Hand written input tables go stale the first time someone adds a variable."
+        },
+        {
+          "key": "q150-12",
+          "type": "mcq",
+          "prompt": "What makes a naming convention worth enforcing?",
+          "options": [
+            "It looks professional",
+            "Consistent names make cost tracking, searching and cleanup possible",
+            "Terraform validates it",
+            "It reduces state size"
+          ],
+          "answer": 1,
+          "explanation": "At scale, inconsistent naming is what makes an estate impossible to reason about."
+        },
+        {
+          "key": "q150-13",
+          "type": "true_false",
+          "prompt": "A refactor that produces a destroy and create plan is safe as long as it applies successfully.",
+          "answer": false,
+          "explanation": "Recreating a resource can mean downtime or data loss, which is exactly what moved blocks avoid."
+        },
+        {
+          "key": "q150-14",
+          "type": "true_false",
+          "prompt": "An architecture diagram that no longer matches the code is worse than no diagram.",
+          "answer": true,
+          "explanation": "People trust the diagram and make decisions from it, so a stale one actively misleads."
+        },
+        {
+          "key": "q150-15",
+          "type": "true_false",
+          "prompt": "Linking your recovery runbook to the code that rebuilds the environment makes recovery faster.",
+          "answer": true,
+          "explanation": "The runbook stops being theory when it points at something that actually runs."
+        }
+      ]
+    },
+    {
+      "afterDay": 155,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q155-1",
+          "type": "mcq",
+          "prompt": "What should a pull request workflow do with Terraform?",
+          "options": [
+            "Apply changes",
+            "Run plan and show the output for review",
+            "Destroy the environment",
+            "Nothing"
+          ],
+          "answer": 1,
+          "explanation": "Plans on pull requests give reviewers the information they need before anything changes."
+        },
+        {
+          "key": "q155-2",
+          "type": "mcq",
+          "prompt": "Why apply a saved plan file rather than replanning at apply time?",
+          "options": [
+            "It is faster",
+            "So what was reviewed is exactly what gets applied",
+            "It uses less state",
+            "It avoids locking"
+          ],
+          "answer": 1,
+          "explanation": "Replanning can produce a different result than the one a human approved."
+        },
+        {
+          "key": "q155-3",
+          "type": "mcq",
+          "prompt": "Why should the pull request workflow never apply?",
+          "options": [
+            "It would be slow",
+            "Because unreviewed code would reach real infrastructure",
+            "Terraform forbids it",
+            "It would corrupt state"
+          ],
+          "answer": 1,
+          "explanation": "The review gate only means something if nothing changes until after it passes."
+        },
+        {
+          "key": "q155-4",
+          "type": "mcq",
+          "prompt": "What stops two CI runs applying at the same time?",
+          "options": [
+            "Branch protection",
+            "State locking",
+            "The approval gate",
+            "Provider version pinning"
+          ],
+          "answer": 1,
+          "explanation": "The lock in the backend is what makes concurrent applies safe."
+        },
+        {
+          "key": "q155-5",
+          "type": "mcq",
+          "prompt": "What does a static analysis tool for Terraform look for?",
+          "options": [
+            "Syntax errors only",
+            "Insecure configuration such as open security groups or unencrypted storage",
+            "Cost estimates",
+            "Drift"
+          ],
+          "answer": 1,
+          "explanation": "It reads your configuration and flags patterns known to be risky."
+        },
+        {
+          "key": "q155-6",
+          "type": "mcq",
+          "prompt": "How is policy as code different from a static scan?",
+          "options": [
+            "No difference",
+            "Policies are rules you write and enforce, rather than a fixed set of checks",
+            "Policies run faster",
+            "Scans are declarative"
+          ],
+          "answer": 1,
+          "explanation": "Policy as code lets an organisation encode its own requirements, such as mandatory tags."
+        },
+        {
+          "key": "q155-7",
+          "type": "mcq",
+          "prompt": "Where do sensitive values end up even when you never write them in code?",
+          "options": [
+            "The provider cache",
+            "The state file",
+            "The plan comment",
+            "The module registry"
+          ],
+          "answer": 1,
+          "explanation": "State records real attribute values, which is why the state backend must be protected."
+        },
+        {
+          "key": "q155-8",
+          "type": "mcq",
+          "prompt": "What is the correct way to use a secret in Terraform?",
+          "options": [
+            "A default value on a variable",
+            "Read it at runtime from a secrets manager",
+            "Commit it in tfvars",
+            "Put it in the module"
+          ],
+          "answer": 1,
+          "explanation": "The secret stays in the secret store and never lands in the repository."
+        },
+        {
+          "key": "q155-9",
+          "type": "mcq",
+          "prompt": "You committed a secret by mistake. What must you do?",
+          "options": [
+            "Delete it in the next commit",
+            "Treat it as compromised and rotate it",
+            "Rename the file",
+            "Squash the commits"
+          ],
+          "answer": 1,
+          "explanation": "It is in the history and possibly already cloned, so rotation is the only real fix."
+        },
+        {
+          "key": "q155-10",
+          "type": "mcq",
+          "prompt": "Why fail the build on high severity scan findings?",
+          "options": [
+            "To slow deployments",
+            "So insecure configuration cannot reach production silently",
+            "To reduce cost",
+            "Because scanners are always right"
+          ],
+          "answer": 1,
+          "explanation": "A warning nobody reads has no effect, while a failed build forces a decision."
+        },
+        {
+          "key": "q155-11",
+          "type": "mcq",
+          "prompt": "What is a sensible guardrail for a team to enforce automatically?",
+          "options": [
+            "Maximum file length",
+            "Required tags on every resource",
+            "Comment style",
+            "Variable naming only"
+          ],
+          "answer": 1,
+          "explanation": "Tagging affects cost allocation and cleanup, and humans forget it constantly."
+        },
+        {
+          "key": "q155-12",
+          "type": "mcq",
+          "prompt": "What should CI credentials for Terraform look like?",
+          "options": [
+            "Full administrator access",
+            "Scoped to what the deploy actually needs",
+            "The root account",
+            "A shared personal user"
+          ],
+          "answer": 1,
+          "explanation": "Least privilege applies to automation, and CI credentials are a high value target."
+        },
+        {
+          "key": "q155-13",
+          "type": "true_false",
+          "prompt": "Posting the plan output as a pull request comment makes infrastructure review practical.",
+          "answer": true,
+          "explanation": "Reviewers can see the real effect without checking out the branch and running anything."
+        },
+        {
+          "key": "q155-14",
+          "type": "true_false",
+          "prompt": "Because state contains sensitive values, the state bucket needs encryption and restricted access.",
+          "answer": true,
+          "explanation": "Anyone who can read state can often read secrets, so it must be treated as sensitive itself."
+        },
+        {
+          "key": "q155-15",
+          "type": "true_false",
+          "prompt": "A manual approval gate before production apply contradicts the goal of automation.",
+          "answer": false,
+          "explanation": "Automating the work while keeping a human decision at the highest risk point is a normal pattern."
+        }
+      ]
+    },
+    {
+      "afterDay": 160,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q160-1",
+          "type": "mcq",
+          "prompt": "What does TF_LOG give you?",
+          "options": [
+            "Cost estimates",
+            "Detailed logging of what Terraform and the provider are doing",
+            "A plan summary",
+            "State history"
+          ],
+          "answer": 1,
+          "explanation": "Debug logging is how you see the actual API calls behind a confusing error."
+        },
+        {
+          "key": "q160-2",
+          "type": "mcq",
+          "prompt": "Why is a targeted plan considered a last resort?",
+          "options": [
+            "It is slow",
+            "It applies part of your configuration and can leave things inconsistent",
+            "It does not work with modules",
+            "It requires root"
+          ],
+          "answer": 1,
+          "explanation": "Skipping the dependency graph is exactly how partial and surprising states happen."
+        },
+        {
+          "key": "q160-3",
+          "type": "mcq",
+          "prompt": "When would you deliberately force replacement of a resource?",
+          "options": [
+            "Every apply",
+            "When the resource is in a bad state that an update cannot fix",
+            "To reduce cost",
+            "To rename it"
+          ],
+          "answer": 1,
+          "explanation": "Replacement is the blunt fix for a resource that has gone wrong in a way updates cannot resolve."
+        },
+        {
+          "key": "q160-4",
+          "type": "mcq",
+          "prompt": "Why does an apply sometimes fail on a resource created seconds earlier?",
+          "options": [
+            "Terraform bug",
+            "Cloud APIs are eventually consistent and the resource is not visible yet",
+            "State corruption",
+            "Provider not installed"
+          ],
+          "answer": 1,
+          "explanation": "The create returned, but the rest of the platform has not caught up yet."
+        },
+        {
+          "key": "q160-5",
+          "type": "mcq",
+          "prompt": "What should you do before upgrading a provider version?",
+          "options": [
+            "Delete state",
+            "Run a plan and read it for unexpected changes",
+            "Destroy the environment",
+            "Disable locking"
+          ],
+          "answer": 1,
+          "explanation": "Provider upgrades can change defaults, and the plan is where that shows up."
+        },
+        {
+          "key": "q160-6",
+          "type": "mcq",
+          "prompt": "Why split configurations so one apply cannot touch both staging and production?",
+          "options": [
+            "It is faster",
+            "To limit blast radius when something goes wrong",
+            "To reduce cost",
+            "Terraform requires it"
+          ],
+          "answer": 1,
+          "explanation": "A single mistake should not be able to take down both environments at once."
+        },
+        {
+          "key": "q160-7",
+          "type": "mcq",
+          "prompt": "What is the risk of reading another configuration's remote state?",
+          "options": [
+            "It is slow",
+            "It creates coupling, so a change in one can break the other",
+            "It exposes secrets always",
+            "It breaks locking"
+          ],
+          "answer": 1,
+          "explanation": "Cross configuration dependencies are convenient until one team changes an output."
+        },
+        {
+          "key": "q160-8",
+          "type": "mcq",
+          "prompt": "Why show a cost estimate on the pull request?",
+          "options": [
+            "To slow merges",
+            "So cost becomes part of the review rather than a surprise on the bill",
+            "It is required",
+            "To replace budgets"
+          ],
+          "answer": 1,
+          "explanation": "Reviewing cost at the moment of change is far more effective than discovering it later."
+        },
+        {
+          "key": "q160-9",
+          "type": "mcq",
+          "prompt": "What must you do before importing a hand built resource?",
+          "options": [
+            "Destroy it",
+            "Write matching configuration for it",
+            "Tag it",
+            "Move it to another region"
+          ],
+          "answer": 1,
+          "explanation": "Import populates state, so without configuration Terraform proposes destroying the resource."
+        },
+        {
+          "key": "q160-10",
+          "type": "mcq",
+          "prompt": "How do you know an import is complete and correct?",
+          "options": [
+            "The command succeeded",
+            "The plan reports no changes",
+            "The resource appears in state",
+            "The console shows it"
+          ],
+          "answer": 1,
+          "explanation": "A clean plan is the only proof that the code matches the imported reality."
+        },
+        {
+          "key": "q160-11",
+          "type": "mcq",
+          "prompt": "Why is importing a large estate slow?",
+          "options": [
+            "Import is rate limited",
+            "Every resource needs accurate configuration written first",
+            "State cannot hold it",
+            "Providers block it"
+          ],
+          "answer": 1,
+          "explanation": "The bottleneck is human work describing what already exists, not the tool."
+        },
+        {
+          "key": "q160-12",
+          "type": "mcq",
+          "prompt": "What is the main benefit of assuming a role across accounts in Terraform?",
+          "options": [
+            "Lower cost",
+            "No long lived credentials, and clear separation between accounts",
+            "Faster applies",
+            "Smaller state"
+          ],
+          "answer": 1,
+          "explanation": "Role assumption gives temporary access with an audit trail and no stored keys."
+        },
+        {
+          "key": "q160-13",
+          "type": "true_false",
+          "prompt": "Reading the provider documentation for a resource end to end is usually faster than guessing from examples.",
+          "answer": true,
+          "explanation": "The arguments, behaviours and import syntax are all documented, and guessing wastes more time than reading."
+        },
+        {
+          "key": "q160-14",
+          "type": "true_false",
+          "prompt": "A change that adds a NAT gateway is a good example of something worth flagging at review time.",
+          "answer": true,
+          "explanation": "It is a small code change with a recurring hourly cost, which is exactly what estimates catch."
+        },
+        {
+          "key": "q160-15",
+          "type": "true_false",
+          "prompt": "Fixing drift by clicking in the console is the correct long term response.",
+          "answer": false,
+          "explanation": "Reconciling through code is what keeps the configuration authoritative, otherwise drift becomes permanent."
+        }
+      ]
+    },
+    {
+      "afterDay": 165,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q165-1",
+          "type": "mcq",
+          "prompt": "Why define your CI deployment role in Terraform rather than the console?",
+          "options": [
+            "It is faster",
+            "So permissions are reviewable, versioned and reproducible",
+            "It costs less",
+            "The console cannot create roles"
+          ],
+          "answer": 1,
+          "explanation": "Permissions are exactly the kind of thing that should go through review and live in code."
+        },
+        {
+          "key": "q165-2",
+          "type": "mcq",
+          "prompt": "Why pass the image tag into the infrastructure as a variable?",
+          "options": [
+            "It reduces state",
+            "So the deployed version is explicit and traceable",
+            "It speeds up applies",
+            "It is required by ECR"
+          ],
+          "answer": 1,
+          "explanation": "The infrastructure then records exactly which build is running."
+        },
+        {
+          "key": "q165-3",
+          "type": "mcq",
+          "prompt": "What is the argument for separating application and infrastructure repositories?",
+          "options": [
+            "Smaller repositories",
+            "Different change rates, reviewers and blast radius",
+            "Terraform requires it",
+            "It reduces cost"
+          ],
+          "answer": 1,
+          "explanation": "Application code changes far more often than infrastructure, and the risk profiles differ."
+        },
+        {
+          "key": "q165-4",
+          "type": "mcq",
+          "prompt": "What does a successful destroy and rebuild prove?",
+          "options": [
+            "That applies are fast",
+            "That the environment is genuinely reproducible from code",
+            "That costs are low",
+            "That state is locked"
+          ],
+          "answer": 1,
+          "explanation": "Any manual step you still need is a gap in the configuration, and this exercise finds them."
+        },
+        {
+          "key": "q165-5",
+          "type": "mcq",
+          "prompt": "You needed a manual step during the rebuild. What is the correct response?",
+          "options": [
+            "Document it and move on",
+            "Turn it into a task and close the gap in code",
+            "Ignore it",
+            "Rebuild again the same way"
+          ],
+          "answer": 1,
+          "explanation": "Documented manual steps quietly become permanent, which defeats the purpose."
+        },
+        {
+          "key": "q165-6",
+          "type": "mcq",
+          "prompt": "How should you fix a fault that someone introduced in the Terraform layer?",
+          "options": [
+            "Click the fix in the console",
+            "Fix it in code and apply",
+            "Restore state from backup",
+            "Recreate the account"
+          ],
+          "answer": 1,
+          "explanation": "Fixing outside the code creates drift and hides the real change from everyone else."
+        },
+        {
+          "key": "q165-7",
+          "type": "mcq",
+          "prompt": "Why pin every provider and module version before calling a project finished?",
+          "options": [
+            "It looks tidy",
+            "So the configuration still produces the same result months later",
+            "It is required to apply",
+            "It reduces plan time"
+          ],
+          "answer": 1,
+          "explanation": "Reproducibility over time is the point, and unpinned versions quietly break it."
+        },
+        {
+          "key": "q165-8",
+          "type": "mcq",
+          "prompt": "What makes an infrastructure repository useful to an employer?",
+          "options": [
+            "Number of resources",
+            "Readable code, pinned versions, documentation and a working pipeline",
+            "Repository size",
+            "Number of modules"
+          ],
+          "answer": 1,
+          "explanation": "Reviewers look for judgement and maintainability, not volume."
+        },
+        {
+          "key": "q165-9",
+          "type": "mcq",
+          "prompt": "Why map exam objectives to days you have already completed?",
+          "options": [
+            "To pass faster",
+            "To find the gaps precisely instead of revising everything evenly",
+            "It is required",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "Targeted revision is the only efficient way to prepare when time is limited."
+        },
+        {
+          "key": "q165-10",
+          "type": "mcq",
+          "prompt": "What is the value of writing up both a code fault and a drift incident?",
+          "options": [
+            "It fills the README",
+            "They are different failure modes and both come up in interviews",
+            "It replaces testing",
+            "It is required by Terraform"
+          ],
+          "answer": 1,
+          "explanation": "One is a code problem and the other is a process problem, and explaining both shows real understanding."
+        },
+        {
+          "key": "q165-11",
+          "type": "mcq",
+          "prompt": "What should the getting started section of your README contain?",
+          "options": [
+            "Your CV",
+            "The exact commands to run the project from a clean machine",
+            "A list of every variable",
+            "The full plan output"
+          ],
+          "answer": 1,
+          "explanation": "Someone should be able to clone the repository and get it running without asking you."
+        },
+        {
+          "key": "q165-12",
+          "type": "mcq",
+          "prompt": "Which statement demonstrates the most capability?",
+          "options": [
+            "Learned Terraform",
+            "Built a reviewed pipeline that plans on pull requests and applies on merge with approval gates",
+            "Wrote Terraform code",
+            "Passed a Terraform course"
+          ],
+          "answer": 1,
+          "explanation": "Describing the working process shows how you operate, not just which tool you touched."
+        },
+        {
+          "key": "q165-13",
+          "type": "true_false",
+          "prompt": "Cost estimation in the pull request turns cost into a review decision rather than a monthly surprise.",
+          "answer": true,
+          "explanation": "The point is to make the trade off visible at the moment somebody can still change it."
+        },
+        {
+          "key": "q165-14",
+          "type": "true_false",
+          "prompt": "Manual steps in a rebuild are acceptable as long as they are documented.",
+          "answer": false,
+          "explanation": "Documented manual steps become permanent and are exactly what infrastructure as code exists to remove."
+        },
+        {
+          "key": "q165-15",
+          "type": "true_false",
+          "prompt": "Mapping the exam guide against your completed work is a better plan than starting revision from scratch.",
+          "answer": true,
+          "explanation": "Most of the syllabus is already covered by what you built, and only the gaps need new study."
+        }
+      ]
+    }
+  ]
+}

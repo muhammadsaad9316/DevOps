@@ -1,0 +1,1451 @@
+{
+  "days": [
+    {
+      "day": 51,
+      "title": "The AWS CLI In Scripts",
+      "tasks": [
+        {
+          "key": "b51-cli-in-script",
+          "title": "Write a script that runs an AWS CLI command and prints the result.",
+          "required": true
+        },
+        {
+          "key": "b51-profiles",
+          "title": "Configure a named profile and make your script use it explicitly rather than the default.",
+          "required": true
+        },
+        {
+          "key": "b51-check-identity",
+          "title": "Add a check at the top that confirms your credentials work before doing anything else.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 52,
+      "title": "JSON Output And jq",
+      "tasks": [
+        {
+          "key": "b52-install-jq",
+          "title": "Install jq and pipe an AWS CLI response into it to see it formatted.",
+          "required": true
+        },
+        {
+          "key": "b52-single-field",
+          "title": "Extract one field from a JSON response with jq.",
+          "required": true
+        },
+        {
+          "key": "b52-raw-output",
+          "title": "Use raw output so the value comes out without quotes and can be used in a variable.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 53,
+      "title": "jq Filters And Arrays",
+      "tasks": [
+        {
+          "key": "b53-array-loop",
+          "title": "Extract an array from a response and loop over its items in bash.",
+          "required": true
+        },
+        {
+          "key": "b53-select",
+          "title": "Use jq select to keep only the items matching a condition.",
+          "required": true
+        },
+        {
+          "key": "b53-build-object",
+          "title": "Use jq to build a smaller object containing only the fields you care about.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 54,
+      "title": "The query Flag",
+      "tasks": [
+        {
+          "key": "b54-query-basic",
+          "title": "Use the AWS CLI query flag to return one field without using jq at all.",
+          "required": true
+        },
+        {
+          "key": "b54-query-filter",
+          "title": "Use a query expression to filter a list by a property value.",
+          "required": true
+        },
+        {
+          "key": "b54-when-which",
+          "title": "Write down when you would use the query flag and when jq is the better choice.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 55,
+      "title": "Auditing IAM",
+      "tasks": [
+        {
+          "key": "b55-list-users",
+          "title": "Write a script that lists every IAM user in the account.",
+          "required": true
+        },
+        {
+          "key": "b55-key-age",
+          "title": "Extend it to show how old each access key is.",
+          "required": true
+        },
+        {
+          "key": "b55-flag-old",
+          "title": "Flag any key older than ninety days and exit non zero if any are found.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 56,
+      "title": "Querying Your Network",
+      "tasks": [
+        {
+          "key": "b56-list-vpcs",
+          "title": "Write a script that lists your VPCs with their CIDR blocks.",
+          "required": true
+        },
+        {
+          "key": "b56-list-subnets",
+          "title": "Extend it to list each subnet with its availability zone and CIDR.",
+          "required": true
+        },
+        {
+          "key": "b56-public-private",
+          "title": "Work out from the route tables which subnets are public and print that in the report.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 57,
+      "title": "Security Group Audit",
+      "tasks": [
+        {
+          "key": "b57-list-rules",
+          "title": "Write a script that lists every security group and its inbound rules.",
+          "required": true
+        },
+        {
+          "key": "b57-find-open",
+          "title": "Find any rule that allows traffic from the whole internet.",
+          "required": true
+        },
+        {
+          "key": "b57-report-risk",
+          "title": "Print a clear warning for each open rule, naming the group and the port.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 58,
+      "title": "Finding Expensive Resources",
+      "tasks": [
+        {
+          "key": "b58-find-nat",
+          "title": "Write a script that finds every NAT gateway in your account.",
+          "required": true
+        },
+        {
+          "key": "b58-multi-region",
+          "title": "Loop the check across several regions so nothing is forgotten in one you never open.",
+          "required": true
+        },
+        {
+          "key": "b58-estimate",
+          "title": "Print a rough monthly cost estimate based on the hourly rate you recorded on day 58.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 59,
+      "title": "Listing And Filtering Instances",
+      "tasks": [
+        {
+          "key": "b59-list-instances",
+          "title": "Write a script that lists running instances with their id, type and name tag.",
+          "required": true
+        },
+        {
+          "key": "b59-filter-tag",
+          "title": "Add filtering so it shows only instances with a tag you pass as an argument.",
+          "required": true
+        },
+        {
+          "key": "b59-format-table",
+          "title": "Format the output as aligned columns a human can read at a glance.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 60,
+      "title": "Launching And Tagging From A Script",
+      "tasks": [
+        {
+          "key": "b60-launch",
+          "title": "Write a script that launches an instance from a launch template or AMI you pass in.",
+          "required": true
+        },
+        {
+          "key": "b60-tag-it",
+          "title": "Tag it automatically with project, owner and a creation timestamp.",
+          "required": true
+        },
+        {
+          "key": "b60-wait-running",
+          "title": "Wait until the instance reports running before the script exits.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 61,
+      "title": "Hunting Orphaned Resources",
+      "tasks": [
+        {
+          "key": "b61-unattached-volumes",
+          "title": "Write a script that finds EBS volumes not attached to anything.",
+          "required": true
+        },
+        {
+          "key": "b61-old-snapshots",
+          "title": "Extend it to find snapshots older than a number of days you choose.",
+          "required": true
+        },
+        {
+          "key": "b61-dry-run-delete",
+          "title": "Add a delete option that is off by default and prints what it would remove first.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 62,
+      "title": "Elastic IPs And Small Leaks",
+      "tasks": [
+        {
+          "key": "b62-unattached-eips",
+          "title": "Find every Elastic IP that is allocated but not attached to anything.",
+          "required": true
+        },
+        {
+          "key": "b62-old-amis",
+          "title": "Find custom AMIs you created and their associated snapshots.",
+          "required": true
+        },
+        {
+          "key": "b62-combine-report",
+          "title": "Combine both checks into one report of things quietly costing money.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 63,
+      "title": "Scripting S3",
+      "tasks": [
+        {
+          "key": "b63-list-buckets",
+          "title": "Write a script that lists your buckets with their creation dates.",
+          "required": true
+        },
+        {
+          "key": "b63-bucket-size",
+          "title": "Extend it to report the size and object count of a bucket you name.",
+          "required": true
+        },
+        {
+          "key": "b63-sync-script",
+          "title": "Write a sync script that uploads a folder and prints how many files changed.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 64,
+      "title": "S3 Permission Audit",
+      "tasks": [
+        {
+          "key": "b64-check-public",
+          "title": "Write a script that checks the public access block setting on every bucket.",
+          "required": true
+        },
+        {
+          "key": "b64-check-policy",
+          "title": "Extend it to flag any bucket policy that allows access to everyone.",
+          "required": true
+        },
+        {
+          "key": "b64-check-encryption",
+          "title": "Add a check for default encryption and report any bucket without it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 65,
+      "title": "A Static Site Deploy Script",
+      "tasks": [
+        {
+          "key": "b65-sync-site",
+          "title": "Write a script that syncs a local folder to your website bucket.",
+          "required": true
+        },
+        {
+          "key": "b65-delete-removed",
+          "title": "Make it remove files from the bucket that no longer exist locally, with a confirmation.",
+          "required": true
+        },
+        {
+          "key": "b65-print-url",
+          "title": "Print the site URL at the end so you can click straight through to check it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 66,
+      "title": "Checking Databases",
+      "tasks": [
+        {
+          "key": "b66-list-rds",
+          "title": "Write a script that lists RDS instances with their engine, class and status.",
+          "required": true
+        },
+        {
+          "key": "b66-check-public",
+          "title": "Flag any database that is publicly accessible.",
+          "required": true
+        },
+        {
+          "key": "b66-check-backups",
+          "title": "Report the backup retention period for each and warn if it is zero.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 67,
+      "title": "Snapshot Automation",
+      "tasks": [
+        {
+          "key": "b67-create-snapshot",
+          "title": "Write a script that takes a snapshot of a volume or database you name.",
+          "required": true
+        },
+        {
+          "key": "b67-tag-snapshot",
+          "title": "Tag each snapshot with the date and the reason it was taken.",
+          "required": true
+        },
+        {
+          "key": "b67-prune-old",
+          "title": "Delete snapshots created by the script that are older than your retention setting.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 68,
+      "title": "Load Balancer Health",
+      "tasks": [
+        {
+          "key": "b68-list-lbs",
+          "title": "Write a script that lists your load balancers with their DNS names.",
+          "required": true
+        },
+        {
+          "key": "b68-target-health",
+          "title": "Report the health of every target in each target group.",
+          "required": true
+        },
+        {
+          "key": "b68-alert-unhealthy",
+          "title": "Exit non zero and print a clear message if any target is unhealthy.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 69,
+      "title": "Certificates Across The Account",
+      "tasks": [
+        {
+          "key": "b69-list-certs",
+          "title": "Write a script that lists every ACM certificate with its domain and status.",
+          "required": true
+        },
+        {
+          "key": "b69-expiry-days",
+          "title": "Calculate the days remaining until each one expires.",
+          "required": true
+        },
+        {
+          "key": "b69-warn-soon",
+          "title": "Warn on anything expiring within sixty days, reusing your day 41 logic.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 70,
+      "title": "Metrics From The Command Line",
+      "tasks": [
+        {
+          "key": "b70-get-metric",
+          "title": "Fetch CPU utilisation for one instance over the last hour from the CLI.",
+          "required": true
+        },
+        {
+          "key": "b70-parse-datapoints",
+          "title": "Parse the returned datapoints with jq and print the average.",
+          "required": true
+        },
+        {
+          "key": "b70-compare-threshold",
+          "title": "Warn when the average is above a threshold you set.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 71,
+      "title": "Alarm State Checker",
+      "tasks": [
+        {
+          "key": "b71-list-alarms",
+          "title": "Write a script that lists every CloudWatch alarm and its current state.",
+          "required": true
+        },
+        {
+          "key": "b71-filter-alarm",
+          "title": "Show only the alarms currently in an alarm state.",
+          "required": true
+        },
+        {
+          "key": "b71-insufficient",
+          "title": "Flag alarms stuck with insufficient data, since they are silently useless.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 72,
+      "title": "A Cost Report Script",
+      "tasks": [
+        {
+          "key": "b72-month-to-date",
+          "title": "Write a script that reports your month to date spend.",
+          "required": true
+        },
+        {
+          "key": "b72-by-service",
+          "title": "Break the spend down by service and show the top five.",
+          "required": true
+        },
+        {
+          "key": "b72-compare-last",
+          "title": "Compare this month against the same point last month and print the difference.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 73,
+      "title": "Account Audit Tool, Part One",
+      "tasks": [
+        {
+          "key": "b73-structure",
+          "title": "Create one script with a function per check, reusing the checks you built this month.",
+          "required": true
+        },
+        {
+          "key": "b73-security-section",
+          "title": "Group the security checks: IAM keys, open security groups, public buckets, public databases.",
+          "required": true
+        },
+        {
+          "key": "b73-consistent-output",
+          "title": "Give every check the same output format so the report reads as one document.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 74,
+      "title": "Account Audit Tool, Part Two",
+      "tasks": [
+        {
+          "key": "b74-cost-section",
+          "title": "Add the cost section: orphaned volumes, unattached addresses, NAT gateways, old snapshots.",
+          "required": true
+        },
+        {
+          "key": "b74-summary-counts",
+          "title": "Print a summary at the top with the number of findings in each category.",
+          "required": true
+        },
+        {
+          "key": "b74-exit-code",
+          "title": "Exit non zero when any high severity finding appears so it can run in a pipeline.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 75,
+      "title": "Automate The Teardown",
+      "tasks": [
+        {
+          "key": "b75-teardown-script",
+          "title": "Turn your day 72 teardown checklist into a script that reports what is still running.",
+          "required": true
+        },
+        {
+          "key": "b75-confirm-before",
+          "title": "Make any destructive action require an explicit confirmation flag.",
+          "required": true
+        },
+        {
+          "key": "b75-run-it",
+          "title": "Run both tools against your account and fix everything they find.",
+          "required": true
+        },
+        {
+          "key": "b75-commit",
+          "title": "Commit the audit and teardown tools to your repository with a README.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 55,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq55-1",
+          "type": "mcq",
+          "prompt": "Why name the profile explicitly in a script rather than relying on the default?",
+          "options": [
+            "It is faster",
+            "So the script cannot accidentally act on the wrong account",
+            "It is required",
+            "It reduces API calls"
+          ],
+          "answer": 1,
+          "explanation": "Running a cleanup script against production because the default profile changed is a real failure mode."
+        },
+        {
+          "key": "bq55-2",
+          "type": "mcq",
+          "prompt": "Why check your identity at the start of a script?",
+          "options": [
+            "To log the user",
+            "So you fail early with a clear message instead of midway through",
+            "It is required",
+            "To speed it up"
+          ],
+          "answer": 1,
+          "explanation": "It is the same guard clause principle from day 8, applied to credentials."
+        },
+        {
+          "key": "bq55-3",
+          "type": "mcq",
+          "prompt": "What format does the AWS CLI return by default?",
+          "options": [
+            "Plain text",
+            "JSON",
+            "CSV",
+            "XML"
+          ],
+          "answer": 1,
+          "explanation": "That is why jq and the query flag matter so much in AWS scripting."
+        },
+        {
+          "key": "bq55-4",
+          "type": "mcq",
+          "prompt": "What does jq do?",
+          "options": [
+            "Runs AWS commands",
+            "Filters and transforms JSON",
+            "Formats bash scripts",
+            "Manages credentials"
+          ],
+          "answer": 1,
+          "explanation": "It is the standard tool for pulling values out of JSON on the command line."
+        },
+        {
+          "key": "bq55-5",
+          "type": "mcq",
+          "prompt": "Why use raw output when extracting a value with jq?",
+          "options": [
+            "It is faster",
+            "So the value comes out without quotes and can be used directly",
+            "It is required",
+            "It reduces size"
+          ],
+          "answer": 1,
+          "explanation": "A quoted string passed into another command usually breaks it."
+        },
+        {
+          "key": "bq55-6",
+          "type": "mcq",
+          "prompt": "What does jq select do?",
+          "options": [
+            "Chooses a field",
+            "Keeps only the items matching a condition",
+            "Sorts the output",
+            "Counts items"
+          ],
+          "answer": 1,
+          "explanation": "It is the filtering step, and it works like a where clause."
+        },
+        {
+          "key": "bq55-7",
+          "type": "mcq",
+          "prompt": "What is the AWS CLI query flag for?",
+          "options": [
+            "Filtering with SQL",
+            "Selecting and filtering fields server side in the response",
+            "Running queries on RDS",
+            "Searching logs"
+          ],
+          "answer": 1,
+          "explanation": "It uses JMESPath and often removes the need for jq entirely."
+        },
+        {
+          "key": "bq55-8",
+          "type": "mcq",
+          "prompt": "When is jq the better choice over the query flag?",
+          "options": [
+            "Always",
+            "When you need to reshape or combine data beyond simple selection",
+            "Never",
+            "Only for S3"
+          ],
+          "answer": 1,
+          "explanation": "The query flag handles selection well, and jq handles transformation."
+        },
+        {
+          "key": "bq55-9",
+          "type": "mcq",
+          "prompt": "Why audit the age of IAM access keys?",
+          "options": [
+            "To count users",
+            "Because old keys are more likely to have leaked and are often forgotten",
+            "It is required",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "Key rotation is a basic control, and nobody does it manually."
+        },
+        {
+          "key": "bq55-10",
+          "type": "mcq",
+          "prompt": "Why should an audit script exit non zero when it finds a problem?",
+          "options": [
+            "To stop the script",
+            "So it can be used as a gate in a pipeline",
+            "It is required",
+            "To print a warning"
+          ],
+          "answer": 1,
+          "explanation": "Exit codes are how automation acts on results, as you learned on day 7."
+        },
+        {
+          "key": "bq55-11",
+          "type": "mcq",
+          "prompt": "Why loop a check across several regions?",
+          "options": [
+            "It is faster",
+            "Because forgotten resources in unused regions still cost money",
+            "It is required",
+            "To improve accuracy"
+          ],
+          "answer": 1,
+          "explanation": "This is exactly the problem the day 51 advice about picking one region was warning about."
+        },
+        {
+          "key": "bq55-12",
+          "type": "mcq",
+          "prompt": "What makes a report script genuinely useful?",
+          "options": [
+            "Full raw JSON output",
+            "A clear summary a human can act on",
+            "Maximum detail",
+            "Colour output"
+          ],
+          "answer": 1,
+          "explanation": "A report nobody reads is the same as no report."
+        },
+        {
+          "key": "bq55-13",
+          "type": "true_false",
+          "prompt": "The AWS CLI returning JSON is the main reason jq is worth learning early.",
+          "answer": true,
+          "explanation": "Almost every AWS scripting task starts with pulling a value out of a JSON response."
+        },
+        {
+          "key": "bq55-14",
+          "type": "true_false",
+          "prompt": "A script that acts on whichever profile happens to be default is safe enough for personal use.",
+          "answer": false,
+          "explanation": "Defaults change, and the mistake it enables is destructive and easy to make."
+        },
+        {
+          "key": "bq55-15",
+          "type": "true_false",
+          "prompt": "Auditing is mostly about comparing what exists against what should exist.",
+          "answer": true,
+          "explanation": "That is the same idea behind firewall audits, drift detection and security reviews."
+        }
+      ]
+    },
+    {
+      "afterDay": 60,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq60-1",
+          "type": "mcq",
+          "prompt": "How would a script determine whether a subnet is public?",
+          "options": [
+            "Check its CIDR",
+            "Check whether its route table has a route to an internet gateway",
+            "Check its name tag",
+            "Check its availability zone"
+          ],
+          "answer": 1,
+          "explanation": "It is the route table that decides, exactly as you learned on day 56."
+        },
+        {
+          "key": "bq60-2",
+          "type": "mcq",
+          "prompt": "What does a security group rule allowing the whole internet look like?",
+          "options": [
+            "A named group source",
+            "A source of 0.0.0.0/0",
+            "An empty source",
+            "A single IP"
+          ],
+          "answer": 1,
+          "explanation": "That is the pattern an audit script should always flag for review."
+        },
+        {
+          "key": "bq60-3",
+          "type": "mcq",
+          "prompt": "Is every rule open to the internet automatically wrong?",
+          "options": [
+            "Yes",
+            "No, but each one should be deliberate and justified",
+            "Yes for all ports",
+            "Only for port 22"
+          ],
+          "answer": 1,
+          "explanation": "A public web server needs port 443 open, and an open SSH port usually does not belong."
+        },
+        {
+          "key": "bq60-4",
+          "type": "mcq",
+          "prompt": "Why estimate NAT gateway cost in a script?",
+          "options": [
+            "It is required",
+            "Because it bills hourly whether used or not and is easy to forget",
+            "To improve performance",
+            "To reduce data transfer"
+          ],
+          "answer": 1,
+          "explanation": "It is one of the most common causes of an unexpected AWS bill."
+        },
+        {
+          "key": "bq60-5",
+          "type": "mcq",
+          "prompt": "Why tag resources automatically at creation time?",
+          "options": [
+            "It is faster",
+            "Because tags added later are usually never added at all",
+            "It is required",
+            "To reduce API calls"
+          ],
+          "answer": 1,
+          "explanation": "Automatic tagging is the only tagging that stays consistent."
+        },
+        {
+          "key": "bq60-6",
+          "type": "mcq",
+          "prompt": "What should a launch script wait for before exiting?",
+          "options": [
+            "Nothing",
+            "The instance to reach a running state",
+            "The billing update",
+            "The next hour"
+          ],
+          "answer": 1,
+          "explanation": "Exiting immediately leaves the caller unsure whether the launch actually worked."
+        },
+        {
+          "key": "bq60-7",
+          "type": "mcq",
+          "prompt": "Why format list output as aligned columns?",
+          "options": [
+            "It is required",
+            "Because unreadable output means the tool goes unused",
+            "It is faster",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Usability decides whether you actually run your own tools."
+        },
+        {
+          "key": "bq60-8",
+          "type": "mcq",
+          "prompt": "Why filter instances by tag rather than listing everything?",
+          "options": [
+            "It is faster",
+            "Because a real account has too many resources to scan by eye",
+            "It is required",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "Filtering is what makes a tool work at more than toy scale."
+        },
+        {
+          "key": "bq60-9",
+          "type": "mcq",
+          "prompt": "What is the risk of a script that can delete resources?",
+          "options": [
+            "It is slow",
+            "One bad filter deletes the wrong things across the whole account",
+            "It costs money",
+            "It needs jq"
+          ],
+          "answer": 1,
+          "explanation": "The blast radius of a broken loop is every resource it matches."
+        },
+        {
+          "key": "bq60-10",
+          "type": "mcq",
+          "prompt": "How should a delete option behave by default?",
+          "options": [
+            "Delete immediately",
+            "Print what it would delete without deleting anything",
+            "Ask for confirmation on each item",
+            "Be enabled always"
+          ],
+          "answer": 1,
+          "explanation": "A dry run by default means a mistake costs you nothing."
+        },
+        {
+          "key": "bq60-11",
+          "type": "mcq",
+          "prompt": "Why do orphaned volumes and snapshots matter?",
+          "options": [
+            "They slow the account",
+            "They keep billing even though nothing uses them",
+            "They block new resources",
+            "They break tagging"
+          ],
+          "answer": 1,
+          "explanation": "Storage bills independently of instances, as you learned on day 65 of the DevOps track."
+        },
+        {
+          "key": "bq60-12",
+          "type": "mcq",
+          "prompt": "What is the connection between this month and your Terraform work later?",
+          "options": [
+            "None",
+            "Auditing what exists is the manual version of drift detection",
+            "Terraform replaces bash",
+            "Bash generates Terraform"
+          ],
+          "answer": 1,
+          "explanation": "You are learning to compare intended state against actual state before you meet the tool that automates it."
+        },
+        {
+          "key": "bq60-13",
+          "type": "true_false",
+          "prompt": "A destructive script should require an explicit flag before it deletes anything.",
+          "answer": true,
+          "explanation": "Defaults should be safe, and destruction should always be a deliberate choice."
+        },
+        {
+          "key": "bq60-14",
+          "type": "true_false",
+          "prompt": "Tagging resources at creation is more reliable than tagging them afterwards.",
+          "answer": true,
+          "explanation": "Manual tagging afterwards is the step everyone skips when they are busy."
+        },
+        {
+          "key": "bq60-15",
+          "type": "true_false",
+          "prompt": "An audit script only needs to run once, when the account is set up.",
+          "answer": false,
+          "explanation": "Accounts drift constantly, which is why the audit is something you schedule."
+        }
+      ]
+    },
+    {
+      "afterDay": 65,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq65-1",
+          "type": "mcq",
+          "prompt": "Why check the public access block setting on every bucket?",
+          "options": [
+            "To count buckets",
+            "Because a publicly readable bucket is a common cause of data leaks",
+            "It is required",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "It is the single most valuable S3 check you can automate."
+        },
+        {
+          "key": "bq65-2",
+          "type": "mcq",
+          "prompt": "What in a bucket policy should an audit flag?",
+          "options": [
+            "Any policy",
+            "A policy granting access to everyone",
+            "A policy with conditions",
+            "A policy naming your own account"
+          ],
+          "answer": 1,
+          "explanation": "A principal of everyone is what makes a bucket effectively public."
+        },
+        {
+          "key": "bq65-3",
+          "type": "mcq",
+          "prompt": "Why check default encryption on buckets?",
+          "options": [
+            "It is faster",
+            "So new objects are encrypted without anyone remembering to do it",
+            "It is required by S3",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "A default means the safe option happens without depending on discipline."
+        },
+        {
+          "key": "bq65-4",
+          "type": "mcq",
+          "prompt": "Why should a sync that deletes remote files ask for confirmation?",
+          "options": [
+            "It is slow",
+            "Because a wrong local path could wipe the entire bucket",
+            "It is required",
+            "To reduce transfer"
+          ],
+          "answer": 1,
+          "explanation": "Delete on sync is powerful and unforgiving, which is exactly when confirmation matters."
+        },
+        {
+          "key": "bq65-5",
+          "type": "mcq",
+          "prompt": "What is the advantage of sync over copying everything each time?",
+          "options": [
+            "It is more accurate",
+            "It transfers only what changed",
+            "It compresses better",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Reduced transfer means faster deploys and lower cost."
+        },
+        {
+          "key": "bq65-6",
+          "type": "mcq",
+          "prompt": "Why print the site URL at the end of a deploy script?",
+          "options": [
+            "It is required",
+            "So you can immediately verify the deploy worked",
+            "To fill the log",
+            "To reduce steps"
+          ],
+          "answer": 1,
+          "explanation": "Small conveniences are what make you keep using your own tools."
+        },
+        {
+          "key": "bq65-7",
+          "type": "mcq",
+          "prompt": "Why flag a publicly accessible database?",
+          "options": [
+            "It is slower",
+            "Because it should almost never be reachable from the internet",
+            "It costs more",
+            "It cannot be backed up"
+          ],
+          "answer": 1,
+          "explanation": "This is the same reasoning behind putting databases in private subnets on day 66."
+        },
+        {
+          "key": "bq65-8",
+          "type": "mcq",
+          "prompt": "What does a backup retention period of zero mean?",
+          "options": [
+            "Infinite retention",
+            "Automated backups are disabled",
+            "Backups are manual only",
+            "It is the default"
+          ],
+          "answer": 1,
+          "explanation": "It means there is no automatic recovery point, which is worth a loud warning."
+        },
+        {
+          "key": "bq65-9",
+          "type": "mcq",
+          "prompt": "Why tag snapshots with the reason they were taken?",
+          "options": [
+            "It is required",
+            "So you can tell later which are safe to delete",
+            "To reduce cost",
+            "To speed up restores"
+          ],
+          "answer": 1,
+          "explanation": "Untagged snapshots accumulate because nobody dares delete something they cannot identify."
+        },
+        {
+          "key": "bq65-10",
+          "type": "mcq",
+          "prompt": "Why should a snapshot pruning script only delete snapshots it created?",
+          "options": [
+            "It is faster",
+            "Because deleting someone else's backup could destroy a recovery point",
+            "It is required",
+            "To reduce API calls"
+          ],
+          "answer": 1,
+          "explanation": "Scoping destructive actions to your own resources is a basic safety rule."
+        },
+        {
+          "key": "bq65-11",
+          "type": "mcq",
+          "prompt": "What should a bucket size report be used for?",
+          "options": [
+            "Curiosity",
+            "Finding where storage cost is actually going",
+            "Checking permissions",
+            "Testing sync"
+          ],
+          "answer": 1,
+          "explanation": "You cannot reduce a cost you cannot locate."
+        },
+        {
+          "key": "bq65-12",
+          "type": "mcq",
+          "prompt": "Why combine several small checks into one audit script?",
+          "options": [
+            "Fewer files",
+            "So the whole picture appears in one run instead of several",
+            "It is faster",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "A single command that reports everything is a tool you will actually run."
+        },
+        {
+          "key": "bq65-13",
+          "type": "true_false",
+          "prompt": "A default that makes the safe thing happen automatically is better than relying on people remembering.",
+          "answer": true,
+          "explanation": "This principle applies to encryption, tagging, backups and dry runs alike."
+        },
+        {
+          "key": "bq65-14",
+          "type": "true_false",
+          "prompt": "A sync with delete enabled and a wrong source path can empty a bucket.",
+          "answer": true,
+          "explanation": "It is why the confirmation step exists, and why versioning matters even more."
+        },
+        {
+          "key": "bq65-15",
+          "type": "true_false",
+          "prompt": "Checking backup retention is part of a security audit rather than a reliability audit.",
+          "answer": false,
+          "explanation": "It belongs to reliability and recovery, though a good audit script covers both areas."
+        }
+      ]
+    },
+    {
+      "afterDay": 70,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq70-1",
+          "type": "mcq",
+          "prompt": "What does the target health check on a load balancer tell you?",
+          "options": [
+            "Instance CPU",
+            "Whether each backend is receiving traffic",
+            "The certificate status",
+            "The cost per hour"
+          ],
+          "answer": 1,
+          "explanation": "An unhealthy target is removed from the pool, which is the failure most worth alerting on."
+        },
+        {
+          "key": "bq70-2",
+          "type": "mcq",
+          "prompt": "Why check ACM certificates across the whole account?",
+          "options": [
+            "To count them",
+            "Because one forgotten expiry can take down a service",
+            "It is required",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "Certificates expire silently until the moment they cause an outage."
+        },
+        {
+          "key": "bq70-3",
+          "type": "mcq",
+          "prompt": "Why warn sixty days before a certificate expires rather than seven?",
+          "options": [
+            "It is the standard",
+            "Because renewal and validation can take time to arrange",
+            "To reduce noise",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "The warning has to arrive while there is still time to act calmly."
+        },
+        {
+          "key": "bq70-4",
+          "type": "mcq",
+          "prompt": "What does fetching CloudWatch metrics from the CLI return?",
+          "options": [
+            "A single number",
+            "A list of datapoints over a time range",
+            "A dashboard",
+            "A log stream"
+          ],
+          "answer": 1,
+          "explanation": "You then have to aggregate them yourself, which is what jq is for."
+        },
+        {
+          "key": "bq70-5",
+          "type": "mcq",
+          "prompt": "Why calculate an average rather than reading a single datapoint?",
+          "options": [
+            "It is faster",
+            "Because one datapoint can be an outlier that means nothing",
+            "It is required",
+            "To reduce API calls"
+          ],
+          "answer": 1,
+          "explanation": "Trends matter more than instantaneous values for almost every metric."
+        },
+        {
+          "key": "bq70-6",
+          "type": "mcq",
+          "prompt": "What does an alarm in the insufficient data state mean?",
+          "options": [
+            "Everything is fine",
+            "It is not receiving the metric and is therefore not protecting anything",
+            "It is about to fire",
+            "It is disabled"
+          ],
+          "answer": 1,
+          "explanation": "A silently useless alarm is worse than no alarm, because you believe you are covered."
+        },
+        {
+          "key": "bq70-7",
+          "type": "mcq",
+          "prompt": "Why list alarms currently in an alarm state?",
+          "options": [
+            "To count them",
+            "So you see active problems without opening the console",
+            "It is required",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "A single command that answers is anything broken right now is genuinely useful."
+        },
+        {
+          "key": "bq70-8",
+          "type": "mcq",
+          "prompt": "Why break down cost by service?",
+          "options": [
+            "It is required",
+            "Because the total tells you nothing about what to change",
+            "It is faster",
+            "To reduce API calls"
+          ],
+          "answer": 1,
+          "explanation": "You need to know which service to look at before you can reduce anything."
+        },
+        {
+          "key": "bq70-9",
+          "type": "mcq",
+          "prompt": "Why compare this month against the same point last month?",
+          "options": [
+            "It is required",
+            "Because a rising trend is more meaningful than an absolute number",
+            "It is faster",
+            "To predict the future"
+          ],
+          "answer": 1,
+          "explanation": "A jump against the same period is the signal that something changed."
+        },
+        {
+          "key": "bq70-10",
+          "type": "mcq",
+          "prompt": "What should a metric warning threshold be based on?",
+          "options": [
+            "A round number",
+            "Your own observed baseline",
+            "The service default",
+            "The maximum value"
+          ],
+          "answer": 1,
+          "explanation": "This is the same reasoning you will meet again when you set real alerts in Month 8."
+        },
+        {
+          "key": "bq70-11",
+          "type": "mcq",
+          "prompt": "Why is a cost script part of an engineer's toolkit rather than finance's?",
+          "options": [
+            "Finance cannot access AWS",
+            "Because architectural choices drive the bill and engineers make those choices",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "You own the decisions, so you own part of the outcome."
+        },
+        {
+          "key": "bq70-12",
+          "type": "mcq",
+          "prompt": "What do these monitoring scripts prepare you for later?",
+          "options": [
+            "Nothing",
+            "The observability work in Month 8, where the same ideas are automated properly",
+            "Terraform",
+            "Kubernetes"
+          ],
+          "answer": 1,
+          "explanation": "Golden signals, thresholds and alert noise all come back with better tooling."
+        },
+        {
+          "key": "bq70-13",
+          "type": "true_false",
+          "prompt": "An alarm that never receives its metric is effectively no alarm at all.",
+          "answer": true,
+          "explanation": "It gives false confidence, which is worse than knowing you have no coverage."
+        },
+        {
+          "key": "bq70-14",
+          "type": "true_false",
+          "prompt": "Aggregating CloudWatch datapoints yourself is a reasonable way to learn what dashboards do for you.",
+          "answer": true,
+          "explanation": "Doing it by hand once makes the managed version far easier to reason about."
+        },
+        {
+          "key": "bq70-15",
+          "type": "true_false",
+          "prompt": "Cost is only worth checking at the end of the month.",
+          "answer": false,
+          "explanation": "By then the money is spent, which is why day 54 made you check the dashboard daily."
+        }
+      ]
+    },
+    {
+      "afterDay": 75,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq75-1",
+          "type": "mcq",
+          "prompt": "Why give every check in an audit tool the same output format?",
+          "options": [
+            "It is required",
+            "So the whole report reads as one document rather than several",
+            "It is faster",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Consistency is what turns a pile of scripts into a tool."
+        },
+        {
+          "key": "bq75-2",
+          "type": "mcq",
+          "prompt": "Why put a summary of finding counts at the top of a report?",
+          "options": [
+            "To fill space",
+            "So the reader knows immediately whether anything needs attention",
+            "It is required",
+            "To sort the output"
+          ],
+          "answer": 1,
+          "explanation": "Nobody reads a long report to discover there was nothing wrong."
+        },
+        {
+          "key": "bq75-3",
+          "type": "mcq",
+          "prompt": "Why should an audit tool exit non zero on high severity findings?",
+          "options": [
+            "To stop the run",
+            "So it can act as a gate in a pipeline",
+            "It is required",
+            "To print a summary"
+          ],
+          "answer": 1,
+          "explanation": "That single behaviour is what lets a script become part of automation."
+        },
+        {
+          "key": "bq75-4",
+          "type": "mcq",
+          "prompt": "What separates a security finding from a cost finding?",
+          "options": [
+            "Nothing",
+            "One is about exposure and the other about waste",
+            "Severity only",
+            "The AWS service"
+          ],
+          "answer": 1,
+          "explanation": "Both matter, and grouping them helps the reader act on the right things first."
+        },
+        {
+          "key": "bq75-5",
+          "type": "mcq",
+          "prompt": "Why automate the teardown checklist?",
+          "options": [
+            "It is faster to type",
+            "Because a manual checklist gets skipped when you are tired",
+            "It is required",
+            "To reduce API calls"
+          ],
+          "answer": 1,
+          "explanation": "The checklist exists precisely for the moments when you are least likely to follow it."
+        },
+        {
+          "key": "bq75-6",
+          "type": "mcq",
+          "prompt": "How should a teardown tool behave by default?",
+          "options": [
+            "Delete everything",
+            "Report what is still running without deleting",
+            "Ask about each resource",
+            "Do nothing"
+          ],
+          "answer": 1,
+          "explanation": "Report first and destroy only on an explicit flag is the safe default."
+        },
+        {
+          "key": "bq75-7",
+          "type": "mcq",
+          "prompt": "Why require a confirmation flag for destructive actions?",
+          "options": [
+            "It is required",
+            "So destruction is always deliberate rather than accidental",
+            "It is faster",
+            "To log the user"
+          ],
+          "answer": 1,
+          "explanation": "The flag is a small friction that prevents an expensive mistake."
+        },
+        {
+          "key": "bq75-8",
+          "type": "mcq",
+          "prompt": "What does building an audit tool teach you beyond bash?",
+          "options": [
+            "Nothing",
+            "What good and bad configuration actually look like in a real account",
+            "Only jq",
+            "Only the CLI"
+          ],
+          "answer": 1,
+          "explanation": "You cannot write a check without first understanding what it is checking for."
+        },
+        {
+          "key": "bq75-9",
+          "type": "mcq",
+          "prompt": "Why commit these tools to your repository?",
+          "options": [
+            "To back them up",
+            "Because they are portfolio evidence that you understand cloud operations",
+            "It is required",
+            "To share with AWS"
+          ],
+          "answer": 1,
+          "explanation": "A working audit tool says more about you than a list of services on a CV."
+        },
+        {
+          "key": "bq75-10",
+          "type": "mcq",
+          "prompt": "What should the README for these tools explain?",
+          "options": [
+            "The AWS pricing model",
+            "What each tool checks, how to run it, and what its exit codes mean",
+            "Your CV",
+            "The bash version"
+          ],
+          "answer": 1,
+          "explanation": "Someone should be able to run it without reading the source."
+        },
+        {
+          "key": "bq75-11",
+          "type": "mcq",
+          "prompt": "What is the biggest risk in an account audit tool?",
+          "options": [
+            "It runs slowly",
+            "A broken filter causing it to act on the wrong resources",
+            "It uses too many API calls",
+            "It needs jq"
+          ],
+          "answer": 1,
+          "explanation": "Which is why dry run defaults and confirmation flags exist."
+        },
+        {
+          "key": "bq75-12",
+          "type": "mcq",
+          "prompt": "What have these three months of bash actually built toward?",
+          "options": [
+            "Bash expertise",
+            "The ability to automate the operational work the main track taught you",
+            "Passing an exam",
+            "Replacing Terraform"
+          ],
+          "answer": 1,
+          "explanation": "Bash is the glue, and from Month 4 Python takes over the heavier work."
+        },
+        {
+          "key": "bq75-13",
+          "type": "true_false",
+          "prompt": "A tool that reports problems but cannot be run automatically is only half finished.",
+          "answer": true,
+          "explanation": "The exit code and consistent output are what let it run unattended."
+        },
+        {
+          "key": "bq75-14",
+          "type": "true_false",
+          "prompt": "An audit tool you wrote yourself is stronger interview material than a certificate alone.",
+          "answer": true,
+          "explanation": "It demonstrates that you understand what good configuration looks like, not just that you studied it."
+        },
+        {
+          "key": "bq75-15",
+          "type": "true_false",
+          "prompt": "From next month the daily track moves to Python, and bash stops being useful.",
+          "answer": false,
+          "explanation": "Bash remains the glue for everything small, and Python takes over where bash becomes awkward."
+        }
+      ]
+    }
+  ]
+}

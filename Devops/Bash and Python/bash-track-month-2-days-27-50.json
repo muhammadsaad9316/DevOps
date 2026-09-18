@@ -1,0 +1,1430 @@
+{
+  "days": [
+    {
+      "day": 27,
+      "title": "Functions",
+      "tasks": [
+        {
+          "key": "b27-first-function",
+          "title": "Write a function that prints a message, then call it three times.",
+          "required": true
+        },
+        {
+          "key": "b27-why-functions",
+          "title": "Rewrite a repeated block from an old script as a function.",
+          "required": true
+        },
+        {
+          "key": "b27-netinfo",
+          "title": "Write a script with three functions that print your IP, your gateway and your DNS server.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 28,
+      "title": "Function Arguments And Return Values",
+      "tasks": [
+        {
+          "key": "b28-args-in-function",
+          "title": "Pass arguments into a function and use them inside it.",
+          "required": true
+        },
+        {
+          "key": "b28-return-status",
+          "title": "Make a function return success or failure, then act on the result with an if.",
+          "required": true
+        },
+        {
+          "key": "b28-valid-ip",
+          "title": "Write a function that checks whether a string looks like a valid IPv4 address.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 29,
+      "title": "Arrays",
+      "tasks": [
+        {
+          "key": "b29-create-array",
+          "title": "Create an array of five hostnames and print each one with a loop.",
+          "required": true
+        },
+        {
+          "key": "b29-array-length",
+          "title": "Print how many items the array holds and access one item by index.",
+          "required": true
+        },
+        {
+          "key": "b29-subnet-list",
+          "title": "Store a list of subnets in an array and loop over them printing each one.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 30,
+      "title": "Arithmetic And A Subnet Helper",
+      "tasks": [
+        {
+          "key": "b30-arithmetic",
+          "title": "Do multiplication, division and modulo inside a script and print the results.",
+          "required": true
+        },
+        {
+          "key": "b30-power-of-two",
+          "title": "Write a function that returns how many hosts a given prefix length allows.",
+          "required": true
+        },
+        {
+          "key": "b30-cidr-table",
+          "title": "Write a script that prints a CIDR table from slash 24 to slash 30 with host counts.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 31,
+      "title": "String Manipulation",
+      "tasks": [
+        {
+          "key": "b31-substring",
+          "title": "Extract part of a string using bash parameter expansion.",
+          "required": true
+        },
+        {
+          "key": "b31-replace",
+          "title": "Replace text inside a variable without calling any external command.",
+          "required": true
+        },
+        {
+          "key": "b31-split-octets",
+          "title": "Write a function that splits an IP address into its four octets.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 32,
+      "title": "Parsing Command Output",
+      "tasks": [
+        {
+          "key": "b32-capture-route",
+          "title": "Capture the output of ip route into a variable and print it.",
+          "required": true
+        },
+        {
+          "key": "b32-extract-gateway",
+          "title": "Extract only the default gateway address from that output.",
+          "required": true
+        },
+        {
+          "key": "b32-gateway-check",
+          "title": "Write a script that prints the gateway and warns if there is no default route.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 33,
+      "title": "awk In Scripts",
+      "tasks": [
+        {
+          "key": "b33-print-column",
+          "title": "Use awk inside a script to print a chosen column from a command's output.",
+          "required": true
+        },
+        {
+          "key": "b33-filter-rows",
+          "title": "Use awk to print only the lines where a column matches a condition.",
+          "required": true
+        },
+        {
+          "key": "b33-listening-ports",
+          "title": "Write a script that lists listening ports and the process for each, formatted neatly.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 34,
+      "title": "sed In Scripts",
+      "tasks": [
+        {
+          "key": "b34-replace-text",
+          "title": "Use sed to replace text in a file and write the result to a new file.",
+          "required": true
+        },
+        {
+          "key": "b34-in-place-backup",
+          "title": "Use sed to edit a file in place while keeping a backup copy.",
+          "required": true
+        },
+        {
+          "key": "b34-hosts-entry",
+          "title": "Write a script that safely adds an entry to the hosts file if it is not already there.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 35,
+      "title": "A DNS Lookup Tool",
+      "tasks": [
+        {
+          "key": "b35-wrap-dig",
+          "title": "Write a script that takes a domain and prints only its A record.",
+          "required": true
+        },
+        {
+          "key": "b35-record-types",
+          "title": "Extend it so a second argument chooses the record type, defaulting to A.",
+          "required": true
+        },
+        {
+          "key": "b35-usage-message",
+          "title": "Add a usage message that prints when the script is run with no arguments.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 36,
+      "title": "Checking Ports",
+      "tasks": [
+        {
+          "key": "b36-single-port",
+          "title": "Write a function that reports whether a given host and port are reachable.",
+          "required": true
+        },
+        {
+          "key": "b36-timeout",
+          "title": "Add a timeout so the check fails fast instead of hanging.",
+          "required": true
+        },
+        {
+          "key": "b36-exit-code",
+          "title": "Make the script exit non zero when the port is closed so automation can use it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 37,
+      "title": "Looping Over Ports And Hosts",
+      "tasks": [
+        {
+          "key": "b37-port-list",
+          "title": "Loop over a list of common ports and report which are open on one host.",
+          "required": true
+        },
+        {
+          "key": "b37-host-list",
+          "title": "Loop over a list of hosts and check one port on each.",
+          "required": true
+        },
+        {
+          "key": "b37-summary",
+          "title": "Print a clean summary at the end showing counts of open and closed.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 38,
+      "title": "A Ping Sweep",
+      "tasks": [
+        {
+          "key": "b38-loop-range",
+          "title": "Loop over the last octet from 1 to 20 and ping each address once.",
+          "required": true
+        },
+        {
+          "key": "b38-quiet-fast",
+          "title": "Use a short timeout and suppress output so the sweep finishes quickly.",
+          "required": true
+        },
+        {
+          "key": "b38-live-hosts",
+          "title": "Print only the addresses that responded, and count them.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 39,
+      "title": "A Capture Helper",
+      "tasks": [
+        {
+          "key": "b39-wrap-tcpdump",
+          "title": "Write a script that runs tcpdump filtered to one host passed as an argument.",
+          "required": true
+        },
+        {
+          "key": "b39-save-file",
+          "title": "Add an option to save the capture to a timestamped pcap file.",
+          "required": true
+        },
+        {
+          "key": "b39-require-root",
+          "title": "Add a check that exits with a clear message if the script is not run with enough privileges.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 40,
+      "title": "curl In Scripts",
+      "tasks": [
+        {
+          "key": "b40-status-code",
+          "title": "Use curl in a script to fetch only the HTTP status code of a URL.",
+          "required": true
+        },
+        {
+          "key": "b40-health-check",
+          "title": "Write a health check that passes on 200 and fails on anything else.",
+          "required": true
+        },
+        {
+          "key": "b40-response-time",
+          "title": "Extend it to also print how long the request took.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 41,
+      "title": "Certificate Expiry Checker",
+      "tasks": [
+        {
+          "key": "b41-read-cert",
+          "title": "Use openssl in a script to print the expiry date of a site certificate.",
+          "required": true
+        },
+        {
+          "key": "b41-days-left",
+          "title": "Calculate how many days remain until expiry.",
+          "required": true
+        },
+        {
+          "key": "b41-warn-threshold",
+          "title": "Warn when fewer than thirty days remain, and exit non zero.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 42,
+      "title": "Error Handling And Cleanup",
+      "tasks": [
+        {
+          "key": "b42-trap",
+          "title": "Use trap so your script cleans up its temporary files even when it fails.",
+          "required": true
+        },
+        {
+          "key": "b42-temp-files",
+          "title": "Create temporary files properly instead of using fixed names in the current folder.",
+          "required": true
+        },
+        {
+          "key": "b42-error-function",
+          "title": "Write one error function that prints a message and exits, and use it everywhere.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 43,
+      "title": "Checking A Web Server",
+      "tasks": [
+        {
+          "key": "b43-service-and-port",
+          "title": "Write a script that checks nginx is running and its port is listening.",
+          "required": true
+        },
+        {
+          "key": "b43-fetch-page",
+          "title": "Extend it to fetch the page and confirm the status code is 200.",
+          "required": true
+        },
+        {
+          "key": "b43-recent-errors",
+          "title": "Add a check that counts errors in the nginx error log from the last hour.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 44,
+      "title": "Running Checks On Another Machine",
+      "tasks": [
+        {
+          "key": "b44-ssh-command",
+          "title": "Run a single command on your second VM over SSH from a script.",
+          "required": true
+        },
+        {
+          "key": "b44-loop-hosts",
+          "title": "Loop over both machines and run the same check on each.",
+          "required": true
+        },
+        {
+          "key": "b44-collect-results",
+          "title": "Collect the results into one report showing each host and its status.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 45,
+      "title": "A Firewall Audit Script",
+      "tasks": [
+        {
+          "key": "b45-list-open",
+          "title": "Write a script that lists every listening port on the machine.",
+          "required": true
+        },
+        {
+          "key": "b45-allowed-list",
+          "title": "Compare that list against an allowed list stored in an array.",
+          "required": true
+        },
+        {
+          "key": "b45-report-unexpected",
+          "title": "Print a warning for any port that is open but not on the allowed list.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 46,
+      "title": "Here Documents And Templates",
+      "tasks": [
+        {
+          "key": "b46-heredoc",
+          "title": "Use a here document to write a multi line block of text into a file.",
+          "required": true
+        },
+        {
+          "key": "b46-variables-inside",
+          "title": "Insert variables into that block so the output changes per run.",
+          "required": true
+        },
+        {
+          "key": "b46-nginx-config",
+          "title": "Generate a simple nginx server block from a template using a hostname argument.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 47,
+      "title": "Remote Work Safely",
+      "tasks": [
+        {
+          "key": "b47-ssh-keys-only",
+          "title": "Confirm your scripts use key based SSH and never prompt for a password.",
+          "required": true
+        },
+        {
+          "key": "b47-strict-checks",
+          "title": "Make the script fail clearly when a host is unreachable rather than hanging.",
+          "required": true
+        },
+        {
+          "key": "b47-no-secrets",
+          "title": "Review every script you have written and confirm none contains a password or key.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 48,
+      "title": "Retry And Wait Logic",
+      "tasks": [
+        {
+          "key": "b48-retry-loop",
+          "title": "Write a function that retries a command up to five times before giving up.",
+          "required": true
+        },
+        {
+          "key": "b48-backoff",
+          "title": "Add a short pause between attempts that grows each time.",
+          "required": true
+        },
+        {
+          "key": "b48-wait-for-service",
+          "title": "Write a script that waits for a port to open before continuing, with a maximum wait.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 49,
+      "title": "A Monitoring Loop",
+      "tasks": [
+        {
+          "key": "b49-check-list",
+          "title": "Store a list of URLs in an array and check each one in a loop.",
+          "required": true
+        },
+        {
+          "key": "b49-log-results",
+          "title": "Append each result to a log file with a timestamp and the status code.",
+          "required": true
+        },
+        {
+          "key": "b49-summary-exit",
+          "title": "Exit non zero if any check failed, so cron can tell something is wrong.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 50,
+      "title": "Build Your Network Toolkit",
+      "tasks": [
+        {
+          "key": "b50-combine",
+          "title": "Combine your best scripts from this month into one toolkit folder with a README.",
+          "required": true
+        },
+        {
+          "key": "b50-shellcheck-all",
+          "title": "Run shellcheck across every script and fix every warning.",
+          "required": true
+        },
+        {
+          "key": "b50-usage-consistent",
+          "title": "Give every tool the same argument style and a usage message.",
+          "required": true
+        },
+        {
+          "key": "b50-commit-toolkit",
+          "title": "Commit the toolkit to your GitHub repository alongside the day 50 capstone.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 30,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq30-1",
+          "type": "mcq",
+          "prompt": "Why put repeated code into a function?",
+          "options": [
+            "It runs faster",
+            "You fix a bug in one place instead of several",
+            "It uses less memory",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Duplication means the same bug exists in several places and you will miss one."
+        },
+        {
+          "key": "bq30-2",
+          "type": "mcq",
+          "prompt": "How does a bash function receive arguments?",
+          "options": [
+            "Through global variables only",
+            "The same way a script does, as numbered positional parameters",
+            "As named parameters",
+            "It cannot take arguments"
+          ],
+          "answer": 1,
+          "explanation": "Inside a function, the numbered parameters refer to the function's own arguments."
+        },
+        {
+          "key": "bq30-3",
+          "type": "mcq",
+          "prompt": "How does a function signal success or failure?",
+          "options": [
+            "By printing a message",
+            "Through its return status",
+            "By setting a global variable",
+            "It cannot"
+          ],
+          "answer": 1,
+          "explanation": "The return status lets the caller act on the result with an if statement."
+        },
+        {
+          "key": "bq30-4",
+          "type": "mcq",
+          "prompt": "What is an array useful for in a script?",
+          "options": [
+            "Faster arithmetic",
+            "Holding a list of items you want to loop over",
+            "Storing passwords",
+            "Redirecting output"
+          ],
+          "answer": 1,
+          "explanation": "It keeps the list in one place so adding an item does not mean new code."
+        },
+        {
+          "key": "bq30-5",
+          "type": "mcq",
+          "prompt": "How do you find the number of items in a bash array?",
+          "options": [
+            "Count them manually",
+            "Use the array length expansion",
+            "Use wc",
+            "Use a loop"
+          ],
+          "answer": 1,
+          "explanation": "The length expansion gives you the count directly."
+        },
+        {
+          "key": "bq30-6",
+          "type": "mcq",
+          "prompt": "Which operator gives the remainder of a division?",
+          "options": [
+            "The slash",
+            "The percent sign",
+            "The asterisk",
+            "The caret"
+          ],
+          "answer": 1,
+          "explanation": "Modulo is useful for anything that repeats on a cycle."
+        },
+        {
+          "key": "bq30-7",
+          "type": "mcq",
+          "prompt": "How many usable hosts does a slash 26 network give you?",
+          "options": [
+            "30",
+            "62",
+            "126",
+            "254"
+          ],
+          "answer": 1,
+          "explanation": "Six host bits give 64 addresses, and two of them are reserved."
+        },
+        {
+          "key": "bq30-8",
+          "type": "mcq",
+          "prompt": "Why write a CIDR table generator instead of memorising the table?",
+          "options": [
+            "It is faster to run",
+            "Because building it forces you to understand the arithmetic behind it",
+            "The table is secret",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "You remember what you have had to calculate, not what you have read."
+        },
+        {
+          "key": "bq30-9",
+          "type": "mcq",
+          "prompt": "Why validate an IP address before using it in a script?",
+          "options": [
+            "It is faster",
+            "Because bad input passed to a network command produces confusing failures",
+            "It is required by bash",
+            "To save memory"
+          ],
+          "answer": 1,
+          "explanation": "Validating at the edge means the rest of the script can trust its input."
+        },
+        {
+          "key": "bq30-10",
+          "type": "mcq",
+          "prompt": "Where should a function be defined relative to where it is called?",
+          "options": [
+            "Anywhere",
+            "Before the point where it is called",
+            "At the end of the file",
+            "In a separate file only"
+          ],
+          "answer": 1,
+          "explanation": "Bash reads top to bottom, so the definition has to come first."
+        },
+        {
+          "key": "bq30-11",
+          "type": "mcq",
+          "prompt": "What is the benefit of one script with three functions over three separate scripts?",
+          "options": [
+            "Smaller files",
+            "Shared setup and one place to look for related tools",
+            "Faster execution",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Related work belongs together, though very different jobs still deserve separate scripts."
+        },
+        {
+          "key": "bq30-12",
+          "type": "mcq",
+          "prompt": "Why should a function do one thing?",
+          "options": [
+            "It runs faster",
+            "Because it is easier to test, reuse and reason about",
+            "It uses less memory",
+            "It is a bash rule"
+          ],
+          "answer": 1,
+          "explanation": "A function that does three things is three functions waiting to be separated."
+        },
+        {
+          "key": "bq30-13",
+          "type": "true_false",
+          "prompt": "A bash function can return a status that an if statement can test.",
+          "answer": true,
+          "explanation": "That is how you build checks that other parts of the script can act on."
+        },
+        {
+          "key": "bq30-14",
+          "type": "true_false",
+          "prompt": "Storing a list in an array means adding an item is a data change rather than a code change.",
+          "answer": true,
+          "explanation": "That separation is what makes a script easy to extend later."
+        },
+        {
+          "key": "bq30-15",
+          "type": "true_false",
+          "prompt": "Understanding subnetting arithmetic well enough to script it is deeper than memorising a table.",
+          "answer": true,
+          "explanation": "Scripting it forces the underlying logic to be explicit, which is why the exercise works."
+        }
+      ]
+    },
+    {
+      "afterDay": 35,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq35-1",
+          "type": "mcq",
+          "prompt": "What is parameter expansion used for?",
+          "options": [
+            "Running commands",
+            "Manipulating strings without calling external tools",
+            "Reading files",
+            "Looping"
+          ],
+          "answer": 1,
+          "explanation": "It handles substrings and replacements inside bash itself, which is faster and simpler."
+        },
+        {
+          "key": "bq35-2",
+          "type": "mcq",
+          "prompt": "Why prefer parameter expansion over calling an external command for simple string work?",
+          "options": [
+            "It looks better",
+            "It avoids starting a new process for every operation",
+            "It is required",
+            "It handles more cases"
+          ],
+          "answer": 1,
+          "explanation": "In a loop, spawning processes repeatedly becomes noticeably slow."
+        },
+        {
+          "key": "bq35-3",
+          "type": "mcq",
+          "prompt": "What does awk do best in a script?",
+          "options": [
+            "Editing files in place",
+            "Selecting and filtering columns from structured output",
+            "Running commands remotely",
+            "Compressing files"
+          ],
+          "answer": 1,
+          "explanation": "Command output is usually columns, and awk is built for exactly that."
+        },
+        {
+          "key": "bq35-4",
+          "type": "mcq",
+          "prompt": "What does sed do best in a script?",
+          "options": [
+            "Selecting columns",
+            "Finding and replacing text",
+            "Arithmetic",
+            "Looping over files"
+          ],
+          "answer": 1,
+          "explanation": "Substitution is its main job, and it works well on config files."
+        },
+        {
+          "key": "bq35-5",
+          "type": "mcq",
+          "prompt": "Why keep a backup when editing a file in place with sed?",
+          "options": [
+            "It is faster",
+            "Because a wrong pattern can corrupt the file with no undo",
+            "It is required",
+            "To save disk"
+          ],
+          "answer": 1,
+          "explanation": "In place editing is destructive, and the backup is your only recovery."
+        },
+        {
+          "key": "bq35-6",
+          "type": "mcq",
+          "prompt": "Why check whether a hosts file entry already exists before adding it?",
+          "options": [
+            "It is faster",
+            "So running the script twice does not create duplicates",
+            "It is required",
+            "To save space"
+          ],
+          "answer": 1,
+          "explanation": "This is the same idea as making a script safe to run more than once."
+        },
+        {
+          "key": "bq35-7",
+          "type": "mcq",
+          "prompt": "What should a script do when run with no arguments?",
+          "options": [
+            "Guess sensible defaults",
+            "Print a usage message and exit non zero",
+            "Run anyway",
+            "Wait for input silently"
+          ],
+          "answer": 1,
+          "explanation": "A usage message is the difference between a tool and a puzzle."
+        },
+        {
+          "key": "bq35-8",
+          "type": "mcq",
+          "prompt": "Why extract only the specific field you need from command output?",
+          "options": [
+            "It looks tidy",
+            "Because the rest of the output breaks comparisons and conditions",
+            "It is faster to read",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Scripts need values, and extra text turns a simple check into a broken one."
+        },
+        {
+          "key": "bq35-9",
+          "type": "mcq",
+          "prompt": "What should a gateway check script do if there is no default route?",
+          "options": [
+            "Print nothing",
+            "Warn clearly and exit non zero",
+            "Add one automatically",
+            "Retry forever"
+          ],
+          "answer": 1,
+          "explanation": "Silent success on a broken system is the worst possible outcome."
+        },
+        {
+          "key": "bq35-10",
+          "type": "mcq",
+          "prompt": "Why give a script a default value for its second argument?",
+          "options": [
+            "It is required",
+            "So the common case works with less typing",
+            "It runs faster",
+            "To reduce errors only"
+          ],
+          "answer": 1,
+          "explanation": "Sensible defaults make a tool pleasant to use without removing flexibility."
+        },
+        {
+          "key": "bq35-11",
+          "type": "mcq",
+          "prompt": "What is the advantage of wrapping dig in your own script?",
+          "options": [
+            "dig is deprecated",
+            "You get exactly the output you want in a consistent format",
+            "It is faster",
+            "It avoids DNS caching"
+          ],
+          "answer": 1,
+          "explanation": "Wrapping a tool to produce clean, predictable output is a normal thing engineers do."
+        },
+        {
+          "key": "bq35-12",
+          "type": "mcq",
+          "prompt": "Why should output from your tools be easy for another script to consume?",
+          "options": [
+            "It looks professional",
+            "Because tools get combined, and messy output breaks the next tool",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "This is the same principle as pipes on day 9 of the DevOps track."
+        },
+        {
+          "key": "bq35-13",
+          "type": "true_false",
+          "prompt": "Editing a system config file from a script without a backup is risky.",
+          "answer": true,
+          "explanation": "A wrong pattern can break networking or logins with no way back."
+        },
+        {
+          "key": "bq35-14",
+          "type": "true_false",
+          "prompt": "A script that produces different output formats depending on input is easy to build tools on top of.",
+          "answer": false,
+          "explanation": "Inconsistent output is exactly what makes a tool hard to reuse or chain."
+        },
+        {
+          "key": "bq35-15",
+          "type": "true_false",
+          "prompt": "awk and sed both appeared in the DevOps track and are worth knowing at a basic level only.",
+          "answer": true,
+          "explanation": "You need enough to select columns and replace text, and Python covers anything more complex."
+        }
+      ]
+    },
+    {
+      "afterDay": 40,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq40-1",
+          "type": "mcq",
+          "prompt": "Why add a timeout to a port check?",
+          "options": [
+            "It is required",
+            "So a filtered port does not make the script hang",
+            "To reduce load",
+            "To improve accuracy"
+          ],
+          "answer": 1,
+          "explanation": "Without a timeout the script can sit there indefinitely with nobody watching."
+        },
+        {
+          "key": "bq40-2",
+          "type": "mcq",
+          "prompt": "Why should a check script exit non zero when the check fails?",
+          "options": [
+            "To print a warning",
+            "So cron, CI or another script can detect the failure",
+            "It is required by bash",
+            "To stop the loop"
+          ],
+          "answer": 1,
+          "explanation": "The exit code is how automation learns the result."
+        },
+        {
+          "key": "bq40-3",
+          "type": "mcq",
+          "prompt": "What is the benefit of checking a list of hosts in a loop?",
+          "options": [
+            "It runs faster",
+            "One script covers any number of hosts with no code change",
+            "It uses less memory",
+            "It avoids DNS"
+          ],
+          "answer": 1,
+          "explanation": "Adding a host becomes a data change, not a code change."
+        },
+        {
+          "key": "bq40-4",
+          "type": "mcq",
+          "prompt": "Why print a summary at the end of a multi check script?",
+          "options": [
+            "To fill the log",
+            "So a human can see the result without reading every line",
+            "It is required",
+            "To slow it down"
+          ],
+          "answer": 1,
+          "explanation": "The summary is what makes the tool usable in practice."
+        },
+        {
+          "key": "bq40-5",
+          "type": "mcq",
+          "prompt": "Why use a short timeout in a ping sweep?",
+          "options": [
+            "Accuracy",
+            "Because most addresses will not respond and waiting for each is slow",
+            "It is required",
+            "To avoid detection"
+          ],
+          "answer": 1,
+          "explanation": "Sweeping twenty addresses with a full default timeout takes far longer than it needs to."
+        },
+        {
+          "key": "bq40-6",
+          "type": "mcq",
+          "prompt": "Why should a tcpdump wrapper check privileges first?",
+          "options": [
+            "To log the user",
+            "Because it will fail confusingly without them",
+            "It is required by tcpdump",
+            "To reduce output"
+          ],
+          "answer": 1,
+          "explanation": "A clear early message beats a cryptic permission error halfway through."
+        },
+        {
+          "key": "bq40-7",
+          "type": "mcq",
+          "prompt": "How do you get only the HTTP status code from curl?",
+          "options": [
+            "Parse the whole response",
+            "Use the write out option to print just the code",
+            "Use grep on the body",
+            "Use head"
+          ],
+          "answer": 1,
+          "explanation": "Curl can output specific fields directly, which avoids fragile parsing."
+        },
+        {
+          "key": "bq40-8",
+          "type": "mcq",
+          "prompt": "What makes a good health check?",
+          "options": [
+            "It prints the full page",
+            "It returns a clear pass or fail based on the status code",
+            "It measures bandwidth",
+            "It logs everything"
+          ],
+          "answer": 1,
+          "explanation": "A health check answers one question, and it should answer it unambiguously."
+        },
+        {
+          "key": "bq40-9",
+          "type": "mcq",
+          "prompt": "Why also measure response time in a health check?",
+          "options": [
+            "To fill the log",
+            "Because a slow response is a problem even when the status is 200",
+            "It is required",
+            "To detect DNS issues"
+          ],
+          "answer": 1,
+          "explanation": "Latency is one of the golden signals, and up is not the same as healthy."
+        },
+        {
+          "key": "bq40-10",
+          "type": "mcq",
+          "prompt": "Why save a capture to a timestamped file?",
+          "options": [
+            "To save space",
+            "So captures from different runs do not overwrite each other",
+            "It is required",
+            "To compress them"
+          ],
+          "answer": 1,
+          "explanation": "This is the same timestamping principle as your backup script."
+        },
+        {
+          "key": "bq40-11",
+          "type": "mcq",
+          "prompt": "Why is a mini port scanner in bash useful even though nmap exists?",
+          "options": [
+            "It is faster than nmap",
+            "Because writing it teaches you how the check actually works",
+            "nmap is not free",
+            "It scans more ports"
+          ],
+          "answer": 1,
+          "explanation": "You use nmap at work, and you build the small version to understand it."
+        },
+        {
+          "key": "bq40-12",
+          "type": "mcq",
+          "prompt": "What should you do with a script that hangs instead of failing?",
+          "options": [
+            "Run it in the background",
+            "Add a timeout so it fails cleanly",
+            "Ignore it",
+            "Run it more often"
+          ],
+          "answer": 1,
+          "explanation": "A hanging script in cron is worse than one that fails, because nothing reports it."
+        },
+        {
+          "key": "bq40-13",
+          "type": "true_false",
+          "prompt": "A health check that always exits zero is useless to automation.",
+          "answer": true,
+          "explanation": "Nothing downstream can distinguish a healthy service from a broken one."
+        },
+        {
+          "key": "bq40-14",
+          "type": "true_false",
+          "prompt": "Scripts that check things should be safe to run repeatedly without side effects.",
+          "answer": true,
+          "explanation": "Checks are run constantly, so a check that changes something is a hazard."
+        },
+        {
+          "key": "bq40-15",
+          "type": "true_false",
+          "prompt": "Building small versions of tools you will later use professionally is wasted effort.",
+          "answer": false,
+          "explanation": "Building the small version is how you understand what the professional tool is doing."
+        }
+      ]
+    },
+    {
+      "afterDay": 45,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq45-1",
+          "type": "mcq",
+          "prompt": "Why check certificate expiry from a script?",
+          "options": [
+            "Browsers do not warn",
+            "Because expired certificates cause outages and the warning comes too late by hand",
+            "It is required",
+            "To rotate keys"
+          ],
+          "answer": 1,
+          "explanation": "Certificate expiry is one of the most common avoidable outages there is."
+        },
+        {
+          "key": "bq45-2",
+          "type": "mcq",
+          "prompt": "Why warn thirty days before expiry rather than on the day?",
+          "options": [
+            "It is the standard",
+            "Because renewal takes time and coordination",
+            "To reduce noise",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "A warning on the expiry day is not a warning, it is a notification of an outage."
+        },
+        {
+          "key": "bq45-3",
+          "type": "mcq",
+          "prompt": "What does trap do in a script?",
+          "options": [
+            "Catches typos",
+            "Runs cleanup code when the script exits or is interrupted",
+            "Retries a command",
+            "Logs errors"
+          ],
+          "answer": 1,
+          "explanation": "It ensures temporary files are removed even when things go wrong."
+        },
+        {
+          "key": "bq45-4",
+          "type": "mcq",
+          "prompt": "Why create temporary files properly rather than using a fixed name?",
+          "options": [
+            "It is faster",
+            "Because two runs at once would collide and overwrite each other",
+            "It saves disk",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Fixed names also make a script predictable to anyone trying to interfere with it."
+        },
+        {
+          "key": "bq45-5",
+          "type": "mcq",
+          "prompt": "Why have one error function used everywhere?",
+          "options": [
+            "Shorter code",
+            "So every failure looks the same and always exits properly",
+            "It is faster",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Consistent failure handling is what makes a script trustworthy."
+        },
+        {
+          "key": "bq45-6",
+          "type": "mcq",
+          "prompt": "What should a web server check verify?",
+          "options": [
+            "Only that the process runs",
+            "That the service runs, the port listens and the page returns 200",
+            "Only the log file",
+            "Only the port"
+          ],
+          "answer": 1,
+          "explanation": "A running process that serves errors is still an outage."
+        },
+        {
+          "key": "bq45-7",
+          "type": "mcq",
+          "prompt": "Why count recent errors rather than all errors in a log?",
+          "options": [
+            "The file is too big",
+            "Because old errors are not evidence of a current problem",
+            "It is faster",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "A count since the beginning of time tells you nothing about right now."
+        },
+        {
+          "key": "bq45-8",
+          "type": "mcq",
+          "prompt": "What should happen when a remote host is unreachable during an SSH check?",
+          "options": [
+            "The script hangs",
+            "It reports the failure clearly and moves on",
+            "It retries forever",
+            "It exits zero"
+          ],
+          "answer": 1,
+          "explanation": "One unreachable host should not stop you checking the others."
+        },
+        {
+          "key": "bq45-9",
+          "type": "mcq",
+          "prompt": "Why should scripts use key based SSH rather than passwords?",
+          "options": [
+            "It is faster",
+            "Because a script cannot type a password and stored passwords are a risk",
+            "It is required by SSH",
+            "It avoids DNS"
+          ],
+          "answer": 1,
+          "explanation": "This is the same reasoning as day 15 of the DevOps track."
+        },
+        {
+          "key": "bq45-10",
+          "type": "mcq",
+          "prompt": "What is a firewall audit script actually comparing?",
+          "options": [
+            "Two config files",
+            "Ports that are open against ports that should be open",
+            "Two hosts",
+            "Log files"
+          ],
+          "answer": 1,
+          "explanation": "The gap between intended and actual is where security problems live."
+        },
+        {
+          "key": "bq45-11",
+          "type": "mcq",
+          "prompt": "Why should you review old scripts for secrets?",
+          "options": [
+            "To clean them up",
+            "Because a password written early on stays in the file and in git history",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Secrets committed once are effectively published, as you learned on day 88."
+        },
+        {
+          "key": "bq45-12",
+          "type": "mcq",
+          "prompt": "What makes a report from a multi host check useful?",
+          "options": [
+            "Full raw output",
+            "One line per host showing its status clearly",
+            "Only failures",
+            "Only successes"
+          ],
+          "answer": 1,
+          "explanation": "You want to see the whole picture at a glance, including what is fine."
+        },
+        {
+          "key": "bq45-13",
+          "type": "true_false",
+          "prompt": "A script that leaves temporary files behind after failing is poorly written.",
+          "answer": true,
+          "explanation": "Cleanup on failure is exactly what trap exists to guarantee."
+        },
+        {
+          "key": "bq45-14",
+          "type": "true_false",
+          "prompt": "Comparing open ports against an allowed list is a simple form of the drift detection idea.",
+          "answer": true,
+          "explanation": "It is the same concept as Terraform drift, applied to firewall state."
+        },
+        {
+          "key": "bq45-15",
+          "type": "true_false",
+          "prompt": "A password stored in a script is acceptable if the script is only on your own machine.",
+          "answer": false,
+          "explanation": "Machines get shared, backed up and committed, and the habit itself is the problem."
+        }
+      ]
+    },
+    {
+      "afterDay": 50,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq50-1",
+          "type": "mcq",
+          "prompt": "What does a here document let you do?",
+          "options": [
+            "Read a file",
+            "Write a multi line block of text into a file or command",
+            "Loop over lines",
+            "Replace text"
+          ],
+          "answer": 1,
+          "explanation": "It is the cleanest way to generate a config file from a script."
+        },
+        {
+          "key": "bq50-2",
+          "type": "mcq",
+          "prompt": "Why insert variables into a generated config file?",
+          "options": [
+            "It is faster",
+            "So one template produces the right config for any hostname or port",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "This is templating, and it is the same idea Terraform and Ansible use at a larger scale."
+        },
+        {
+          "key": "bq50-3",
+          "type": "mcq",
+          "prompt": "Why add retry logic to a command that talks to the network?",
+          "options": [
+            "Networks are always slow",
+            "Because transient failures are normal and a single attempt is fragile",
+            "It is required",
+            "To reduce load"
+          ],
+          "answer": 1,
+          "explanation": "A retry turns a temporary blip into a non event."
+        },
+        {
+          "key": "bq50-4",
+          "type": "mcq",
+          "prompt": "Why increase the pause between retries?",
+          "options": [
+            "It is required",
+            "To avoid hammering a service that is already struggling",
+            "It is faster",
+            "To save memory"
+          ],
+          "answer": 1,
+          "explanation": "Backing off gives the other side a chance to recover."
+        },
+        {
+          "key": "bq50-5",
+          "type": "mcq",
+          "prompt": "Why does a wait loop need a maximum wait?",
+          "options": [
+            "It is required",
+            "Because otherwise it can block forever when something is truly broken",
+            "To reduce CPU",
+            "To improve accuracy"
+          ],
+          "answer": 1,
+          "explanation": "An unbounded wait is a hang, and hangs are invisible in automation."
+        },
+        {
+          "key": "bq50-6",
+          "type": "mcq",
+          "prompt": "Why log each monitoring result with a timestamp?",
+          "options": [
+            "To fill disk",
+            "So you can see when a problem started and how long it lasted",
+            "It is required",
+            "To sort the file"
+          ],
+          "answer": 1,
+          "explanation": "Duration and start time are the first questions asked about any incident."
+        },
+        {
+          "key": "bq50-7",
+          "type": "mcq",
+          "prompt": "Why should a monitoring script exit non zero if any check failed?",
+          "options": [
+            "To stop the loop",
+            "So the thing running it knows something is wrong",
+            "It is required by cron",
+            "To print a warning"
+          ],
+          "answer": 1,
+          "explanation": "The exit code is the only signal an automated runner reliably sees."
+        },
+        {
+          "key": "bq50-8",
+          "type": "mcq",
+          "prompt": "Why give every tool in a toolkit the same argument style?",
+          "options": [
+            "It looks tidy",
+            "So you can use any of them without re reading the source",
+            "It is faster",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Consistency is what makes a collection of scripts feel like a real toolkit."
+        },
+        {
+          "key": "bq50-9",
+          "type": "mcq",
+          "prompt": "Why run shellcheck across every script before committing?",
+          "options": [
+            "It formats them",
+            "Because most of its warnings are real bugs waiting to happen",
+            "It is required by git",
+            "It compresses them"
+          ],
+          "answer": 1,
+          "explanation": "Quoting and unset variable problems are exactly what it finds."
+        },
+        {
+          "key": "bq50-10",
+          "type": "mcq",
+          "prompt": "What makes a scripts repository worth showing an employer?",
+          "options": [
+            "The number of scripts",
+            "Small, well written tools that each solve a real problem, with a README",
+            "Long scripts",
+            "Clever one liners"
+          ],
+          "answer": 1,
+          "explanation": "Readable and useful beats clever, and the README is what gets read first."
+        },
+        {
+          "key": "bq50-11",
+          "type": "mcq",
+          "prompt": "What have you actually been practising all month?",
+          "options": [
+            "Bash syntax",
+            "Automating the networking work from the main track",
+            "Writing long programs",
+            "Memorising commands"
+          ],
+          "answer": 1,
+          "explanation": "The second track exists to turn the first track into things that run by themselves."
+        },
+        {
+          "key": "bq50-12",
+          "type": "mcq",
+          "prompt": "Why keep this track to thirty minutes a day?",
+          "options": [
+            "Bash is unimportant",
+            "So it never eats the time the main track needs",
+            "It is enough to finish",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Two tracks only work if the smaller one stays genuinely small."
+        },
+        {
+          "key": "bq50-13",
+          "type": "true_false",
+          "prompt": "Generating config files from a template in bash is a simplified version of what larger tools do.",
+          "answer": true,
+          "explanation": "The concept scales up directly into the tooling you meet later."
+        },
+        {
+          "key": "bq50-14",
+          "type": "true_false",
+          "prompt": "A monitoring script with no maximum wait and no timeout is safe to schedule in cron.",
+          "answer": false,
+          "explanation": "It can hang indefinitely, and nothing will tell you that it did."
+        },
+        {
+          "key": "bq50-15",
+          "type": "true_false",
+          "prompt": "By the end of this month you should have a small set of tools you actually use.",
+          "answer": true,
+          "explanation": "Tools you use are the ones you remember, and they are also the ones worth showing."
+        }
+      ]
+    }
+  ]
+}

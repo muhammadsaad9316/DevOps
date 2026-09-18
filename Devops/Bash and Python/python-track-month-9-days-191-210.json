@@ -1,0 +1,1168 @@
+{
+  "days": [
+    {
+      "day": 191,
+      "title": "Capstone: Production Readiness",
+      "tasks": [
+        {
+          "key": "p191-config-check",
+          "title": "Confirm every setting comes from configuration, with nothing environment specific left in the code.",
+          "required": true
+        },
+        {
+          "key": "p191-startup-validation",
+          "title": "Validate the configuration at startup and fail immediately with a clear message if it is wrong.",
+          "required": true
+        },
+        {
+          "key": "p191-graceful-failure",
+          "title": "Make sure a failure leaves no partial work behind and reports what did not complete.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 192,
+      "title": "Capstone: Security Pass",
+      "tasks": [
+        {
+          "key": "p192-no-secrets",
+          "title": "Search the whole repository and its history for anything that looks like a credential.",
+          "required": true
+        },
+        {
+          "key": "p192-dependency-audit",
+          "title": "Run a dependency vulnerability check and read every finding.",
+          "required": true
+        },
+        {
+          "key": "p192-pin-deps",
+          "title": "Pin your dependency versions and record why each one is needed.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 193,
+      "title": "Capstone: Performance And Cost",
+      "tasks": [
+        {
+          "key": "p193-measure-run",
+          "title": "Measure how long a full run takes and how many API calls it makes.",
+          "required": true
+        },
+        {
+          "key": "p193-reduce-calls",
+          "title": "Find one place where you are calling out more than necessary and fix it.",
+          "required": true
+        },
+        {
+          "key": "p193-record-numbers",
+          "title": "Record the before and after numbers in your notes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 194,
+      "title": "Capstone: Documentation",
+      "tasks": [
+        {
+          "key": "p194-final-readme",
+          "title": "Finalise the README with purpose, install, three usage examples, configuration and exit codes.",
+          "required": true
+        },
+        {
+          "key": "p194-example-output-final",
+          "title": "Include real example output for both the human and JSON formats.",
+          "required": true
+        },
+        {
+          "key": "p194-decisions-section",
+          "title": "Add a short section covering two design decisions and what you rejected.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 195,
+      "title": "Capstone: Final Proof",
+      "tasks": [
+        {
+          "key": "p195-clean-env",
+          "title": "Install and run the tool on a clean environment following only your own README.",
+          "required": true
+        },
+        {
+          "key": "p195-fix-instructions",
+          "title": "Fix every instruction that failed and repeat until a clean run works first time.",
+          "required": true
+        },
+        {
+          "key": "p195-tests-green",
+          "title": "Confirm the pipeline is green and every test passes.",
+          "required": true
+        },
+        {
+          "key": "p195-final-commit",
+          "title": "Commit, tag a version, and pin the repository on your profile.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 196,
+      "title": "Reading kubectl From Python",
+      "tasks": [
+        {
+          "key": "p196-json-output-kubectl",
+          "title": "Run a kubectl command in JSON mode from Python and parse the result.",
+          "required": true
+        },
+        {
+          "key": "p196-list-pods",
+          "title": "Print every pod with its name, status and restart count.",
+          "required": true
+        },
+        {
+          "key": "p196-same-pattern",
+          "title": "Notice this is the same subprocess and JSON pattern from day 146, and write that down.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 197,
+      "title": "A Small Pod Report",
+      "tasks": [
+        {
+          "key": "p197-flag-unhealthy",
+          "title": "Flag any pod that is not running or has restarted more than a few times.",
+          "required": true
+        },
+        {
+          "key": "p197-exit-code-k8s",
+          "title": "Exit non zero when anything looks wrong so it can be used in automation.",
+          "required": true
+        },
+        {
+          "key": "p197-keep-it-small",
+          "title": "Stop here. This is exposure, not a Kubernetes tool. Twenty minutes maximum.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 198,
+      "title": "Dependency Audit",
+      "tasks": [
+        {
+          "key": "p198-list-all",
+          "title": "List the dependencies across all three of your Python repositories.",
+          "required": true
+        },
+        {
+          "key": "p198-remove-unused",
+          "title": "Remove anything you are no longer using and confirm the tests still pass.",
+          "required": true
+        },
+        {
+          "key": "p198-update-pins",
+          "title": "Update the pins deliberately, one at a time, checking tests after each.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 199,
+      "title": "Your Personal Reference",
+      "tasks": [
+        {
+          "key": "p199-collect-snippets",
+          "title": "Collect the patterns you look up most into one reference file.",
+          "required": true
+        },
+        {
+          "key": "p199-organise",
+          "title": "Organise it by task: files, JSON, dates, requests, boto3, argparse, logging.",
+          "required": true
+        },
+        {
+          "key": "p199-commit-reference",
+          "title": "Commit it. This is the file you will actually reopen next year.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 200,
+      "title": "Your Honest Level",
+      "tasks": [
+        {
+          "key": "p200-write-statement",
+          "title": "Write one paragraph describing what you can do in Python without help.",
+          "required": true
+        },
+        {
+          "key": "p200-list-cannot",
+          "title": "Write a second paragraph listing what you cannot do yet. Be specific.",
+          "required": true
+        },
+        {
+          "key": "p200-use-in-cv",
+          "title": "Turn the first paragraph into one accurate line for your CV.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 201,
+      "title": "Final Portfolio Polish",
+      "tasks": [
+        {
+          "key": "p201-read-as-stranger",
+          "title": "Open each of your three repositories as if you had never seen them and note what confuses you.",
+          "required": true
+        },
+        {
+          "key": "p201-fix-confusion",
+          "title": "Fix the three most confusing things you found.",
+          "required": true
+        },
+        {
+          "key": "p201-pin-order",
+          "title": "Order your pinned repositories so the strongest is first.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 202,
+      "title": "Code Samples For Applications",
+      "tasks": [
+        {
+          "key": "p202-pick-sample",
+          "title": "Choose one file you would be happy for an interviewer to read line by line.",
+          "required": true
+        },
+        {
+          "key": "p202-clean-it",
+          "title": "Clean it: naming, docstrings, error handling and no leftover debugging.",
+          "required": true
+        },
+        {
+          "key": "p202-link-ready",
+          "title": "Have the direct link ready so you can send it without hunting for it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 203,
+      "title": "Keeping The Streak, Light",
+      "tasks": [
+        {
+          "key": "p203-tiny-one",
+          "title": "Write one short script. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p203-commit-tiny",
+          "title": "Commit it.",
+          "required": true
+        },
+        {
+          "key": "p203-stop-here",
+          "title": "Stop. Applications and Eid matter more than code this week.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 204,
+      "title": "Keeping The Streak, Light",
+      "tasks": [
+        {
+          "key": "p204-tiny-two",
+          "title": "Write or improve one small function. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p204-commit-tiny-two",
+          "title": "Commit it.",
+          "required": true
+        },
+        {
+          "key": "p204-stop-here-two",
+          "title": "Stop after fifteen minutes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 205,
+      "title": "Keeping The Streak, Light",
+      "tasks": [
+        {
+          "key": "p205-tiny-three",
+          "title": "Read one file of your own code and improve one line. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p205-commit-tiny-three",
+          "title": "Commit it.",
+          "required": true
+        },
+        {
+          "key": "p205-stop-here-three",
+          "title": "Stop after fifteen minutes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 206,
+      "title": "Retention Audit: Fundamentals",
+      "tasks": [
+        {
+          "key": "p206-no-notes-basics",
+          "title": "With no notes, write a script that reads a file, counts something and prints a summary.",
+          "required": true
+        },
+        {
+          "key": "p206-no-notes-data",
+          "title": "With no notes, filter a list of dictionaries and sort the result.",
+          "required": true
+        },
+        {
+          "key": "p206-mark-gaps",
+          "title": "Write down every single thing you had to look up.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 207,
+      "title": "Retention Audit: Automation",
+      "tasks": [
+        {
+          "key": "p207-no-notes-boto3",
+          "title": "With no notes, write a boto3 script that lists something and handles the error case.",
+          "required": true
+        },
+        {
+          "key": "p207-no-notes-cli",
+          "title": "With no notes, add argparse with one flag and structured logging.",
+          "required": true
+        },
+        {
+          "key": "p207-gap-list-final",
+          "title": "Add these gaps to yesterday's list. This list is the point of both days.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 208,
+      "title": "Rebuild From Memory",
+      "tasks": [
+        {
+          "key": "p208-blank-rebuild",
+          "title": "From an empty folder, rebuild one small tool you wrote earlier, with as few lookups as possible.",
+          "required": true
+        },
+        {
+          "key": "p208-count-lookups-py",
+          "title": "Count the lookups and identify the three things you needed most often.",
+          "required": true
+        },
+        {
+          "key": "p208-drill-three",
+          "title": "Drill those three until you can write them unaided.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 209,
+      "title": "Phase Two For Python",
+      "tasks": [
+        {
+          "key": "p209-next-topics",
+          "title": "Write the Phase 2 list: async basics, better testing, and one framework relevant to your target roles.",
+          "required": true
+        },
+        {
+          "key": "p209-sustainable-pace",
+          "title": "Set a pace for after this course that is smaller than thirty minutes but never zero.",
+          "required": true
+        },
+        {
+          "key": "p209-next-project-py",
+          "title": "Choose the next Python project now so there is no empty week after this ends.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 210,
+      "title": "Close The Loop",
+      "tasks": [
+        {
+          "key": "p210-nine-months",
+          "title": "Write down what you could do with Python on day 76 and what you can do today.",
+          "required": true
+        },
+        {
+          "key": "p210-honest-limits",
+          "title": "Write down clearly what you still cannot do, and put it next to the first paragraph.",
+          "required": true
+        },
+        {
+          "key": "p210-final-commit-py",
+          "title": "Make sure every Python repository is committed, documented and reachable from your profile.",
+          "required": true
+        },
+        {
+          "key": "p210-tomorrow-py",
+          "title": "Decide what your fifteen minutes tomorrow will be. The plan ending is not the work ending.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 195,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq195-1",
+          "type": "mcq",
+          "prompt": "Why validate configuration at startup rather than when it is first used?",
+          "options": [
+            "It is faster",
+            "So the program fails immediately with a clear message instead of halfway through",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "Failing at the start is the same guard clause principle you learned in bash on day 8."
+        },
+        {
+          "key": "pq195-2",
+          "type": "mcq",
+          "prompt": "Why should a failure leave no partial work behind?",
+          "options": [
+            "It is faster",
+            "Because half finished work is harder to recover from than no work",
+            "It is required",
+            "It saves disk"
+          ],
+          "answer": 1,
+          "explanation": "The same reasoning as trap and cleanup, applied to real operations."
+        },
+        {
+          "key": "pq195-3",
+          "type": "mcq",
+          "prompt": "Why search the git history for credentials, not just the current files?",
+          "options": [
+            "It is required",
+            "Because a deleted secret remains in every earlier commit",
+            "It is faster",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Deleting a secret in a later commit does not remove it from the repository."
+        },
+        {
+          "key": "pq195-4",
+          "type": "mcq",
+          "prompt": "Why run a dependency vulnerability check?",
+          "options": [
+            "It is required",
+            "Because your code is only as secure as the packages it pulls in",
+            "It is faster",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Most real world exposure comes through dependencies rather than your own code."
+        },
+        {
+          "key": "pq195-5",
+          "type": "mcq",
+          "prompt": "Why record why each dependency is needed?",
+          "options": [
+            "It is required",
+            "So unused packages can be removed later with confidence",
+            "It is faster",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Nobody removes a dependency they cannot explain, so they accumulate forever."
+        },
+        {
+          "key": "pq195-6",
+          "type": "mcq",
+          "prompt": "Why count the API calls a run makes?",
+          "options": [
+            "It is required",
+            "Because calls cost time, money and can hit rate limits",
+            "It is faster",
+            "To reduce memory"
+          ],
+          "answer": 1,
+          "explanation": "Cost and reliability both depend on how much you ask for."
+        },
+        {
+          "key": "pq195-7",
+          "type": "mcq",
+          "prompt": "Why record the before and after numbers of an improvement?",
+          "options": [
+            "To fill notes",
+            "Because a measured change is evidence and a claimed one is an opinion",
+            "It is required",
+            "To compare tools"
+          ],
+          "answer": 1,
+          "explanation": "That number is what turns a CV line from familiar with into achieved."
+        },
+        {
+          "key": "pq195-8",
+          "type": "mcq",
+          "prompt": "What should a README include beyond installation?",
+          "options": [
+            "The source code",
+            "Purpose, usage examples, configuration and exit codes",
+            "Only the purpose",
+            "The test output"
+          ],
+          "answer": 1,
+          "explanation": "Someone should be able to run it correctly and interpret the result."
+        },
+        {
+          "key": "pq195-9",
+          "type": "mcq",
+          "prompt": "Why show both output formats in the README?",
+          "options": [
+            "To make it longer",
+            "Because human and machine readers need different things and both exist",
+            "It is required",
+            "For search"
+          ],
+          "answer": 1,
+          "explanation": "It also demonstrates that you thought about who consumes the output."
+        },
+        {
+          "key": "pq195-10",
+          "type": "mcq",
+          "prompt": "Why install on a clean environment following only your README?",
+          "options": [
+            "To test speed",
+            "Because your machine has setup your instructions never mention",
+            "It is required",
+            "To check licences"
+          ],
+          "answer": 1,
+          "explanation": "It is the works on my machine problem, applied to documentation."
+        },
+        {
+          "key": "pq195-11",
+          "type": "mcq",
+          "prompt": "Why tag a version before calling it finished?",
+          "options": [
+            "It is required",
+            "So there is a specific, referenceable point someone can go back to",
+            "It is faster",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "It is the same reasoning as immutable image tags for rollback."
+        },
+        {
+          "key": "pq195-12",
+          "type": "mcq",
+          "prompt": "What makes this capstone component worth showing?",
+          "options": [
+            "Its size",
+            "It is tested, instrumented, documented and reproducible",
+            "It uses many libraries",
+            "It took a long time"
+          ],
+          "answer": 1,
+          "explanation": "Those four properties are what separate software from a working script."
+        },
+        {
+          "key": "pq195-13",
+          "type": "true_false",
+          "prompt": "A secret deleted in a later commit is safely removed from the repository.",
+          "answer": false,
+          "explanation": "It remains in the history and must be treated as compromised and rotated."
+        },
+        {
+          "key": "pq195-14",
+          "type": "true_false",
+          "prompt": "Validating configuration at startup makes failures easier to diagnose.",
+          "answer": true,
+          "explanation": "The error arrives at the point where the problem is, rather than three functions later."
+        },
+        {
+          "key": "pq195-15",
+          "type": "true_false",
+          "prompt": "Reducing unnecessary API calls improves both cost and reliability.",
+          "answer": true,
+          "explanation": "Fewer calls means less spend and less exposure to rate limits and transient failures."
+        }
+      ]
+    },
+    {
+      "afterDay": 200,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq200-1",
+          "type": "mcq",
+          "prompt": "What pattern do you use to read kubectl output from Python?",
+          "options": [
+            "A special client only",
+            "Run the command in JSON mode and parse the result",
+            "Read the cluster database",
+            "Scrape the dashboard"
+          ],
+          "answer": 1,
+          "explanation": "It is the same subprocess and JSON approach you used with Terraform on day 147."
+        },
+        {
+          "key": "pq200-2",
+          "type": "mcq",
+          "prompt": "What does a high restart count on a pod usually indicate?",
+          "options": [
+            "Healthy scaling",
+            "The container keeps failing and being restarted",
+            "A network issue only",
+            "Normal operation"
+          ],
+          "answer": 1,
+          "explanation": "It is one of the first things to look at when something is misbehaving."
+        },
+        {
+          "key": "pq200-3",
+          "type": "mcq",
+          "prompt": "Why keep the Kubernetes script deliberately small?",
+          "options": [
+            "Python is unsuited",
+            "Because this week is exposure, not building a Kubernetes tool",
+            "It is required",
+            "It would be slow"
+          ],
+          "answer": 1,
+          "explanation": "Scope discipline is why the exposure week works instead of eating the month."
+        },
+        {
+          "key": "pq200-4",
+          "type": "mcq",
+          "prompt": "Why does the same subprocess pattern keep appearing?",
+          "options": [
+            "Coincidence",
+            "Because most command line tools can emit JSON, which Python reads well",
+            "It is the only option",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Learning it once gives you access to almost every tool you will meet."
+        },
+        {
+          "key": "pq200-5",
+          "type": "mcq",
+          "prompt": "Why remove unused dependencies?",
+          "options": [
+            "It is required",
+            "Because every dependency is maintenance and potential vulnerability",
+            "It is faster",
+            "To reduce file count"
+          ],
+          "answer": 1,
+          "explanation": "Fewer packages means less to update and less to audit."
+        },
+        {
+          "key": "pq200-6",
+          "type": "mcq",
+          "prompt": "Why update pinned versions one at a time?",
+          "options": [
+            "It is faster",
+            "So you know which update broke something when a test fails",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Updating everything at once turns one failure into a search problem."
+        },
+        {
+          "key": "pq200-7",
+          "type": "mcq",
+          "prompt": "Why build a personal reference file of patterns?",
+          "options": [
+            "To avoid learning",
+            "Because you will look these up repeatedly and your own notes are fastest",
+            "It is required",
+            "To share online"
+          ],
+          "answer": 1,
+          "explanation": "It is the file you will actually reopen, unlike a bookmarked tutorial."
+        },
+        {
+          "key": "pq200-8",
+          "type": "mcq",
+          "prompt": "How should the reference be organised?",
+          "options": [
+            "Alphabetically",
+            "By task, so you find it the way you will search for it",
+            "By date learned",
+            "By length"
+          ],
+          "answer": 1,
+          "explanation": "You will look for how do I read JSON, not for the letter J."
+        },
+        {
+          "key": "pq200-9",
+          "type": "mcq",
+          "prompt": "Why write an honest statement of what you cannot do?",
+          "options": [
+            "To be modest",
+            "Because knowing your limits lets you target roles you can actually hold",
+            "It is required",
+            "To reduce applications"
+          ],
+          "answer": 1,
+          "explanation": "Getting a job you cannot do is worse than not getting it."
+        },
+        {
+          "key": "pq200-10",
+          "type": "mcq",
+          "prompt": "Why turn the capability paragraph into one CV line?",
+          "options": [
+            "To save space",
+            "Because a specific accurate claim beats a list of technology names",
+            "It is required",
+            "To pass filters"
+          ],
+          "answer": 1,
+          "explanation": "Specificity is what makes a claim credible in an interview."
+        },
+        {
+          "key": "pq200-11",
+          "type": "mcq",
+          "prompt": "What is the danger of overclaiming your Python level?",
+          "options": [
+            "Nothing",
+            "It collapses on the first practical question",
+            "It is dishonest only",
+            "It slows applications"
+          ],
+          "answer": 1,
+          "explanation": "Interviewers ask you to write something, and the gap becomes obvious immediately."
+        },
+        {
+          "key": "pq200-12",
+          "type": "mcq",
+          "prompt": "What is the danger of underclaiming?",
+          "options": [
+            "Nothing",
+            "You filter yourself out of roles you could actually do",
+            "It is polite",
+            "It reduces interviews"
+          ],
+          "answer": 1,
+          "explanation": "Calibration cuts both ways, and undervaluing yourself costs opportunities."
+        },
+        {
+          "key": "pq200-13",
+          "type": "true_false",
+          "prompt": "Running a command in JSON mode and parsing it in Python works for kubectl, terraform and the AWS CLI.",
+          "answer": true,
+          "explanation": "That single pattern covers most of the tooling you will meet."
+        },
+        {
+          "key": "pq200-14",
+          "type": "true_false",
+          "prompt": "A personal reference file is a substitute for understanding.",
+          "answer": false,
+          "explanation": "It is a shortcut for things you already understand but do not memorise, which is a different thing."
+        },
+        {
+          "key": "pq200-15",
+          "type": "true_false",
+          "prompt": "An accurate self assessment is more useful in interviews than an impressive one.",
+          "answer": true,
+          "explanation": "It is defensible, and defensible claims are what survive follow up questions."
+        }
+      ]
+    },
+    {
+      "afterDay": 205,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq205-1",
+          "type": "mcq",
+          "prompt": "Why read your own repositories as if you had never seen them?",
+          "options": [
+            "To find bugs",
+            "Because you cannot see what confuses a stranger while you remember writing it",
+            "It is required",
+            "To measure size"
+          ],
+          "answer": 1,
+          "explanation": "Familiarity hides exactly the gaps a reviewer will hit first."
+        },
+        {
+          "key": "pq205-2",
+          "type": "mcq",
+          "prompt": "Why order pinned repositories with the strongest first?",
+          "options": [
+            "It looks tidy",
+            "Because a reviewer may only open one",
+            "It is required",
+            "For search ranking"
+          ],
+          "answer": 1,
+          "explanation": "Attention is short, and the first thing they see carries the most weight."
+        },
+        {
+          "key": "pq205-3",
+          "type": "mcq",
+          "prompt": "What should a code sample you send an interviewer be?",
+          "options": [
+            "Your longest file",
+            "One file you would be happy to have read line by line",
+            "The whole repository",
+            "A test file"
+          ],
+          "answer": 1,
+          "explanation": "One clean, complete, defensible file beats a large body of uneven work."
+        },
+        {
+          "key": "pq205-4",
+          "type": "mcq",
+          "prompt": "What should you remove from a sample before sending it?",
+          "options": [
+            "Comments",
+            "Leftover debugging, dead code and unclear names",
+            "Error handling",
+            "Docstrings"
+          ],
+          "answer": 1,
+          "explanation": "Those three signal carelessness more than any missing feature does."
+        },
+        {
+          "key": "pq205-5",
+          "type": "mcq",
+          "prompt": "Why have the direct link ready in advance?",
+          "options": [
+            "It is required",
+            "Because hunting for it during a conversation wastes the moment",
+            "It is faster to type",
+            "To track clicks"
+          ],
+          "answer": 1,
+          "explanation": "Small friction at the wrong moment costs opportunities."
+        },
+        {
+          "key": "pq205-6",
+          "type": "mcq",
+          "prompt": "Why is this week deliberately the lightest of the whole plan?",
+          "options": [
+            "The material ran out",
+            "Because Eid and job applications both land here",
+            "It is a review week",
+            "The app requires it"
+          ],
+          "answer": 1,
+          "explanation": "Planning around known peaks is what keeps a long plan survivable."
+        },
+        {
+          "key": "pq205-7",
+          "type": "mcq",
+          "prompt": "Why keep going for fifteen minutes rather than pausing entirely?",
+          "options": [
+            "To finish the course",
+            "Because restarting a broken habit is much harder than maintaining a small one",
+            "It is required",
+            "To pass a quiz"
+          ],
+          "answer": 1,
+          "explanation": "This has been the rule at every pressure point in the plan."
+        },
+        {
+          "key": "pq205-8",
+          "type": "mcq",
+          "prompt": "What is the value of committing even a tiny change?",
+          "options": [
+            "Repository size",
+            "It keeps the daily record unbroken",
+            "It is required",
+            "It improves the code"
+          ],
+          "answer": 1,
+          "explanation": "The record is the habit made visible."
+        },
+        {
+          "key": "pq205-9",
+          "type": "mcq",
+          "prompt": "Why should applications take priority over code this week?",
+          "options": [
+            "Code does not matter",
+            "Because the applications are what actually produce interviews",
+            "It is required",
+            "Code is finished"
+          ],
+          "answer": 1,
+          "explanation": "At this point the portfolio is built and the bottleneck is getting it seen."
+        },
+        {
+          "key": "pq205-10",
+          "type": "mcq",
+          "prompt": "What is the risk of polishing code instead of applying?",
+          "options": [
+            "Nothing",
+            "Polishing feels productive while producing no opportunities",
+            "It costs money",
+            "It takes longer"
+          ],
+          "answer": 1,
+          "explanation": "It is a comfortable substitute for the uncomfortable task, which is the trap."
+        },
+        {
+          "key": "pq205-11",
+          "type": "mcq",
+          "prompt": "How many strong repositories do you actually need?",
+          "options": [
+            "Ten",
+            "About three",
+            "One",
+            "Twenty"
+          ],
+          "answer": 1,
+          "explanation": "Three lets you show range without any of them being weak."
+        },
+        {
+          "key": "pq205-12",
+          "type": "mcq",
+          "prompt": "What should improving one line a day teach you?",
+          "options": [
+            "Perfectionism",
+            "That small consistent effort compounds and keeps the habit alive",
+            "Nothing",
+            "Speed"
+          ],
+          "answer": 1,
+          "explanation": "It is the sustainable pace this whole track has been training."
+        },
+        {
+          "key": "pq205-13",
+          "type": "true_false",
+          "prompt": "Polishing your portfolio further is a reasonable substitute for sending applications.",
+          "answer": false,
+          "explanation": "It feels productive and produces nothing, which is exactly why it is tempting."
+        },
+        {
+          "key": "pq205-14",
+          "type": "true_false",
+          "prompt": "A reviewer may open only one of your repositories.",
+          "answer": true,
+          "explanation": "Which is why order and consistency across all three matter."
+        },
+        {
+          "key": "pq205-15",
+          "type": "true_false",
+          "prompt": "Fifteen minutes on a heavy week is enough to protect a daily habit.",
+          "answer": true,
+          "explanation": "Continuity matters far more than volume at the pressure points."
+        }
+      ]
+    },
+    {
+      "afterDay": 210,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq210-1",
+          "type": "mcq",
+          "prompt": "Why do a retention audit with no notes?",
+          "options": [
+            "To feel confident",
+            "Because completing something and retaining it are different",
+            "It is required",
+            "To pass a quiz"
+          ],
+          "answer": 1,
+          "explanation": "Interviews and incidents happen without your notes."
+        },
+        {
+          "key": "pq210-2",
+          "type": "mcq",
+          "prompt": "What is the point of the list of things you looked up?",
+          "options": [
+            "To feel bad",
+            "It tells you exactly what to drill next",
+            "It is required",
+            "To measure speed"
+          ],
+          "answer": 1,
+          "explanation": "The list is the output of the exercise, and acting on it is the value."
+        },
+        {
+          "key": "pq210-3",
+          "type": "mcq",
+          "prompt": "Why rebuild a tool from an empty folder?",
+          "options": [
+            "To test the machine",
+            "Because it measures what you can produce unaided",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "Counting the lookups gives you an honest measure of fluency."
+        },
+        {
+          "key": "pq210-4",
+          "type": "mcq",
+          "prompt": "What is a realistic description of your Python after nine months of half hour days?",
+          "options": [
+            "Professional developer",
+            "Able to write, test, package and instrument small tools",
+            "Beginner",
+            "Ready for algorithm interviews"
+          ],
+          "answer": 1,
+          "explanation": "That is a genuinely useful level, and it is what you can defend."
+        },
+        {
+          "key": "pq210-5",
+          "type": "mcq",
+          "prompt": "Why choose the next project before this plan ends?",
+          "options": [
+            "To stay busy",
+            "So there is no empty week where the habit dies",
+            "It is required",
+            "To impress employers"
+          ],
+          "answer": 1,
+          "explanation": "The gap after a finish line is where momentum is usually lost."
+        },
+        {
+          "key": "pq210-6",
+          "type": "mcq",
+          "prompt": "What is a sustainable pace after an intensive plan?",
+          "options": [
+            "The same thirty minutes",
+            "Smaller than before, but never zero",
+            "Nothing until a job",
+            "Weekends only"
+          ],
+          "answer": 1,
+          "explanation": "Skills decay, and a small daily floor preserves far more than occasional bursts."
+        },
+        {
+          "key": "pq210-7",
+          "type": "mcq",
+          "prompt": "Why write down what you still cannot do?",
+          "options": [
+            "To be modest",
+            "Because it makes your claims about what you can do credible",
+            "It is required",
+            "To limit applications"
+          ],
+          "answer": 1,
+          "explanation": "Calibrated self assessment is rare enough that it stands out."
+        },
+        {
+          "key": "pq210-8",
+          "type": "mcq",
+          "prompt": "What single pattern from this track transfers to almost any tool?",
+          "options": [
+            "Classes",
+            "Run a command in JSON mode and parse the output",
+            "Type hints",
+            "Comprehensions"
+          ],
+          "answer": 1,
+          "explanation": "It worked for the AWS CLI, Terraform and kubectl without changing shape."
+        },
+        {
+          "key": "pq210-9",
+          "type": "mcq",
+          "prompt": "What did building your own API client before boto3 achieve?",
+          "options": [
+            "Nothing",
+            "It made boto3 understandable rather than magical",
+            "It saved time",
+            "It was required"
+          ],
+          "answer": 1,
+          "explanation": "Understanding the shape of a thing before meeting the library is a repeatable strategy."
+        },
+        {
+          "key": "pq210-10",
+          "type": "mcq",
+          "prompt": "Why did this track stay at thirty minutes a day?",
+          "options": [
+            "The material was thin",
+            "So it never damaged the main track it was supporting",
+            "It is required",
+            "To finish sooner"
+          ],
+          "answer": 1,
+          "explanation": "Two tracks only work when the smaller one genuinely stays smaller."
+        },
+        {
+          "key": "pq210-11",
+          "type": "mcq",
+          "prompt": "What is the most valuable thing you built in this track?",
+          "options": [
+            "The log parser",
+            "A tool that reads real infrastructure, handles failure, and is tested and documented",
+            "The reference file",
+            "The Kubernetes script"
+          ],
+          "answer": 1,
+          "explanation": "It solves a real problem end to end, which is what portfolio evidence means."
+        },
+        {
+          "key": "pq210-12",
+          "type": "mcq",
+          "prompt": "What does finishing this plan actually mean?",
+          "options": [
+            "The work is complete",
+            "One stage is done and the next begins tomorrow",
+            "You are job ready anywhere",
+            "You can stop practising"
+          ],
+          "answer": 1,
+          "explanation": "The plan ending and the work ending are not the same thing."
+        },
+        {
+          "key": "pq210-13",
+          "type": "true_false",
+          "prompt": "Being able to write something with your notes open is the same as being able to write it in an interview.",
+          "answer": false,
+          "explanation": "The gap between the two is exactly what these last days are designed to measure."
+        },
+        {
+          "key": "pq210-14",
+          "type": "true_false",
+          "prompt": "Deciding tomorrow's fifteen minutes before the plan ends protects the habit you built.",
+          "answer": true,
+          "explanation": "The undefined day after a finish line is where most people quietly stop."
+        },
+        {
+          "key": "pq210-15",
+          "type": "true_false",
+          "prompt": "Thirty minutes a day for nine months is enough to become a competent scripter for infrastructure work.",
+          "answer": true,
+          "explanation": "It is not enough to become a software engineer, and it is exactly what these roles ask for."
+        }
+      ]
+    }
+  ]
+}

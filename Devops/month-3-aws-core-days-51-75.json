@@ -1,0 +1,1796 @@
+{
+  "days": [
+    {
+      "day": 51,
+      "title": "Account Setup And Not Getting A Surprise Bill",
+      "tasks": [
+        {
+          "key": "d51-create-account",
+          "title": "Create an AWS account and complete verification. Use a password manager for the root password.",
+          "required": true
+        },
+        {
+          "key": "d51-billing-alarm",
+          "title": "Before anything else, set a billing alarm at ten dollars. Confirm the alert email arrives.",
+          "required": true
+        },
+        {
+          "key": "d51-budget",
+          "title": "Create an AWS Budget with a hard monthly limit so you get warned twice, not once.",
+          "required": true
+        },
+        {
+          "key": "d51-free-tier",
+          "title": "Read exactly what the free tier covers and which three services most often cause bills.",
+          "required": false
+        },
+        {
+          "key": "d51-root-mfa",
+          "title": "Turn on MFA for the root account, then write down that you will not use root again.",
+          "required": true
+        },
+        {
+          "key": "d51-regions",
+          "title": "Pick one region and stick to it all month. Note why resources in other regions get forgotten.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 52,
+      "title": "IAM Users, Groups And The CLI",
+      "tasks": [
+        {
+          "key": "d52-admin-user",
+          "title": "Create an IAM user for yourself with MFA and stop using root entirely.",
+          "required": true
+        },
+        {
+          "key": "d52-group",
+          "title": "Create a group, attach a policy to the group, and put your user in it.",
+          "required": true
+        },
+        {
+          "key": "d52-access-keys",
+          "title": "Create access keys for your user and store them somewhere you would not commit to git.",
+          "required": true
+        },
+        {
+          "key": "d52-install-cli",
+          "title": "Install the AWS CLI on your VM and configure it with aws configure.",
+          "required": true
+        },
+        {
+          "key": "d52-first-call",
+          "title": "Run aws sts get-caller-identity and read what it tells you about who you are.",
+          "required": true
+        },
+        {
+          "key": "d52-cli-vs-console",
+          "title": "Do the same small task twice, once in the console and once in the CLI. Compare them.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 53,
+      "title": "IAM Policies And Least Privilege",
+      "tasks": [
+        {
+          "key": "d53-policy-anatomy",
+          "title": "Read a policy document and identify Effect, Action, Resource and Condition.",
+          "required": true
+        },
+        {
+          "key": "d53-managed-vs-inline",
+          "title": "Learn the difference between AWS managed policies, customer managed policies and inline policies.",
+          "required": true
+        },
+        {
+          "key": "d53-write-policy",
+          "title": "Write a custom policy that allows reading one S3 bucket and nothing else.",
+          "required": true
+        },
+        {
+          "key": "d53-test-deny",
+          "title": "Attach your restrictive policy to a test user and prove it cannot do anything extra.",
+          "required": true
+        },
+        {
+          "key": "d53-policy-simulator",
+          "title": "Use the IAM policy simulator to check a permission before you deploy it.",
+          "required": true
+        },
+        {
+          "key": "d53-break-perms",
+          "title": "Break it: remove a permission your CLI needs, read the exact denial message, then restore it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 54,
+      "title": "IAM Roles And Why They Beat Keys",
+      "tasks": [
+        {
+          "key": "d54-role-concept",
+          "title": "Learn what an IAM role is and how it differs from a user with access keys.",
+          "required": true
+        },
+        {
+          "key": "d54-trust-policy",
+          "title": "Read a trust policy and work out which principal is allowed to assume the role.",
+          "required": true
+        },
+        {
+          "key": "d54-create-role",
+          "title": "Create a role that an EC2 instance can assume, with read only S3 access.",
+          "required": true
+        },
+        {
+          "key": "d54-assume-role",
+          "title": "Assume a role from the CLI and watch your identity change with get-caller-identity.",
+          "required": true
+        },
+        {
+          "key": "d54-no-keys-on-servers",
+          "title": "Write down why putting access keys on a server is a bad idea and what to use instead.",
+          "required": true
+        },
+        {
+          "key": "d54-cost-check",
+          "title": "Check the billing dashboard. Make this the last task of every day from now on.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 55,
+      "title": "VPC Foundations",
+      "tasks": [
+        {
+          "key": "d55-vpc-create",
+          "title": "Create a VPC with the CIDR block 10.0.0.0/16 and nothing else in it yet.",
+          "required": true
+        },
+        {
+          "key": "d55-cidr-plan",
+          "title": "Plan four subnets on paper before creating any: two public, two private, across two zones.",
+          "required": true
+        },
+        {
+          "key": "d55-subnets",
+          "title": "Create the four subnets you planned, each in the correct availability zone.",
+          "required": true
+        },
+        {
+          "key": "d55-az-purpose",
+          "title": "Learn what an availability zone is and why you spread subnets across two of them.",
+          "required": true
+        },
+        {
+          "key": "d55-default-vpc",
+          "title": "Look at the default VPC and list three ways yours is different from it.",
+          "required": true
+        },
+        {
+          "key": "d55-destroy",
+          "title": "Leave the VPC in place, but confirm no billable resources exist inside it yet.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 56,
+      "title": "Route Tables And Internet Gateways",
+      "tasks": [
+        {
+          "key": "d56-igw",
+          "title": "Create an internet gateway and attach it to your VPC.",
+          "required": true
+        },
+        {
+          "key": "d56-public-route",
+          "title": "Create a route table with a default route to the internet gateway and associate your public subnets.",
+          "required": true
+        },
+        {
+          "key": "d56-private-route",
+          "title": "Leave the private subnets on a route table with no internet gateway route.",
+          "required": true
+        },
+        {
+          "key": "d56-map-to-month2",
+          "title": "Compare an AWS route table to the ip route output you read on day 32.",
+          "required": true
+        },
+        {
+          "key": "d56-verify",
+          "title": "Prove which subnets are public and which are private by reading the route tables alone.",
+          "required": true
+        },
+        {
+          "key": "d56-cost-check",
+          "title": "Check the billing dashboard before you close the laptop.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 57,
+      "title": "Security Groups And Network ACLs",
+      "tasks": [
+        {
+          "key": "d57-sg-create",
+          "title": "Create a security group that allows only SSH from your own home IP address.",
+          "required": true
+        },
+        {
+          "key": "d57-stateful",
+          "title": "Learn what stateful means for a security group and why you rarely write outbound rules.",
+          "required": true
+        },
+        {
+          "key": "d57-nacl",
+          "title": "Look at the default network ACL and learn how it differs from a security group.",
+          "required": true
+        },
+        {
+          "key": "d57-sg-vs-ufw",
+          "title": "Write down how security groups compare to the ufw rules you wrote on day 45.",
+          "required": true
+        },
+        {
+          "key": "d57-sg-reference",
+          "title": "Create a security group whose rule allows traffic from another security group, not an IP.",
+          "required": true
+        },
+        {
+          "key": "d57-break-sg",
+          "title": "Break it: remove your SSH rule while connected, then recover access from the console.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 58,
+      "title": "NAT Gateways And Private Egress",
+      "tasks": [
+        {
+          "key": "d58-why-nat",
+          "title": "Work out why a private instance still needs outbound internet to install packages.",
+          "required": true
+        },
+        {
+          "key": "d58-create-nat",
+          "title": "Create a NAT gateway in a public subnet and note its hourly cost before you do.",
+          "required": true
+        },
+        {
+          "key": "d58-private-route",
+          "title": "Point the private route table at the NAT gateway and confirm the route appears.",
+          "required": true
+        },
+        {
+          "key": "d58-nat-cost",
+          "title": "Read what a NAT gateway costs per hour and per gigabyte. Write the number in your notes.",
+          "required": true
+        },
+        {
+          "key": "d58-alternatives",
+          "title": "Read what a VPC endpoint is and how it can replace NAT traffic for some services.",
+          "required": false
+        },
+        {
+          "key": "d58-delete-nat",
+          "title": "Delete the NAT gateway at the end of the day. Rebuild it tomorrow if you need it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 59,
+      "title": "Launching Your First EC2 Instance",
+      "tasks": [
+        {
+          "key": "d59-key-pair",
+          "title": "Create an EC2 key pair and store the private key with permissions 400.",
+          "required": true
+        },
+        {
+          "key": "d59-launch",
+          "title": "Launch a t3.micro instance into a public subnet with your SSH security group.",
+          "required": true
+        },
+        {
+          "key": "d59-connect",
+          "title": "SSH into the instance from your VM and run the Linux commands you learned in Month 1.",
+          "required": true
+        },
+        {
+          "key": "d59-metadata",
+          "title": "Query the instance metadata endpoint and find the instance ID and availability zone.",
+          "required": true
+        },
+        {
+          "key": "d59-instance-types",
+          "title": "Read what the letters and numbers in an instance type name mean.",
+          "required": false
+        },
+        {
+          "key": "d59-terminate",
+          "title": "Terminate the instance at the end of the day and confirm it is gone.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 60,
+      "title": "User Data And Repeatable Instances",
+      "tasks": [
+        {
+          "key": "d60-user-data",
+          "title": "Launch an instance with a user data script that installs and starts nginx automatically.",
+          "required": true
+        },
+        {
+          "key": "d60-verify-boot",
+          "title": "Reach the nginx default page in a browser without ever SSHing into the machine.",
+          "required": true
+        },
+        {
+          "key": "d60-cloud-init-log",
+          "title": "Read the cloud init log on the instance to see exactly what your script did.",
+          "required": true
+        },
+        {
+          "key": "d60-break-userdata",
+          "title": "Break it: put an error in the user data script, launch it, then find the failure in the log.",
+          "required": true
+        },
+        {
+          "key": "d60-idempotent",
+          "title": "Rewrite the script so running it twice causes no damage.",
+          "required": true
+        },
+        {
+          "key": "d60-terminate",
+          "title": "Terminate everything and check the billing dashboard.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 61,
+      "title": "AMIs, EBS Volumes And Snapshots",
+      "tasks": [
+        {
+          "key": "d61-ebs-basics",
+          "title": "Learn what an EBS volume is and why it survives an instance stop but not always a terminate.",
+          "required": true
+        },
+        {
+          "key": "d61-attach-volume",
+          "title": "Attach a second EBS volume to an instance, format it and mount it using day 21 skills.",
+          "required": true
+        },
+        {
+          "key": "d61-snapshot",
+          "title": "Take a snapshot of the volume and note that snapshots are stored in S3 behind the scenes.",
+          "required": true
+        },
+        {
+          "key": "d61-restore",
+          "title": "Create a new volume from the snapshot, attach it to a fresh instance and confirm the data.",
+          "required": true
+        },
+        {
+          "key": "d61-custom-ami",
+          "title": "Create a custom AMI from a configured instance and launch a new instance from it.",
+          "required": true
+        },
+        {
+          "key": "d61-cleanup",
+          "title": "Delete the volumes, snapshots and AMI you created. Snapshots cost money quietly.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 62,
+      "title": "Elastic IPs, DNS Names And Reaching Instances",
+      "tasks": [
+        {
+          "key": "d62-public-vs-elastic",
+          "title": "Learn the difference between an auto assigned public IP and an Elastic IP.",
+          "required": true
+        },
+        {
+          "key": "d62-allocate-eip",
+          "title": "Allocate an Elastic IP, attach it to an instance and confirm it survives a stop and start.",
+          "required": true
+        },
+        {
+          "key": "d62-eip-cost",
+          "title": "Find out when an unattached Elastic IP starts costing money.",
+          "required": true
+        },
+        {
+          "key": "d62-private-dns",
+          "title": "Use the private DNS name to reach one instance from another inside the VPC.",
+          "required": true
+        },
+        {
+          "key": "d62-release",
+          "title": "Release the Elastic IP at the end of the day.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 63,
+      "title": "S3 Buckets And Object Storage",
+      "tasks": [
+        {
+          "key": "d63-create-bucket",
+          "title": "Create a bucket and upload files with both the console and the CLI.",
+          "required": true
+        },
+        {
+          "key": "d63-object-vs-file",
+          "title": "Learn why object storage is not a filesystem and what that means in practice.",
+          "required": true
+        },
+        {
+          "key": "d63-sync",
+          "title": "Use aws s3 sync to push a whole folder and then run it again to see what changes.",
+          "required": true
+        },
+        {
+          "key": "d63-versioning",
+          "title": "Turn on versioning, overwrite a file, and recover the previous version.",
+          "required": true
+        },
+        {
+          "key": "d63-storage-classes",
+          "title": "Read what the storage classes are and when Glacier makes sense.",
+          "required": false
+        },
+        {
+          "key": "d63-cost-check",
+          "title": "Check the billing dashboard.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 64,
+      "title": "S3 Permissions And Public Access",
+      "tasks": [
+        {
+          "key": "d64-block-public",
+          "title": "Look at Block Public Access and understand why it is on by default.",
+          "required": true
+        },
+        {
+          "key": "d64-bucket-policy",
+          "title": "Write a bucket policy that allows read access to one prefix only.",
+          "required": true
+        },
+        {
+          "key": "d64-role-access",
+          "title": "Give an EC2 instance access to the bucket using the role from day 54, not access keys.",
+          "required": true
+        },
+        {
+          "key": "d64-presigned",
+          "title": "Generate a presigned URL and confirm it expires.",
+          "required": true
+        },
+        {
+          "key": "d64-break-access",
+          "title": "Break it: apply a policy that locks you out of your own bucket, then work out how to recover.",
+          "required": true
+        },
+        {
+          "key": "d64-leak-lesson",
+          "title": "Read one real story of a public S3 bucket leak and write down what went wrong.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 65,
+      "title": "Static Website Hosting On S3",
+      "tasks": [
+        {
+          "key": "d65-static-site",
+          "title": "Host a static site from S3 and reach it over the website endpoint.",
+          "required": true
+        },
+        {
+          "key": "d65-index-error",
+          "title": "Configure the index document and the error document and test a missing page.",
+          "required": true
+        },
+        {
+          "key": "d65-cloudfront",
+          "title": "Read what CloudFront adds in front of S3 and why HTTPS needs it.",
+          "required": false
+        },
+        {
+          "key": "d65-compare-nginx",
+          "title": "Write down when you would use S3 hosting and when you would use the nginx setup from day 43.",
+          "required": true
+        },
+        {
+          "key": "d65-cleanup",
+          "title": "Empty and delete the bucket when you are finished with it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 66,
+      "title": "RDS In A Private Subnet",
+      "tasks": [
+        {
+          "key": "d66-subnet-group",
+          "title": "Create a DB subnet group using your two private subnets.",
+          "required": true
+        },
+        {
+          "key": "d66-launch-rds",
+          "title": "Launch a small PostgreSQL RDS instance with public access turned off.",
+          "required": true
+        },
+        {
+          "key": "d66-sg-rules",
+          "title": "Create a security group that only allows port 5432 from your application security group.",
+          "required": true
+        },
+        {
+          "key": "d66-connect",
+          "title": "Connect to the database from an EC2 instance and run one query.",
+          "required": true
+        },
+        {
+          "key": "d66-fail-from-outside",
+          "title": "Prove you cannot reach the database from your laptop, and explain why that is correct.",
+          "required": true
+        },
+        {
+          "key": "d66-stop-rds",
+          "title": "Stop or delete the RDS instance at the end of the day. It is the most expensive thing here.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 67,
+      "title": "Backups, Snapshots And Recovery",
+      "tasks": [
+        {
+          "key": "d67-rds-snapshot",
+          "title": "Take a manual RDS snapshot and read how long automated backups are kept.",
+          "required": true
+        },
+        {
+          "key": "d67-restore",
+          "title": "Restore the snapshot into a new instance and confirm the data arrived intact.",
+          "required": true
+        },
+        {
+          "key": "d67-rpo-rto",
+          "title": "Learn what RPO and RTO mean and write down what they would be for your cargo system.",
+          "required": true
+        },
+        {
+          "key": "d67-backup-plan",
+          "title": "Write a one page backup and recovery plan for a small production database.",
+          "required": true
+        },
+        {
+          "key": "d67-cleanup",
+          "title": "Delete the restored instance and any snapshots you no longer need.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 68,
+      "title": "Load Balancers And Target Groups",
+      "tasks": [
+        {
+          "key": "d68-two-instances",
+          "title": "Launch two instances behind the same user data script so both serve a page.",
+          "required": true
+        },
+        {
+          "key": "d68-target-group",
+          "title": "Create a target group and register both instances in it.",
+          "required": true
+        },
+        {
+          "key": "d68-create-alb",
+          "title": "Create an Application Load Balancer in your public subnets pointing at the target group.",
+          "required": true
+        },
+        {
+          "key": "d68-health-checks",
+          "title": "Configure a health check, then stop one instance and watch it leave the pool.",
+          "required": true
+        },
+        {
+          "key": "d68-compare-nginx",
+          "title": "Compare the ALB to the nginx upstream block you wrote on day 49.",
+          "required": true
+        },
+        {
+          "key": "d68-delete-alb",
+          "title": "Delete the load balancer at the end of the day. It bills by the hour.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 69,
+      "title": "HTTPS With ACM And Private Backends",
+      "tasks": [
+        {
+          "key": "d69-acm-cert",
+          "title": "Request a certificate in ACM and complete the validation step.",
+          "required": true
+        },
+        {
+          "key": "d69-https-listener",
+          "title": "Add an HTTPS listener to the load balancer using the certificate.",
+          "required": true
+        },
+        {
+          "key": "d69-redirect",
+          "title": "Redirect HTTP to HTTPS at the load balancer and confirm it with curl.",
+          "required": true
+        },
+        {
+          "key": "d69-private-targets",
+          "title": "Move the instances into private subnets so only the load balancer can reach them.",
+          "required": true
+        },
+        {
+          "key": "d69-compare-day49",
+          "title": "Write down how this compares to terminating TLS at nginx on day 49.",
+          "required": true
+        },
+        {
+          "key": "d69-cleanup",
+          "title": "Tear down everything you created today and check the bill.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 70,
+      "title": "CloudWatch Metrics And Logs",
+      "tasks": [
+        {
+          "key": "d70-metrics",
+          "title": "Find CPU and network metrics for an instance and read them over a one hour window.",
+          "required": true
+        },
+        {
+          "key": "d70-agent",
+          "title": "Install the CloudWatch agent so memory and disk metrics appear, since they are not there by default.",
+          "required": true
+        },
+        {
+          "key": "d70-ship-logs",
+          "title": "Send the nginx access log from an instance into a CloudWatch log group.",
+          "required": true
+        },
+        {
+          "key": "d70-logs-insights",
+          "title": "Query your logs with Logs Insights to count requests by status code.",
+          "required": true
+        },
+        {
+          "key": "d70-retention",
+          "title": "Set a log retention period and explain why forever is an expensive default.",
+          "required": true
+        },
+        {
+          "key": "d70-cost-check",
+          "title": "Check the billing dashboard.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 71,
+      "title": "Alarms And Knowing When Things Break",
+      "tasks": [
+        {
+          "key": "d71-cpu-alarm",
+          "title": "Create an alarm that fires when instance CPU stays above a threshold.",
+          "required": true
+        },
+        {
+          "key": "d71-sns",
+          "title": "Create an SNS topic, subscribe your email, and confirm the subscription.",
+          "required": true
+        },
+        {
+          "key": "d71-trigger",
+          "title": "Deliberately load the CPU until the alarm fires and the email arrives.",
+          "required": true
+        },
+        {
+          "key": "d71-log-alarm",
+          "title": "Create a metric filter that alarms when a specific error appears in your logs.",
+          "required": true
+        },
+        {
+          "key": "d71-alarm-fatigue",
+          "title": "Write down three alarms worth waking up for and three that would just be noise.",
+          "required": true
+        },
+        {
+          "key": "d71-cleanup",
+          "title": "Delete the test alarms you no longer want.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 72,
+      "title": "Cost, Tagging And Cleanup Discipline",
+      "tasks": [
+        {
+          "key": "d72-cost-explorer",
+          "title": "Open Cost Explorer and find which service has cost you the most this month.",
+          "required": true
+        },
+        {
+          "key": "d72-tagging",
+          "title": "Tag every resource you create with a project and an owner tag.",
+          "required": true
+        },
+        {
+          "key": "d72-orphans",
+          "title": "Hunt for orphaned resources: unattached volumes, unused Elastic IPs, old snapshots.",
+          "required": true
+        },
+        {
+          "key": "d72-cheap-swaps",
+          "title": "Read three ways to cut cost: right sizing, stopping unused instances and removing NAT gateways.",
+          "required": false
+        },
+        {
+          "key": "d72-checklist",
+          "title": "Write a teardown checklist you will run at the end of every AWS day from now on.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 73,
+      "title": "Capstone Build, Part One",
+      "tasks": [
+        {
+          "key": "d73-architecture",
+          "title": "Draw the target architecture on paper before you build anything: VPC, ALB, app, database.",
+          "required": true
+        },
+        {
+          "key": "d73-network-layer",
+          "title": "Build the VPC, subnets, route tables, internet gateway and NAT for the capstone.",
+          "required": true
+        },
+        {
+          "key": "d73-security-groups",
+          "title": "Create three security groups: load balancer, application and database, each referencing the one above.",
+          "required": true
+        },
+        {
+          "key": "d73-instances",
+          "title": "Launch two application instances in private subnets using a user data script.",
+          "required": true
+        },
+        {
+          "key": "d73-verify-private",
+          "title": "Prove the application instances have no public IP and cannot be reached directly.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 74,
+      "title": "Capstone Build, Part Two",
+      "tasks": [
+        {
+          "key": "d74-database",
+          "title": "Launch the database in a private subnet reachable only from the application security group.",
+          "required": true
+        },
+        {
+          "key": "d74-load-balancer",
+          "title": "Put the load balancer in front with HTTPS and a working health check.",
+          "required": true
+        },
+        {
+          "key": "d74-logs-alarm",
+          "title": "Ship application logs to CloudWatch and create one alarm that fires when the app dies.",
+          "required": true
+        },
+        {
+          "key": "d74-end-to-end",
+          "title": "Load the site over HTTPS and trace one request from the load balancer log to the app log.",
+          "required": true
+        },
+        {
+          "key": "d74-cost-note",
+          "title": "Record what this whole stack costs per day so you know what you are running.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 75,
+      "title": "Break It, Fix It, Tear It Down",
+      "tasks": [
+        {
+          "key": "d75-snapshot-state",
+          "title": "Write down the working state of every component before anyone touches it.",
+          "required": true
+        },
+        {
+          "key": "d75-sabotage",
+          "title": "Have a friend break one thing without telling you: a security group, a route, or the app itself.",
+          "required": true
+        },
+        {
+          "key": "d75-diagnose",
+          "title": "Diagnose it using CloudWatch, the load balancer health checks and your day 38 checklist.",
+          "required": true
+        },
+        {
+          "key": "d75-fix",
+          "title": "Fix the fault and confirm the site is healthy again from outside the VPC.",
+          "required": true
+        },
+        {
+          "key": "d75-write-up",
+          "title": "Write the incident up: what broke, how you found it, how long it took, what you would automate.",
+          "required": true
+        },
+        {
+          "key": "d75-push-repo",
+          "title": "Push the architecture diagram and the write up to your GitHub repo.",
+          "required": true
+        },
+        {
+          "key": "d75-teardown",
+          "title": "Run your teardown checklist. Confirm the bill stops growing before you sleep.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 55,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q55-1",
+          "type": "mcq",
+          "prompt": "What should you set up before creating any billable AWS resource?",
+          "options": [
+            "A load balancer",
+            "A billing alarm and a budget",
+            "A custom AMI",
+            "A VPC endpoint"
+          ],
+          "answer": 1,
+          "explanation": "Cost alerts are the only thing standing between a forgotten resource and a large bill."
+        },
+        {
+          "key": "q55-2",
+          "type": "mcq",
+          "prompt": "Why should you stop using the root account after setup?",
+          "options": [
+            "It is slower",
+            "It has unlimited power and cannot be restricted",
+            "It cannot use the CLI",
+            "It expires after 30 days"
+          ],
+          "answer": 1,
+          "explanation": "Root can do anything, so daily work should happen under an IAM user with limited permissions."
+        },
+        {
+          "key": "q55-3",
+          "type": "mcq",
+          "prompt": "What are the four parts of an IAM policy statement?",
+          "options": [
+            "User, Group, Role, Policy",
+            "Effect, Action, Resource, Condition",
+            "Allow, Deny, Read, Write",
+            "Region, Zone, Service, Tag"
+          ],
+          "answer": 1,
+          "explanation": "Effect decides allow or deny, Action names the API calls, Resource names the targets and Condition adds limits."
+        },
+        {
+          "key": "q55-4",
+          "type": "mcq",
+          "prompt": "What is the main advantage of an IAM role over access keys on a server?",
+          "options": [
+            "Roles are faster",
+            "Credentials are temporary and never stored on the instance",
+            "Roles cost less",
+            "Roles work across accounts only"
+          ],
+          "answer": 1,
+          "explanation": "Roles hand out short lived credentials automatically, so there is no long lived secret to leak."
+        },
+        {
+          "key": "q55-5",
+          "type": "mcq",
+          "prompt": "Which command tells you which identity your CLI is currently using?",
+          "options": [
+            "aws iam list-users",
+            "aws sts get-caller-identity",
+            "aws configure list",
+            "aws ec2 describe-instances"
+          ],
+          "answer": 1,
+          "explanation": "get-caller-identity reports the account, user ID and ARN behind the current credentials."
+        },
+        {
+          "key": "q55-6",
+          "type": "mcq",
+          "prompt": "What does a CIDR block of 10.0.0.0/16 give you?",
+          "options": [
+            "256 addresses",
+            "1024 addresses",
+            "65536 addresses",
+            "16 addresses"
+          ],
+          "answer": 2,
+          "explanation": "Sixteen network bits leave sixteen host bits, which is 65536 addresses in total."
+        },
+        {
+          "key": "q55-7",
+          "type": "mcq",
+          "prompt": "What is an availability zone?",
+          "options": [
+            "A separate AWS account",
+            "An isolated location within a region",
+            "A type of subnet",
+            "A billing boundary"
+          ],
+          "answer": 1,
+          "explanation": "Zones are physically separate locations in one region, which is why you spread subnets across them."
+        },
+        {
+          "key": "q55-8",
+          "type": "mcq",
+          "prompt": "Why spread subnets across two availability zones?",
+          "options": [
+            "It is cheaper",
+            "So one zone failing does not take everything down",
+            "It increases bandwidth",
+            "It is required for IAM"
+          ],
+          "answer": 1,
+          "explanation": "Running in more than one zone is the basic protection against a single location failing."
+        },
+        {
+          "key": "q55-9",
+          "type": "mcq",
+          "prompt": "What makes a subnet public rather than private?",
+          "options": [
+            "Its CIDR range",
+            "A route to an internet gateway in its route table",
+            "Its availability zone",
+            "Its security group"
+          ],
+          "answer": 1,
+          "explanation": "The route table decides it, not the subnet itself."
+        },
+        {
+          "key": "q55-10",
+          "type": "mcq",
+          "prompt": "What does an internet gateway do?",
+          "options": [
+            "Filters traffic",
+            "Connects a VPC to the internet",
+            "Assigns private IPs",
+            "Balances load"
+          ],
+          "answer": 1,
+          "explanation": "It is the door between your VPC and the public internet."
+        },
+        {
+          "key": "q55-11",
+          "type": "mcq",
+          "prompt": "Which of these is a good reason to pick one region and stay in it?",
+          "options": [
+            "Other regions are slower",
+            "Resources in forgotten regions still cost money",
+            "IAM only works in one region",
+            "VPCs are global"
+          ],
+          "answer": 1,
+          "explanation": "Resources left running in a region you never look at are a common source of surprise charges."
+        },
+        {
+          "key": "q55-12",
+          "type": "mcq",
+          "prompt": "What does MFA add to an account?",
+          "options": [
+            "Faster login",
+            "A second factor beyond the password",
+            "Encrypted storage",
+            "Free tier extension"
+          ],
+          "answer": 1,
+          "explanation": "Multi factor authentication means a stolen password alone is not enough to get in."
+        },
+        {
+          "key": "q55-13",
+          "type": "true_false",
+          "prompt": "The free tier means you cannot be charged during your first year.",
+          "answer": false,
+          "explanation": "Plenty of services sit outside the free tier, and exceeding free tier limits also produces charges."
+        },
+        {
+          "key": "q55-14",
+          "type": "true_false",
+          "prompt": "An IAM policy with no explicit allow results in access being denied.",
+          "answer": true,
+          "explanation": "AWS denies by default, so permissions only exist where something explicitly grants them."
+        },
+        {
+          "key": "q55-15",
+          "type": "true_false",
+          "prompt": "You should plan your subnet CIDR ranges before creating the subnets.",
+          "answer": true,
+          "explanation": "Changing a subnet range later means rebuilding it, so the planning has to come first."
+        }
+      ]
+    },
+    {
+      "afterDay": 60,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q60-1",
+          "type": "mcq",
+          "prompt": "What does it mean that a security group is stateful?",
+          "options": [
+            "It logs all traffic",
+            "Return traffic for an allowed connection is automatically permitted",
+            "It remembers deleted rules",
+            "It applies across all regions"
+          ],
+          "answer": 1,
+          "explanation": "Because it tracks connections, you rarely need to write matching outbound rules."
+        },
+        {
+          "key": "q60-2",
+          "type": "mcq",
+          "prompt": "What is one key difference between a security group and a network ACL?",
+          "options": [
+            "Security groups are free",
+            "Network ACLs are stateless and support deny rules",
+            "Network ACLs attach to instances",
+            "Security groups work at the subnet level"
+          ],
+          "answer": 1,
+          "explanation": "NACLs evaluate each direction separately and can explicitly deny, which security groups cannot."
+        },
+        {
+          "key": "q60-3",
+          "type": "mcq",
+          "prompt": "What can a security group rule reference as its source?",
+          "options": [
+            "Only an IP range",
+            "An IP range or another security group",
+            "Only a subnet",
+            "Only a VPC"
+          ],
+          "answer": 1,
+          "explanation": "Referencing another security group is how you let the app tier talk to the database tier cleanly."
+        },
+        {
+          "key": "q60-4",
+          "type": "mcq",
+          "prompt": "Why does a private instance need a NAT gateway?",
+          "options": [
+            "To receive inbound traffic",
+            "To make outbound connections such as package downloads",
+            "To get a private IP",
+            "To join a load balancer"
+          ],
+          "answer": 1,
+          "explanation": "NAT lets instances reach out without allowing anyone to reach in."
+        },
+        {
+          "key": "q60-5",
+          "type": "mcq",
+          "prompt": "What is a common surprise about NAT gateway pricing?",
+          "options": [
+            "It is free",
+            "It charges per hour and per gigabyte processed",
+            "It only charges on weekends",
+            "It is billed yearly"
+          ],
+          "answer": 1,
+          "explanation": "The hourly charge runs whether you use it or not, and data processing costs stack on top."
+        },
+        {
+          "key": "q60-6",
+          "type": "mcq",
+          "prompt": "Where must a NAT gateway be placed?",
+          "options": [
+            "In a private subnet",
+            "In a public subnet",
+            "Outside the VPC",
+            "In the default VPC only"
+          ],
+          "answer": 1,
+          "explanation": "It needs a route to the internet gateway, so it lives in a public subnet."
+        },
+        {
+          "key": "q60-7",
+          "type": "mcq",
+          "prompt": "What does EC2 user data do?",
+          "options": [
+            "Stores login details",
+            "Runs a script when the instance first boots",
+            "Backs up the instance",
+            "Sets the instance type"
+          ],
+          "answer": 1,
+          "explanation": "User data lets you configure an instance automatically at launch without connecting to it."
+        },
+        {
+          "key": "q60-8",
+          "type": "mcq",
+          "prompt": "Where would you look to see whether a user data script succeeded?",
+          "options": [
+            "The security group",
+            "The cloud init log on the instance",
+            "The billing console",
+            "The route table"
+          ],
+          "answer": 1,
+          "explanation": "Cloud init writes a log of exactly what ran and what failed."
+        },
+        {
+          "key": "q60-9",
+          "type": "mcq",
+          "prompt": "What is the instance metadata endpoint used for?",
+          "options": [
+            "Billing details",
+            "Information about the instance itself, such as its ID and zone",
+            "Listing other instances",
+            "Managing IAM users"
+          ],
+          "answer": 1,
+          "explanation": "An instance can query metadata to learn about itself and to fetch role credentials."
+        },
+        {
+          "key": "q60-10",
+          "type": "mcq",
+          "prompt": "Why should a startup script be safe to run twice?",
+          "options": [
+            "It runs faster",
+            "Because reruns should not break or duplicate anything",
+            "AWS requires it",
+            "It reduces cost"
+          ],
+          "answer": 1,
+          "explanation": "Scripts that only work once cause failures the moment an instance is replaced or rebooted."
+        },
+        {
+          "key": "q60-11",
+          "type": "mcq",
+          "prompt": "What is the safest way to give an EC2 instance access to S3?",
+          "options": [
+            "Copy access keys onto the instance",
+            "Attach an IAM role to the instance",
+            "Make the bucket public",
+            "Use the root account keys"
+          ],
+          "answer": 1,
+          "explanation": "The role supplies temporary credentials automatically with nothing stored on disk."
+        },
+        {
+          "key": "q60-12",
+          "type": "mcq",
+          "prompt": "You removed your own SSH rule from a security group. What is the recovery path?",
+          "options": [
+            "Terminate the instance",
+            "Re-add the rule from the console or CLI",
+            "Reinstall the operating system",
+            "Wait for the rule to expire"
+          ],
+          "answer": 1,
+          "explanation": "The console does not depend on SSH, so you can restore the rule from there."
+        },
+        {
+          "key": "q60-13",
+          "type": "true_false",
+          "prompt": "A security group applies to an instance, while a network ACL applies to a subnet.",
+          "answer": true,
+          "explanation": "The two operate at different levels, which is why they are often used together."
+        },
+        {
+          "key": "q60-14",
+          "type": "true_false",
+          "prompt": "Deleting a NAT gateway at the end of a practice day is a reasonable way to control cost.",
+          "answer": true,
+          "explanation": "It is one of the more expensive resources to leave idle, and it is quick to recreate."
+        },
+        {
+          "key": "q60-15",
+          "type": "true_false",
+          "prompt": "An instance in a private subnet with no NAT can still install packages from the internet.",
+          "answer": false,
+          "explanation": "Without a route out through NAT or an endpoint, outbound connections fail."
+        }
+      ]
+    },
+    {
+      "afterDay": 65,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q65-1",
+          "type": "mcq",
+          "prompt": "What happens to an EBS root volume by default when you terminate an instance?",
+          "options": [
+            "It is kept forever",
+            "It is deleted",
+            "It becomes a snapshot",
+            "It is detached and stored free"
+          ],
+          "answer": 1,
+          "explanation": "The root volume is normally set to delete on termination, which is why data must live elsewhere."
+        },
+        {
+          "key": "q65-2",
+          "type": "mcq",
+          "prompt": "What is an EBS snapshot?",
+          "options": [
+            "A running copy of an instance",
+            "A point in time backup of a volume",
+            "A log file",
+            "A network capture"
+          ],
+          "answer": 1,
+          "explanation": "Snapshots capture the volume contents at a moment so you can restore or clone it later."
+        },
+        {
+          "key": "q65-3",
+          "type": "mcq",
+          "prompt": "What is a custom AMI useful for?",
+          "options": [
+            "Reducing storage cost",
+            "Launching new instances that already have your configuration",
+            "Encrypting traffic",
+            "Managing IAM users"
+          ],
+          "answer": 1,
+          "explanation": "Baking configuration into an image makes new instances consistent and fast to start."
+        },
+        {
+          "key": "q65-4",
+          "type": "mcq",
+          "prompt": "When does an Elastic IP typically start costing money?",
+          "options": [
+            "Always",
+            "When it is allocated but not attached to a running instance",
+            "Only in the first month",
+            "Only when attached"
+          ],
+          "answer": 1,
+          "explanation": "AWS charges for reserved addresses that are sitting idle, to discourage hoarding."
+        },
+        {
+          "key": "q65-5",
+          "type": "mcq",
+          "prompt": "Why is object storage not the same as a filesystem?",
+          "options": [
+            "It is slower",
+            "Objects are stored whole with keys, not as files in directories",
+            "It cannot store images",
+            "It has no permissions"
+          ],
+          "answer": 1,
+          "explanation": "S3 has flat keys that look like paths, but there are no real directories and no partial in place edits."
+        },
+        {
+          "key": "q65-6",
+          "type": "mcq",
+          "prompt": "What does aws s3 sync do on a second run?",
+          "options": [
+            "Copies everything again",
+            "Copies only what changed",
+            "Deletes the destination",
+            "Nothing at all"
+          ],
+          "answer": 1,
+          "explanation": "Sync compares source and destination and transfers only the differences."
+        },
+        {
+          "key": "q65-7",
+          "type": "mcq",
+          "prompt": "What does S3 versioning let you do?",
+          "options": [
+            "Compress old files",
+            "Recover a previous version of an overwritten object",
+            "Encrypt objects",
+            "Speed up uploads"
+          ],
+          "answer": 1,
+          "explanation": "With versioning on, overwrites and deletes keep the earlier version available for recovery."
+        },
+        {
+          "key": "q65-8",
+          "type": "mcq",
+          "prompt": "Why is Block Public Access on by default?",
+          "options": [
+            "To save money",
+            "Because accidental public buckets are a common cause of data leaks",
+            "To improve speed",
+            "Because AWS requires HTTPS"
+          ],
+          "answer": 1,
+          "explanation": "Publicly readable buckets have caused many real world breaches, so the default is closed."
+        },
+        {
+          "key": "q65-9",
+          "type": "mcq",
+          "prompt": "What is a presigned URL used for?",
+          "options": [
+            "Permanently public access",
+            "Time limited access to a private object",
+            "Encrypting a bucket",
+            "Speeding up downloads"
+          ],
+          "answer": 1,
+          "explanation": "It grants temporary access to one object without making the bucket public."
+        },
+        {
+          "key": "q65-10",
+          "type": "mcq",
+          "prompt": "Which resource can quietly keep costing money after you delete an instance?",
+          "options": [
+            "Security groups",
+            "Old snapshots and unattached volumes",
+            "Route tables",
+            "IAM roles"
+          ],
+          "answer": 1,
+          "explanation": "Storage resources persist independently of instances and keep billing until deleted."
+        },
+        {
+          "key": "q65-11",
+          "type": "mcq",
+          "prompt": "What does S3 static website hosting not give you on its own?",
+          "options": [
+            "An index document",
+            "HTTPS on a custom domain",
+            "An error document",
+            "Public object access"
+          ],
+          "answer": 1,
+          "explanation": "HTTPS on your own domain needs CloudFront in front of the bucket."
+        },
+        {
+          "key": "q65-12",
+          "type": "mcq",
+          "prompt": "What is the correct way to let an EC2 instance read one S3 bucket?",
+          "options": [
+            "Make the bucket public",
+            "Attach a role with a policy scoped to that bucket",
+            "Store root keys on the instance",
+            "Disable Block Public Access"
+          ],
+          "answer": 1,
+          "explanation": "A scoped role gives exactly the access needed and nothing more."
+        },
+        {
+          "key": "q65-13",
+          "type": "true_false",
+          "prompt": "Snapshots are free to keep as long as you do not restore them.",
+          "answer": false,
+          "explanation": "Snapshot storage is billed, which is why old ones should be cleaned up."
+        },
+        {
+          "key": "q65-14",
+          "type": "true_false",
+          "prompt": "Tagging resources with a project and owner makes cleanup and cost tracking much easier.",
+          "answer": true,
+          "explanation": "Tags are how you find what belongs to what once you have more than a handful of resources."
+        },
+        {
+          "key": "q65-15",
+          "type": "true_false",
+          "prompt": "A bucket policy can lock you out of your own bucket.",
+          "answer": true,
+          "explanation": "An overly broad deny can block even the account owner, which is why policies should be tested carefully."
+        }
+      ]
+    },
+    {
+      "afterDay": 70,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q70-1",
+          "type": "mcq",
+          "prompt": "Why should a database sit in a private subnet?",
+          "options": [
+            "It runs faster",
+            "So it cannot be reached from the internet",
+            "It costs less",
+            "It is required for backups"
+          ],
+          "answer": 1,
+          "explanation": "A database with no public route removes the entire class of direct internet attacks."
+        },
+        {
+          "key": "q70-2",
+          "type": "mcq",
+          "prompt": "What is a DB subnet group?",
+          "options": [
+            "A security group for databases",
+            "The set of subnets RDS can place the database in",
+            "A backup schedule",
+            "A group of database users"
+          ],
+          "answer": 1,
+          "explanation": "RDS needs to know which subnets it may use, normally private ones across two zones."
+        },
+        {
+          "key": "q70-3",
+          "type": "mcq",
+          "prompt": "How should an application reach a private RDS instance?",
+          "options": [
+            "Over the public internet",
+            "From an instance whose security group is allowed on the database port",
+            "Through an S3 bucket",
+            "Via the root account"
+          ],
+          "answer": 1,
+          "explanation": "Security group referencing keeps the path tight and avoids hardcoded IP ranges."
+        },
+        {
+          "key": "q70-4",
+          "type": "mcq",
+          "prompt": "What does RPO measure?",
+          "options": [
+            "How long recovery takes",
+            "How much data you can afford to lose",
+            "How many users are online",
+            "How often alarms fire"
+          ],
+          "answer": 1,
+          "explanation": "Recovery point objective is about acceptable data loss, measured in time since the last good backup."
+        },
+        {
+          "key": "q70-5",
+          "type": "mcq",
+          "prompt": "What does RTO measure?",
+          "options": [
+            "How much data you can lose",
+            "How long you can afford to be down",
+            "How many backups you keep",
+            "How fast the network is"
+          ],
+          "answer": 1,
+          "explanation": "Recovery time objective is the target for how quickly service must be restored."
+        },
+        {
+          "key": "q70-6",
+          "type": "mcq",
+          "prompt": "What does a load balancer health check do?",
+          "options": [
+            "Measures CPU",
+            "Removes unhealthy targets from receiving traffic",
+            "Restarts instances",
+            "Sends billing alerts"
+          ],
+          "answer": 1,
+          "explanation": "Failing targets stop receiving requests, which is what keeps the site up when one instance dies."
+        },
+        {
+          "key": "q70-7",
+          "type": "mcq",
+          "prompt": "What is a target group?",
+          "options": [
+            "A group of IAM users",
+            "The set of instances a load balancer sends traffic to",
+            "A billing tag",
+            "A subnet collection"
+          ],
+          "answer": 1,
+          "explanation": "The target group holds the registered targets and the health check settings for them."
+        },
+        {
+          "key": "q70-8",
+          "type": "mcq",
+          "prompt": "What is ACM used for?",
+          "options": [
+            "Managing access keys",
+            "Provisioning and managing TLS certificates",
+            "Monitoring costs",
+            "Storing logs"
+          ],
+          "answer": 1,
+          "explanation": "AWS Certificate Manager issues and renews certificates for use with load balancers and CloudFront."
+        },
+        {
+          "key": "q70-9",
+          "type": "mcq",
+          "prompt": "Where does TLS normally terminate in a load balanced setup?",
+          "options": [
+            "On each application instance",
+            "At the load balancer",
+            "In the database",
+            "At the NAT gateway"
+          ],
+          "answer": 1,
+          "explanation": "Terminating at the load balancer means one certificate to manage instead of one per instance."
+        },
+        {
+          "key": "q70-10",
+          "type": "mcq",
+          "prompt": "Which metric is not collected by CloudWatch by default on EC2?",
+          "options": [
+            "CPU utilisation",
+            "Network in and out",
+            "Memory usage",
+            "Disk read operations"
+          ],
+          "answer": 2,
+          "explanation": "Memory is inside the operating system, so it needs the CloudWatch agent installed to be reported."
+        },
+        {
+          "key": "q70-11",
+          "type": "mcq",
+          "prompt": "Why set a retention period on log groups?",
+          "options": [
+            "Logs expire automatically anyway",
+            "Because storing logs forever costs money",
+            "It improves query speed only",
+            "AWS requires 30 days"
+          ],
+          "answer": 1,
+          "explanation": "Log storage is billed, so indefinite retention quietly becomes a real cost."
+        },
+        {
+          "key": "q70-12",
+          "type": "mcq",
+          "prompt": "What is alarm fatigue?",
+          "options": [
+            "Alarms that fail to fire",
+            "So many alerts that people stop reacting to them",
+            "Alarms that cost too much",
+            "Alarms with no metric"
+          ],
+          "answer": 1,
+          "explanation": "Too many low value alerts train people to ignore the ones that matter."
+        },
+        {
+          "key": "q70-13",
+          "type": "true_false",
+          "prompt": "You should be able to reach your private RDS instance directly from your laptop.",
+          "answer": false,
+          "explanation": "If you can, it is exposed, and the whole point of a private subnet has been lost."
+        },
+        {
+          "key": "q70-14",
+          "type": "true_false",
+          "prompt": "Moving application instances into private subnets behind a load balancer reduces their exposure.",
+          "answer": true,
+          "explanation": "Only the load balancer is reachable from outside, so the instances have no direct attack surface."
+        },
+        {
+          "key": "q70-15",
+          "type": "true_false",
+          "prompt": "An automated backup is only proven once you have successfully restored from it.",
+          "answer": true,
+          "explanation": "Untested backups fail exactly when you need them, so restoring is part of the process."
+        }
+      ]
+    },
+    {
+      "afterDay": 75,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q75-1",
+          "type": "mcq",
+          "prompt": "Your site returns 502 through the load balancer. What do you check first?",
+          "options": [
+            "Your DNS registrar",
+            "Target health and whether the app is running",
+            "Your IAM policies",
+            "The billing console"
+          ],
+          "answer": 1,
+          "explanation": "A 502 means the balancer could not get a usable response, so the targets are the first place to look."
+        },
+        {
+          "key": "q75-2",
+          "type": "mcq",
+          "prompt": "The load balancer shows all targets unhealthy but the app runs fine over SSH. What is likely?",
+          "options": [
+            "The instance type is too small",
+            "The security group blocks the health check port",
+            "The AMI is corrupt",
+            "The region is wrong"
+          ],
+          "answer": 1,
+          "explanation": "If the balancer cannot reach the health check path, targets are marked unhealthy even when the app works."
+        },
+        {
+          "key": "q75-3",
+          "type": "mcq",
+          "prompt": "An instance in a private subnet cannot download packages. What is the most likely cause?",
+          "options": [
+            "Wrong instance type",
+            "No NAT gateway or a missing route to it",
+            "IAM policy denies it",
+            "The AMI is out of date"
+          ],
+          "answer": 1,
+          "explanation": "Outbound internet from a private subnet depends on a NAT route being present."
+        },
+        {
+          "key": "q75-4",
+          "type": "mcq",
+          "prompt": "You deleted the NAT gateway to save cost and now deployments fail. Why?",
+          "options": [
+            "Instances lost their IPs",
+            "Private instances can no longer reach the internet",
+            "The load balancer stopped",
+            "IAM roles expired"
+          ],
+          "answer": 1,
+          "explanation": "Removing NAT removes outbound access, which breaks anything that pulls from the internet."
+        },
+        {
+          "key": "q75-5",
+          "type": "mcq",
+          "prompt": "What is the correct order when building the capstone architecture?",
+          "options": [
+            "Instances, then network, then security",
+            "Network, then security groups, then instances",
+            "Load balancer first, then VPC",
+            "Database first, then subnets"
+          ],
+          "answer": 1,
+          "explanation": "The network and its security boundaries have to exist before anything can be placed inside them."
+        },
+        {
+          "key": "q75-6",
+          "type": "mcq",
+          "prompt": "Why give the load balancer, application and database separate security groups?",
+          "options": [
+            "It is cheaper",
+            "So each tier only accepts traffic from the tier above it",
+            "AWS requires three",
+            "It speeds up traffic"
+          ],
+          "answer": 1,
+          "explanation": "Chained security groups enforce the tiers and stop the database being reachable from anywhere else."
+        },
+        {
+          "key": "q75-7",
+          "type": "mcq",
+          "prompt": "How do you prove an application instance is genuinely private?",
+          "options": [
+            "It has a security group",
+            "It has no public IP and cannot be reached directly from outside",
+            "It is in a different region",
+            "It uses HTTPS"
+          ],
+          "answer": 1,
+          "explanation": "No public address and no inbound path from the internet is what private actually means."
+        },
+        {
+          "key": "q75-8",
+          "type": "mcq",
+          "prompt": "Which log would you use to trace one request from the edge into the application?",
+          "options": [
+            "The billing report",
+            "The load balancer access log and the application log together",
+            "The route table",
+            "The IAM credential report"
+          ],
+          "answer": 1,
+          "explanation": "Matching the request across both logs shows exactly where it went and where it failed."
+        },
+        {
+          "key": "q75-9",
+          "type": "mcq",
+          "prompt": "What belongs in an incident write up?",
+          "options": [
+            "Only the fix",
+            "What broke, how it was found, how long it took and what to automate",
+            "The cost of the account",
+            "A list of IAM users"
+          ],
+          "answer": 1,
+          "explanation": "The value is in the diagnosis and the follow up actions, not just the final command that fixed it."
+        },
+        {
+          "key": "q75-10",
+          "type": "mcq",
+          "prompt": "What is the point of a teardown checklist?",
+          "options": [
+            "To speed up builds",
+            "To make sure nothing keeps billing after you finish",
+            "To document the architecture",
+            "To satisfy IAM"
+          ],
+          "answer": 1,
+          "explanation": "Forgotten resources are the main source of unexpected charges, and a checklist catches them."
+        },
+        {
+          "key": "q75-11",
+          "type": "mcq",
+          "prompt": "Which of these keeps billing after instances are terminated?",
+          "options": [
+            "Security groups",
+            "Unattached volumes, Elastic IPs and snapshots",
+            "Route tables",
+            "IAM roles"
+          ],
+          "answer": 1,
+          "explanation": "Storage and reserved addresses are billed independently of any running instance."
+        },
+        {
+          "key": "q75-12",
+          "type": "mcq",
+          "prompt": "Why draw the architecture before building it?",
+          "options": [
+            "It is required by AWS",
+            "It exposes gaps and ordering problems before they cost you time",
+            "It reduces cost automatically",
+            "It replaces documentation"
+          ],
+          "answer": 1,
+          "explanation": "A diagram forces you to decide what talks to what, which is much cheaper on paper than in the console."
+        },
+        {
+          "key": "q75-13",
+          "type": "true_false",
+          "prompt": "Knowing the daily cost of the stack you are running is part of doing this job properly.",
+          "answer": true,
+          "explanation": "Cost is an operational metric, and engineers who cannot answer what it costs get caught out."
+        },
+        {
+          "key": "q75-14",
+          "type": "true_false",
+          "prompt": "If you can reach the application instances directly from the internet, the design is working as intended.",
+          "answer": false,
+          "explanation": "Only the load balancer should be reachable, so direct access means the private layer has been broken."
+        },
+        {
+          "key": "q75-15",
+          "type": "true_false",
+          "prompt": "A written architecture diagram and incident report are worth more in an interview than a list of services you have used.",
+          "answer": true,
+          "explanation": "They show judgement and operational thinking, which is exactly what a list of service names cannot demonstrate."
+        }
+      ]
+    }
+  ]
+}

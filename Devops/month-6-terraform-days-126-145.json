@@ -1,0 +1,1358 @@
+{
+  "days": [
+    {
+      "day": 126,
+      "title": "Why Infrastructure As Code",
+      "tasks": [
+        {
+          "key": "d126-clickops-problem",
+          "title": "List everything you built by hand in Month 3 and estimate how long rebuilding it would take.",
+          "required": true
+        },
+        {
+          "key": "d126-what-iac-solves",
+          "title": "Read what infrastructure as code solves: repeatability, review and recovery.",
+          "required": false
+        },
+        {
+          "key": "d126-install",
+          "title": "Install Terraform and confirm the version on the command line.",
+          "required": true
+        },
+        {
+          "key": "d126-why-terraform",
+          "title": "Read why Terraform is used across AWS, Azure and GCP rather than one cloud only.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 127,
+      "title": "Providers And Your First Resource",
+      "tasks": [
+        {
+          "key": "d127-provider-block",
+          "title": "Write a provider block for AWS with an explicit region and version constraint.",
+          "required": true
+        },
+        {
+          "key": "d127-terraform-init",
+          "title": "Run terraform init and look at what appeared in the working directory.",
+          "required": true
+        },
+        {
+          "key": "d127-first-resource",
+          "title": "Write one resource block that creates an S3 bucket and nothing else.",
+          "required": true
+        },
+        {
+          "key": "d127-apply",
+          "title": "Apply it, confirm the bucket exists in the console, then read the output Terraform printed.",
+          "required": true
+        },
+        {
+          "key": "d127-destroy",
+          "title": "Destroy it and confirm the bucket is gone.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 128,
+      "title": "The Core Loop: Plan, Apply, Destroy",
+      "tasks": [
+        {
+          "key": "d128-plan-first",
+          "title": "Change something and run plan without applying. Read every line of the proposed change.",
+          "required": true
+        },
+        {
+          "key": "d128-symbols",
+          "title": "Learn what the plus, minus, tilde and minus slash plus symbols mean in a plan.",
+          "required": true
+        },
+        {
+          "key": "d128-apply-review",
+          "title": "Apply the change and compare the result to what the plan predicted.",
+          "required": true
+        },
+        {
+          "key": "d128-replace",
+          "title": "Make a change that forces replacement rather than update, and spot it in the plan.",
+          "required": true
+        },
+        {
+          "key": "d128-fmt-validate",
+          "title": "Run terraform fmt and terraform validate and make both part of your habit.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 129,
+      "title": "State: The Thing That Breaks People",
+      "tasks": [
+        {
+          "key": "d129-read-state",
+          "title": "Open the state file and find the resource you created inside it.",
+          "required": true
+        },
+        {
+          "key": "d129-what-state-is",
+          "title": "Write down in your own words what state is and why Terraform needs it.",
+          "required": true
+        },
+        {
+          "key": "d129-state-list",
+          "title": "Use terraform state list and terraform state show to inspect tracked resources.",
+          "required": true
+        },
+        {
+          "key": "d129-delete-outside",
+          "title": "Break it: delete a resource in the console, then run plan and see what Terraform wants to do.",
+          "required": true
+        },
+        {
+          "key": "d129-never-edit",
+          "title": "Read why you should not hand edit the state file, and what to use instead.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 130,
+      "title": "Dependencies And Resource References",
+      "tasks": [
+        {
+          "key": "d130-implicit-depends",
+          "title": "Reference one resource attribute from another and let Terraform work out the order.",
+          "required": true
+        },
+        {
+          "key": "d130-graph",
+          "title": "Read how Terraform builds a dependency graph from those references.",
+          "required": false
+        },
+        {
+          "key": "d130-depends-on",
+          "title": "Use depends_on for a dependency Terraform cannot infer, and explain why it was needed.",
+          "required": true
+        },
+        {
+          "key": "d130-two-resources",
+          "title": "Create a VPC and a subnet where the subnet references the VPC id.",
+          "required": true
+        },
+        {
+          "key": "d130-destroy-order",
+          "title": "Destroy both and observe that Terraform removes them in reverse order.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 131,
+      "title": "Variables And Configuration",
+      "tasks": [
+        {
+          "key": "d131-declare-variable",
+          "title": "Declare a variable with a type, a description and a default.",
+          "required": true
+        },
+        {
+          "key": "d131-tfvars",
+          "title": "Move your values into a tfvars file and keep secrets out of it.",
+          "required": true
+        },
+        {
+          "key": "d131-precedence",
+          "title": "Learn the order of precedence between defaults, tfvars, environment variables and the CLI.",
+          "required": true
+        },
+        {
+          "key": "d131-validation",
+          "title": "Add a validation block that rejects an invalid value, then prove it rejects one.",
+          "required": true
+        },
+        {
+          "key": "d131-sensitive",
+          "title": "Mark a variable as sensitive and confirm it no longer prints in output.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 132,
+      "title": "Outputs And Data Sources",
+      "tasks": [
+        {
+          "key": "d132-outputs",
+          "title": "Add outputs for the values you would need to hand to another system.",
+          "required": true
+        },
+        {
+          "key": "d132-output-usage",
+          "title": "Read the outputs from the command line with terraform output.",
+          "required": true
+        },
+        {
+          "key": "d132-data-source",
+          "title": "Use a data source to look up an existing AMI instead of hardcoding an id.",
+          "required": true
+        },
+        {
+          "key": "d132-data-vs-resource",
+          "title": "Write down the difference between a data source and a resource.",
+          "required": true
+        },
+        {
+          "key": "d132-remote-lookup",
+          "title": "Use a data source to read something Terraform did not create, such as the default VPC.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 133,
+      "title": "Expressions, Locals And Functions",
+      "tasks": [
+        {
+          "key": "d133-locals",
+          "title": "Use a locals block to build a naming convention used across several resources.",
+          "required": true
+        },
+        {
+          "key": "d133-string-interp",
+          "title": "Build resource names by combining variables with string interpolation.",
+          "required": true
+        },
+        {
+          "key": "d133-functions",
+          "title": "Use three built in functions and read the documentation for each.",
+          "required": true
+        },
+        {
+          "key": "d133-conditional",
+          "title": "Write a conditional expression that changes a value based on the environment.",
+          "required": true
+        },
+        {
+          "key": "d133-console",
+          "title": "Use terraform console to test expressions before putting them in your code.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 134,
+      "title": "count And for_each",
+      "tasks": [
+        {
+          "key": "d134-count",
+          "title": "Use count to create three identical resources from one block.",
+          "required": true
+        },
+        {
+          "key": "d134-count-problem",
+          "title": "Break it: remove the middle item from a count list and watch what Terraform wants to recreate.",
+          "required": true
+        },
+        {
+          "key": "d134-for-each",
+          "title": "Rewrite the same thing with for_each and confirm removing one item now leaves the others alone.",
+          "required": true
+        },
+        {
+          "key": "d134-when-each",
+          "title": "Write down the rule for when to use count and when to use for_each.",
+          "required": true
+        },
+        {
+          "key": "d134-for-expression",
+          "title": "Use a for expression to transform a list into the shape a resource needs.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 135,
+      "title": "Lifecycle And Meta Arguments",
+      "tasks": [
+        {
+          "key": "d135-prevent-destroy",
+          "title": "Add prevent_destroy to a resource and confirm Terraform refuses to remove it.",
+          "required": true
+        },
+        {
+          "key": "d135-create-before",
+          "title": "Use create_before_destroy and explain when it prevents downtime.",
+          "required": true
+        },
+        {
+          "key": "d135-ignore-changes",
+          "title": "Use ignore_changes for an attribute changed outside Terraform, and note the risk.",
+          "required": true
+        },
+        {
+          "key": "d135-provider-alias",
+          "title": "Configure a second provider alias for a different region and use both in one config.",
+          "required": true
+        },
+        {
+          "key": "d135-tags-everywhere",
+          "title": "Add default tags at the provider level so every resource is tagged automatically.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 136,
+      "title": "Remote State In S3",
+      "tasks": [
+        {
+          "key": "d136-why-remote",
+          "title": "Write down why local state breaks the moment a second person is involved.",
+          "required": true
+        },
+        {
+          "key": "d136-backend-bucket",
+          "title": "Create an S3 bucket for state with versioning and encryption enabled.",
+          "required": true
+        },
+        {
+          "key": "d136-backend-config",
+          "title": "Configure the S3 backend and migrate your existing state into it.",
+          "required": true
+        },
+        {
+          "key": "d136-verify",
+          "title": "Confirm the state file is in the bucket and no longer sits in your working directory.",
+          "required": true
+        },
+        {
+          "key": "d136-gitignore-state",
+          "title": "Make sure state files and the local directory are excluded from git.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 137,
+      "title": "State Locking And Team Safety",
+      "tasks": [
+        {
+          "key": "d137-why-locking",
+          "title": "Read what happens when two people run apply against the same state at the same time.",
+          "required": false
+        },
+        {
+          "key": "d137-dynamodb-lock",
+          "title": "Create a DynamoDB table for locking and wire it into the backend.",
+          "required": true
+        },
+        {
+          "key": "d137-observe-lock",
+          "title": "Start an apply, open a second terminal, and watch the second one refuse to run.",
+          "required": true
+        },
+        {
+          "key": "d137-force-unlock",
+          "title": "Read what force unlock does and why it is dangerous to use casually.",
+          "required": true
+        },
+        {
+          "key": "d137-state-backup",
+          "title": "Confirm bucket versioning gives you a recoverable history of the state file.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 138,
+      "title": "Drift And Reality Checks",
+      "tasks": [
+        {
+          "key": "d138-cause-drift",
+          "title": "Change a resource in the console so it no longer matches your code.",
+          "required": true
+        },
+        {
+          "key": "d138-detect",
+          "title": "Run plan and read exactly how Terraform describes the difference.",
+          "required": true
+        },
+        {
+          "key": "d138-reconcile",
+          "title": "Decide whether to apply the code or update the code, then do it deliberately.",
+          "required": true
+        },
+        {
+          "key": "d138-refresh",
+          "title": "Learn what refresh does and why plan already does most of it.",
+          "required": true
+        },
+        {
+          "key": "d138-drift-policy",
+          "title": "Write down a simple team rule about who is allowed to change things in the console.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 139,
+      "title": "Importing Existing Resources",
+      "tasks": [
+        {
+          "key": "d139-create-by-hand",
+          "title": "Create a small resource manually in the console.",
+          "required": true
+        },
+        {
+          "key": "d139-write-config",
+          "title": "Write the matching Terraform configuration for it before importing anything.",
+          "required": true
+        },
+        {
+          "key": "d139-import",
+          "title": "Import the resource into state and run plan until it reports no changes.",
+          "required": true
+        },
+        {
+          "key": "d139-import-block",
+          "title": "Read how import blocks let you import declaratively rather than by command.",
+          "required": false
+        },
+        {
+          "key": "d139-why-hard",
+          "title": "Write down why importing a large hand built environment is slow and painful.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 140,
+      "title": "State Surgery And Recovery",
+      "tasks": [
+        {
+          "key": "d140-state-mv",
+          "title": "Rename a resource in your code and use state mv so Terraform does not destroy and recreate it.",
+          "required": true
+        },
+        {
+          "key": "d140-state-rm",
+          "title": "Remove a resource from state without destroying it, then confirm it still exists in AWS.",
+          "required": true
+        },
+        {
+          "key": "d140-re-import",
+          "title": "Import that same resource back into state and get to a clean plan.",
+          "required": true
+        },
+        {
+          "key": "d140-backup-first",
+          "title": "Make backing up state before any surgery a written rule in your notes.",
+          "required": true
+        },
+        {
+          "key": "d140-when-scared",
+          "title": "List three state operations that should make you stop and think before running them.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 141,
+      "title": "Using Public Modules",
+      "tasks": [
+        {
+          "key": "d141-registry",
+          "title": "Find a well maintained VPC module in the public registry and read its inputs and outputs.",
+          "required": true
+        },
+        {
+          "key": "d141-use-module",
+          "title": "Use the module to build a VPC instead of writing every resource yourself.",
+          "required": true
+        },
+        {
+          "key": "d141-version-pin",
+          "title": "Pin the module version and explain why leaving it unpinned is risky.",
+          "required": true
+        },
+        {
+          "key": "d141-read-source",
+          "title": "Read part of the module source to see what it is actually creating.",
+          "required": true
+        },
+        {
+          "key": "d141-tradeoff",
+          "title": "Write down the trade off between a public module and your own code.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 142,
+      "title": "Writing Your Own Module",
+      "tasks": [
+        {
+          "key": "d142-extract",
+          "title": "Turn a repeated group of resources into a local module with variables and outputs.",
+          "required": true
+        },
+        {
+          "key": "d142-call-twice",
+          "title": "Call your module twice with different inputs and confirm both instances build.",
+          "required": true
+        },
+        {
+          "key": "d142-module-outputs",
+          "title": "Expose the values a caller needs and hide the ones it does not.",
+          "required": true
+        },
+        {
+          "key": "d142-readme",
+          "title": "Write a README for the module explaining its inputs, outputs and an example.",
+          "required": true
+        },
+        {
+          "key": "d142-structure",
+          "title": "Read a common module directory layout and reorganise yours to match.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 143,
+      "title": "Multiple Environments",
+      "tasks": [
+        {
+          "key": "d143-separate-state",
+          "title": "Set up separate state keys for staging and production in the same backend bucket.",
+          "required": true
+        },
+        {
+          "key": "d143-shared-modules",
+          "title": "Use the same module for both environments with different variable values.",
+          "required": true
+        },
+        {
+          "key": "d143-workspaces",
+          "title": "Read what workspaces do and why many teams prefer separate directories instead.",
+          "required": false
+        },
+        {
+          "key": "d143-diff-sizes",
+          "title": "Make staging smaller and cheaper than production through variables alone.",
+          "required": true
+        },
+        {
+          "key": "d143-promote",
+          "title": "Apply a change to staging first, verify it, then promote the same code to production.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 144,
+      "title": "Rebuilding The Network Layer In Code",
+      "tasks": [
+        {
+          "key": "d144-vpc-subnets",
+          "title": "Write Terraform for the VPC, subnets and route tables from day 55 and day 56.",
+          "required": true
+        },
+        {
+          "key": "d144-gateways",
+          "title": "Add the internet gateway and NAT gateway in code, with the NAT made optional by a variable.",
+          "required": true
+        },
+        {
+          "key": "d144-security-groups",
+          "title": "Write the three tiered security groups from day 73 as Terraform resources.",
+          "required": true
+        },
+        {
+          "key": "d144-plan-review",
+          "title": "Read the whole plan carefully before applying. Count the resources it will create.",
+          "required": true
+        },
+        {
+          "key": "d144-apply-verify",
+          "title": "Apply it and verify the network in the console matches what you built by hand before.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 145,
+      "title": "The Whole Stack From Code",
+      "tasks": [
+        {
+          "key": "d145-compute",
+          "title": "Add the load balancer, target group and Auto Scaling group to your configuration.",
+          "required": true
+        },
+        {
+          "key": "d145-database",
+          "title": "Add the database in the private subnets with its security group.",
+          "required": true
+        },
+        {
+          "key": "d145-outputs-url",
+          "title": "Output the load balancer address and load the site using only that output.",
+          "required": true
+        },
+        {
+          "key": "d145-destroy-rebuild",
+          "title": "Destroy everything, then rebuild it from code alone and time how long it took.",
+          "required": true
+        },
+        {
+          "key": "d145-commit",
+          "title": "Commit the whole configuration to your repository with a README explaining how to run it.",
+          "required": true
+        },
+        {
+          "key": "d145-review",
+          "title": "Review your Terraform notes and mark what you still cannot write without looking it up.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 130,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q130-1",
+          "type": "mcq",
+          "prompt": "What is the main problem infrastructure as code solves?",
+          "options": [
+            "Lower cloud bills",
+            "Environments that can be rebuilt and reviewed instead of clicked together",
+            "Faster networks",
+            "Better encryption"
+          ],
+          "answer": 1,
+          "explanation": "Code makes infrastructure repeatable, reviewable and recoverable, which clicking never is."
+        },
+        {
+          "key": "q130-2",
+          "type": "mcq",
+          "prompt": "What does terraform init do?",
+          "options": [
+            "Creates resources",
+            "Prepares the directory and downloads the required providers",
+            "Deletes state",
+            "Validates syntax only"
+          ],
+          "answer": 1,
+          "explanation": "It sets up the working directory before any planning or applying can happen."
+        },
+        {
+          "key": "q130-3",
+          "type": "mcq",
+          "prompt": "What does terraform plan do?",
+          "options": [
+            "Applies changes",
+            "Shows what would change without changing anything",
+            "Destroys resources",
+            "Formats code"
+          ],
+          "answer": 1,
+          "explanation": "Plan is the dry run, and reading it properly is the habit that prevents accidents."
+        },
+        {
+          "key": "q130-4",
+          "type": "mcq",
+          "prompt": "In a plan, what does the minus slash plus symbol mean?",
+          "options": [
+            "Update in place",
+            "The resource will be destroyed and recreated",
+            "No change",
+            "Resource will be moved"
+          ],
+          "answer": 1,
+          "explanation": "Replacement is the symbol worth watching for, because it means downtime or data loss."
+        },
+        {
+          "key": "q130-5",
+          "type": "mcq",
+          "prompt": "What is Terraform state?",
+          "options": [
+            "A log of commands",
+            "A record mapping your configuration to real world resources",
+            "A backup of resources",
+            "A cache of provider downloads"
+          ],
+          "answer": 1,
+          "explanation": "Without state, Terraform has no way to know which real resource matches which code block."
+        },
+        {
+          "key": "q130-6",
+          "type": "mcq",
+          "prompt": "You delete a Terraform managed resource in the console. What does the next plan show?",
+          "options": [
+            "No changes",
+            "That it needs to be created again",
+            "An error that stops everything",
+            "That state is corrupt"
+          ],
+          "answer": 1,
+          "explanation": "Terraform compares reality to the configuration and proposes recreating what is missing."
+        },
+        {
+          "key": "q130-7",
+          "type": "mcq",
+          "prompt": "Why should you avoid hand editing the state file?",
+          "options": [
+            "It is encrypted",
+            "It is easy to corrupt and there are commands designed for the job",
+            "It is read only",
+            "It has no effect"
+          ],
+          "answer": 1,
+          "explanation": "State commands exist precisely so you never have to open the file with an editor."
+        },
+        {
+          "key": "q130-8",
+          "type": "mcq",
+          "prompt": "How does Terraform usually work out the order to create resources?",
+          "options": [
+            "Alphabetically",
+            "From references between resources",
+            "By file order",
+            "Randomly"
+          ],
+          "answer": 1,
+          "explanation": "Referencing one resource from another creates an implicit dependency."
+        },
+        {
+          "key": "q130-9",
+          "type": "mcq",
+          "prompt": "When would you need depends_on?",
+          "options": [
+            "Always",
+            "When a dependency exists that Terraform cannot infer from references",
+            "Never",
+            "Only for providers"
+          ],
+          "answer": 1,
+          "explanation": "It is the escape hatch for relationships that are real but invisible in the configuration."
+        },
+        {
+          "key": "q130-10",
+          "type": "mcq",
+          "prompt": "What does terraform validate check?",
+          "options": [
+            "That resources exist in AWS",
+            "That the configuration is syntactically valid and internally consistent",
+            "That costs are within budget",
+            "That state is locked"
+          ],
+          "answer": 1,
+          "explanation": "It catches configuration errors before you attempt a plan against the provider."
+        },
+        {
+          "key": "q130-11",
+          "type": "mcq",
+          "prompt": "In what order does Terraform destroy resources?",
+          "options": [
+            "The order they appear in the file",
+            "Reverse dependency order",
+            "Alphabetical order",
+            "All at once"
+          ],
+          "answer": 1,
+          "explanation": "Dependents are removed before the things they depend on."
+        },
+        {
+          "key": "q130-12",
+          "type": "mcq",
+          "prompt": "Why pin a provider version?",
+          "options": [
+            "It downloads faster",
+            "So a new provider release cannot change behaviour unexpectedly",
+            "It is required",
+            "It reduces state size"
+          ],
+          "answer": 1,
+          "explanation": "Unpinned versions turn a working configuration into one that can break without you changing anything."
+        },
+        {
+          "key": "q130-13",
+          "type": "true_false",
+          "prompt": "Running plan makes changes to your infrastructure.",
+          "answer": false,
+          "explanation": "Plan only reads and reports, which is why it is safe to run at any time."
+        },
+        {
+          "key": "q130-14",
+          "type": "true_false",
+          "prompt": "Terraform can manage resources across more than one cloud provider.",
+          "answer": true,
+          "explanation": "Provider plugins are what make it cloud agnostic, unlike a single vendor tool."
+        },
+        {
+          "key": "q130-15",
+          "type": "true_false",
+          "prompt": "Reading the plan output carefully before applying is the single most important Terraform habit.",
+          "answer": true,
+          "explanation": "Almost every serious Terraform accident was visible in a plan that nobody read."
+        }
+      ]
+    },
+    {
+      "afterDay": 135,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q135-1",
+          "type": "mcq",
+          "prompt": "What should a variable declaration include beyond its name?",
+          "options": [
+            "Only a default",
+            "A type and a description at minimum",
+            "A provider",
+            "A state key"
+          ],
+          "answer": 1,
+          "explanation": "Types catch mistakes early and descriptions make the configuration usable by other people."
+        },
+        {
+          "key": "q135-2",
+          "type": "mcq",
+          "prompt": "Which has higher precedence, a tfvars file or a value passed on the command line?",
+          "options": [
+            "The tfvars file",
+            "The command line",
+            "They conflict and error",
+            "Whichever is alphabetically first"
+          ],
+          "answer": 1,
+          "explanation": "Command line values sit at the top of the precedence order."
+        },
+        {
+          "key": "q135-3",
+          "type": "mcq",
+          "prompt": "What does marking a variable as sensitive do?",
+          "options": [
+            "Encrypts it in state",
+            "Stops it being displayed in command output",
+            "Requires MFA",
+            "Locks the state"
+          ],
+          "answer": 1,
+          "explanation": "It hides the value from output, but it does not encrypt it inside the state file."
+        },
+        {
+          "key": "q135-4",
+          "type": "mcq",
+          "prompt": "What is a data source used for?",
+          "options": [
+            "Creating a resource",
+            "Reading information about something Terraform does not manage",
+            "Storing state",
+            "Defining variables"
+          ],
+          "answer": 1,
+          "explanation": "Data sources let you look things up instead of hardcoding identifiers."
+        },
+        {
+          "key": "q135-5",
+          "type": "mcq",
+          "prompt": "Why look up an AMI with a data source instead of hardcoding the id?",
+          "options": [
+            "It is faster",
+            "Because AMI ids differ by region and change over time",
+            "It reduces cost",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Hardcoded ids break the moment you change region or the image is updated."
+        },
+        {
+          "key": "q135-6",
+          "type": "mcq",
+          "prompt": "What is a locals block for?",
+          "options": [
+            "Declaring input variables",
+            "Naming values computed once and reused across the configuration",
+            "Storing secrets",
+            "Defining outputs"
+          ],
+          "answer": 1,
+          "explanation": "Locals reduce repetition and keep naming conventions consistent."
+        },
+        {
+          "key": "q135-7",
+          "type": "mcq",
+          "prompt": "What is the main problem with using count over a list?",
+          "options": [
+            "It is slower",
+            "Removing a middle item shifts the indexes and causes unnecessary recreation",
+            "It cannot create more than ten",
+            "It ignores dependencies"
+          ],
+          "answer": 1,
+          "explanation": "Index based identity is fragile, which is exactly what for_each fixes."
+        },
+        {
+          "key": "q135-8",
+          "type": "mcq",
+          "prompt": "When is for_each the better choice?",
+          "options": [
+            "When creating identical copies with no identity",
+            "When each instance has a stable key such as a name",
+            "When you need exactly one resource",
+            "Only for modules"
+          ],
+          "answer": 1,
+          "explanation": "Keyed identity means adding and removing entries does not disturb the others."
+        },
+        {
+          "key": "q135-9",
+          "type": "mcq",
+          "prompt": "What does prevent_destroy do?",
+          "options": [
+            "Prevents any change",
+            "Makes Terraform refuse to destroy that resource",
+            "Backs up the resource",
+            "Locks the state"
+          ],
+          "answer": 1,
+          "explanation": "It is a guardrail for things like a production database that must never be removed by accident."
+        },
+        {
+          "key": "q135-10",
+          "type": "mcq",
+          "prompt": "When does create_before_destroy help?",
+          "options": [
+            "When saving cost",
+            "When replacing a resource without a gap in service",
+            "When importing",
+            "When formatting code"
+          ],
+          "answer": 1,
+          "explanation": "The replacement is stood up before the old one is removed, which avoids downtime."
+        },
+        {
+          "key": "q135-11",
+          "type": "mcq",
+          "prompt": "What is the risk of using ignore_changes?",
+          "options": [
+            "It slows plans",
+            "Real drift becomes invisible to Terraform",
+            "It corrupts state",
+            "It disables outputs"
+          ],
+          "answer": 1,
+          "explanation": "You are telling Terraform to stop caring about an attribute, so changes there go unnoticed."
+        },
+        {
+          "key": "q135-12",
+          "type": "mcq",
+          "prompt": "What do provider default tags achieve?",
+          "options": [
+            "Lower cost",
+            "Every resource is tagged consistently without repeating yourself",
+            "Faster applies",
+            "Automatic backups"
+          ],
+          "answer": 1,
+          "explanation": "Consistent tagging is what makes cost tracking and cleanup possible later."
+        },
+        {
+          "key": "q135-13",
+          "type": "true_false",
+          "prompt": "terraform console lets you test an expression before putting it into your configuration.",
+          "answer": true,
+          "explanation": "It is the quickest way to check a function or interpolation without running a plan."
+        },
+        {
+          "key": "q135-14",
+          "type": "true_false",
+          "prompt": "A variable validation block can reject an invalid value before any resource is created.",
+          "answer": true,
+          "explanation": "Failing early on bad input is much cheaper than failing halfway through an apply."
+        },
+        {
+          "key": "q135-15",
+          "type": "true_false",
+          "prompt": "A provider alias lets one configuration work with two regions at the same time.",
+          "answer": true,
+          "explanation": "You define a second provider configuration and reference it explicitly where needed."
+        }
+      ]
+    },
+    {
+      "afterDay": 140,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q140-1",
+          "type": "mcq",
+          "prompt": "Why is local state a problem for a team?",
+          "options": [
+            "It is slower",
+            "Only one person has it, and concurrent work overwrites or diverges",
+            "It cannot be encrypted",
+            "It has a size limit"
+          ],
+          "answer": 1,
+          "explanation": "Shared infrastructure needs shared state, otherwise two people manage two different pictures of reality."
+        },
+        {
+          "key": "q140-2",
+          "type": "mcq",
+          "prompt": "What should be enabled on an S3 bucket used for Terraform state?",
+          "options": [
+            "Public access",
+            "Versioning and encryption",
+            "Static website hosting",
+            "Lifecycle expiry"
+          ],
+          "answer": 1,
+          "explanation": "Versioning gives you a recovery path and encryption protects what is inside."
+        },
+        {
+          "key": "q140-3",
+          "type": "mcq",
+          "prompt": "What does the DynamoDB table provide in a Terraform backend?",
+          "options": [
+            "Storage of state",
+            "A lock so two applies cannot run at once",
+            "Cost tracking",
+            "Drift detection"
+          ],
+          "answer": 1,
+          "explanation": "Locking prevents simultaneous applies from corrupting the shared state."
+        },
+        {
+          "key": "q140-4",
+          "type": "mcq",
+          "prompt": "Why is force unlock dangerous?",
+          "options": [
+            "It deletes state",
+            "It can release a lock while another apply is genuinely still running",
+            "It rewrites resources",
+            "It disables the backend"
+          ],
+          "answer": 1,
+          "explanation": "Breaking a legitimate lock is how two applies end up racing each other."
+        },
+        {
+          "key": "q140-5",
+          "type": "mcq",
+          "prompt": "What is configuration drift?",
+          "options": [
+            "A syntax error",
+            "Reality no longer matching the configuration",
+            "A provider upgrade",
+            "A state lock"
+          ],
+          "answer": 1,
+          "explanation": "Drift is what happens when someone changes things outside the tool."
+        },
+        {
+          "key": "q140-6",
+          "type": "mcq",
+          "prompt": "How do you detect drift?",
+          "options": [
+            "Read the state file",
+            "Run plan and read what Terraform wants to change",
+            "Check the billing console",
+            "Run validate"
+          ],
+          "answer": 1,
+          "explanation": "Plan compares the real world with your configuration, which is exactly what drift detection is."
+        },
+        {
+          "key": "q140-7",
+          "type": "mcq",
+          "prompt": "You find drift. What are your two legitimate options?",
+          "options": [
+            "Ignore it or delete state",
+            "Apply the code to restore it, or update the code to match reality",
+            "Force unlock or refresh",
+            "Import or destroy"
+          ],
+          "answer": 1,
+          "explanation": "Either the code is right and reality should change, or reality is right and the code should be updated."
+        },
+        {
+          "key": "q140-8",
+          "type": "mcq",
+          "prompt": "What must you do before importing a resource?",
+          "options": [
+            "Destroy it",
+            "Write the matching configuration for it",
+            "Remove it from the console",
+            "Lock the state"
+          ],
+          "answer": 1,
+          "explanation": "Import only populates state, so without matching configuration the next plan wants to destroy it."
+        },
+        {
+          "key": "q140-9",
+          "type": "mcq",
+          "prompt": "What does terraform state mv do?",
+          "options": [
+            "Moves a resource between regions",
+            "Changes which state address a resource is tracked under",
+            "Copies state to S3",
+            "Renames the resource in AWS"
+          ],
+          "answer": 1,
+          "explanation": "It is how you rename or restructure code without destroying and recreating the real resource."
+        },
+        {
+          "key": "q140-10",
+          "type": "mcq",
+          "prompt": "What does terraform state rm do?",
+          "options": [
+            "Destroys the resource",
+            "Removes it from state while leaving it running",
+            "Deletes the state file",
+            "Unlocks state"
+          ],
+          "answer": 1,
+          "explanation": "The resource becomes unmanaged, which is useful when handing it to another configuration."
+        },
+        {
+          "key": "q140-11",
+          "type": "mcq",
+          "prompt": "What should you always do before state surgery?",
+          "options": [
+            "Run fmt",
+            "Back up the state file",
+            "Destroy dependent resources",
+            "Disable locking"
+          ],
+          "answer": 1,
+          "explanation": "State operations are hard to undo, and a backup is the only real safety net."
+        },
+        {
+          "key": "q140-12",
+          "type": "mcq",
+          "prompt": "Why is importing a large hand built environment painful?",
+          "options": [
+            "Import is unreliable",
+            "Every resource needs matching configuration written by hand first",
+            "It costs money",
+            "State cannot hold that many resources"
+          ],
+          "answer": 1,
+          "explanation": "The work is in writing accurate configuration for everything, not in the import command itself."
+        },
+        {
+          "key": "q140-13",
+          "type": "true_false",
+          "prompt": "State files should be committed to git so the team can share them.",
+          "answer": false,
+          "explanation": "State often contains sensitive values and needs locking, which is why a remote backend is used instead."
+        },
+        {
+          "key": "q140-14",
+          "type": "true_false",
+          "prompt": "After a successful import, the plan should report no changes if your configuration matches.",
+          "answer": true,
+          "explanation": "A clean plan is the proof that your code accurately describes the imported resource."
+        },
+        {
+          "key": "q140-15",
+          "type": "true_false",
+          "prompt": "Bucket versioning on the state bucket gives you a recoverable history of state.",
+          "answer": true,
+          "explanation": "If an apply corrupts state, an earlier version is still available to restore."
+        }
+      ]
+    },
+    {
+      "afterDay": 145,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q145-1",
+          "type": "mcq",
+          "prompt": "What is the main benefit of using a well maintained public module?",
+          "options": [
+            "It is free",
+            "You inherit patterns and edge case handling you would otherwise get wrong",
+            "It runs faster",
+            "It needs no variables"
+          ],
+          "answer": 1,
+          "explanation": "Mature modules encode a lot of hard won detail that a first attempt usually misses."
+        },
+        {
+          "key": "q145-2",
+          "type": "mcq",
+          "prompt": "Why pin a module version?",
+          "options": [
+            "To reduce download size",
+            "So an upstream change cannot alter your infrastructure unexpectedly",
+            "It is required by the registry",
+            "To enable outputs"
+          ],
+          "answer": 1,
+          "explanation": "An unpinned module can change what it creates the next time you run init."
+        },
+        {
+          "key": "q145-3",
+          "type": "mcq",
+          "prompt": "What is the trade off of using a public module?",
+          "options": [
+            "It costs money",
+            "Less control and understanding of what is actually created",
+            "It only works on AWS",
+            "It cannot be versioned"
+          ],
+          "answer": 1,
+          "explanation": "Convenience comes at the price of a layer you did not write and may not fully understand."
+        },
+        {
+          "key": "q145-4",
+          "type": "mcq",
+          "prompt": "What makes a good module interface?",
+          "options": [
+            "As many variables as possible",
+            "Clear inputs, useful outputs, and internals kept hidden",
+            "No variables at all",
+            "One resource per module"
+          ],
+          "answer": 1,
+          "explanation": "A module should expose what callers need and hide the rest."
+        },
+        {
+          "key": "q145-5",
+          "type": "mcq",
+          "prompt": "Why write a README for your own module?",
+          "options": [
+            "The registry requires it",
+            "So someone else can use it without reading the source",
+            "To improve performance",
+            "To pass validation"
+          ],
+          "answer": 1,
+          "explanation": "A module without documentation gets rewritten by the next person instead of reused."
+        },
+        {
+          "key": "q145-6",
+          "type": "mcq",
+          "prompt": "How should staging and production usually be separated?",
+          "options": [
+            "Same state, different names",
+            "Separate state, same modules, different variable values",
+            "Separate AWS accounts only",
+            "Separate providers"
+          ],
+          "answer": 1,
+          "explanation": "Reusing the code while isolating the state is what makes promotion safe and predictable."
+        },
+        {
+          "key": "q145-7",
+          "type": "mcq",
+          "prompt": "Why should staging be smaller than production?",
+          "options": [
+            "It is required",
+            "To test the same code without paying production prices",
+            "To speed up applies",
+            "To avoid drift"
+          ],
+          "answer": 1,
+          "explanation": "The shape should match while the size does not, and variables are how you do that."
+        },
+        {
+          "key": "q145-8",
+          "type": "mcq",
+          "prompt": "What is the correct promotion flow for a change?",
+          "options": [
+            "Apply to production and roll back if needed",
+            "Apply to staging, verify, then apply the same code to production",
+            "Apply to both at once",
+            "Test locally only"
+          ],
+          "answer": 1,
+          "explanation": "The same code proven in staging is what should reach production, unchanged."
+        },
+        {
+          "key": "q145-9",
+          "type": "mcq",
+          "prompt": "Why make the NAT gateway optional through a variable?",
+          "options": [
+            "It is unstable",
+            "So cheaper environments can skip an expensive resource",
+            "It cannot be created in code",
+            "It breaks state"
+          ],
+          "answer": 1,
+          "explanation": "Cost control through configuration is one of the practical wins of infrastructure as code."
+        },
+        {
+          "key": "q145-10",
+          "type": "mcq",
+          "prompt": "What should you do before applying a large plan?",
+          "options": [
+            "Run fmt",
+            "Read it fully and count the resources it will create",
+            "Back up the AMI",
+            "Disable locking"
+          ],
+          "answer": 1,
+          "explanation": "A large plan is exactly where an unnoticed replacement or deletion does the most damage."
+        },
+        {
+          "key": "q145-11",
+          "type": "mcq",
+          "prompt": "What does a successful destroy and rebuild from code prove?",
+          "options": [
+            "That the code is fast",
+            "That your environment is genuinely reproducible",
+            "That state is locked",
+            "That costs are low"
+          ],
+          "answer": 1,
+          "explanation": "Reproducibility is the whole promise of infrastructure as code, and this is how you verify it."
+        },
+        {
+          "key": "q145-12",
+          "type": "mcq",
+          "prompt": "Which statement is strongest on a CV?",
+          "options": [
+            "Familiar with Terraform",
+            "Rebuilt a full AWS environment from code and destroyed and recreated it in under an hour",
+            "Completed a Terraform course",
+            "Read the Terraform documentation"
+          ],
+          "answer": 1,
+          "explanation": "A demonstrated, timed outcome shows capability that a familiarity claim cannot."
+        },
+        {
+          "key": "q145-13",
+          "type": "true_false",
+          "prompt": "Using the same module for two environments with different inputs is a normal and recommended pattern.",
+          "answer": true,
+          "explanation": "Shared code with environment specific values is how teams keep environments consistent."
+        },
+        {
+          "key": "q145-14",
+          "type": "true_false",
+          "prompt": "If your code is complete, you should be able to destroy everything and rebuild it without manual steps.",
+          "answer": true,
+          "explanation": "Any manual step you still need is a gap in the configuration worth closing."
+        },
+        {
+          "key": "q145-15",
+          "type": "true_false",
+          "prompt": "Committing your Terraform configuration to a repository with a README turns it into portfolio evidence.",
+          "answer": true,
+          "explanation": "Readable, runnable infrastructure code is one of the clearest signals of practical ability."
+        }
+      ]
+    }
+  ]
+}

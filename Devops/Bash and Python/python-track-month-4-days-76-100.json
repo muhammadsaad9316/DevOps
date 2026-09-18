@@ -1,0 +1,1451 @@
+{
+  "days": [
+    {
+      "day": 76,
+      "title": "Your First Python Program",
+      "tasks": [
+        {
+          "key": "p76-check-python",
+          "title": "Confirm Python 3 is installed and check the version from the terminal.",
+          "required": true
+        },
+        {
+          "key": "p76-hello",
+          "title": "Write a file called hello.py that prints two lines, and run it with python3.",
+          "required": true
+        },
+        {
+          "key": "p76-vs-bash",
+          "title": "Write down two differences you noticed between running a Python file and a bash script.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 77,
+      "title": "Variables And Types",
+      "tasks": [
+        {
+          "key": "p77-four-types",
+          "title": "Create a variable of each type: text, whole number, decimal number and true or false.",
+          "required": true
+        },
+        {
+          "key": "p77-check-type",
+          "title": "Use the type function to print the type of each variable.",
+          "required": true
+        },
+        {
+          "key": "p77-no-declaration",
+          "title": "Note that Python needs no dollar sign and no quotes rule like bash, and write down the difference.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 78,
+      "title": "Strings",
+      "tasks": [
+        {
+          "key": "p78-fstring",
+          "title": "Print a sentence that includes a variable using an f-string.",
+          "required": true
+        },
+        {
+          "key": "p78-methods",
+          "title": "Use upper, lower, strip and split on a string and print each result.",
+          "required": true
+        },
+        {
+          "key": "p78-split-path",
+          "title": "Split a file path on the slash character and print the last part.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 79,
+      "title": "Input And Converting Types",
+      "tasks": [
+        {
+          "key": "p79-input",
+          "title": "Ask the user for their name with input and greet them.",
+          "required": true
+        },
+        {
+          "key": "p79-int-convert",
+          "title": "Ask for a number, convert it from text to a number, and double it.",
+          "required": true
+        },
+        {
+          "key": "p79-bad-input",
+          "title": "Break it: type a word when it asks for a number and read the error message carefully.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 80,
+      "title": "Making Decisions",
+      "tasks": [
+        {
+          "key": "p80-if-else",
+          "title": "Write a program that checks a number and prints whether it is above or below ten.",
+          "required": true
+        },
+        {
+          "key": "p80-elif",
+          "title": "Add an elif branch so it also handles exactly ten.",
+          "required": true
+        },
+        {
+          "key": "p80-indentation",
+          "title": "Break it: remove an indent and read the error. Indentation is syntax in Python.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 81,
+      "title": "Lists",
+      "tasks": [
+        {
+          "key": "p81-create-list",
+          "title": "Create a list of five server names and print the whole list.",
+          "required": true
+        },
+        {
+          "key": "p81-index-slice",
+          "title": "Print the first item, the last item, and the first three items.",
+          "required": true
+        },
+        {
+          "key": "p81-append-remove",
+          "title": "Add an item, remove an item, and print how many items remain.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 82,
+      "title": "Looping Over Lists",
+      "tasks": [
+        {
+          "key": "p82-for-loop",
+          "title": "Loop over your list of servers and print each one on its own line.",
+          "required": true
+        },
+        {
+          "key": "p82-loop-with-if",
+          "title": "Inside the loop, print a different message for names that start with a chosen letter.",
+          "required": true
+        },
+        {
+          "key": "p82-count-matches",
+          "title": "Count how many items matched and print the total after the loop.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 83,
+      "title": "Ranges And while Loops",
+      "tasks": [
+        {
+          "key": "p83-range",
+          "title": "Use range in a for loop to print the numbers one to ten.",
+          "required": true
+        },
+        {
+          "key": "p83-while",
+          "title": "Write a while loop that stops when a counter reaches five.",
+          "required": true
+        },
+        {
+          "key": "p83-break-continue",
+          "title": "Use break to stop a loop early and continue to skip one item.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 84,
+      "title": "Dictionaries",
+      "tasks": [
+        {
+          "key": "p84-create-dict",
+          "title": "Create a dictionary describing a server with name, ip and status keys.",
+          "required": true
+        },
+        {
+          "key": "p84-access-update",
+          "title": "Read one value, change one value, and add a new key.",
+          "required": true
+        },
+        {
+          "key": "p84-loop-dict",
+          "title": "Loop over the dictionary and print each key with its value.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 85,
+      "title": "Nested Data",
+      "tasks": [
+        {
+          "key": "p85-list-of-dicts",
+          "title": "Create a list of three server dictionaries.",
+          "required": true
+        },
+        {
+          "key": "p85-loop-nested",
+          "title": "Loop over the list and print the name and status of each server.",
+          "required": true
+        },
+        {
+          "key": "p85-filter-nested",
+          "title": "Print only the servers whose status is not running.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 86,
+      "title": "Functions",
+      "tasks": [
+        {
+          "key": "p86-define-call",
+          "title": "Write a function that prints a greeting and call it three times.",
+          "required": true
+        },
+        {
+          "key": "p86-with-argument",
+          "title": "Add an argument so it greets whatever name you pass in.",
+          "required": true
+        },
+        {
+          "key": "p86-rewrite-old",
+          "title": "Rewrite one of your earlier programs so its main logic sits inside a function.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 87,
+      "title": "Return Values And Defaults",
+      "tasks": [
+        {
+          "key": "p87-return",
+          "title": "Write a function that returns a value instead of printing it, and store the result.",
+          "required": true
+        },
+        {
+          "key": "p87-default-arg",
+          "title": "Give one argument a default value and call the function both with and without it.",
+          "required": true
+        },
+        {
+          "key": "p87-check-function",
+          "title": "Write a function that takes a server dictionary and returns True if it is running.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 88,
+      "title": "Configuration And The Environment",
+      "tasks": [
+        {
+          "key": "p88-import-os",
+          "title": "Import the os module and read an environment variable from Python.",
+          "required": true
+        },
+        {
+          "key": "p88-default-value",
+          "title": "Provide a default so the program still works when the variable is not set.",
+          "required": true
+        },
+        {
+          "key": "p88-no-hardcode",
+          "title": "Move a hardcoded value out of one of your scripts into an environment variable.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 89,
+      "title": "Modules And Imports",
+      "tasks": [
+        {
+          "key": "p89-standard-library",
+          "title": "Import and use two standard library modules, such as datetime and random.",
+          "required": true
+        },
+        {
+          "key": "p89-own-module",
+          "title": "Move a function into its own file and import it from another file.",
+          "required": true
+        },
+        {
+          "key": "p89-why-modules",
+          "title": "Write down why splitting code into files matters once a program grows.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 90,
+      "title": "Errors And Exceptions",
+      "tasks": [
+        {
+          "key": "p90-read-traceback",
+          "title": "Cause an error on purpose and read the traceback from the bottom line upwards.",
+          "required": true
+        },
+        {
+          "key": "p90-try-except",
+          "title": "Wrap a risky operation in try and except so the program handles the failure.",
+          "required": true
+        },
+        {
+          "key": "p90-specific-error",
+          "title": "Catch one specific error type rather than catching everything, and explain why that is better.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 91,
+      "title": "Reading Files",
+      "tasks": [
+        {
+          "key": "p91-open-read",
+          "title": "Open a text file and print its whole contents.",
+          "required": true
+        },
+        {
+          "key": "p91-line-by-line",
+          "title": "Read the file line by line and print each line with a number.",
+          "required": true
+        },
+        {
+          "key": "p91-with-block",
+          "title": "Use a with block so the file closes automatically, and explain what that protects against.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 92,
+      "title": "Writing Files",
+      "tasks": [
+        {
+          "key": "p92-write-file",
+          "title": "Write three lines into a new file and confirm the contents from the terminal.",
+          "required": true
+        },
+        {
+          "key": "p92-append",
+          "title": "Append a line without erasing the file, and note this matches redirection in bash.",
+          "required": true
+        },
+        {
+          "key": "p92-write-report",
+          "title": "Write a program that loops over your server list and writes a report file.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 93,
+      "title": "Working With JSON",
+      "tasks": [
+        {
+          "key": "p93-load-json",
+          "title": "Read a JSON file into Python and print one value from it.",
+          "required": true
+        },
+        {
+          "key": "p93-nested-access",
+          "title": "Reach a value inside a nested structure two levels deep.",
+          "required": true
+        },
+        {
+          "key": "p93-write-json",
+          "title": "Write a Python dictionary out to a JSON file, formatted so a human can read it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 94,
+      "title": "Arguments From The Command Line",
+      "tasks": [
+        {
+          "key": "p94-sys-argv",
+          "title": "Read an argument passed to your Python script from the command line.",
+          "required": true
+        },
+        {
+          "key": "p94-argument-check",
+          "title": "Print a usage message and exit if the argument is missing.",
+          "required": true
+        },
+        {
+          "key": "p94-exit-code",
+          "title": "Exit with a non zero code on failure so bash and CI can detect it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 95,
+      "title": "Your First Useful Script",
+      "tasks": [
+        {
+          "key": "p95-choose-task",
+          "title": "Choose a small real job, such as summarising a JSON file or renaming files in a folder.",
+          "required": true
+        },
+        {
+          "key": "p95-write-it",
+          "title": "Write it with a function, an argument, and error handling.",
+          "required": true
+        },
+        {
+          "key": "p95-run-twice",
+          "title": "Run it twice and confirm the second run causes no harm.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 96,
+      "title": "Debugging Python",
+      "tasks": [
+        {
+          "key": "p96-print-debug",
+          "title": "Add print statements to find out where a broken program goes wrong.",
+          "required": true
+        },
+        {
+          "key": "p96-read-error-types",
+          "title": "Learn what NameError, TypeError, KeyError and IndexError each mean by causing all four.",
+          "required": true
+        },
+        {
+          "key": "p96-checklist",
+          "title": "Write a short debugging checklist for Python and add it to your notes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 97,
+      "title": "Your First Test",
+      "tasks": [
+        {
+          "key": "p97-write-test",
+          "title": "Write a test function that checks one of your functions returns the expected value.",
+          "required": true
+        },
+        {
+          "key": "p97-run-pytest",
+          "title": "Install pytest, run it, and watch the test pass.",
+          "required": true
+        },
+        {
+          "key": "p97-fail-test",
+          "title": "Break the function on purpose and confirm the test catches it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 98,
+      "title": "Writing Code Others Can Read",
+      "tasks": [
+        {
+          "key": "p98-naming",
+          "title": "Rename the variables in one old script so each name says what it holds.",
+          "required": true
+        },
+        {
+          "key": "p98-small-functions",
+          "title": "Split one long function into two smaller ones that each do one thing.",
+          "required": true
+        },
+        {
+          "key": "p98-docstring",
+          "title": "Add a short docstring to each function saying what it does.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 99,
+      "title": "Build A Log Parser",
+      "tasks": [
+        {
+          "key": "p99-read-log",
+          "title": "Write a program that reads a log file passed as an argument.",
+          "required": true
+        },
+        {
+          "key": "p99-count-levels",
+          "title": "Count how many lines are errors, warnings and info, then print the totals.",
+          "required": true
+        },
+        {
+          "key": "p99-top-messages",
+          "title": "Print the five most common error messages with their counts.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 100,
+      "title": "Polish And Commit",
+      "tasks": [
+        {
+          "key": "p100-add-tests",
+          "title": "Add two tests for your log parser and make them pass.",
+          "required": true
+        },
+        {
+          "key": "p100-handle-missing",
+          "title": "Handle the case where the file does not exist, with a clear message and a non zero exit.",
+          "required": true
+        },
+        {
+          "key": "p100-readme",
+          "title": "Write a short README explaining what it does and how to run it.",
+          "required": true
+        },
+        {
+          "key": "p100-commit",
+          "title": "Commit it to the repository alongside your Month 4 pipeline work.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 80,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq80-1",
+          "type": "mcq",
+          "prompt": "How do you run a Python file from the terminal?",
+          "options": [
+            "run file.py",
+            "python3 file.py",
+            "exec file.py",
+            "./python file.py"
+          ],
+          "answer": 1,
+          "explanation": "You call the interpreter and give it the filename, just as you did with bash."
+        },
+        {
+          "key": "pq80-2",
+          "type": "mcq",
+          "prompt": "Which of these is a Python string?",
+          "options": [
+            "42",
+            "3.14",
+            "hello in quotes",
+            "True"
+          ],
+          "answer": 2,
+          "explanation": "Text in quotes is a string, while the others are a number, a decimal and a boolean."
+        },
+        {
+          "key": "pq80-3",
+          "type": "mcq",
+          "prompt": "How do you find out what type a variable holds?",
+          "options": [
+            "typeof",
+            "the type function",
+            "kind",
+            "check"
+          ],
+          "answer": 1,
+          "explanation": "The type function is the quickest way to see what you actually have."
+        },
+        {
+          "key": "pq80-4",
+          "type": "mcq",
+          "prompt": "What is an f-string used for?",
+          "options": [
+            "Reading files",
+            "Putting variable values inside a string",
+            "Formatting numbers only",
+            "Importing modules"
+          ],
+          "answer": 1,
+          "explanation": "It is the clearest way to build a sentence that includes a value."
+        },
+        {
+          "key": "pq80-5",
+          "type": "mcq",
+          "prompt": "What does the split method do to a string?",
+          "options": [
+            "Removes spaces",
+            "Breaks it into a list of pieces",
+            "Makes it uppercase",
+            "Reverses it"
+          ],
+          "answer": 1,
+          "explanation": "You choose the separator, and it returns a list of the parts."
+        },
+        {
+          "key": "pq80-6",
+          "type": "mcq",
+          "prompt": "What does the input function return?",
+          "options": [
+            "A number",
+            "Text, always",
+            "A list",
+            "Nothing"
+          ],
+          "answer": 1,
+          "explanation": "Even when the user types digits, you get text and must convert it yourself."
+        },
+        {
+          "key": "pq80-7",
+          "type": "mcq",
+          "prompt": "What happens if you try to convert the word hello into a number?",
+          "options": [
+            "It becomes zero",
+            "The program raises an error",
+            "It becomes empty",
+            "It is ignored"
+          ],
+          "answer": 1,
+          "explanation": "Python fails loudly rather than guessing, which is usually what you want."
+        },
+        {
+          "key": "pq80-8",
+          "type": "mcq",
+          "prompt": "What is elif used for?",
+          "options": [
+            "Ending a program",
+            "Checking another condition when the first was false",
+            "Looping",
+            "Defining a function"
+          ],
+          "answer": 1,
+          "explanation": "It lets one chain handle several possibilities without nesting."
+        },
+        {
+          "key": "pq80-9",
+          "type": "mcq",
+          "prompt": "What makes indentation different in Python compared to bash?",
+          "options": [
+            "Nothing",
+            "Indentation defines which lines belong to a block and is required",
+            "It is only for readability",
+            "Bash requires it too"
+          ],
+          "answer": 1,
+          "explanation": "A wrong indent is a syntax error, not just untidy formatting."
+        },
+        {
+          "key": "pq80-10",
+          "type": "mcq",
+          "prompt": "How do you write a comment in Python?",
+          "options": [
+            "Two slashes",
+            "A hash at the start",
+            "A semicolon",
+            "An asterisk"
+          ],
+          "answer": 1,
+          "explanation": "It is the same character bash uses for comments."
+        },
+        {
+          "key": "pq80-11",
+          "type": "mcq",
+          "prompt": "Why does Python need no dollar sign to use a variable?",
+          "options": [
+            "It is newer",
+            "Because it is a programming language rather than a shell expanding text",
+            "It is a style choice",
+            "It does need one"
+          ],
+          "answer": 1,
+          "explanation": "The shell substitutes text into commands, while Python works with values directly."
+        },
+        {
+          "key": "pq80-12",
+          "type": "mcq",
+          "prompt": "What does the strip method do?",
+          "options": [
+            "Removes a character you choose",
+            "Removes whitespace from both ends",
+            "Splits the string",
+            "Converts to lowercase"
+          ],
+          "answer": 1,
+          "explanation": "It is essential when reading lines from a file, which always carry a newline."
+        },
+        {
+          "key": "pq80-13",
+          "type": "true_false",
+          "prompt": "Python and bash both use a hash to start a comment.",
+          "answer": true,
+          "explanation": "It is one of the few things that carries straight over from what you already know."
+        },
+        {
+          "key": "pq80-14",
+          "type": "true_false",
+          "prompt": "Getting an error message means you have done something badly.",
+          "answer": false,
+          "explanation": "Errors are information, and reading them properly is a skill worth building deliberately."
+        },
+        {
+          "key": "pq80-15",
+          "type": "true_false",
+          "prompt": "Indentation in Python is optional styling.",
+          "answer": false,
+          "explanation": "It defines the structure of your code, and getting it wrong stops the program running."
+        }
+      ]
+    },
+    {
+      "afterDay": 85,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq85-1",
+          "type": "mcq",
+          "prompt": "How do you get the first item of a list?",
+          "options": [
+            "Index one",
+            "Index zero",
+            "The first method",
+            "The head method"
+          ],
+          "answer": 1,
+          "explanation": "Python counts from zero, which catches everyone at least once."
+        },
+        {
+          "key": "pq85-2",
+          "type": "mcq",
+          "prompt": "What does append do to a list?",
+          "options": [
+            "Removes an item",
+            "Adds an item at the end",
+            "Sorts the list",
+            "Empties the list"
+          ],
+          "answer": 1,
+          "explanation": "It is the standard way to build a list up as a program runs."
+        },
+        {
+          "key": "pq85-3",
+          "type": "mcq",
+          "prompt": "How do you find how many items a list holds?",
+          "options": [
+            "The count method",
+            "The len function",
+            "The size method",
+            "The length property"
+          ],
+          "answer": 1,
+          "explanation": "The len function works on lists, strings and dictionaries alike."
+        },
+        {
+          "key": "pq85-4",
+          "type": "mcq",
+          "prompt": "What does a for loop do with a list?",
+          "options": [
+            "Runs once",
+            "Runs the block once for each item",
+            "Sorts it first",
+            "Returns a new list"
+          ],
+          "answer": 1,
+          "explanation": "It is the same idea as the bash for loop you already know."
+        },
+        {
+          "key": "pq85-5",
+          "type": "mcq",
+          "prompt": "What does range produce?",
+          "options": [
+            "A random number",
+            "A sequence of numbers you can loop over",
+            "A list of strings",
+            "A dictionary"
+          ],
+          "answer": 1,
+          "explanation": "It is how you loop a fixed number of times."
+        },
+        {
+          "key": "pq85-6",
+          "type": "mcq",
+          "prompt": "What is the difference between break and continue?",
+          "options": [
+            "None",
+            "break leaves the loop, continue skips to the next item",
+            "break skips one item",
+            "continue ends the program"
+          ],
+          "answer": 1,
+          "explanation": "One exits entirely and the other moves on."
+        },
+        {
+          "key": "pq85-7",
+          "type": "mcq",
+          "prompt": "What is a dictionary?",
+          "options": [
+            "An ordered list",
+            "A collection of key and value pairs",
+            "A type of string",
+            "A loop"
+          ],
+          "answer": 1,
+          "explanation": "You look values up by name rather than by position."
+        },
+        {
+          "key": "pq85-8",
+          "type": "mcq",
+          "prompt": "How do you read a value from a dictionary?",
+          "options": [
+            "By its position",
+            "By its key",
+            "With a loop only",
+            "With len"
+          ],
+          "answer": 1,
+          "explanation": "The key is the whole point, and it is what makes dictionaries useful for structured data."
+        },
+        {
+          "key": "pq85-9",
+          "type": "mcq",
+          "prompt": "Why is a list of dictionaries a useful shape?",
+          "options": [
+            "It is fastest",
+            "Because it matches how real data such as JSON is structured",
+            "It uses less memory",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "AWS responses, config files and APIs almost all look like this."
+        },
+        {
+          "key": "pq85-10",
+          "type": "mcq",
+          "prompt": "How would you print only servers whose status is not running?",
+          "options": [
+            "Sort the list",
+            "Loop over it and use an if inside",
+            "Use len",
+            "Use append"
+          ],
+          "answer": 1,
+          "explanation": "Loop plus condition is the filtering pattern you will use constantly."
+        },
+        {
+          "key": "pq85-11",
+          "type": "mcq",
+          "prompt": "What happens if you ask a dictionary for a key that does not exist?",
+          "options": [
+            "It returns empty",
+            "It raises an error",
+            "It returns zero",
+            "It adds the key"
+          ],
+          "answer": 1,
+          "explanation": "That error has a name, KeyError, and you will meet it often."
+        },
+        {
+          "key": "pq85-12",
+          "type": "mcq",
+          "prompt": "Which bash idea does the Python for loop most resemble?",
+          "options": [
+            "Command substitution",
+            "Looping over a list of items",
+            "Redirection",
+            "Exit codes"
+          ],
+          "answer": 1,
+          "explanation": "The syntax differs but the concept is identical to what you learned on day 11."
+        },
+        {
+          "key": "pq85-13",
+          "type": "true_false",
+          "prompt": "Python lists are indexed starting from zero.",
+          "answer": true,
+          "explanation": "It is the single most common early mistake, so it is worth saying out loud."
+        },
+        {
+          "key": "pq85-14",
+          "type": "true_false",
+          "prompt": "A list of dictionaries is close to the shape of the JSON that AWS returns.",
+          "answer": true,
+          "explanation": "That is exactly why this structure is worth being comfortable with before Month 6."
+        },
+        {
+          "key": "pq85-15",
+          "type": "true_false",
+          "prompt": "You can loop over both a list and a dictionary in Python.",
+          "answer": true,
+          "explanation": "Looping over a dictionary gives you its keys, and you can request values alongside them."
+        }
+      ]
+    },
+    {
+      "afterDay": 90,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq90-1",
+          "type": "mcq",
+          "prompt": "Why put code inside a function?",
+          "options": [
+            "It runs faster",
+            "So it can be reused and tested instead of repeated",
+            "It uses less memory",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "The same reason you wrote bash functions on day 27."
+        },
+        {
+          "key": "pq90-2",
+          "type": "mcq",
+          "prompt": "What is the difference between printing a value and returning it?",
+          "options": [
+            "None",
+            "Printing shows it, returning hands it back so other code can use it",
+            "Returning is faster",
+            "Printing is for numbers"
+          ],
+          "answer": 1,
+          "explanation": "A function that only prints cannot be built upon."
+        },
+        {
+          "key": "pq90-3",
+          "type": "mcq",
+          "prompt": "What is a default argument for?",
+          "options": [
+            "Speed",
+            "So the function works without that argument being supplied",
+            "Type checking",
+            "Documentation"
+          ],
+          "answer": 1,
+          "explanation": "It makes the common case simple while keeping flexibility."
+        },
+        {
+          "key": "pq90-4",
+          "type": "mcq",
+          "prompt": "How do you read an environment variable in Python?",
+          "options": [
+            "With input",
+            "Through the os module",
+            "With open",
+            "With import"
+          ],
+          "answer": 1,
+          "explanation": "It is the same idea as reading one in bash, through a standard module."
+        },
+        {
+          "key": "pq90-5",
+          "type": "mcq",
+          "prompt": "Why give an environment variable a default in code?",
+          "options": [
+            "It is required",
+            "So the program still runs when the variable is not set",
+            "It is faster",
+            "To reduce memory"
+          ],
+          "answer": 1,
+          "explanation": "Missing configuration should not mean an immediate crash for a non essential value."
+        },
+        {
+          "key": "pq90-6",
+          "type": "mcq",
+          "prompt": "Why move hardcoded values into the environment?",
+          "options": [
+            "It is faster",
+            "So the same code runs in different environments without editing",
+            "It is required by Python",
+            "To reduce file size"
+          ],
+          "answer": 1,
+          "explanation": "This is the same principle as day 88 of the DevOps track."
+        },
+        {
+          "key": "pq90-7",
+          "type": "mcq",
+          "prompt": "What does import do?",
+          "options": [
+            "Copies a file",
+            "Makes code from another module available in your program",
+            "Runs a script",
+            "Installs a package"
+          ],
+          "answer": 1,
+          "explanation": "It is how you use the standard library and your own modules."
+        },
+        {
+          "key": "pq90-8",
+          "type": "mcq",
+          "prompt": "Why split code into multiple files as it grows?",
+          "options": [
+            "It runs faster",
+            "Because one long file becomes impossible to navigate and reuse",
+            "It is required",
+            "To reduce memory"
+          ],
+          "answer": 1,
+          "explanation": "The same reason you would not put every bash tool in one script."
+        },
+        {
+          "key": "pq90-9",
+          "type": "mcq",
+          "prompt": "How should you read a Python traceback?",
+          "options": [
+            "Top line first",
+            "The last line first, then work upwards",
+            "Only the middle",
+            "Ignore it"
+          ],
+          "answer": 1,
+          "explanation": "The last line names the error, and the lines above show how you got there."
+        },
+        {
+          "key": "pq90-10",
+          "type": "mcq",
+          "prompt": "What does try and except do?",
+          "options": [
+            "Prevents all errors",
+            "Lets you handle a failure instead of the program stopping",
+            "Speeds up code",
+            "Tests functions"
+          ],
+          "answer": 1,
+          "explanation": "It gives you a chance to respond rather than crash."
+        },
+        {
+          "key": "pq90-11",
+          "type": "mcq",
+          "prompt": "Why catch a specific error rather than everything?",
+          "options": [
+            "It is faster",
+            "Because catching everything hides bugs you did not expect",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "A broad catch turns a real problem into silent wrong behaviour."
+        },
+        {
+          "key": "pq90-12",
+          "type": "mcq",
+          "prompt": "What does a KeyError usually mean?",
+          "options": [
+            "A file is missing",
+            "You asked a dictionary for a key it does not have",
+            "A number was expected",
+            "The syntax is wrong"
+          ],
+          "answer": 1,
+          "explanation": "It is one of the four errors worth being able to recognise instantly."
+        },
+        {
+          "key": "pq90-13",
+          "type": "true_false",
+          "prompt": "A function that returns a value is more useful than one that only prints.",
+          "answer": true,
+          "explanation": "Returning lets other code make decisions with the result."
+        },
+        {
+          "key": "pq90-14",
+          "type": "true_false",
+          "prompt": "Catching every possible exception with one broad except is good defensive programming.",
+          "answer": false,
+          "explanation": "It hides bugs, and the failure then shows up somewhere far from its cause."
+        },
+        {
+          "key": "pq90-15",
+          "type": "true_false",
+          "prompt": "Reading the traceback carefully is usually faster than guessing what went wrong.",
+          "answer": true,
+          "explanation": "The traceback names the error and points at the line, which is most of the answer."
+        }
+      ]
+    },
+    {
+      "afterDay": 95,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq95-1",
+          "type": "mcq",
+          "prompt": "Why use a with block when opening a file?",
+          "options": [
+            "It is faster",
+            "The file closes automatically even if an error occurs",
+            "It reads more lines",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "It is the same idea as trap and cleanup in bash on day 42."
+        },
+        {
+          "key": "pq95-2",
+          "type": "mcq",
+          "prompt": "What happens when you write to a file that already exists?",
+          "options": [
+            "It appends",
+            "It is overwritten unless you open it in append mode",
+            "It errors",
+            "It creates a copy"
+          ],
+          "answer": 1,
+          "explanation": "This mirrors the difference between one and two greater than signs in bash."
+        },
+        {
+          "key": "pq95-3",
+          "type": "mcq",
+          "prompt": "Why read a file line by line rather than all at once?",
+          "options": [
+            "It is required",
+            "Because a very large file may not fit comfortably in memory",
+            "It is more accurate",
+            "It is easier to write"
+          ],
+          "answer": 1,
+          "explanation": "Log files in particular can be far larger than you expect."
+        },
+        {
+          "key": "pq95-4",
+          "type": "mcq",
+          "prompt": "What does loading JSON into Python give you?",
+          "options": [
+            "A string",
+            "Dictionaries and lists you can work with directly",
+            "A file object",
+            "A number"
+          ],
+          "answer": 1,
+          "explanation": "This is why the nested data work on day 85 mattered."
+        },
+        {
+          "key": "pq95-5",
+          "type": "mcq",
+          "prompt": "Why is Python better than bash and jq for complex JSON work?",
+          "options": [
+            "It is faster",
+            "Because nested logic and conditions get unreadable in a shell pipeline",
+            "jq is deprecated",
+            "Bash cannot read JSON"
+          ],
+          "answer": 1,
+          "explanation": "jq is excellent for simple extraction, and Python takes over when logic is involved."
+        },
+        {
+          "key": "pq95-6",
+          "type": "mcq",
+          "prompt": "How do you read a command line argument in Python?",
+          "options": [
+            "With input",
+            "Through the argument list in the sys module",
+            "With open",
+            "With os.environ"
+          ],
+          "answer": 1,
+          "explanation": "It is the same concept as the numbered parameters in bash."
+        },
+        {
+          "key": "pq95-7",
+          "type": "mcq",
+          "prompt": "What should a script do when a required argument is missing?",
+          "options": [
+            "Guess a default",
+            "Print usage and exit with a non zero code",
+            "Continue anyway",
+            "Wait for input"
+          ],
+          "answer": 1,
+          "explanation": "Exactly the same rule you applied to your bash tools."
+        },
+        {
+          "key": "pq95-8",
+          "type": "mcq",
+          "prompt": "Why does exiting with a non zero code matter for a Python script?",
+          "options": [
+            "It is required",
+            "So bash, cron and CI can detect the failure",
+            "It prints an error",
+            "It stops the loop"
+          ],
+          "answer": 1,
+          "explanation": "The exit code is the interface between your script and everything that runs it."
+        },
+        {
+          "key": "pq95-9",
+          "type": "mcq",
+          "prompt": "Why should a script be safe to run twice?",
+          "options": [
+            "It runs faster",
+            "Because automation reruns things, and a second run should not cause damage",
+            "It is required",
+            "To save disk"
+          ],
+          "answer": 1,
+          "explanation": "The same idempotence principle from day 60 of the DevOps track."
+        },
+        {
+          "key": "pq95-10",
+          "type": "mcq",
+          "prompt": "What makes a script genuinely useful rather than an exercise?",
+          "options": [
+            "Its length",
+            "It does a real job you would otherwise do by hand",
+            "It uses many features",
+            "It has no errors"
+          ],
+          "answer": 1,
+          "explanation": "Tools you use are the ones you remember and the ones worth showing."
+        },
+        {
+          "key": "pq95-11",
+          "type": "mcq",
+          "prompt": "Why format JSON with indentation when writing it to a file?",
+          "options": [
+            "It is smaller",
+            "So a human can read and review it",
+            "It is required",
+            "It loads faster"
+          ],
+          "answer": 1,
+          "explanation": "Machine readable and human readable are both worth having when you can."
+        },
+        {
+          "key": "pq95-12",
+          "type": "mcq",
+          "prompt": "What connects this month's Python to your Month 3 bash work?",
+          "options": [
+            "Nothing",
+            "Both handle JSON, arguments and exit codes, which is the shared interface",
+            "Python replaces bash entirely",
+            "Bash cannot use JSON"
+          ],
+          "answer": 1,
+          "explanation": "The two tracks meet at the command line, which is why the conventions match."
+        },
+        {
+          "key": "pq95-13",
+          "type": "true_false",
+          "prompt": "A with block protects you from leaving a file handle open after an error.",
+          "answer": true,
+          "explanation": "It is automatic cleanup, and it is one of the first Python habits worth having."
+        },
+        {
+          "key": "pq95-14",
+          "type": "true_false",
+          "prompt": "Python is always the right choice over bash for shell tasks.",
+          "answer": false,
+          "explanation": "Short glue work stays in bash, and Python takes over when there is real logic or data handling."
+        },
+        {
+          "key": "pq95-15",
+          "type": "true_false",
+          "prompt": "The usage message and exit code conventions carry over directly from your bash tools.",
+          "answer": true,
+          "explanation": "That consistency is what lets your Python and bash tools be used together."
+        }
+      ]
+    },
+    {
+      "afterDay": 100,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq100-1",
+          "type": "mcq",
+          "prompt": "What is a NameError usually telling you?",
+          "options": [
+            "A file is missing",
+            "You used a variable or function name that does not exist",
+            "A type is wrong",
+            "An index is out of range"
+          ],
+          "answer": 1,
+          "explanation": "It is nearly always a typo or a name defined after it was used."
+        },
+        {
+          "key": "pq100-2",
+          "type": "mcq",
+          "prompt": "What is a TypeError usually telling you?",
+          "options": [
+            "A key is missing",
+            "You used a value in a way its type does not support",
+            "A file is missing",
+            "The syntax is wrong"
+          ],
+          "answer": 1,
+          "explanation": "Adding a number to a string is the classic example."
+        },
+        {
+          "key": "pq100-3",
+          "type": "mcq",
+          "prompt": "What is an IndexError usually telling you?",
+          "options": [
+            "A key is missing",
+            "You asked for a list position that does not exist",
+            "A file is missing",
+            "A type is wrong"
+          ],
+          "answer": 1,
+          "explanation": "It usually means an off by one mistake or an empty list."
+        },
+        {
+          "key": "pq100-4",
+          "type": "mcq",
+          "prompt": "What does a test actually do for you?",
+          "options": [
+            "Makes code faster",
+            "Tells you when a change broke something that used to work",
+            "Removes bugs",
+            "Documents the code"
+          ],
+          "answer": 1,
+          "explanation": "Its value appears later, when you change something and want to know what you broke."
+        },
+        {
+          "key": "pq100-5",
+          "type": "mcq",
+          "prompt": "Why deliberately break a function after writing a test for it?",
+          "options": [
+            "To practise fixing",
+            "To confirm the test actually catches the problem",
+            "It is required",
+            "To measure speed"
+          ],
+          "answer": 1,
+          "explanation": "A test that passes no matter what is worse than no test at all."
+        },
+        {
+          "key": "pq100-6",
+          "type": "mcq",
+          "prompt": "Why does a test that always passes give false confidence?",
+          "options": [
+            "It runs slowly",
+            "Because you believe you are protected when you are not",
+            "It uses memory",
+            "It is hard to read"
+          ],
+          "answer": 1,
+          "explanation": "It is the same problem as an alarm stuck on insufficient data."
+        },
+        {
+          "key": "pq100-7",
+          "type": "mcq",
+          "prompt": "Why rename variables to say what they hold?",
+          "options": [
+            "It runs faster",
+            "Because you will read the code far more often than you write it",
+            "It is required",
+            "It reduces file size"
+          ],
+          "answer": 1,
+          "explanation": "Future you is the main beneficiary of clear naming."
+        },
+        {
+          "key": "pq100-8",
+          "type": "mcq",
+          "prompt": "Why split a long function into smaller ones?",
+          "options": [
+            "It runs faster",
+            "Because each smaller piece is easier to understand and test",
+            "It is required",
+            "To use less memory"
+          ],
+          "answer": 1,
+          "explanation": "A function doing three things is three functions waiting to be separated."
+        },
+        {
+          "key": "pq100-9",
+          "type": "mcq",
+          "prompt": "What is a docstring for?",
+          "options": [
+            "Speed",
+            "Saying what a function does, for whoever reads it next",
+            "Type checking",
+            "Testing"
+          ],
+          "answer": 1,
+          "explanation": "It sits with the code, so it is far more likely to stay accurate than a separate document."
+        },
+        {
+          "key": "pq100-10",
+          "type": "mcq",
+          "prompt": "How should your log parser handle a file that does not exist?",
+          "options": [
+            "Crash with a traceback",
+            "Print a clear message and exit non zero",
+            "Create the file",
+            "Continue silently"
+          ],
+          "answer": 1,
+          "explanation": "A clear message beats a traceback for anyone who is not you."
+        },
+        {
+          "key": "pq100-11",
+          "type": "mcq",
+          "prompt": "Why count the most common error messages rather than listing them all?",
+          "options": [
+            "It is faster",
+            "Because the frequent ones are usually the ones worth fixing",
+            "It is required",
+            "To reduce memory"
+          ],
+          "answer": 1,
+          "explanation": "It is the same reasoning behind alerting on thresholds rather than every single event."
+        },
+        {
+          "key": "pq100-12",
+          "type": "mcq",
+          "prompt": "What should you have at the end of this month?",
+          "options": [
+            "A finished Python course",
+            "One small tool that works, is tested and is committed",
+            "A certificate",
+            "A large program"
+          ],
+          "answer": 1,
+          "explanation": "One working tool is worth more than twenty tutorial exercises."
+        },
+        {
+          "key": "pq100-13",
+          "type": "true_false",
+          "prompt": "A test that passes even when the function is broken is worse than having no test.",
+          "answer": true,
+          "explanation": "It creates confidence that is not backed by anything real."
+        },
+        {
+          "key": "pq100-14",
+          "type": "true_false",
+          "prompt": "Handling a missing file with a clear message is part of writing a usable tool.",
+          "answer": true,
+          "explanation": "The difference between a script and a tool is largely how it behaves when things go wrong."
+        },
+        {
+          "key": "pq100-15",
+          "type": "true_false",
+          "prompt": "After one month of Python you should expect to be a competent programmer.",
+          "answer": false,
+          "explanation": "You should expect to write small useful scripts, and real fluency takes considerably longer."
+        }
+      ]
+    }
+  ]
+}

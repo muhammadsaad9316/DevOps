@@ -1,0 +1,1475 @@
+{
+  "schemaVersion": 1,
+  "title": "Bash & Python",
+  "description": "The daily 30 minute companion of the DevOps roadmap.",
+  "days": [
+    {
+      "day": 1,
+      "title": "Your First Script",
+      "tasks": [
+        {
+          "key": "b1-make-file",
+          "title": "Create a file called hello.sh and write two echo lines in it.",
+          "required": true
+        },
+        {
+          "key": "b1-run-it",
+          "title": "Run it with bash hello.sh and confirm both lines print.",
+          "required": true
+        },
+        {
+          "key": "b1-comment",
+          "title": "Add a comment line starting with a hash and confirm it does not run.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Shebang And Permissions",
+      "tasks": [
+        {
+          "key": "b2-shebang",
+          "title": "Add a shebang line at the top so the system knows which interpreter to use.",
+          "required": true
+        },
+        {
+          "key": "b2-executable",
+          "title": "Make the script executable with chmod and run it directly with a dot slash.",
+          "required": true
+        },
+        {
+          "key": "b2-why-dotslash",
+          "title": "Work out why you need the dot slash and write the reason in your notes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Variables",
+      "tasks": [
+        {
+          "key": "b3-assign",
+          "title": "Create three variables and print them with echo. Notice there are no spaces around the equals sign.",
+          "required": true
+        },
+        {
+          "key": "b3-quotes",
+          "title": "Print a variable inside double quotes and inside single quotes. Explain the difference.",
+          "required": true
+        },
+        {
+          "key": "b3-folder-script",
+          "title": "Write a script that creates a folder whose name comes from a variable.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Command Substitution",
+      "tasks": [
+        {
+          "key": "b4-capture",
+          "title": "Capture the output of the date command into a variable and print it.",
+          "required": true
+        },
+        {
+          "key": "b4-timestamp",
+          "title": "Build a timestamped filename using command substitution.",
+          "required": true
+        },
+        {
+          "key": "b4-whoami-script",
+          "title": "Write a script that greets the current user by name using whoami.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "title": "Reading Input",
+      "tasks": [
+        {
+          "key": "b5-read",
+          "title": "Use read to ask the user for their name, then greet them.",
+          "required": true
+        },
+        {
+          "key": "b5-prompt",
+          "title": "Add a prompt message so the user knows what to type.",
+          "required": true
+        },
+        {
+          "key": "b5-combine",
+          "title": "Write a script that asks for a folder name and creates it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "title": "Arguments",
+      "tasks": [
+        {
+          "key": "b6-dollar-one",
+          "title": "Read the first argument passed to your script and print it.",
+          "required": true
+        },
+        {
+          "key": "b6-multiple",
+          "title": "Handle two arguments, and print how many were given using the count variable.",
+          "required": true
+        },
+        {
+          "key": "b6-arg-folder",
+          "title": "Rewrite yesterday's script so the folder name comes from an argument instead of a prompt.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "title": "Exit Codes",
+      "tasks": [
+        {
+          "key": "b7-echo-status",
+          "title": "Run a command that works and one that fails, checking the exit status after each.",
+          "required": true
+        },
+        {
+          "key": "b7-exit",
+          "title": "Add an exit line to your script with a non zero number and confirm the status matches.",
+          "required": true
+        },
+        {
+          "key": "b7-why-matter",
+          "title": "Write down why exit codes matter for scripts that run automatically.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "title": "The if Statement",
+      "tasks": [
+        {
+          "key": "b8-file-exists",
+          "title": "Write an if statement that checks whether a file exists before touching it.",
+          "required": true
+        },
+        {
+          "key": "b8-else",
+          "title": "Add an else branch that prints a message when the file is missing.",
+          "required": true
+        },
+        {
+          "key": "b8-guard",
+          "title": "Add a check at the top of a script that exits early if no argument was given.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "title": "Test Conditions",
+      "tasks": [
+        {
+          "key": "b9-file-tests",
+          "title": "Learn the tests for file exists, directory exists and file is readable, then use all three.",
+          "required": true
+        },
+        {
+          "key": "b9-string-tests",
+          "title": "Compare two strings for equal and not equal inside an if statement.",
+          "required": true
+        },
+        {
+          "key": "b9-empty-check",
+          "title": "Check whether a variable is empty and handle that case properly.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "title": "Numbers And Comparison",
+      "tasks": [
+        {
+          "key": "b10-numeric",
+          "title": "Compare two numbers using the numeric operators for greater than and less than.",
+          "required": true
+        },
+        {
+          "key": "b10-arithmetic",
+          "title": "Do simple arithmetic in a script and print the result.",
+          "required": true
+        },
+        {
+          "key": "b10-count-files",
+          "title": "Write a script that counts files in a folder and warns if there are more than ten.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "title": "The for Loop",
+      "tasks": [
+        {
+          "key": "b11-loop-list",
+          "title": "Loop over a list of words and print each one.",
+          "required": true
+        },
+        {
+          "key": "b11-loop-files",
+          "title": "Loop over every file in a directory and print its name.",
+          "required": true
+        },
+        {
+          "key": "b11-rename",
+          "title": "Write a loop that adds a suffix to every text file in a test folder.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "title": "Loops And Permissions",
+      "tasks": [
+        {
+          "key": "b12-loop-perms",
+          "title": "Loop over files in a folder and print each one with its permissions.",
+          "required": true
+        },
+        {
+          "key": "b12-find-writable",
+          "title": "Write a script that lists only the files that are writable by you.",
+          "required": true
+        },
+        {
+          "key": "b12-fix-perms",
+          "title": "Write a script that sets 644 on every file inside a folder you choose.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "title": "The while Loop",
+      "tasks": [
+        {
+          "key": "b13-counter",
+          "title": "Write a while loop that counts from one to five.",
+          "required": true
+        },
+        {
+          "key": "b13-read-lines",
+          "title": "Read a text file line by line with a while loop and print each line numbered.",
+          "required": true
+        },
+        {
+          "key": "b13-break",
+          "title": "Add a break so the loop stops early when it meets a chosen word.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "title": "Case Statements",
+      "tasks": [
+        {
+          "key": "b14-case-basic",
+          "title": "Write a case statement that responds differently to three different arguments.",
+          "required": true
+        },
+        {
+          "key": "b14-menu",
+          "title": "Build a small menu script that offers three actions and runs the chosen one.",
+          "required": true
+        },
+        {
+          "key": "b14-default",
+          "title": "Add a default branch that handles anything unexpected.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "title": "Output And Redirection In Scripts",
+      "tasks": [
+        {
+          "key": "b15-log-file",
+          "title": "Make a script write its output to a log file instead of the screen.",
+          "required": true
+        },
+        {
+          "key": "b15-append-log",
+          "title": "Change it so each run appends to the log with a timestamp rather than overwriting.",
+          "required": true
+        },
+        {
+          "key": "b15-errors-separate",
+          "title": "Send error messages to a separate file from the normal output.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 16,
+      "title": "Working With Processes",
+      "tasks": [
+        {
+          "key": "b16-check-running",
+          "title": "Write a script that checks whether a named process is running.",
+          "required": true
+        },
+        {
+          "key": "b16-start-if-not",
+          "title": "Extend it so it starts the process only if it is not already running.",
+          "required": true
+        },
+        {
+          "key": "b16-pid-file",
+          "title": "Print the process id of a running program from inside your script.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 17,
+      "title": "Background Jobs In Scripts",
+      "tasks": [
+        {
+          "key": "b17-background",
+          "title": "Start a long command in the background from a script and carry on.",
+          "required": true
+        },
+        {
+          "key": "b17-wait",
+          "title": "Use wait so the script pauses until the background job finishes.",
+          "required": true
+        },
+        {
+          "key": "b17-parallel",
+          "title": "Run three commands in parallel from one script and wait for all of them.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 18,
+      "title": "Scripting Services",
+      "tasks": [
+        {
+          "key": "b18-service-status",
+          "title": "Write a script that reports whether nginx is active, using systemctl inside an if.",
+          "required": true
+        },
+        {
+          "key": "b18-restart-safe",
+          "title": "Extend it to restart the service only when it is not running.",
+          "required": true
+        },
+        {
+          "key": "b18-report",
+          "title": "Make the script print a clear one line result that a human can read at a glance.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 19,
+      "title": "Scripting Log Checks",
+      "tasks": [
+        {
+          "key": "b19-grep-in-script",
+          "title": "Write a script that searches a log file for a word you pass as an argument.",
+          "required": true
+        },
+        {
+          "key": "b19-count-errors",
+          "title": "Extend it to count how many matches it found and print the number.",
+          "required": true
+        },
+        {
+          "key": "b19-alert-threshold",
+          "title": "Make it print a warning when the count goes above a number you choose.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 20,
+      "title": "Scripting Package Checks",
+      "tasks": [
+        {
+          "key": "b20-check-installed",
+          "title": "Write a script that checks whether a package is installed.",
+          "required": true
+        },
+        {
+          "key": "b20-install-if-missing",
+          "title": "Extend it to install the package only when it is missing.",
+          "required": true
+        },
+        {
+          "key": "b20-list-loop",
+          "title": "Loop over a list of five packages and report the status of each one.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 21,
+      "title": "Disk And Space Scripts",
+      "tasks": [
+        {
+          "key": "b21-disk-check",
+          "title": "Write a script that prints disk usage as a percentage number only.",
+          "required": true
+        },
+        {
+          "key": "b21-warn-full",
+          "title": "Make it warn when usage passes a threshold you set.",
+          "required": true
+        },
+        {
+          "key": "b21-biggest",
+          "title": "Write a script that prints the five largest folders in a path you pass in.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 22,
+      "title": "A Real Backup Script",
+      "tasks": [
+        {
+          "key": "b22-tar-script",
+          "title": "Write a script that tars a folder into a timestamped archive.",
+          "required": true
+        },
+        {
+          "key": "b22-check-source",
+          "title": "Add a check that exits with a clear message if the source folder does not exist.",
+          "required": true
+        },
+        {
+          "key": "b22-keep-recent",
+          "title": "Extend it to delete archives older than seven days.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 23,
+      "title": "Environment And Config In Scripts",
+      "tasks": [
+        {
+          "key": "b23-env-var",
+          "title": "Read an environment variable inside a script and use it.",
+          "required": true
+        },
+        {
+          "key": "b23-default-value",
+          "title": "Give the variable a default value for when it is not set.",
+          "required": true
+        },
+        {
+          "key": "b23-config-file",
+          "title": "Move your script settings into a separate config file and source it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 24,
+      "title": "Scheduling Your Scripts",
+      "tasks": [
+        {
+          "key": "b24-cron-script",
+          "title": "Put your backup script into cron and confirm it runs.",
+          "required": true
+        },
+        {
+          "key": "b24-absolute-paths",
+          "title": "Fix the script so it works under cron by using full paths everywhere.",
+          "required": true
+        },
+        {
+          "key": "b24-log-the-run",
+          "title": "Make the cron job write a line to a log every time it runs.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 25,
+      "title": "Making Scripts Safe",
+      "tasks": [
+        {
+          "key": "b25-set-e",
+          "title": "Add set with the e and u flags and observe how the script now fails fast.",
+          "required": true
+        },
+        {
+          "key": "b25-quote-vars",
+          "title": "Put quotes around every variable and test with a filename containing a space.",
+          "required": true
+        },
+        {
+          "key": "b25-shellcheck",
+          "title": "Install shellcheck, run it on your scripts, and fix every warning it reports.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 26,
+      "title": "Build One Tool You Will Keep",
+      "tasks": [
+        {
+          "key": "b26-choose",
+          "title": "Choose one small job you did by hand this month and turn it into a script.",
+          "required": true
+        },
+        {
+          "key": "b26-write-it",
+          "title": "Write it with argument handling, a usage message, error checks and quoting.",
+          "required": true
+        },
+        {
+          "key": "b26-shellcheck-clean",
+          "title": "Run shellcheck until it reports nothing.",
+          "required": true
+        },
+        {
+          "key": "b26-commit",
+          "title": "Commit it to the GitHub repository you created on day 26 of the DevOps track.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 5,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq5-1",
+          "type": "mcq",
+          "prompt": "What is a shebang line?",
+          "options": [
+            "A comment",
+            "The first line saying which interpreter runs the script",
+            "A variable",
+            "An exit code"
+          ],
+          "answer": 1,
+          "explanation": "It tells the system which program should execute the file."
+        },
+        {
+          "key": "bq5-2",
+          "type": "mcq",
+          "prompt": "Why do you need dot slash to run a script in the current folder?",
+          "options": [
+            "It is faster",
+            "Because the current directory is not in your PATH",
+            "It makes it executable",
+            "It is required by bash"
+          ],
+          "answer": 1,
+          "explanation": "The shell only searches PATH, so you must give an explicit path for a local file."
+        },
+        {
+          "key": "bq5-3",
+          "type": "mcq",
+          "prompt": "Which command makes a script executable?",
+          "options": [
+            "chown",
+            "chmod",
+            "touch",
+            "export"
+          ],
+          "answer": 1,
+          "explanation": "chmod changes the permission bits, and you need the execute bit set."
+        },
+        {
+          "key": "bq5-4",
+          "type": "mcq",
+          "prompt": "How do you assign a variable in bash?",
+          "options": [
+            "name = value",
+            "name=value",
+            "set name value",
+            "var name=value"
+          ],
+          "answer": 1,
+          "explanation": "There must be no spaces around the equals sign."
+        },
+        {
+          "key": "bq5-5",
+          "type": "mcq",
+          "prompt": "What is the difference between double and single quotes?",
+          "options": [
+            "None",
+            "Double quotes expand variables, single quotes do not",
+            "Single quotes expand variables",
+            "Single quotes are faster"
+          ],
+          "answer": 1,
+          "explanation": "Single quotes take the text literally, which is sometimes exactly what you want."
+        },
+        {
+          "key": "bq5-6",
+          "type": "mcq",
+          "prompt": "What does command substitution do?",
+          "options": [
+            "Renames a command",
+            "Captures a command's output into a variable",
+            "Runs a command in the background",
+            "Redirects output to a file"
+          ],
+          "answer": 1,
+          "explanation": "It lets you use the result of one command as a value inside your script."
+        },
+        {
+          "key": "bq5-7",
+          "type": "mcq",
+          "prompt": "Which command reads input from the user into a variable?",
+          "options": [
+            "input",
+            "read",
+            "get",
+            "scan"
+          ],
+          "answer": 1,
+          "explanation": "read pauses the script and stores what the user types."
+        },
+        {
+          "key": "bq5-8",
+          "type": "mcq",
+          "prompt": "How do you write a comment in bash?",
+          "options": [
+            "Two slashes",
+            "A hash at the start of the line",
+            "A semicolon",
+            "An asterisk"
+          ],
+          "answer": 1,
+          "explanation": "Everything after the hash on that line is ignored."
+        },
+        {
+          "key": "bq5-9",
+          "type": "mcq",
+          "prompt": "What character starts a variable when you use its value?",
+          "options": [
+            "Hash",
+            "Dollar sign",
+            "Percent",
+            "Ampersand"
+          ],
+          "answer": 1,
+          "explanation": "The dollar sign tells the shell to substitute the variable's value."
+        },
+        {
+          "key": "bq5-10",
+          "type": "mcq",
+          "prompt": "Why build a timestamped filename?",
+          "options": [
+            "It is shorter",
+            "So each run creates a separate file instead of overwriting",
+            "It runs faster",
+            "It is required by tar"
+          ],
+          "answer": 1,
+          "explanation": "Timestamps stop each run from destroying the previous result."
+        },
+        {
+          "key": "bq5-11",
+          "type": "mcq",
+          "prompt": "What does echo do?",
+          "options": [
+            "Runs a command",
+            "Prints text or a variable value",
+            "Reads input",
+            "Exits the script"
+          ],
+          "answer": 1,
+          "explanation": "It is the simplest way to see what your script is doing."
+        },
+        {
+          "key": "bq5-12",
+          "type": "mcq",
+          "prompt": "Where should the shebang line appear?",
+          "options": [
+            "Anywhere",
+            "On the very first line",
+            "At the end",
+            "After the variables"
+          ],
+          "answer": 1,
+          "explanation": "It only works as the first line of the file."
+        },
+        {
+          "key": "bq5-13",
+          "type": "true_false",
+          "prompt": "A script with the execute permission removed can still be run with bash filename.",
+          "answer": true,
+          "explanation": "Calling bash directly bypasses the need for the execute bit on the file."
+        },
+        {
+          "key": "bq5-14",
+          "type": "true_false",
+          "prompt": "Putting spaces around the equals sign when assigning a variable causes an error.",
+          "answer": true,
+          "explanation": "Bash reads it as a command with arguments instead of an assignment."
+        },
+        {
+          "key": "bq5-15",
+          "type": "true_false",
+          "prompt": "Writing a small script every day is more useful than reading about bash for an hour.",
+          "answer": true,
+          "explanation": "Scripting is muscle memory, and it only builds through repetition at the keyboard."
+        }
+      ]
+    },
+    {
+      "afterDay": 10,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq10-1",
+          "type": "mcq",
+          "prompt": "How do you read the first argument passed to a script?",
+          "options": [
+            "dollar zero",
+            "dollar one",
+            "arg1",
+            "input one"
+          ],
+          "answer": 1,
+          "explanation": "Dollar zero holds the script name, and the arguments start at one."
+        },
+        {
+          "key": "bq10-2",
+          "type": "mcq",
+          "prompt": "What does the argument count variable tell you?",
+          "options": [
+            "The exit code",
+            "How many arguments were passed",
+            "The process id",
+            "The script name"
+          ],
+          "answer": 1,
+          "explanation": "It lets you check the user gave you what the script needs."
+        },
+        {
+          "key": "bq10-3",
+          "type": "mcq",
+          "prompt": "What does an exit code of zero mean?",
+          "options": [
+            "Failure",
+            "Success",
+            "The script is still running",
+            "No output"
+          ],
+          "answer": 1,
+          "explanation": "Zero means success, and any other number signals a specific failure."
+        },
+        {
+          "key": "bq10-4",
+          "type": "mcq",
+          "prompt": "Why do exit codes matter for automated scripts?",
+          "options": [
+            "They print faster",
+            "Because cron and pipelines use them to decide whether something worked",
+            "They reduce disk use",
+            "They are required by bash"
+          ],
+          "answer": 1,
+          "explanation": "Automation has no human watching, so the exit code is how failure is detected."
+        },
+        {
+          "key": "bq10-5",
+          "type": "mcq",
+          "prompt": "Which test checks that a file exists?",
+          "options": [
+            "A directory test",
+            "A file exists test",
+            "A string test",
+            "A numeric test"
+          ],
+          "answer": 1,
+          "explanation": "Checking before acting is what stops a script failing halfway through."
+        },
+        {
+          "key": "bq10-6",
+          "type": "mcq",
+          "prompt": "Why check a variable is not empty before using it?",
+          "options": [
+            "It is faster",
+            "Because an empty value can make a command do something destructive",
+            "It reduces memory",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "An empty variable in a delete command is one of the classic ways scripts cause damage."
+        },
+        {
+          "key": "bq10-7",
+          "type": "mcq",
+          "prompt": "What is a guard clause at the top of a script?",
+          "options": [
+            "A comment",
+            "An early check that exits if the inputs are wrong",
+            "A loop",
+            "A log line"
+          ],
+          "answer": 1,
+          "explanation": "Failing early with a clear message is better than failing later in a confusing way."
+        },
+        {
+          "key": "bq10-8",
+          "type": "mcq",
+          "prompt": "Which comparison would you use for two numbers?",
+          "options": [
+            "The string equal operator",
+            "The numeric comparison operators",
+            "The file exists test",
+            "The empty test"
+          ],
+          "answer": 1,
+          "explanation": "String and numeric comparison use different operators in bash."
+        },
+        {
+          "key": "bq10-9",
+          "type": "mcq",
+          "prompt": "What does an else branch do?",
+          "options": [
+            "Ends the script",
+            "Runs when the if condition is false",
+            "Repeats the if",
+            "Sets an exit code"
+          ],
+          "answer": 1,
+          "explanation": "It handles the other case so the script does not silently do nothing."
+        },
+        {
+          "key": "bq10-10",
+          "type": "mcq",
+          "prompt": "Why print a clear message when a check fails?",
+          "options": [
+            "To fill the log",
+            "So whoever runs it knows what went wrong and what to fix",
+            "It is required",
+            "To slow the script"
+          ],
+          "answer": 1,
+          "explanation": "A script that fails silently wastes far more time than one that explains itself."
+        },
+        {
+          "key": "bq10-11",
+          "type": "mcq",
+          "prompt": "What is the risk of a script that assumes its arguments are correct?",
+          "options": [
+            "It runs slower",
+            "It can act on the wrong target and cause damage",
+            "It uses more memory",
+            "It cannot be scheduled"
+          ],
+          "answer": 1,
+          "explanation": "Validation is what stands between a typo and a deleted folder."
+        },
+        {
+          "key": "bq10-12",
+          "type": "mcq",
+          "prompt": "When would you exit with a non zero code?",
+          "options": [
+            "Always",
+            "When something went wrong",
+            "Never",
+            "Only in loops"
+          ],
+          "answer": 1,
+          "explanation": "It is how your script tells the outside world it failed."
+        },
+        {
+          "key": "bq10-13",
+          "type": "true_false",
+          "prompt": "Checking whether a file exists before acting on it makes a script more reliable.",
+          "answer": true,
+          "explanation": "It replaces an ugly crash with a clear, handled outcome."
+        },
+        {
+          "key": "bq10-14",
+          "type": "true_false",
+          "prompt": "String comparison and numeric comparison use the same operators in bash.",
+          "answer": false,
+          "explanation": "They use different operators, and mixing them is a common source of confusing bugs."
+        },
+        {
+          "key": "bq10-15",
+          "type": "true_false",
+          "prompt": "A script that exits with zero after failing is a problem for automation.",
+          "answer": true,
+          "explanation": "Anything running it will believe the work succeeded and carry on."
+        }
+      ]
+    },
+    {
+      "afterDay": 15,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq15-1",
+          "type": "mcq",
+          "prompt": "What does a for loop do?",
+          "options": [
+            "Repeats until a condition is false",
+            "Runs the same steps for each item in a list",
+            "Chooses between branches",
+            "Reads user input"
+          ],
+          "answer": 1,
+          "explanation": "You give it a list and it works through it one item at a time."
+        },
+        {
+          "key": "bq15-2",
+          "type": "mcq",
+          "prompt": "How would you act on every file in a directory?",
+          "options": [
+            "A case statement",
+            "A for loop over the files",
+            "An if statement",
+            "A read command"
+          ],
+          "answer": 1,
+          "explanation": "Looping over files is one of the most common things a script does."
+        },
+        {
+          "key": "bq15-3",
+          "type": "mcq",
+          "prompt": "What is the difference between a for loop and a while loop?",
+          "options": [
+            "None",
+            "for works through a known list, while repeats until a condition changes",
+            "while is faster",
+            "for cannot use variables"
+          ],
+          "answer": 1,
+          "explanation": "Use for when you know the items, and while when you are waiting on a condition."
+        },
+        {
+          "key": "bq15-4",
+          "type": "mcq",
+          "prompt": "How do you read a file line by line?",
+          "options": [
+            "A for loop over the filename",
+            "A while loop with read",
+            "A case statement",
+            "An if statement"
+          ],
+          "answer": 1,
+          "explanation": "The while and read combination handles each line safely."
+        },
+        {
+          "key": "bq15-5",
+          "type": "mcq",
+          "prompt": "What does break do inside a loop?",
+          "options": [
+            "Pauses it",
+            "Stops the loop immediately",
+            "Skips one item",
+            "Restarts the loop"
+          ],
+          "answer": 1,
+          "explanation": "It leaves the loop entirely and continues after it."
+        },
+        {
+          "key": "bq15-6",
+          "type": "mcq",
+          "prompt": "When is a case statement clearer than a chain of if statements?",
+          "options": [
+            "Never",
+            "When comparing one value against several possible options",
+            "When comparing numbers",
+            "When reading files"
+          ],
+          "answer": 1,
+          "explanation": "It reads far better than four or five else branches."
+        },
+        {
+          "key": "bq15-7",
+          "type": "mcq",
+          "prompt": "Why add a default branch to a case statement?",
+          "options": [
+            "It is required",
+            "To handle input you did not expect",
+            "To speed it up",
+            "To exit the script"
+          ],
+          "answer": 1,
+          "explanation": "Unexpected input is guaranteed eventually, and silence is the worst response."
+        },
+        {
+          "key": "bq15-8",
+          "type": "mcq",
+          "prompt": "How do you make a script write output to a file instead of the screen?",
+          "options": [
+            "Use echo twice",
+            "Redirect the output with the greater than sign",
+            "Use read",
+            "Use a loop"
+          ],
+          "answer": 1,
+          "explanation": "This is the same redirection you learned on day 9 of the DevOps track."
+        },
+        {
+          "key": "bq15-9",
+          "type": "mcq",
+          "prompt": "How do you add to a log file without erasing it?",
+          "options": [
+            "One greater than sign",
+            "Two greater than signs",
+            "A pipe",
+            "A less than sign"
+          ],
+          "answer": 1,
+          "explanation": "One overwrites and two append, and getting this wrong destroys log history."
+        },
+        {
+          "key": "bq15-10",
+          "type": "mcq",
+          "prompt": "Why send errors to a separate file from normal output?",
+          "options": [
+            "It is faster",
+            "So problems are easy to find instead of buried in normal output",
+            "It saves space",
+            "It is required by cron"
+          ],
+          "answer": 1,
+          "explanation": "Separating the streams is what makes an unattended script debuggable."
+        },
+        {
+          "key": "bq15-11",
+          "type": "mcq",
+          "prompt": "Why timestamp each line written to a log?",
+          "options": [
+            "To make it longer",
+            "So you know when each run happened",
+            "To sort it",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "A log with no times cannot answer the question of when something broke."
+        },
+        {
+          "key": "bq15-12",
+          "type": "mcq",
+          "prompt": "What should a loop that renames files do first?",
+          "options": [
+            "Rename everything",
+            "Test on a copy or a test folder",
+            "Delete the originals",
+            "Run as root"
+          ],
+          "answer": 1,
+          "explanation": "A loop applies your mistake to every file at once, so test first."
+        },
+        {
+          "key": "bq15-13",
+          "type": "true_false",
+          "prompt": "A loop with a mistake in it will make that mistake once per item.",
+          "answer": true,
+          "explanation": "That multiplying effect is exactly why you test loops on throwaway data first."
+        },
+        {
+          "key": "bq15-14",
+          "type": "true_false",
+          "prompt": "The redirection you learned in the Linux track works the same way inside scripts.",
+          "answer": true,
+          "explanation": "Scripts are just the same shell commands saved in a file."
+        },
+        {
+          "key": "bq15-15",
+          "type": "true_false",
+          "prompt": "A script that only prints to the screen is fine for a job that runs at 3am from cron.",
+          "answer": false,
+          "explanation": "Nobody is watching, so the output has to go somewhere you can read later."
+        }
+      ]
+    },
+    {
+      "afterDay": 20,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq20-1",
+          "type": "mcq",
+          "prompt": "How would a script check whether a process is running?",
+          "options": [
+            "Read the log file",
+            "Search the process list for its name",
+            "Check disk usage",
+            "Read the config file"
+          ],
+          "answer": 1,
+          "explanation": "It uses the same process tools you learned on day 16 of the DevOps track."
+        },
+        {
+          "key": "bq20-2",
+          "type": "mcq",
+          "prompt": "Why check before starting a service?",
+          "options": [
+            "It is faster",
+            "To avoid starting a second copy of something already running",
+            "It is required",
+            "To save disk space"
+          ],
+          "answer": 1,
+          "explanation": "Blindly starting things is how you end up with port conflicts and duplicate processes."
+        },
+        {
+          "key": "bq20-3",
+          "type": "mcq",
+          "prompt": "What does the ampersand at the end of a command do?",
+          "options": [
+            "Chains commands",
+            "Runs it in the background",
+            "Redirects output",
+            "Repeats it"
+          ],
+          "answer": 1,
+          "explanation": "The script continues immediately instead of waiting."
+        },
+        {
+          "key": "bq20-4",
+          "type": "mcq",
+          "prompt": "What does wait do in a script?",
+          "options": [
+            "Sleeps for a second",
+            "Pauses until background jobs finish",
+            "Stops the script",
+            "Retries a command"
+          ],
+          "answer": 1,
+          "explanation": "It is how you run things in parallel and still know when they are all done."
+        },
+        {
+          "key": "bq20-5",
+          "type": "mcq",
+          "prompt": "Why run several commands in parallel?",
+          "options": [
+            "It uses less memory",
+            "To finish faster when the tasks do not depend on each other",
+            "It is safer",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Independent work does not need to be sequential."
+        },
+        {
+          "key": "bq20-6",
+          "type": "mcq",
+          "prompt": "How would a script check whether nginx is active?",
+          "options": [
+            "Read the nginx config",
+            "Use systemctl inside an if statement",
+            "Check the port only",
+            "Read the access log"
+          ],
+          "answer": 1,
+          "explanation": "This connects directly to the systemd work from day 18 of the DevOps track."
+        },
+        {
+          "key": "bq20-7",
+          "type": "mcq",
+          "prompt": "Why should a status script print one clear line?",
+          "options": [
+            "To save disk",
+            "So a human can understand the result at a glance",
+            "It is required",
+            "To speed it up"
+          ],
+          "answer": 1,
+          "explanation": "A wall of output is a script that nobody will actually use."
+        },
+        {
+          "key": "bq20-8",
+          "type": "mcq",
+          "prompt": "How would you count matches when searching a log?",
+          "options": [
+            "Count them by eye",
+            "Use grep with the count flag",
+            "Use wc on the whole file",
+            "Use a for loop"
+          ],
+          "answer": 1,
+          "explanation": "grep can count directly, which is simpler and faster than looping."
+        },
+        {
+          "key": "bq20-9",
+          "type": "mcq",
+          "prompt": "Why warn only when a count passes a threshold?",
+          "options": [
+            "To reduce output",
+            "Because a few errors are normal and constant alerts get ignored",
+            "It is required",
+            "To save memory"
+          ],
+          "answer": 1,
+          "explanation": "This is the same alert noise problem that applies to real monitoring."
+        },
+        {
+          "key": "bq20-10",
+          "type": "mcq",
+          "prompt": "Why check whether a package is installed before installing it?",
+          "options": [
+            "It is faster",
+            "To avoid unnecessary work and make the script safe to run twice",
+            "It is required",
+            "To save bandwidth only"
+          ],
+          "answer": 1,
+          "explanation": "A script safe to run repeatedly is far more useful than one that only works once."
+        },
+        {
+          "key": "bq20-11",
+          "type": "mcq",
+          "prompt": "What is the benefit of looping over a list of packages?",
+          "options": [
+            "Shorter code",
+            "One script handles any number of packages instead of repeating yourself",
+            "It runs faster",
+            "It uses less disk"
+          ],
+          "answer": 1,
+          "explanation": "Adding a package becomes one line in a list, not a new block of code."
+        },
+        {
+          "key": "bq20-12",
+          "type": "mcq",
+          "prompt": "Why should a script that manages services report what it did?",
+          "options": [
+            "To fill the log",
+            "So you can tell afterwards whether it acted or found nothing to do",
+            "It is required",
+            "To slow it down"
+          ],
+          "answer": 1,
+          "explanation": "Silence leaves you guessing whether it ran at all."
+        },
+        {
+          "key": "bq20-13",
+          "type": "true_false",
+          "prompt": "A script that can be run twice without causing harm is more useful than one that cannot.",
+          "answer": true,
+          "explanation": "Automation reruns constantly, and scripts that only work once cause real damage."
+        },
+        {
+          "key": "bq20-14",
+          "type": "true_false",
+          "prompt": "Scripting systemd checks builds directly on what you learned about services in the Linux month.",
+          "answer": true,
+          "explanation": "The second track is mostly automating what the first track just taught you."
+        },
+        {
+          "key": "bq20-15",
+          "type": "true_false",
+          "prompt": "Alerting on every single error in a log is good practice.",
+          "answer": false,
+          "explanation": "Constant alerts get ignored, which is the same noise problem real monitoring teams face."
+        }
+      ]
+    },
+    {
+      "afterDay": 25,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "bq25-1",
+          "type": "mcq",
+          "prompt": "Why check disk usage as a plain number rather than reading the full output?",
+          "options": [
+            "It is prettier",
+            "So the script can compare it against a threshold",
+            "It is faster",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "A script needs a value it can test, not text a human reads."
+        },
+        {
+          "key": "bq25-2",
+          "type": "mcq",
+          "prompt": "What should a backup script do if the source folder does not exist?",
+          "options": [
+            "Create it",
+            "Exit with a clear message",
+            "Back up the parent folder",
+            "Carry on silently"
+          ],
+          "answer": 1,
+          "explanation": "Backing up the wrong thing is worse than not backing up at all."
+        },
+        {
+          "key": "bq25-3",
+          "type": "mcq",
+          "prompt": "Why delete archives older than a set number of days?",
+          "options": [
+            "To speed up tar",
+            "Because backups accumulate and fill the disk",
+            "It is required",
+            "To improve compression"
+          ],
+          "answer": 1,
+          "explanation": "Unmanaged backups are a common cause of a full disk in production."
+        },
+        {
+          "key": "bq25-4",
+          "type": "mcq",
+          "prompt": "Why give an environment variable a default value in a script?",
+          "options": [
+            "It is required",
+            "So the script still works when the variable is not set",
+            "It runs faster",
+            "To reduce memory"
+          ],
+          "answer": 1,
+          "explanation": "Defaults make a script usable without a long setup process."
+        },
+        {
+          "key": "bq25-5",
+          "type": "mcq",
+          "prompt": "Why move settings into a separate config file?",
+          "options": [
+            "It is shorter",
+            "So you can change behaviour without editing the script",
+            "It is required",
+            "It runs faster"
+          ],
+          "answer": 1,
+          "explanation": "It is the same principle as keeping configuration out of a container image."
+        },
+        {
+          "key": "bq25-6",
+          "type": "mcq",
+          "prompt": "Why do cron jobs often fail when the same script works in your terminal?",
+          "options": [
+            "Cron is broken",
+            "Cron has a minimal environment, especially PATH",
+            "Cron runs as a different user only",
+            "Cron cannot run scripts"
+          ],
+          "answer": 1,
+          "explanation": "Full paths are usually the fix, which matches day 24 of the DevOps track."
+        },
+        {
+          "key": "bq25-7",
+          "type": "mcq",
+          "prompt": "What does the set command with the e flag do?",
+          "options": [
+            "Prints each command",
+            "Exits the script when a command fails",
+            "Enables error logging",
+            "Expands variables"
+          ],
+          "answer": 1,
+          "explanation": "It stops the script continuing after a failure it should not ignore."
+        },
+        {
+          "key": "bq25-8",
+          "type": "mcq",
+          "prompt": "What does the set command with the u flag do?",
+          "options": [
+            "Runs as root",
+            "Treats an unset variable as an error",
+            "Enables verbose output",
+            "Updates packages"
+          ],
+          "answer": 1,
+          "explanation": "It catches typos in variable names that would otherwise expand to nothing."
+        },
+        {
+          "key": "bq25-9",
+          "type": "mcq",
+          "prompt": "Why quote every variable in a script?",
+          "options": [
+            "It looks tidy",
+            "So filenames with spaces do not break the command",
+            "It is faster",
+            "It is required by shellcheck"
+          ],
+          "answer": 1,
+          "explanation": "An unquoted variable containing a space is read as multiple arguments."
+        },
+        {
+          "key": "bq25-10",
+          "type": "mcq",
+          "prompt": "What does shellcheck do?",
+          "options": [
+            "Runs your script",
+            "Analyses it and reports likely bugs and bad practices",
+            "Formats it",
+            "Schedules it"
+          ],
+          "answer": 1,
+          "explanation": "It catches the common mistakes before they cause a problem in production."
+        },
+        {
+          "key": "bq25-11",
+          "type": "mcq",
+          "prompt": "Why should a cron job write a line to a log every run?",
+          "options": [
+            "To fill disk",
+            "So you can tell whether it ran, and when",
+            "It is required",
+            "To slow it down"
+          ],
+          "answer": 1,
+          "explanation": "Without a record you cannot distinguish a job that did nothing from one that never ran."
+        },
+        {
+          "key": "bq25-12",
+          "type": "mcq",
+          "prompt": "What makes a script worth keeping?",
+          "options": [
+            "Its length",
+            "It does one real job reliably and tells you what happened",
+            "It uses many features",
+            "It runs as root"
+          ],
+          "answer": 1,
+          "explanation": "Small, reliable and clear beats clever every time."
+        },
+        {
+          "key": "bq25-13",
+          "type": "true_false",
+          "prompt": "An unquoted variable holding a filename with a space will be treated as two arguments.",
+          "answer": true,
+          "explanation": "It is one of the most common bugs in shell scripts and quoting prevents it."
+        },
+        {
+          "key": "bq25-14",
+          "type": "true_false",
+          "prompt": "Fixing every shellcheck warning is a reasonable standard for a script you intend to keep.",
+          "answer": true,
+          "explanation": "Most of its warnings are real bugs waiting to happen rather than style opinions."
+        },
+        {
+          "key": "bq25-15",
+          "type": "true_false",
+          "prompt": "A script written for your terminal will always work unchanged under cron.",
+          "answer": false,
+          "explanation": "The environment differs, and PATH problems are the usual cause of the failure."
+        }
+      ]
+    }
+  ]
+}

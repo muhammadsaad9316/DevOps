@@ -1,0 +1,26 @@
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors & IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary & Log files
+*.log
+tmp/
+temp/
+scratch/
+
+# VirtualBox & VM artifacts
+*.vdi
+*.vmdk
+*.vbox
+*.vbox-prev
+
+# Antigravity artifacts
+.system_generated/

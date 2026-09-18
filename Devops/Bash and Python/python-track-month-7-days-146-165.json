@@ -1,0 +1,1158 @@
+{
+  "days": [
+    {
+      "day": 146,
+      "title": "Running Commands From Python",
+      "tasks": [
+        {
+          "key": "p146-subprocess-read",
+          "title": "Read what subprocess does and why it is preferred over older ways of running commands.",
+          "required": false
+        },
+        {
+          "key": "p146-run-command",
+          "title": "Run one shell command from Python and capture its output.",
+          "required": true
+        },
+        {
+          "key": "p146-exit-code-read",
+          "title": "Check the exit code of that command and act on it with an if.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 147,
+      "title": "Reading Terraform Outputs",
+      "tasks": [
+        {
+          "key": "p147-json-output",
+          "title": "Run terraform output in JSON mode and capture the result in Python.",
+          "required": true
+        },
+        {
+          "key": "p147-read-value",
+          "title": "Pull one output value out of the parsed data and print it.",
+          "required": true
+        },
+        {
+          "key": "p147-why-useful",
+          "title": "Write down why a script reading Terraform outputs is better than hardcoding the same values.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 148,
+      "title": "Reading A Terraform Plan",
+      "tasks": [
+        {
+          "key": "p148-plan-json",
+          "title": "Produce a plan in JSON form and load it into Python.",
+          "required": true
+        },
+        {
+          "key": "p148-count-changes",
+          "title": "Count how many resources would be created, changed and destroyed.",
+          "required": true
+        },
+        {
+          "key": "p148-flag-destroys",
+          "title": "Print a warning listing anything that would be destroyed.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 149,
+      "title": "Safety Guards",
+      "tasks": [
+        {
+          "key": "p149-detect-env",
+          "title": "Write a function that works out which environment a script is pointed at.",
+          "required": true
+        },
+        {
+          "key": "p149-refuse-prod",
+          "title": "Make a destructive helper refuse to run against production without an explicit flag.",
+          "required": true
+        },
+        {
+          "key": "p149-log-target",
+          "title": "Log the account and region at the start of every run so the target is never ambiguous.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 150,
+      "title": "Python Inside A Workflow",
+      "tasks": [
+        {
+          "key": "p150-action-step",
+          "title": "Add a step to a GitHub Actions workflow that runs a Python script.",
+          "required": true
+        },
+        {
+          "key": "p150-install-deps",
+          "title": "Install your requirements inside the workflow before running the script.",
+          "required": true
+        },
+        {
+          "key": "p150-see-it-run",
+          "title": "Push a change and watch your script run in the pipeline.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 151,
+      "title": "Your Audit Tool In CI",
+      "tasks": [
+        {
+          "key": "p151-run-audit-ci",
+          "title": "Run your Month 6 audit tool from a scheduled workflow.",
+          "required": true
+        },
+        {
+          "key": "p151-credentials-ci",
+          "title": "Give the workflow read only AWS access, scoped to what the audit needs.",
+          "required": true
+        },
+        {
+          "key": "p151-fail-on-high",
+          "title": "Make the workflow fail when a high severity finding appears.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 152,
+      "title": "Output That CI Can Use",
+      "tasks": [
+        {
+          "key": "p152-json-artifact",
+          "title": "Save the JSON findings as a workflow artifact you can download.",
+          "required": true
+        },
+        {
+          "key": "p152-summary",
+          "title": "Write a short summary into the workflow run so the result is visible without opening logs.",
+          "required": true
+        },
+        {
+          "key": "p152-quiet-by-default",
+          "title": "Keep normal output clean and put detail behind a verbose flag.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 153,
+      "title": "Sending Notifications",
+      "tasks": [
+        {
+          "key": "p153-webhook",
+          "title": "Send a message to a webhook URL from Python using requests.",
+          "required": true
+        },
+        {
+          "key": "p153-secret-url",
+          "title": "Read the webhook URL from an environment variable, never from the code.",
+          "required": true
+        },
+        {
+          "key": "p153-only-on-change",
+          "title": "Send a notification only when findings appear, not on every clean run.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 154,
+      "title": "Writing A Lambda Function",
+      "tasks": [
+        {
+          "key": "p154-handler",
+          "title": "Write a Lambda handler function that takes an event and returns a result.",
+          "required": true
+        },
+        {
+          "key": "p154-test-locally",
+          "title": "Call the handler directly from a test file with a fake event.",
+          "required": true
+        },
+        {
+          "key": "p154-logging-lambda",
+          "title": "Use logging inside the handler and check the output appears in CloudWatch.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 155,
+      "title": "Deploying A Lambda",
+      "tasks": [
+        {
+          "key": "p155-package",
+          "title": "Package your function with its dependencies into a deployable archive.",
+          "required": true
+        },
+        {
+          "key": "p155-deploy",
+          "title": "Deploy it, invoke it, and read the result.",
+          "required": true
+        },
+        {
+          "key": "p155-iam-role",
+          "title": "Give it a role with only the permissions it actually needs, then test the boundary.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 156,
+      "title": "Scheduled Automation",
+      "tasks": [
+        {
+          "key": "p156-eventbridge-rule",
+          "title": "Trigger your function on a schedule with an EventBridge rule.",
+          "required": true
+        },
+        {
+          "key": "p156-audit-lambda",
+          "title": "Run a small version of your audit from the scheduled function.",
+          "required": true
+        },
+        {
+          "key": "p156-notify-findings",
+          "title": "Send the findings to your webhook when the scheduled run finds something.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 157,
+      "title": "Reading And Writing S3 From Automation",
+      "tasks": [
+        {
+          "key": "p157-write-report",
+          "title": "Write each audit report to S3 with a timestamped key.",
+          "required": true
+        },
+        {
+          "key": "p157-read-previous",
+          "title": "Read the previous report and compare it with the current one.",
+          "required": true
+        },
+        {
+          "key": "p157-report-changes",
+          "title": "Report only what changed since the last run rather than everything again.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 158,
+      "title": "Secrets In Automation",
+      "tasks": [
+        {
+          "key": "p158-read-secret",
+          "title": "Read a value from Secrets Manager or Parameter Store in Python.",
+          "required": true
+        },
+        {
+          "key": "p158-cache-secret",
+          "title": "Fetch the secret once per run rather than on every call, and explain why.",
+          "required": true
+        },
+        {
+          "key": "p158-never-log",
+          "title": "Confirm no code path logs the secret, including in error handling.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 159,
+      "title": "Safe To Run Twice",
+      "tasks": [
+        {
+          "key": "p159-idempotent-check",
+          "title": "Review one automation and identify what would break if it ran twice in a row.",
+          "required": true
+        },
+        {
+          "key": "p159-make-safe",
+          "title": "Fix it so a second run causes no harm and no duplicates.",
+          "required": true
+        },
+        {
+          "key": "p159-test-twice",
+          "title": "Prove it by running it twice and comparing the results.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 160,
+      "title": "When Automation Fails",
+      "tasks": [
+        {
+          "key": "p160-catch-and-report",
+          "title": "Make your function catch its own failures and report them rather than dying silently.",
+          "required": true
+        },
+        {
+          "key": "p160-alarm-on-error",
+          "title": "Create an alarm that fires when the function errors, and trigger it on purpose.",
+          "required": true
+        },
+        {
+          "key": "p160-partial-failure",
+          "title": "Handle the case where three checks succeed and one fails, without losing the successful results.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 161,
+      "title": "Packaging Your Tool",
+      "tasks": [
+        {
+          "key": "p161-project-file",
+          "title": "Add a project file declaring your tool's name, version and dependencies.",
+          "required": true
+        },
+        {
+          "key": "p161-entry-point",
+          "title": "Define an entry point so the tool runs as a named command rather than a file path.",
+          "required": true
+        },
+        {
+          "key": "p161-install-local",
+          "title": "Install it into a fresh virtual environment and run it by name.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 162,
+      "title": "Making It Usable By Others",
+      "tasks": [
+        {
+          "key": "p162-clean-help",
+          "title": "Review the help output and make every flag description clear to a stranger.",
+          "required": true
+        },
+        {
+          "key": "p162-sensible-defaults",
+          "title": "Set defaults so the most common use needs no flags at all.",
+          "required": true
+        },
+        {
+          "key": "p162-error-messages",
+          "title": "Rewrite three error messages so they say what to do, not just what failed.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 163,
+      "title": "CI For Your Own Project",
+      "tasks": [
+        {
+          "key": "p163-test-workflow",
+          "title": "Add a workflow that runs your tests on every push.",
+          "required": true
+        },
+        {
+          "key": "p163-lint-step",
+          "title": "Add a linting and formatting check that fails the build on problems.",
+          "required": true
+        },
+        {
+          "key": "p163-fail-visible",
+          "title": "Push a deliberate failure and confirm the pull request is blocked.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 164,
+      "title": "Documentation",
+      "tasks": [
+        {
+          "key": "p164-readme-full",
+          "title": "Write a README with what it does, installation, three usage examples and the exit codes.",
+          "required": true
+        },
+        {
+          "key": "p164-example-output",
+          "title": "Include a real example of the output so a reader knows what to expect.",
+          "required": true
+        },
+        {
+          "key": "p164-fresh-machine",
+          "title": "Follow your own installation instructions on a clean environment and fix what breaks.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 165,
+      "title": "Consolidate",
+      "tasks": [
+        {
+          "key": "p165-review-month",
+          "title": "Review everything you built this month and list what you could not rewrite unaided.",
+          "required": true
+        },
+        {
+          "key": "p165-drill-gaps",
+          "title": "Drill the two weakest of those until you can write them from memory.",
+          "required": true
+        },
+        {
+          "key": "p165-commit-all",
+          "title": "Commit the packaged tool and pin the repository alongside your Terraform work.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 150,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq150-1",
+          "type": "mcq",
+          "prompt": "What does subprocess let a Python program do?",
+          "options": [
+            "Import modules",
+            "Run external commands and capture their output",
+            "Create threads",
+            "Read files"
+          ],
+          "answer": 1,
+          "explanation": "It is the bridge between Python and the command line tools you already know."
+        },
+        {
+          "key": "pq150-2",
+          "type": "mcq",
+          "prompt": "Why check the exit code of a command you ran from Python?",
+          "options": [
+            "It is faster",
+            "Because the command can fail while your script carries on regardless",
+            "It is required",
+            "To read the output"
+          ],
+          "answer": 1,
+          "explanation": "Ignoring the exit code is how a script reports success after everything failed."
+        },
+        {
+          "key": "pq150-3",
+          "type": "mcq",
+          "prompt": "Why read Terraform outputs rather than hardcoding the same values?",
+          "options": [
+            "It is faster",
+            "Because the values change when the infrastructure changes",
+            "It is required",
+            "It reduces state size"
+          ],
+          "answer": 1,
+          "explanation": "Hardcoded identifiers go stale the first time you rebuild an environment."
+        },
+        {
+          "key": "pq150-4",
+          "type": "mcq",
+          "prompt": "What does producing a Terraform plan in JSON allow?",
+          "options": [
+            "Faster applies",
+            "A program can analyse the proposed changes",
+            "Smaller state",
+            "Automatic approval"
+          ],
+          "answer": 1,
+          "explanation": "It turns a human readable plan into something you can write checks against."
+        },
+        {
+          "key": "pq150-5",
+          "type": "mcq",
+          "prompt": "Why write a script that flags planned destroys?",
+          "options": [
+            "It is required",
+            "Because a destroy hidden in a large plan is easy to miss",
+            "It speeds up review",
+            "It reduces cost"
+          ],
+          "answer": 1,
+          "explanation": "This is the reviewer problem from day 150 of the DevOps track, automated."
+        },
+        {
+          "key": "pq150-6",
+          "type": "mcq",
+          "prompt": "Why detect which environment a script is pointed at?",
+          "options": [
+            "It is faster",
+            "So a tool cannot act on production when you meant staging",
+            "It is required",
+            "To reduce API calls"
+          ],
+          "answer": 1,
+          "explanation": "Wrong environment is one of the most damaging and most preventable mistakes."
+        },
+        {
+          "key": "pq150-7",
+          "type": "mcq",
+          "prompt": "How should a destructive helper behave against production?",
+          "options": [
+            "Run normally",
+            "Refuse unless an explicit flag is given",
+            "Ask each time",
+            "Never run"
+          ],
+          "answer": 1,
+          "explanation": "Friction in exactly the right place is what prevents the expensive accident."
+        },
+        {
+          "key": "pq150-8",
+          "type": "mcq",
+          "prompt": "Why log the account and region at the start of a run?",
+          "options": [
+            "To fill the log",
+            "So there is never ambiguity about what the script acted on",
+            "It is required",
+            "To measure time"
+          ],
+          "answer": 1,
+          "explanation": "When something goes wrong, the first question is always which account."
+        },
+        {
+          "key": "pq150-9",
+          "type": "mcq",
+          "prompt": "What must a workflow do before running your Python script?",
+          "options": [
+            "Nothing",
+            "Install its dependencies",
+            "Build a container",
+            "Create a virtual environment only"
+          ],
+          "answer": 1,
+          "explanation": "Runners start clean, exactly as they did for your other pipeline steps."
+        },
+        {
+          "key": "pq150-10",
+          "type": "mcq",
+          "prompt": "Why run a Python script in CI rather than on your laptop?",
+          "options": [
+            "It is faster",
+            "So it runs automatically and consistently rather than when you remember",
+            "It is required",
+            "To save your battery"
+          ],
+          "answer": 1,
+          "explanation": "Anything that depends on you remembering will eventually be forgotten."
+        },
+        {
+          "key": "pq150-11",
+          "type": "mcq",
+          "prompt": "What is the risk of a script that runs commands built from user input?",
+          "options": [
+            "It is slow",
+            "Unsafe input can cause unintended commands to run",
+            "It uses memory",
+            "It is not a risk"
+          ],
+          "answer": 1,
+          "explanation": "Passing arguments as a list rather than a single string is the safer habit."
+        },
+        {
+          "key": "pq150-12",
+          "type": "mcq",
+          "prompt": "Why is this month lighter at the start?",
+          "options": [
+            "The material is easier",
+            "Because it falls at the end of Ramadan and around Eid",
+            "It is a review month",
+            "The app requires it"
+          ],
+          "answer": 1,
+          "explanation": "Both tracks reduce together, so no date has one full and one light course."
+        },
+        {
+          "key": "pq150-13",
+          "type": "true_false",
+          "prompt": "A command that fails silently inside a Python script is a real risk.",
+          "answer": true,
+          "explanation": "Without checking the exit code, your script reports success it did not achieve."
+        },
+        {
+          "key": "pq150-14",
+          "type": "true_false",
+          "prompt": "Analysing a Terraform plan programmatically is a reasonable way to catch dangerous changes.",
+          "answer": true,
+          "explanation": "It automates the review habit you built manually in the DevOps track."
+        },
+        {
+          "key": "pq150-15",
+          "type": "true_false",
+          "prompt": "Hardcoding resource identifiers is acceptable if you only have one environment.",
+          "answer": false,
+          "explanation": "One environment becomes two, and rebuilds change identifiers even when the count does not."
+        }
+      ]
+    },
+    {
+      "afterDay": 155,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq155-1",
+          "type": "mcq",
+          "prompt": "What permissions should a scheduled audit workflow have?",
+          "options": [
+            "Administrator",
+            "Read only, scoped to what the audit reads",
+            "Write access to all services",
+            "The root account"
+          ],
+          "answer": 1,
+          "explanation": "An audit never needs to change anything, so it should not be able to."
+        },
+        {
+          "key": "pq155-2",
+          "type": "mcq",
+          "prompt": "Why make the workflow fail on a high severity finding?",
+          "options": [
+            "To stop the schedule",
+            "So the problem is visible rather than buried in a log nobody opens",
+            "It is required",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "A report that nobody reads is the same as no report."
+        },
+        {
+          "key": "pq155-3",
+          "type": "mcq",
+          "prompt": "Why save findings as a workflow artifact?",
+          "options": [
+            "To reduce log size",
+            "So you can download and analyse the full results later",
+            "It is required",
+            "It runs faster"
+          ],
+          "answer": 1,
+          "explanation": "Logs get truncated and rotated, and an artifact keeps the full record."
+        },
+        {
+          "key": "pq155-4",
+          "type": "mcq",
+          "prompt": "Why keep normal output clean and put detail behind a verbose flag?",
+          "options": [
+            "It is faster",
+            "Because a wall of detail makes the important result harder to see",
+            "It is required",
+            "It saves memory"
+          ],
+          "answer": 1,
+          "explanation": "The default should serve the common case, not the debugging case."
+        },
+        {
+          "key": "pq155-5",
+          "type": "mcq",
+          "prompt": "Where should a webhook URL come from?",
+          "options": [
+            "The code",
+            "An environment variable or secret store",
+            "A config file in git",
+            "A comment"
+          ],
+          "answer": 1,
+          "explanation": "A webhook URL is a credential, and anyone with it can post as you."
+        },
+        {
+          "key": "pq155-6",
+          "type": "mcq",
+          "prompt": "Why notify only when findings appear?",
+          "options": [
+            "It is faster",
+            "Because a message on every clean run trains people to ignore all of them",
+            "It is required",
+            "It costs less"
+          ],
+          "answer": 1,
+          "explanation": "The same alert noise problem you met with CloudWatch alarms."
+        },
+        {
+          "key": "pq155-7",
+          "type": "mcq",
+          "prompt": "What does a Lambda handler receive?",
+          "options": [
+            "Nothing",
+            "An event and a context object",
+            "A file",
+            "A database connection"
+          ],
+          "answer": 1,
+          "explanation": "The event describes what triggered it, and your code decides what to do with it."
+        },
+        {
+          "key": "pq155-8",
+          "type": "mcq",
+          "prompt": "Why call the handler directly in a test?",
+          "options": [
+            "It is faster",
+            "So you can test the logic without deploying anything",
+            "It is required",
+            "It reduces cost"
+          ],
+          "answer": 1,
+          "explanation": "Deploy to test is a slow loop, and testing locally keeps you moving."
+        },
+        {
+          "key": "pq155-9",
+          "type": "mcq",
+          "prompt": "Why does a Lambda need its dependencies packaged with it?",
+          "options": [
+            "It is required by Python",
+            "Because the runtime has no access to your local virtual environment",
+            "It is faster",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "It is the same reproducibility problem containers solve, in a different shape."
+        },
+        {
+          "key": "pq155-10",
+          "type": "mcq",
+          "prompt": "What permissions should a Lambda's execution role have?",
+          "options": [
+            "Full access",
+            "Only what the function actually needs",
+            "None",
+            "The same as your user"
+          ],
+          "answer": 1,
+          "explanation": "Least privilege applies to automation exactly as it does to people."
+        },
+        {
+          "key": "pq155-11",
+          "type": "mcq",
+          "prompt": "Why use logging rather than print inside a Lambda?",
+          "options": [
+            "print does not work",
+            "Because levels and structure make CloudWatch logs far more useful",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "You will be debugging entirely from logs, so their quality matters more than usual."
+        },
+        {
+          "key": "pq155-12",
+          "type": "mcq",
+          "prompt": "What is the advantage of a scheduled function over a scheduled workflow?",
+          "options": [
+            "It is always better",
+            "It runs independently of your repository and its runners",
+            "It is cheaper always",
+            "It needs no permissions"
+          ],
+          "answer": 1,
+          "explanation": "Each has a place, and knowing why you chose one is what matters."
+        },
+        {
+          "key": "pq155-13",
+          "type": "true_false",
+          "prompt": "A notification sent on every successful run will eventually be ignored.",
+          "answer": true,
+          "explanation": "It is the same reason you were told to delete alerts you would not act on."
+        },
+        {
+          "key": "pq155-14",
+          "type": "true_false",
+          "prompt": "Testing a Lambda handler locally with a fake event is a reasonable substitute for some deployments.",
+          "answer": true,
+          "explanation": "It shortens the feedback loop enormously while you are still shaping the logic."
+        },
+        {
+          "key": "pq155-15",
+          "type": "true_false",
+          "prompt": "A webhook URL is harmless to commit because it is not a password.",
+          "answer": false,
+          "explanation": "Anyone holding it can post messages as your integration, so it is a credential."
+        }
+      ]
+    },
+    {
+      "afterDay": 160,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq160-1",
+          "type": "mcq",
+          "prompt": "Why write each report to S3 with a timestamped key?",
+          "options": [
+            "It is required",
+            "So you build a history rather than overwriting the previous result",
+            "It is faster",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "The history is what lets you compare runs and see trends."
+        },
+        {
+          "key": "pq160-2",
+          "type": "mcq",
+          "prompt": "Why report only what changed since the last run?",
+          "options": [
+            "It is faster",
+            "Because a full list every time hides the new problems among the old ones",
+            "It is required",
+            "It uses less storage"
+          ],
+          "answer": 1,
+          "explanation": "New findings are the actionable ones, and the rest are already known."
+        },
+        {
+          "key": "pq160-3",
+          "type": "mcq",
+          "prompt": "Why fetch a secret once per run rather than on every call?",
+          "options": [
+            "It is required",
+            "Because repeated calls add latency and can hit rate limits",
+            "It is more secure",
+            "It reduces logging"
+          ],
+          "answer": 1,
+          "explanation": "Caching within a single run is the sensible middle ground."
+        },
+        {
+          "key": "pq160-4",
+          "type": "mcq",
+          "prompt": "Why check that no code path logs a secret?",
+          "options": [
+            "It is required",
+            "Because error handling often prints values that were never meant to be visible",
+            "It is faster",
+            "It reduces log size"
+          ],
+          "answer": 1,
+          "explanation": "The exception handler is the most common place a secret leaks by accident."
+        },
+        {
+          "key": "pq160-5",
+          "type": "mcq",
+          "prompt": "What does idempotent mean for an automation?",
+          "options": [
+            "It runs fast",
+            "Running it twice causes no additional effect",
+            "It never fails",
+            "It has no dependencies"
+          ],
+          "answer": 1,
+          "explanation": "Automation reruns, and anything that duplicates on a second run will eventually cause damage."
+        },
+        {
+          "key": "pq160-6",
+          "type": "mcq",
+          "prompt": "Why prove idempotency by actually running twice?",
+          "options": [
+            "It is required",
+            "Because assuming it is safe is how duplicate records appear in production",
+            "It is faster",
+            "To test speed"
+          ],
+          "answer": 1,
+          "explanation": "The claim is cheap and the test is what makes it real."
+        },
+        {
+          "key": "pq160-7",
+          "type": "mcq",
+          "prompt": "Why should a function catch its own failures rather than dying?",
+          "options": [
+            "It looks better",
+            "So the failure is reported rather than silent",
+            "It is faster",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "A crashed scheduled job produces no output at all, which nobody notices."
+        },
+        {
+          "key": "pq160-8",
+          "type": "mcq",
+          "prompt": "Why create an alarm on function errors?",
+          "options": [
+            "It is required",
+            "Because otherwise a broken schedule can fail for weeks unnoticed",
+            "It reduces cost",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Scheduled automation fails silently by nature, so it needs explicit monitoring."
+        },
+        {
+          "key": "pq160-9",
+          "type": "mcq",
+          "prompt": "Why trigger the error alarm on purpose?",
+          "options": [
+            "To test speed",
+            "To confirm it actually fires and reaches you",
+            "It is required",
+            "To generate logs"
+          ],
+          "answer": 1,
+          "explanation": "An untested alarm is an assumption, and it fails on the day it matters."
+        },
+        {
+          "key": "pq160-10",
+          "type": "mcq",
+          "prompt": "How should a tool handle three checks succeeding and one failing?",
+          "options": [
+            "Discard everything",
+            "Report the successful results and the failure separately",
+            "Retry all four",
+            "Exit immediately"
+          ],
+          "answer": 1,
+          "explanation": "Throwing away good results because one check broke wastes the whole run."
+        },
+        {
+          "key": "pq160-11",
+          "type": "mcq",
+          "prompt": "Why compare against a previous report rather than only reading the current one?",
+          "options": [
+            "It is faster",
+            "Because a trend tells you more than a snapshot",
+            "It is required",
+            "It reduces storage"
+          ],
+          "answer": 1,
+          "explanation": "Getting worse and getting better look identical in a single snapshot."
+        },
+        {
+          "key": "pq160-12",
+          "type": "mcq",
+          "prompt": "What is the most common failure mode of scheduled automation?",
+          "options": [
+            "It runs too often",
+            "It stops working and nobody notices",
+            "It costs too much",
+            "It duplicates data"
+          ],
+          "answer": 1,
+          "explanation": "Silence looks identical to everything being fine, which is why alarms matter."
+        },
+        {
+          "key": "pq160-13",
+          "type": "true_false",
+          "prompt": "Scheduled automation needs monitoring more than interactive scripts do.",
+          "answer": true,
+          "explanation": "Nobody is watching it run, so failure is invisible unless you make it visible."
+        },
+        {
+          "key": "pq160-14",
+          "type": "true_false",
+          "prompt": "Error handling code is a common place for secrets to leak into logs.",
+          "answer": true,
+          "explanation": "Printing the whole context on failure is a habit that quietly exposes credentials."
+        },
+        {
+          "key": "pq160-15",
+          "type": "true_false",
+          "prompt": "An automation that duplicates records on a second run is acceptable if it rarely runs twice.",
+          "answer": false,
+          "explanation": "Retries, manual reruns and overlapping schedules all happen, usually at the worst moment."
+        }
+      ]
+    },
+    {
+      "afterDay": 165,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq165-1",
+          "type": "mcq",
+          "prompt": "What does defining an entry point give your tool?",
+          "options": [
+            "Speed",
+            "It runs as a named command instead of a file path",
+            "Type safety",
+            "Automatic tests"
+          ],
+          "answer": 1,
+          "explanation": "It is the difference between a script you remember the path to and a tool you install."
+        },
+        {
+          "key": "pq165-2",
+          "type": "mcq",
+          "prompt": "Why declare dependencies in a project file?",
+          "options": [
+            "It is faster",
+            "So installation brings everything needed automatically",
+            "It reduces size",
+            "It is required by Python"
+          ],
+          "answer": 1,
+          "explanation": "The same reproducibility principle as requirements files and pinned images."
+        },
+        {
+          "key": "pq165-3",
+          "type": "mcq",
+          "prompt": "Why install your own tool into a fresh environment?",
+          "options": [
+            "To test speed",
+            "Because it proves the packaging works for someone who is not you",
+            "It is required",
+            "To reduce size"
+          ],
+          "answer": 1,
+          "explanation": "The same clean machine test you applied to your infrastructure repositories."
+        },
+        {
+          "key": "pq165-4",
+          "type": "mcq",
+          "prompt": "What makes a good error message?",
+          "options": [
+            "It names the exception",
+            "It says what went wrong and what to do about it",
+            "It is short",
+            "It includes a stack trace"
+          ],
+          "answer": 1,
+          "explanation": "The reader needs a next action, not just a diagnosis."
+        },
+        {
+          "key": "pq165-5",
+          "type": "mcq",
+          "prompt": "Why set defaults so the common use needs no flags?",
+          "options": [
+            "It is faster",
+            "Because a tool that needs six flags to do anything goes unused",
+            "It is required",
+            "It reduces code"
+          ],
+          "answer": 1,
+          "explanation": "Convenience decides whether you actually run your own tools."
+        },
+        {
+          "key": "pq165-6",
+          "type": "mcq",
+          "prompt": "Why run tests on every push to your own project?",
+          "options": [
+            "It is required",
+            "So a change that breaks something is caught immediately",
+            "It is faster",
+            "To fill the log"
+          ],
+          "answer": 1,
+          "explanation": "The value of a test appears when you change something months later."
+        },
+        {
+          "key": "pq165-7",
+          "type": "mcq",
+          "prompt": "Why add a linting step that fails the build?",
+          "options": [
+            "To enforce style opinions",
+            "Because most lint findings are real problems, and a warning nobody reads has no effect",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "The same reasoning as failing the build on high severity scan findings."
+        },
+        {
+          "key": "pq165-8",
+          "type": "mcq",
+          "prompt": "Why include example output in your README?",
+          "options": [
+            "To make it longer",
+            "So a reader knows what to expect before running anything",
+            "It is required",
+            "To improve search"
+          ],
+          "answer": 1,
+          "explanation": "Showing the output answers half the questions a reader would otherwise ask."
+        },
+        {
+          "key": "pq165-9",
+          "type": "mcq",
+          "prompt": "What should a usage example show?",
+          "options": [
+            "Every flag",
+            "The two or three ways the tool is actually used",
+            "The source code",
+            "The tests"
+          ],
+          "answer": 1,
+          "explanation": "Exhaustive documentation goes unread, and a few real examples get used."
+        },
+        {
+          "key": "pq165-10",
+          "type": "mcq",
+          "prompt": "Why review what you cannot rewrite unaided?",
+          "options": [
+            "To feel bad",
+            "Because it separates what you completed from what you retained",
+            "It is required",
+            "To pass the quiz"
+          ],
+          "answer": 1,
+          "explanation": "The same retention principle that appears again in Month 9."
+        },
+        {
+          "key": "pq165-11",
+          "type": "mcq",
+          "prompt": "What does a packaged, tested, documented tool demonstrate?",
+          "options": [
+            "Python knowledge",
+            "That you can produce something another person could actually use",
+            "Speed",
+            "Certificate readiness"
+          ],
+          "answer": 1,
+          "explanation": "Producing usable software is a different skill from writing working code."
+        },
+        {
+          "key": "pq165-12",
+          "type": "mcq",
+          "prompt": "What has this month changed about your Python?",
+          "options": [
+            "The syntax",
+            "It moved from scripts you run to automation that runs itself",
+            "Nothing",
+            "It got faster"
+          ],
+          "answer": 1,
+          "explanation": "Scheduled, monitored, packaged automation is a meaningfully different level."
+        },
+        {
+          "key": "pq165-13",
+          "type": "true_false",
+          "prompt": "A tool that only you can install and run is only half finished.",
+          "answer": true,
+          "explanation": "The packaging and documentation are what make it usable by anyone else."
+        },
+        {
+          "key": "pq165-14",
+          "type": "true_false",
+          "prompt": "An error message that says what to do next is more useful than one that names the exception.",
+          "answer": true,
+          "explanation": "The exception is for you, and the instruction is for whoever is running it."
+        },
+        {
+          "key": "pq165-15",
+          "type": "true_false",
+          "prompt": "Running your own project's tests in CI is unnecessary for a small personal tool.",
+          "answer": false,
+          "explanation": "Small tools grow, and the habit is what you are actually building this month."
+        }
+      ]
+    }
+  ]
+}

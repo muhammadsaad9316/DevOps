@@ -1,0 +1,1158 @@
+{
+  "days": [
+    {
+      "day": 126,
+      "title": "boto3 Setup",
+      "tasks": [
+        {
+          "key": "p126-install",
+          "title": "Install boto3 inside a virtual environment for a new project.",
+          "required": true
+        },
+        {
+          "key": "p126-first-client",
+          "title": "Create a client and make one call that lists something small in your account.",
+          "required": true
+        },
+        {
+          "key": "p126-credentials",
+          "title": "Confirm boto3 finds your credentials the same way the AWS CLI does, with no keys in the code.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 127,
+      "title": "Clients And Regions",
+      "tasks": [
+        {
+          "key": "p127-region",
+          "title": "Create a client for a specific region rather than relying on the default.",
+          "required": true
+        },
+        {
+          "key": "p127-two-services",
+          "title": "Make one call each to two different services in the same script.",
+          "required": true
+        },
+        {
+          "key": "p127-vs-cli",
+          "title": "Run the same query with the AWS CLI and with boto3, and compare the two outputs.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 128,
+      "title": "Reading The Response",
+      "tasks": [
+        {
+          "key": "p128-dict-response",
+          "title": "Print the raw response and identify the outer keys before touching the data.",
+          "required": true
+        },
+        {
+          "key": "p128-drill-down",
+          "title": "Reach a value nested two levels deep, using the skills from day 85.",
+          "required": true
+        },
+        {
+          "key": "p128-missing-key",
+          "title": "Handle a key that may not be present rather than assuming it is always there.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 129,
+      "title": "Pagination",
+      "tasks": [
+        {
+          "key": "p129-truncated",
+          "title": "Find out what happens when a result set is larger than one response.",
+          "required": true
+        },
+        {
+          "key": "p129-paginator",
+          "title": "Use a paginator to collect every result across all pages.",
+          "required": true
+        },
+        {
+          "key": "p129-count-total",
+          "title": "Print the total number of items found across every page.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 130,
+      "title": "Errors From AWS",
+      "tasks": [
+        {
+          "key": "p130-permission-error",
+          "title": "Break it: call something your role cannot do and read the exception carefully.",
+          "required": true
+        },
+        {
+          "key": "p130-catch-clienterror",
+          "title": "Catch the AWS client error specifically rather than catching everything.",
+          "required": true
+        },
+        {
+          "key": "p130-error-code",
+          "title": "Extract the error code from the exception and act differently for two different codes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 131,
+      "title": "Listing Instances",
+      "tasks": [
+        {
+          "key": "p131-describe",
+          "title": "Write a script that lists running instances with id, type and state.",
+          "required": true
+        },
+        {
+          "key": "p131-filters",
+          "title": "Use a filter so the call returns only the instances you want, rather than filtering afterwards.",
+          "required": true
+        },
+        {
+          "key": "p131-name-tag",
+          "title": "Pull the Name tag out of the tag list and print it alongside each instance.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 132,
+      "title": "Tags And Untagged Resources",
+      "tasks": [
+        {
+          "key": "p132-read-tags",
+          "title": "Write a function that turns an AWS tag list into a plain Python dictionary.",
+          "required": true
+        },
+        {
+          "key": "p132-find-untagged",
+          "title": "Find every instance missing a required tag such as owner or project.",
+          "required": true
+        },
+        {
+          "key": "p132-report",
+          "title": "Print a report of untagged resources and exit non zero if any were found.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 133,
+      "title": "S3 From Python",
+      "tasks": [
+        {
+          "key": "p133-list-buckets",
+          "title": "List your buckets with their creation dates.",
+          "required": true
+        },
+        {
+          "key": "p133-list-objects",
+          "title": "List the objects in one bucket, handling pagination properly.",
+          "required": true
+        },
+        {
+          "key": "p133-total-size",
+          "title": "Calculate the total size of a bucket and print it in a readable unit.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 134,
+      "title": "Uploading And Downloading",
+      "tasks": [
+        {
+          "key": "p134-upload",
+          "title": "Upload a file to a bucket from Python.",
+          "required": true
+        },
+        {
+          "key": "p134-download",
+          "title": "Download it again to a different name and confirm the contents match.",
+          "required": true
+        },
+        {
+          "key": "p134-exists-check",
+          "title": "Write a function that checks whether an object exists without downloading it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 135,
+      "title": "Auditing IAM",
+      "tasks": [
+        {
+          "key": "p135-list-users",
+          "title": "List every IAM user in the account.",
+          "required": true
+        },
+        {
+          "key": "p135-key-age-python",
+          "title": "Calculate the age of each access key using the date skills from day 101.",
+          "required": true
+        },
+        {
+          "key": "p135-compare-bash",
+          "title": "Compare this script to your bash version from day 55 and note which was easier to write.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 136,
+      "title": "Metrics",
+      "tasks": [
+        {
+          "key": "p136-get-metric",
+          "title": "Fetch CPU utilisation for one instance over the last hour.",
+          "required": true
+        },
+        {
+          "key": "p136-average",
+          "title": "Calculate the average from the returned datapoints.",
+          "required": true
+        },
+        {
+          "key": "p136-time-range",
+          "title": "Change the time range using datetime rather than hardcoded strings.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 137,
+      "title": "Logs",
+      "tasks": [
+        {
+          "key": "p137-log-groups",
+          "title": "List your CloudWatch log groups with their retention settings.",
+          "required": true
+        },
+        {
+          "key": "p137-find-no-retention",
+          "title": "Find any log group with no retention set and flag it as a cost risk.",
+          "required": true
+        },
+        {
+          "key": "p137-read-events",
+          "title": "Read recent log events from one group and print them.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 138,
+      "title": "Cost Data",
+      "tasks": [
+        {
+          "key": "p138-month-to-date",
+          "title": "Fetch your month to date spend from Python.",
+          "required": true
+        },
+        {
+          "key": "p138-by-service",
+          "title": "Break the spend down by service and print the top five.",
+          "required": true
+        },
+        {
+          "key": "p138-format-output",
+          "title": "Format the amounts to two decimal places with the currency shown.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 139,
+      "title": "Rewriting A Bash Check",
+      "tasks": [
+        {
+          "key": "p139-pick-check",
+          "title": "Choose one check from your day 73 bash audit tool, such as open security groups.",
+          "required": true
+        },
+        {
+          "key": "p139-rewrite",
+          "title": "Rewrite it in Python using boto3.",
+          "required": true
+        },
+        {
+          "key": "p139-same-output",
+          "title": "Make the output format match your bash tool so both can be used together.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 140,
+      "title": "Rewriting A Second Check",
+      "tasks": [
+        {
+          "key": "p140-second-check",
+          "title": "Rewrite a second check, such as public buckets or unattached volumes.",
+          "required": true
+        },
+        {
+          "key": "p140-compare-versions",
+          "title": "Compare the bash and Python versions side by side and write down what changed.",
+          "required": true
+        },
+        {
+          "key": "p140-when-which",
+          "title": "Write your own rule for when to reach for bash and when to reach for Python.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 141,
+      "title": "Structuring The Tool",
+      "tasks": [
+        {
+          "key": "p141-project-layout",
+          "title": "Create the project with a main file, a checks module and a requirements file.",
+          "required": true
+        },
+        {
+          "key": "p141-argparse-entry",
+          "title": "Add argparse with flags for region, profile and which checks to run.",
+          "required": true
+        },
+        {
+          "key": "p141-logging-setup",
+          "title": "Set up logging with levels rather than printing everything.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 142,
+      "title": "Adding The Checks",
+      "tasks": [
+        {
+          "key": "p142-one-function",
+          "title": "Write each check as a function that returns findings rather than printing them.",
+          "required": true
+        },
+        {
+          "key": "p142-common-shape",
+          "title": "Give every finding the same shape: severity, resource, and a message.",
+          "required": true
+        },
+        {
+          "key": "p142-run-all",
+          "title": "Run every check and collect all findings into one list.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 143,
+      "title": "Output Formats",
+      "tasks": [
+        {
+          "key": "p143-human-output",
+          "title": "Print a readable report grouped by severity.",
+          "required": true
+        },
+        {
+          "key": "p143-json-output",
+          "title": "Add a flag that outputs the findings as JSON instead, for other tools to consume.",
+          "required": true
+        },
+        {
+          "key": "p143-exit-code-python",
+          "title": "Exit non zero when any high severity finding is present.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 144,
+      "title": "Safety",
+      "tasks": [
+        {
+          "key": "p144-no-writes",
+          "title": "Confirm the audit tool only reads and can never change anything.",
+          "required": true
+        },
+        {
+          "key": "p144-dry-run-default",
+          "title": "For any cleanup feature, make dry run the default and require a flag to act.",
+          "required": true
+        },
+        {
+          "key": "p144-confirm-destructive",
+          "title": "Require an explicit confirmation before anything is deleted, as you did in bash.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 145,
+      "title": "Test, Document, Commit",
+      "tasks": [
+        {
+          "key": "p145-two-tests",
+          "title": "Write two tests using fake responses rather than calling AWS.",
+          "required": true
+        },
+        {
+          "key": "p145-readme-python",
+          "title": "Write a README covering what each check does, the flags, and the exit codes.",
+          "required": true
+        },
+        {
+          "key": "p145-commit-tool",
+          "title": "Commit it and note in your notes that this is the strongest Python thing you have built.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 130,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq130-1",
+          "type": "mcq",
+          "prompt": "What is boto3?",
+          "options": [
+            "A testing tool",
+            "The Python library for working with AWS",
+            "A web framework",
+            "A container runtime"
+          ],
+          "answer": 1,
+          "explanation": "It is an API client, exactly like the one you built on day 119."
+        },
+        {
+          "key": "pq130-2",
+          "type": "mcq",
+          "prompt": "Where does boto3 find your credentials?",
+          "options": [
+            "Only in the code",
+            "The same places the AWS CLI looks, such as the credentials file and environment",
+            "In a database",
+            "In the region setting"
+          ],
+          "answer": 1,
+          "explanation": "That is why you should never put keys in your Python code."
+        },
+        {
+          "key": "pq130-3",
+          "type": "mcq",
+          "prompt": "Why specify a region explicitly in your code?",
+          "options": [
+            "It is faster",
+            "So the script cannot act in whichever region happens to be default",
+            "It is required",
+            "It reduces API calls"
+          ],
+          "answer": 1,
+          "explanation": "Same reasoning as naming the profile explicitly in your bash scripts."
+        },
+        {
+          "key": "pq130-4",
+          "type": "mcq",
+          "prompt": "What shape does a boto3 response usually have?",
+          "options": [
+            "A string",
+            "Nested dictionaries and lists",
+            "A CSV file",
+            "A number"
+          ],
+          "answer": 1,
+          "explanation": "It is JSON turned into Python data, which is why day 85 mattered."
+        },
+        {
+          "key": "pq130-5",
+          "type": "mcq",
+          "prompt": "What should you do before writing code against a response?",
+          "options": [
+            "Guess the structure",
+            "Print the raw response and read its actual shape",
+            "Read the source of boto3",
+            "Use a paginator"
+          ],
+          "answer": 1,
+          "explanation": "Assuming the shape is the fastest way to write code that breaks on the first real call."
+        },
+        {
+          "key": "pq130-6",
+          "type": "mcq",
+          "prompt": "How should you handle a key that may not exist in a response?",
+          "options": [
+            "Assume it is there",
+            "Access it safely with a default",
+            "Catch a broad exception",
+            "Ignore the response"
+          ],
+          "answer": 1,
+          "explanation": "Optional fields are common, and a KeyError in production is avoidable."
+        },
+        {
+          "key": "pq130-7",
+          "type": "mcq",
+          "prompt": "What happens when a result set is larger than one response?",
+          "options": [
+            "You get everything anyway",
+            "The response is truncated and you must page through the rest",
+            "An error is raised",
+            "It sorts differently"
+          ],
+          "answer": 1,
+          "explanation": "Missing this is how scripts silently report only the first page of results."
+        },
+        {
+          "key": "pq130-8",
+          "type": "mcq",
+          "prompt": "What does a paginator do?",
+          "options": [
+            "Sorts results",
+            "Handles fetching every page for you",
+            "Filters results",
+            "Caches results"
+          ],
+          "answer": 1,
+          "explanation": "It removes the manual loop you would otherwise write yourself."
+        },
+        {
+          "key": "pq130-9",
+          "type": "mcq",
+          "prompt": "Why is silently reading only the first page dangerous in an audit tool?",
+          "options": [
+            "It is slow",
+            "Because it reports a clean result while problems exist on later pages",
+            "It uses more memory",
+            "It is not"
+          ],
+          "answer": 1,
+          "explanation": "A tool that misses findings is worse than one that reports none, because it is trusted."
+        },
+        {
+          "key": "pq130-10",
+          "type": "mcq",
+          "prompt": "Which exception should you catch for AWS API failures?",
+          "options": [
+            "Every exception",
+            "The specific AWS client error type",
+            "KeyError",
+            "TypeError"
+          ],
+          "answer": 1,
+          "explanation": "Catching everything hides bugs, as you learned on day 90."
+        },
+        {
+          "key": "pq130-11",
+          "type": "mcq",
+          "prompt": "Why extract the error code from an AWS exception?",
+          "options": [
+            "To log it",
+            "Because different codes need different responses, such as retry versus fail",
+            "It is required",
+            "To reduce output"
+          ],
+          "answer": 1,
+          "explanation": "Access denied and rate exceeded call for completely different handling."
+        },
+        {
+          "key": "pq130-12",
+          "type": "mcq",
+          "prompt": "Why is boto3 easier to learn after building your own API client?",
+          "options": [
+            "It is simpler",
+            "Because you already understand clients, pagination and error handling",
+            "It has less code",
+            "It needs no credentials"
+          ],
+          "answer": 1,
+          "explanation": "That was the entire reason day 119 came before this month."
+        },
+        {
+          "key": "pq130-13",
+          "type": "true_false",
+          "prompt": "boto3 responses are nested Python dictionaries and lists.",
+          "answer": true,
+          "explanation": "Everything you learned about nested data in Month 4 applies directly here."
+        },
+        {
+          "key": "pq130-14",
+          "type": "true_false",
+          "prompt": "A script that only reads the first page of results is a common and silent bug.",
+          "answer": true,
+          "explanation": "It looks like it works, which is exactly what makes it dangerous."
+        },
+        {
+          "key": "pq130-15",
+          "type": "true_false",
+          "prompt": "Access keys should be written into Python code when the repository is private.",
+          "answer": false,
+          "explanation": "boto3 finds credentials the same way the CLI does, and there is never a reason to embed them."
+        }
+      ]
+    },
+    {
+      "afterDay": 135,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq135-1",
+          "type": "mcq",
+          "prompt": "Why use an API filter rather than fetching everything and filtering in Python?",
+          "options": [
+            "It is required",
+            "Because less data is transferred and the call is faster",
+            "It is more accurate",
+            "Python cannot filter"
+          ],
+          "answer": 1,
+          "explanation": "Filtering at the source scales, and filtering afterwards does not."
+        },
+        {
+          "key": "pq135-2",
+          "type": "mcq",
+          "prompt": "How are AWS tags returned in a response?",
+          "options": [
+            "As a dictionary",
+            "As a list of key and value pairs",
+            "As a string",
+            "As a set"
+          ],
+          "answer": 1,
+          "explanation": "That is why converting them into a dictionary is one of the first helpers you write."
+        },
+        {
+          "key": "pq135-3",
+          "type": "mcq",
+          "prompt": "Why write a helper that converts tags to a dictionary?",
+          "options": [
+            "It is faster",
+            "Because you will need it in every script that touches tags",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "Small repeated conversions belong in one function, not in ten places."
+        },
+        {
+          "key": "pq135-4",
+          "type": "mcq",
+          "prompt": "Why hunt for untagged resources?",
+          "options": [
+            "It is required",
+            "Because cost allocation and cleanup both depend on tags",
+            "It improves performance",
+            "It reduces API calls"
+          ],
+          "answer": 1,
+          "explanation": "An untagged resource is one nobody can attribute or safely delete."
+        },
+        {
+          "key": "pq135-5",
+          "type": "mcq",
+          "prompt": "Why should a report tool exit non zero when it finds problems?",
+          "options": [
+            "To stop the run",
+            "So it can be used as a gate in automation",
+            "It is required",
+            "To print a summary"
+          ],
+          "answer": 1,
+          "explanation": "The same convention as your bash tools, which is what lets them work together."
+        },
+        {
+          "key": "pq135-6",
+          "type": "mcq",
+          "prompt": "Why check whether an S3 object exists without downloading it?",
+          "options": [
+            "It is required",
+            "Because downloading to check wastes time and transfer cost",
+            "It is more accurate",
+            "Downloading is not allowed"
+          ],
+          "answer": 1,
+          "explanation": "A metadata call answers the question far more cheaply."
+        },
+        {
+          "key": "pq135-7",
+          "type": "mcq",
+          "prompt": "Why does listing objects in a large bucket need pagination?",
+          "options": [
+            "Buckets are slow",
+            "Because the response is capped and returns only part of the list",
+            "It is required",
+            "To reduce cost"
+          ],
+          "answer": 1,
+          "explanation": "The same truncation problem, and the same paginator solution."
+        },
+        {
+          "key": "pq135-8",
+          "type": "mcq",
+          "prompt": "How would you calculate the age of an access key?",
+          "options": [
+            "Read it from the response directly",
+            "Compare its creation date to now using datetime",
+            "Count the characters",
+            "Use a paginator"
+          ],
+          "answer": 1,
+          "explanation": "This is exactly why dates came earlier in the track."
+        },
+        {
+          "key": "pq135-9",
+          "type": "mcq",
+          "prompt": "Why was the IAM audit easier in Python than in bash?",
+          "options": [
+            "Python is always easier",
+            "Because dates, filtering and nested data are awkward in a shell pipeline",
+            "bash cannot call AWS",
+            "jq is deprecated"
+          ],
+          "answer": 1,
+          "explanation": "Logic and data handling is where Python clearly wins over bash and jq."
+        },
+        {
+          "key": "pq135-10",
+          "type": "mcq",
+          "prompt": "When is bash still the better choice?",
+          "options": [
+            "Never",
+            "Short glue work chaining a few commands together",
+            "Anything with JSON",
+            "Anything with dates"
+          ],
+          "answer": 1,
+          "explanation": "Bash remains excellent at gluing commands, and Python takes over when there is real logic."
+        },
+        {
+          "key": "pq135-11",
+          "type": "mcq",
+          "prompt": "Why print sizes in a readable unit rather than raw bytes?",
+          "options": [
+            "It is required",
+            "Because a human has to act on the number",
+            "It is faster",
+            "It reduces memory"
+          ],
+          "answer": 1,
+          "explanation": "Usability decides whether you actually use your own tools."
+        },
+        {
+          "key": "pq135-12",
+          "type": "mcq",
+          "prompt": "What should a required tag list be?",
+          "options": [
+            "Hardcoded in the function",
+            "Configurable, so different projects can require different tags",
+            "Fixed by AWS",
+            "Random"
+          ],
+          "answer": 1,
+          "explanation": "This is the configuration separated from code principle again."
+        },
+        {
+          "key": "pq135-13",
+          "type": "true_false",
+          "prompt": "AWS tags come back as a list, not as a dictionary.",
+          "answer": true,
+          "explanation": "Converting them is one of the small helpers that appears in almost every AWS script."
+        },
+        {
+          "key": "pq135-14",
+          "type": "true_false",
+          "prompt": "Filtering in the API call is better than filtering after the response arrives.",
+          "answer": true,
+          "explanation": "It reduces transfer, runs faster and scales to accounts with thousands of resources."
+        },
+        {
+          "key": "pq135-15",
+          "type": "true_false",
+          "prompt": "Writing the same audit in bash and then in Python was wasted effort.",
+          "answer": false,
+          "explanation": "Doing both is what teaches you which tool fits which job, which is a judgement employers value."
+        }
+      ]
+    },
+    {
+      "afterDay": 140,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq140-1",
+          "type": "mcq",
+          "prompt": "What do CloudWatch metric calls return?",
+          "options": [
+            "A single value",
+            "A list of datapoints over a time range",
+            "A dashboard",
+            "A log stream"
+          ],
+          "answer": 1,
+          "explanation": "You aggregate them yourself, which is the same as you did with jq in bash."
+        },
+        {
+          "key": "pq140-2",
+          "type": "mcq",
+          "prompt": "Why use datetime rather than hardcoded time strings?",
+          "options": [
+            "It is faster",
+            "So the range moves with the current time instead of going stale",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "A hardcoded date works today and silently breaks tomorrow."
+        },
+        {
+          "key": "pq140-3",
+          "type": "mcq",
+          "prompt": "Why is a single datapoint a poor basis for a decision?",
+          "options": [
+            "It is slow to fetch",
+            "Because one value can be an outlier that means nothing",
+            "It costs more",
+            "It is not returned"
+          ],
+          "answer": 1,
+          "explanation": "Averages and trends are what tell you something real."
+        },
+        {
+          "key": "pq140-4",
+          "type": "mcq",
+          "prompt": "Why flag a log group with no retention set?",
+          "options": [
+            "It is insecure",
+            "Because logs kept forever quietly become a significant cost",
+            "It is required",
+            "It slows queries"
+          ],
+          "answer": 1,
+          "explanation": "This is the same finding you built into your bash audit tool."
+        },
+        {
+          "key": "pq140-5",
+          "type": "mcq",
+          "prompt": "Why format currency amounts to two decimal places?",
+          "options": [
+            "It is required",
+            "Because raw floating point output is hard to read and looks unfinished",
+            "It is faster",
+            "It reduces size"
+          ],
+          "answer": 1,
+          "explanation": "Presentation matters for anything a human reads and acts on."
+        },
+        {
+          "key": "pq140-6",
+          "type": "mcq",
+          "prompt": "Why break cost down by service rather than reporting a total?",
+          "options": [
+            "It is required",
+            "Because the total does not tell you what to change",
+            "It is faster",
+            "To reduce API calls"
+          ],
+          "answer": 1,
+          "explanation": "You cannot reduce a cost you cannot locate."
+        },
+        {
+          "key": "pq140-7",
+          "type": "mcq",
+          "prompt": "Why make your Python checks output the same format as your bash checks?",
+          "options": [
+            "It is required",
+            "So both can be used together and read as one report",
+            "Python needs it",
+            "To reduce code"
+          ],
+          "answer": 1,
+          "explanation": "Consistent interfaces are what let separate tools be combined."
+        },
+        {
+          "key": "pq140-8",
+          "type": "mcq",
+          "prompt": "What is the main advantage of the Python version of an audit check?",
+          "options": [
+            "Speed",
+            "Complex logic, dates and nested data are far easier to express",
+            "Fewer lines always",
+            "It needs no credentials"
+          ],
+          "answer": 1,
+          "explanation": "Bash and jq get unreadable exactly where Python gets comfortable."
+        },
+        {
+          "key": "pq140-9",
+          "type": "mcq",
+          "prompt": "What is the main advantage the bash version keeps?",
+          "options": [
+            "Better error handling",
+            "It is quicker to write for short glue work with no dependencies",
+            "Better data handling",
+            "Better testing"
+          ],
+          "answer": 1,
+          "explanation": "For three commands chained together, bash is still the right answer."
+        },
+        {
+          "key": "pq140-10",
+          "type": "mcq",
+          "prompt": "Why write down your own rule for choosing between them?",
+          "options": [
+            "It is required",
+            "Because making the choice deliberately beats defaulting to whichever you used last",
+            "It is faster",
+            "To pass the quiz"
+          ],
+          "answer": 1,
+          "explanation": "Engineers who can justify a tool choice are more useful than ones who only know one."
+        },
+        {
+          "key": "pq140-11",
+          "type": "mcq",
+          "prompt": "What should you do when a boto3 call is rate limited?",
+          "options": [
+            "Give up",
+            "Retry with a growing delay",
+            "Retry immediately in a loop",
+            "Ignore the error"
+          ],
+          "answer": 1,
+          "explanation": "The same backoff pattern from bash day 48 and Python day 110."
+        },
+        {
+          "key": "pq140-12",
+          "type": "mcq",
+          "prompt": "Why does reading logs from Python matter for later?",
+          "options": [
+            "It is required",
+            "Because Month 8 builds real observability, and this is the manual version",
+            "It replaces CloudWatch",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Doing it by hand once makes the managed tooling much easier to reason about."
+        },
+        {
+          "key": "pq140-13",
+          "type": "true_false",
+          "prompt": "Hardcoded date strings in a monitoring script are a bug waiting to happen.",
+          "answer": true,
+          "explanation": "The script works on the day you write it and silently reports nothing afterwards."
+        },
+        {
+          "key": "pq140-14",
+          "type": "true_false",
+          "prompt": "Having written the same check twice, in bash and Python, gives you a real basis for choosing between them.",
+          "answer": true,
+          "explanation": "Opinions about tools are much stronger when they come from having used both on the same problem."
+        },
+        {
+          "key": "pq140-15",
+          "type": "true_false",
+          "prompt": "Python should replace bash entirely once you know it.",
+          "answer": false,
+          "explanation": "Each is better at different work, and knowing when to use which is the actual skill."
+        }
+      ]
+    },
+    {
+      "afterDay": 145,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq145-1",
+          "type": "mcq",
+          "prompt": "Why should each check return findings rather than print them?",
+          "options": [
+            "It is faster",
+            "So the caller decides how to display, filter or export them",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "A function that prints cannot be reused, tested or reformatted."
+        },
+        {
+          "key": "pq145-2",
+          "type": "mcq",
+          "prompt": "Why give every finding the same shape?",
+          "options": [
+            "It looks tidy",
+            "So they can be grouped, sorted and output in any format",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "A consistent structure is what makes the JSON output possible at all."
+        },
+        {
+          "key": "pq145-3",
+          "type": "mcq",
+          "prompt": "Why add a JSON output option?",
+          "options": [
+            "Humans prefer it",
+            "So another tool or pipeline can consume the results",
+            "It is smaller",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Human readable and machine readable are both useful, for different readers."
+        },
+        {
+          "key": "pq145-4",
+          "type": "mcq",
+          "prompt": "Why group the human readable report by severity?",
+          "options": [
+            "It is required",
+            "So the reader deals with the most important findings first",
+            "It is shorter",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "A flat list makes the reader do the prioritising, which they will not do."
+        },
+        {
+          "key": "pq145-5",
+          "type": "mcq",
+          "prompt": "Why should an audit tool only read?",
+          "options": [
+            "It is faster",
+            "Because a tool that can change things can also break things while investigating",
+            "It is required",
+            "To reduce API calls"
+          ],
+          "answer": 1,
+          "explanation": "Separating investigation from action limits the damage a bug can do."
+        },
+        {
+          "key": "pq145-6",
+          "type": "mcq",
+          "prompt": "How should any cleanup feature behave by default?",
+          "options": [
+            "Delete immediately",
+            "Dry run, printing what it would remove",
+            "Ask about each item",
+            "Do nothing at all"
+          ],
+          "answer": 1,
+          "explanation": "Safe defaults with an explicit flag for action, exactly as in your bash tools."
+        },
+        {
+          "key": "pq145-7",
+          "type": "mcq",
+          "prompt": "Why test with fake responses rather than real AWS calls?",
+          "options": [
+            "It is cheaper only",
+            "Because tests must be fast, repeatable and not depend on the account state",
+            "AWS forbids it",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "A test that depends on live infrastructure tells you nothing reliable."
+        },
+        {
+          "key": "pq145-8",
+          "type": "mcq",
+          "prompt": "What should a README for this tool explain?",
+          "options": [
+            "The boto3 source",
+            "What each check does, the available flags, and what the exit codes mean",
+            "AWS pricing",
+            "The Python version only"
+          ],
+          "answer": 1,
+          "explanation": "Someone should be able to run it correctly without reading your code."
+        },
+        {
+          "key": "pq145-9",
+          "type": "mcq",
+          "prompt": "Why does argparse matter for a tool with several checks?",
+          "options": [
+            "It is faster",
+            "Because users need to select regions, profiles and which checks to run",
+            "It is required",
+            "It reduces code"
+          ],
+          "answer": 1,
+          "explanation": "Options are what turn a script into a tool other people can use."
+        },
+        {
+          "key": "pq145-10",
+          "type": "mcq",
+          "prompt": "Why use logging levels rather than printing everything?",
+          "options": [
+            "It is faster",
+            "So normal output stays clean while detail is available when needed",
+            "It is required",
+            "It reduces size"
+          ],
+          "answer": 1,
+          "explanation": "A tool that prints its internals by default is unusable in a pipeline."
+        },
+        {
+          "key": "pq145-11",
+          "type": "mcq",
+          "prompt": "Why is this the strongest Python thing you have built so far?",
+          "options": [
+            "It is the longest",
+            "Because it reads real infrastructure, handles failure, and produces actionable output",
+            "It uses classes",
+            "It has tests"
+          ],
+          "answer": 1,
+          "explanation": "It solves a real problem end to end, which is what makes a portfolio piece."
+        },
+        {
+          "key": "pq145-12",
+          "type": "mcq",
+          "prompt": "What does this tool demonstrate to an employer?",
+          "options": [
+            "Python syntax",
+            "That you understand what good and bad cloud configuration looks like",
+            "Certificate knowledge",
+            "Docker skills"
+          ],
+          "answer": 1,
+          "explanation": "You cannot write a check without knowing what it is checking for and why."
+        },
+        {
+          "key": "pq145-13",
+          "type": "true_false",
+          "prompt": "A function that returns data is more reusable than one that prints it.",
+          "answer": true,
+          "explanation": "Printing decides the output format for every caller, which is rarely what you want."
+        },
+        {
+          "key": "pq145-14",
+          "type": "true_false",
+          "prompt": "An audit tool that can also delete resources is more useful and equally safe.",
+          "answer": false,
+          "explanation": "Combining investigation with destruction means a bug during investigation can destroy things."
+        },
+        {
+          "key": "pq145-15",
+          "type": "true_false",
+          "prompt": "This month was deliberately lighter because it falls during Ramadan.",
+          "answer": true,
+          "explanation": "Both tracks were reduced together so the whole plan stays survivable rather than being abandoned."
+        }
+      ]
+    }
+  ]
+}

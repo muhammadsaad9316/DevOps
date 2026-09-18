@@ -1,0 +1,1796 @@
+{
+  "days": [
+    {
+      "day": 76,
+      "title": "What A Container Actually Is",
+      "tasks": [
+        {
+          "key": "d76-namespaces",
+          "title": "Read what Linux namespaces are and which ones isolate processes, network and filesystem.",
+          "required": false
+        },
+        {
+          "key": "d76-cgroups",
+          "title": "Learn what cgroups limit and why a container can be capped at half a CPU.",
+          "required": true
+        },
+        {
+          "key": "d76-not-a-vm",
+          "title": "Write down three ways a container differs from the virtual machines you built in Month 1.",
+          "required": true
+        },
+        {
+          "key": "d76-install-docker",
+          "title": "Install Docker on your VM and add your user to the docker group.",
+          "required": true
+        },
+        {
+          "key": "d76-hello-world",
+          "title": "Run the hello world image and read every line of what Docker printed.",
+          "required": true
+        },
+        {
+          "key": "d76-ps-on-host",
+          "title": "Run a container, then find its process on the host with ps. Notice it is just a process.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 77,
+      "title": "Running Containers",
+      "tasks": [
+        {
+          "key": "d77-run-interactive",
+          "title": "Run an Ubuntu container interactively and explore it with your Month 1 commands.",
+          "required": true
+        },
+        {
+          "key": "d77-detached",
+          "title": "Run nginx detached and confirm it is running with docker ps.",
+          "required": true
+        },
+        {
+          "key": "d77-port-mapping",
+          "title": "Map a container port to a host port and load the page from your browser.",
+          "required": true
+        },
+        {
+          "key": "d77-exec",
+          "title": "Use docker exec to get a shell inside a running container without restarting it.",
+          "required": true
+        },
+        {
+          "key": "d77-stop-rm",
+          "title": "Stop and remove containers, then find the stopped ones with docker ps -a.",
+          "required": true
+        },
+        {
+          "key": "d77-ephemeral",
+          "title": "Break it: write a file inside a container, remove the container, and watch the file vanish.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 78,
+      "title": "Images, Layers And The Registry",
+      "tasks": [
+        {
+          "key": "d78-pull-inspect",
+          "title": "Pull three images and compare their sizes with docker images.",
+          "required": true
+        },
+        {
+          "key": "d78-layers",
+          "title": "Run docker history on an image and read what each layer added.",
+          "required": true
+        },
+        {
+          "key": "d78-tags",
+          "title": "Learn what a tag is and why latest is a bad thing to depend on in production.",
+          "required": true
+        },
+        {
+          "key": "d78-inspect",
+          "title": "Use docker inspect to find an image entrypoint, exposed ports and environment variables.",
+          "required": true
+        },
+        {
+          "key": "d78-dockerhub",
+          "title": "Create a Docker Hub account and pull an image from it using an explicit tag.",
+          "required": true
+        },
+        {
+          "key": "d78-prune",
+          "title": "Learn docker system df and docker system prune, then reclaim disk space.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 79,
+      "title": "Volumes And Persistent Data",
+      "tasks": [
+        {
+          "key": "d79-bind-mount",
+          "title": "Bind mount a host folder into a container and edit a file from both sides.",
+          "required": true
+        },
+        {
+          "key": "d79-named-volume",
+          "title": "Create a named volume, write data to it, destroy the container and prove the data survived.",
+          "required": true
+        },
+        {
+          "key": "d79-volume-vs-bind",
+          "title": "Write down when you would use a bind mount and when a named volume.",
+          "required": true
+        },
+        {
+          "key": "d79-db-container",
+          "title": "Run a PostgreSQL container with a volume and confirm data survives a container restart.",
+          "required": true
+        },
+        {
+          "key": "d79-permissions",
+          "title": "Break it: hit a file permission error between host and container, then work out why it happened.",
+          "required": true
+        },
+        {
+          "key": "d79-backup-volume",
+          "title": "Back up a named volume to a tar file using the tar skills from day 22.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 80,
+      "title": "Container Networking And Logs",
+      "tasks": [
+        {
+          "key": "d80-default-bridge",
+          "title": "Inspect the default bridge network and find the IP address Docker gave your container.",
+          "required": true
+        },
+        {
+          "key": "d80-custom-network",
+          "title": "Create a custom network, attach two containers, and make them reach each other by name.",
+          "required": true
+        },
+        {
+          "key": "d80-dns-in-docker",
+          "title": "Work out how container name resolution works and connect it to what you learned on day 34.",
+          "required": true
+        },
+        {
+          "key": "d80-docker-logs",
+          "title": "Read container logs with docker logs and follow them live with the follow flag.",
+          "required": true
+        },
+        {
+          "key": "d80-stdout-logging",
+          "title": "Learn why containers should log to stdout instead of writing log files inside themselves.",
+          "required": true
+        },
+        {
+          "key": "d80-port-conflict",
+          "title": "Break it: map two containers to the same host port and read the error you get.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 81,
+      "title": "Your First Dockerfile",
+      "tasks": [
+        {
+          "key": "d81-from-run-cmd",
+          "title": "Write a Dockerfile using FROM, RUN and CMD that runs a simple script.",
+          "required": true
+        },
+        {
+          "key": "d81-build",
+          "title": "Build the image with a proper tag and run a container from it.",
+          "required": true
+        },
+        {
+          "key": "d81-copy-workdir",
+          "title": "Add COPY and WORKDIR to bring your own files into the image.",
+          "required": true
+        },
+        {
+          "key": "d81-cmd-vs-entrypoint",
+          "title": "Learn the difference between CMD and ENTRYPOINT and when each one is right.",
+          "required": true
+        },
+        {
+          "key": "d81-expose",
+          "title": "Add EXPOSE and confirm it documents the port without publishing it.",
+          "required": true
+        },
+        {
+          "key": "d81-iterate",
+          "title": "Change one line, rebuild, and watch which layers were cached and which rebuilt.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 82,
+      "title": "Layer Caching And Build Speed",
+      "tasks": [
+        {
+          "key": "d82-cache-order",
+          "title": "Reorder your Dockerfile so dependencies install before your source code is copied.",
+          "required": true
+        },
+        {
+          "key": "d82-measure",
+          "title": "Time a rebuild before and after the reorder and record both numbers.",
+          "required": true
+        },
+        {
+          "key": "d82-dockerignore",
+          "title": "Add a dockerignore file and confirm the build context got smaller.",
+          "required": true
+        },
+        {
+          "key": "d82-break-cache",
+          "title": "Break it: put a COPY of your whole app at the top and watch every rebuild take full time.",
+          "required": true
+        },
+        {
+          "key": "d82-layer-count",
+          "title": "Combine several RUN commands into one and compare the layer count and image size.",
+          "required": true
+        },
+        {
+          "key": "d82-cache-rules",
+          "title": "Write down in your notes the rule for what invalidates a Docker layer cache.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 83,
+      "title": "Multi Stage Builds And Small Images",
+      "tasks": [
+        {
+          "key": "d83-fat-image",
+          "title": "Build a deliberately large image and record its size.",
+          "required": true
+        },
+        {
+          "key": "d83-multistage",
+          "title": "Rewrite it as a multi stage build that ships only the final artifact.",
+          "required": true
+        },
+        {
+          "key": "d83-compare-size",
+          "title": "Compare the two image sizes and write down the percentage saved.",
+          "required": true
+        },
+        {
+          "key": "d83-base-images",
+          "title": "Compare a full base image with a slim and an alpine variant of the same thing.",
+          "required": true
+        },
+        {
+          "key": "d83-why-small",
+          "title": "Write down three reasons small images matter: pull time, disk cost and attack surface.",
+          "required": true
+        },
+        {
+          "key": "d83-alpine-gotcha",
+          "title": "Read one common problem people hit with alpine images and how they solve it.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 84,
+      "title": "Image Security And Non Root Containers",
+      "tasks": [
+        {
+          "key": "d84-root-default",
+          "title": "Prove that a default container runs as root and explain why that is a risk.",
+          "required": true
+        },
+        {
+          "key": "d84-user-directive",
+          "title": "Add a USER directive so your image runs as an unprivileged user.",
+          "required": true
+        },
+        {
+          "key": "d84-scan",
+          "title": "Scan an image for known vulnerabilities and read the report.",
+          "required": true
+        },
+        {
+          "key": "d84-no-secrets",
+          "title": "Break it: put a secret in a Dockerfile, then find it with docker history. Never do it again.",
+          "required": true
+        },
+        {
+          "key": "d84-pin-versions",
+          "title": "Pin your base image to a specific version instead of latest and explain why.",
+          "required": true
+        },
+        {
+          "key": "d84-minimal-packages",
+          "title": "Remove one package your image does not need and rebuild.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 85,
+      "title": "Pushing To A Registry",
+      "tasks": [
+        {
+          "key": "d85-tag-properly",
+          "title": "Tag an image with a version number and a registry path.",
+          "required": true
+        },
+        {
+          "key": "d85-push-hub",
+          "title": "Push your image to Docker Hub and pull it back down on a fresh machine.",
+          "required": true
+        },
+        {
+          "key": "d85-ecr-create",
+          "title": "Create a private ECR repository in your AWS account.",
+          "required": true
+        },
+        {
+          "key": "d85-ecr-login",
+          "title": "Authenticate Docker to ECR using the AWS CLI and push your image there.",
+          "required": true
+        },
+        {
+          "key": "d85-pull-from-ec2",
+          "title": "Pull the image from ECR onto an EC2 instance using an IAM role, not access keys.",
+          "required": true
+        },
+        {
+          "key": "d85-registry-cost",
+          "title": "Check what ECR storage costs and set a lifecycle policy to delete old images.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 86,
+      "title": "Docker Compose Basics",
+      "tasks": [
+        {
+          "key": "d86-install-compose",
+          "title": "Confirm Docker Compose is available and check its version.",
+          "required": true
+        },
+        {
+          "key": "d86-first-compose",
+          "title": "Write a compose file that runs a single web service and start it up.",
+          "required": true
+        },
+        {
+          "key": "d86-up-down",
+          "title": "Learn what compose up, down, ps and logs each do.",
+          "required": true
+        },
+        {
+          "key": "d86-build-in-compose",
+          "title": "Point a compose service at your own Dockerfile instead of a prebuilt image.",
+          "required": true
+        },
+        {
+          "key": "d86-why-compose",
+          "title": "Write down why compose is easier than typing long docker run commands.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 87,
+      "title": "Multi Container Applications",
+      "tasks": [
+        {
+          "key": "d87-app-plus-db",
+          "title": "Write a compose file running your app and a PostgreSQL database together.",
+          "required": true
+        },
+        {
+          "key": "d87-service-names",
+          "title": "Connect the app to the database using the service name as the hostname.",
+          "required": true
+        },
+        {
+          "key": "d87-depends-on",
+          "title": "Add depends_on and then find out why it does not actually wait for readiness.",
+          "required": true
+        },
+        {
+          "key": "d87-healthcheck",
+          "title": "Add a healthcheck so the database is confirmed ready before the app tries to connect.",
+          "required": true
+        },
+        {
+          "key": "d87-volumes-compose",
+          "title": "Add a named volume so the database survives a compose down and up.",
+          "required": true
+        },
+        {
+          "key": "d87-break-network",
+          "title": "Break it: rename a service and watch the app fail to resolve it, then fix it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 88,
+      "title": "Configuration, Environment And Secrets",
+      "tasks": [
+        {
+          "key": "d88-env-vars",
+          "title": "Pass configuration into a container using environment variables.",
+          "required": true
+        },
+        {
+          "key": "d88-env-file",
+          "title": "Move the values into an env file and keep that file out of git.",
+          "required": true
+        },
+        {
+          "key": "d88-gitignore",
+          "title": "Write a gitignore that excludes env files, keys and local state. Verify with git status.",
+          "required": true
+        },
+        {
+          "key": "d88-config-not-code",
+          "title": "Write down why configuration should never be baked into an image.",
+          "required": true
+        },
+        {
+          "key": "d88-secrets-manager",
+          "title": "Read how AWS Secrets Manager and Parameter Store handle this properly in production.",
+          "required": false
+        },
+        {
+          "key": "d88-leak-check",
+          "title": "Break it: commit a fake secret, then learn why deleting it in a later commit is not enough.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 89,
+      "title": "Running Containers On EC2",
+      "tasks": [
+        {
+          "key": "d89-install-on-ec2",
+          "title": "Install Docker on an EC2 instance using a user data script from day 60.",
+          "required": true
+        },
+        {
+          "key": "d89-pull-and-run",
+          "title": "Pull your image from ECR and run it on the instance.",
+          "required": true
+        },
+        {
+          "key": "d89-restart-policy",
+          "title": "Set a restart policy so the container comes back after a reboot. Test by rebooting.",
+          "required": true
+        },
+        {
+          "key": "d89-behind-nginx",
+          "title": "Put nginx in front of the container as a reverse proxy using your day 48 config.",
+          "required": true
+        },
+        {
+          "key": "d89-logs-to-cloudwatch",
+          "title": "Ship container logs to CloudWatch using the awslogs driver.",
+          "required": true
+        },
+        {
+          "key": "d89-teardown",
+          "title": "Tear down the instance and check the billing dashboard.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 90,
+      "title": "Debugging Containers",
+      "tasks": [
+        {
+          "key": "d90-exit-codes",
+          "title": "Make a container exit with an error, then find the exit code with docker ps -a.",
+          "required": true
+        },
+        {
+          "key": "d90-inspect-stopped",
+          "title": "Read the logs of a stopped container to find out why it died.",
+          "required": true
+        },
+        {
+          "key": "d90-shell-in",
+          "title": "Exec into a running container and check the network from inside it with your Month 2 tools.",
+          "required": true
+        },
+        {
+          "key": "d90-works-locally",
+          "title": "Break it: build something that works on your machine and fails on a clean one. Find out why.",
+          "required": true
+        },
+        {
+          "key": "d90-resource-limits",
+          "title": "Set a memory limit, make the container exceed it, and observe what happens.",
+          "required": true
+        },
+        {
+          "key": "d90-checklist",
+          "title": "Write a container debugging checklist and add it to your notes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 91,
+      "title": "Git Properly",
+      "tasks": [
+        {
+          "key": "d91-init-commit",
+          "title": "Initialise a repository, stage changes and write commits with meaningful messages.",
+          "required": true
+        },
+        {
+          "key": "d91-branches",
+          "title": "Create a branch, make changes on it, and merge it back into main.",
+          "required": true
+        },
+        {
+          "key": "d91-conflict",
+          "title": "Break it: create a real merge conflict on purpose and resolve it by hand.",
+          "required": true
+        },
+        {
+          "key": "d91-log-diff",
+          "title": "Use git log, git diff and git show to investigate what changed and when.",
+          "required": true
+        },
+        {
+          "key": "d91-undo",
+          "title": "Learn the difference between git revert and git reset, and when each is safe.",
+          "required": true
+        },
+        {
+          "key": "d91-remote",
+          "title": "Push your repository to GitHub and pull it down on a second machine.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 92,
+      "title": "Pull Requests And Working Like A Team",
+      "tasks": [
+        {
+          "key": "d92-feature-branch",
+          "title": "Do a full cycle: branch, commit, push, open a pull request, merge it.",
+          "required": true
+        },
+        {
+          "key": "d92-review-yourself",
+          "title": "Review your own diff before merging and find one thing to improve.",
+          "required": true
+        },
+        {
+          "key": "d92-readme",
+          "title": "Write a README that explains what the project is and how to run it locally.",
+          "required": true
+        },
+        {
+          "key": "d92-commit-style",
+          "title": "Adopt a consistent commit message format and use it from now on.",
+          "required": true
+        },
+        {
+          "key": "d92-protect-main",
+          "title": "Turn on branch protection so main cannot be pushed to directly.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 93,
+      "title": "Your First GitHub Actions Workflow",
+      "tasks": [
+        {
+          "key": "d93-workflow-file",
+          "title": "Create a workflow file that runs on every push and prints a message.",
+          "required": true
+        },
+        {
+          "key": "d93-jobs-steps",
+          "title": "Learn the difference between a workflow, a job and a step.",
+          "required": true
+        },
+        {
+          "key": "d93-runners",
+          "title": "Read what a runner is and what ubuntu latest actually gives you.",
+          "required": false
+        },
+        {
+          "key": "d93-triggers",
+          "title": "Set the workflow to run on pushes to main and on pull requests only.",
+          "required": true
+        },
+        {
+          "key": "d93-read-logs",
+          "title": "Break a step on purpose and read the failure in the Actions log until you can navigate it fast.",
+          "required": true
+        },
+        {
+          "key": "d93-checkout",
+          "title": "Use the checkout action and prove your repository files are available to the job.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 94,
+      "title": "Testing And Quality Gates In CI",
+      "tasks": [
+        {
+          "key": "d94-add-tests",
+          "title": "Add a simple test to your project that can pass or fail.",
+          "required": true
+        },
+        {
+          "key": "d94-run-in-ci",
+          "title": "Run the tests in the workflow and see the result on the commit.",
+          "required": true
+        },
+        {
+          "key": "d94-fail-blocks",
+          "title": "Break it: push a failing test and confirm the pull request is blocked from merging.",
+          "required": true
+        },
+        {
+          "key": "d94-linting",
+          "title": "Add a linter step so style problems are caught automatically.",
+          "required": true
+        },
+        {
+          "key": "d94-caching",
+          "title": "Cache dependencies between runs and compare the workflow times.",
+          "required": true
+        },
+        {
+          "key": "d94-matrix",
+          "title": "Read what a matrix build is and when you would need one.",
+          "required": false
+        }
+      ]
+    },
+    {
+      "day": 95,
+      "title": "Secrets And Building Images In CI",
+      "tasks": [
+        {
+          "key": "d95-repo-secrets",
+          "title": "Store a secret in GitHub repository settings and use it in a workflow.",
+          "required": true
+        },
+        {
+          "key": "d95-mask-check",
+          "title": "Confirm the secret is masked in logs, then read why echoing it would still leak it.",
+          "required": true
+        },
+        {
+          "key": "d95-build-image",
+          "title": "Add a step that builds your Docker image inside the workflow.",
+          "required": true
+        },
+        {
+          "key": "d95-oidc",
+          "title": "Read how OIDC lets GitHub Actions get AWS credentials without stored access keys.",
+          "required": false
+        },
+        {
+          "key": "d95-push-ecr",
+          "title": "Authenticate to ECR from the workflow and push the built image.",
+          "required": true
+        },
+        {
+          "key": "d95-tag-with-sha",
+          "title": "Tag the image with the commit SHA so every build is traceable to its code.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 96,
+      "title": "Deploying From The Pipeline",
+      "tasks": [
+        {
+          "key": "d96-deploy-step",
+          "title": "Add a deploy step that pulls the new image onto your EC2 instance and restarts it.",
+          "required": true
+        },
+        {
+          "key": "d96-no-manual",
+          "title": "Do a full change with no manual commands: edit code, push, watch it reach the server.",
+          "required": true
+        },
+        {
+          "key": "d96-env-separation",
+          "title": "Create separate staging and production targets and deploy only to staging first.",
+          "required": true
+        },
+        {
+          "key": "d96-approval",
+          "title": "Add a manual approval before production deploys and test that it blocks.",
+          "required": true
+        },
+        {
+          "key": "d96-rollback",
+          "title": "Break it: deploy a broken version, then roll back by redeploying the previous image tag.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 97,
+      "title": "Zero Downtime And Health",
+      "tasks": [
+        {
+          "key": "d97-downtime-measure",
+          "title": "Measure how long your site is down during a deploy using a loop of curl requests.",
+          "required": true
+        },
+        {
+          "key": "d97-two-containers",
+          "title": "Run two containers behind nginx so one can be replaced while the other serves.",
+          "required": true
+        },
+        {
+          "key": "d97-drain",
+          "title": "Deploy again and measure the downtime now. Record the improvement.",
+          "required": true
+        },
+        {
+          "key": "d97-healthcheck-gate",
+          "title": "Make the deploy wait for a health check to pass before sending traffic to the new container.",
+          "required": true
+        },
+        {
+          "key": "d97-why-it-matters",
+          "title": "Write down why deploy downtime matters for a business like the cargo system.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 98,
+      "title": "Pipeline Hardening",
+      "tasks": [
+        {
+          "key": "d98-least-privilege-ci",
+          "title": "Scope the CI IAM permissions to only what the deploy needs, then test it still works.",
+          "required": true
+        },
+        {
+          "key": "d98-scan-in-ci",
+          "title": "Add an image vulnerability scan step and make a high severity finding fail the build.",
+          "required": true
+        },
+        {
+          "key": "d98-branch-rules",
+          "title": "Require the workflow to pass before a pull request can be merged.",
+          "required": true
+        },
+        {
+          "key": "d98-timeouts",
+          "title": "Add timeouts so a hung job cannot run forever and burn minutes.",
+          "required": true
+        },
+        {
+          "key": "d98-notifications",
+          "title": "Send a notification when a deploy fails so you find out without checking manually.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 99,
+      "title": "Capstone Build",
+      "tasks": [
+        {
+          "key": "d99-clean-repo",
+          "title": "Start a clean repository for the capstone with a proper README and gitignore.",
+          "required": true
+        },
+        {
+          "key": "d99-containerise",
+          "title": "Containerise a two service application with a multi stage build and a non root user.",
+          "required": true
+        },
+        {
+          "key": "d99-compose-local",
+          "title": "Make it run locally with one compose command and document that in the README.",
+          "required": true
+        },
+        {
+          "key": "d99-full-workflow",
+          "title": "Write the workflow: test, lint, build, scan, push to ECR, deploy to EC2.",
+          "required": true
+        },
+        {
+          "key": "d99-diagram",
+          "title": "Draw the pipeline as a diagram showing every stage from commit to running container.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 100,
+      "title": "Break It, Fix It, Prove It",
+      "tasks": [
+        {
+          "key": "d100-one-line",
+          "title": "Change one line of code, push it, and watch it reach production with no manual step.",
+          "required": true
+        },
+        {
+          "key": "d100-sabotage",
+          "title": "Have a friend break one stage of the pipeline without telling you which.",
+          "required": true
+        },
+        {
+          "key": "d100-diagnose",
+          "title": "Diagnose it from the Actions logs and the container logs alone, using your day 90 checklist.",
+          "required": true
+        },
+        {
+          "key": "d100-fix-verify",
+          "title": "Fix it and prove the fix with a fresh green run end to end.",
+          "required": true
+        },
+        {
+          "key": "d100-write-up",
+          "title": "Write the project up with what it does, how it deploys and one measurable improvement.",
+          "required": true
+        },
+        {
+          "key": "d100-push-portfolio",
+          "title": "Push everything and pin the repository on your GitHub profile.",
+          "required": true
+        },
+        {
+          "key": "d100-review",
+          "title": "Review your notes from days 76 to 100 and mark what you still cannot do unaided.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 80,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q80-1",
+          "type": "mcq",
+          "prompt": "What makes a container lighter than a virtual machine?",
+          "options": [
+            "It uses less disk",
+            "It shares the host kernel instead of running its own",
+            "It has no network",
+            "It cannot store data"
+          ],
+          "answer": 1,
+          "explanation": "Containers are isolated processes on the host kernel, so there is no second operating system to boot."
+        },
+        {
+          "key": "q80-2",
+          "type": "mcq",
+          "prompt": "What do Linux namespaces provide to a container?",
+          "options": [
+            "Speed",
+            "Isolation of things like processes, network and filesystem",
+            "Encryption",
+            "Load balancing"
+          ],
+          "answer": 1,
+          "explanation": "Namespaces are what make a container see its own limited view of the system."
+        },
+        {
+          "key": "q80-3",
+          "type": "mcq",
+          "prompt": "What do cgroups control?",
+          "options": [
+            "File permissions",
+            "Resource limits such as CPU and memory",
+            "Network routing",
+            "Image layers"
+          ],
+          "answer": 1,
+          "explanation": "Control groups cap how much of a resource a container is allowed to consume."
+        },
+        {
+          "key": "q80-4",
+          "type": "mcq",
+          "prompt": "What is the difference between an image and a container?",
+          "options": [
+            "Nothing",
+            "An image is the template, a container is a running instance of it",
+            "An image runs, a container is stored",
+            "Containers are larger"
+          ],
+          "answer": 1,
+          "explanation": "You build or pull an image, then run containers from it, and many containers can come from one image."
+        },
+        {
+          "key": "q80-5",
+          "type": "mcq",
+          "prompt": "What happens to files written inside a container when it is removed?",
+          "options": [
+            "They move to the host",
+            "They are lost unless stored in a volume",
+            "They become an image layer",
+            "They are backed up automatically"
+          ],
+          "answer": 1,
+          "explanation": "The writable layer disappears with the container, which is why volumes exist."
+        },
+        {
+          "key": "q80-6",
+          "type": "mcq",
+          "prompt": "Which command gets you a shell inside an already running container?",
+          "options": [
+            "docker run",
+            "docker exec",
+            "docker start",
+            "docker attach"
+          ],
+          "answer": 1,
+          "explanation": "exec starts a new process inside the existing container without restarting it."
+        },
+        {
+          "key": "q80-7",
+          "type": "mcq",
+          "prompt": "What does docker ps -a show that docker ps does not?",
+          "options": [
+            "Image sizes",
+            "Stopped containers",
+            "Network settings",
+            "Volume names"
+          ],
+          "answer": 1,
+          "explanation": "Without -a you only see running containers, so stopped ones look invisible."
+        },
+        {
+          "key": "q80-8",
+          "type": "mcq",
+          "prompt": "Why is depending on the latest tag risky?",
+          "options": [
+            "It downloads slowly",
+            "It can change underneath you without warning",
+            "It is not supported",
+            "It costs more"
+          ],
+          "answer": 1,
+          "explanation": "The same tag can point at different content over time, so builds stop being reproducible."
+        },
+        {
+          "key": "q80-9",
+          "type": "mcq",
+          "prompt": "What is the difference between a bind mount and a named volume?",
+          "options": [
+            "No difference",
+            "A bind mount maps a host path, a named volume is managed by Docker",
+            "Bind mounts are faster always",
+            "Named volumes cannot persist"
+          ],
+          "answer": 1,
+          "explanation": "Bind mounts point at a specific host directory, while named volumes are stored and managed by Docker."
+        },
+        {
+          "key": "q80-10",
+          "type": "mcq",
+          "prompt": "How do two containers on a custom network reach each other?",
+          "options": [
+            "By host IP only",
+            "By container or service name",
+            "Only through the host port",
+            "They cannot"
+          ],
+          "answer": 1,
+          "explanation": "Docker provides name resolution on user defined networks, so service names work as hostnames."
+        },
+        {
+          "key": "q80-11",
+          "type": "mcq",
+          "prompt": "Why should a container log to stdout rather than a file inside itself?",
+          "options": [
+            "It is faster",
+            "So the logs can be collected by the platform and survive the container",
+            "Files are not allowed",
+            "It saves memory"
+          ],
+          "answer": 1,
+          "explanation": "Logs written inside the container die with it, while stdout can be shipped somewhere durable."
+        },
+        {
+          "key": "q80-12",
+          "type": "mcq",
+          "prompt": "What does docker system prune do?",
+          "options": [
+            "Updates images",
+            "Removes unused containers, networks and images to reclaim space",
+            "Restarts Docker",
+            "Scans for vulnerabilities"
+          ],
+          "answer": 1,
+          "explanation": "It cleans up unused objects, which matters because Docker fills disks quietly."
+        },
+        {
+          "key": "q80-13",
+          "type": "true_false",
+          "prompt": "A container is just a process running on the host with restricted visibility.",
+          "answer": true,
+          "explanation": "You can see it in the host process list, which is why containers start so much faster than virtual machines."
+        },
+        {
+          "key": "q80-14",
+          "type": "true_false",
+          "prompt": "Two containers can be published to the same host port at the same time.",
+          "answer": false,
+          "explanation": "The second one fails to bind, exactly as two services on one port would on a normal Linux machine."
+        },
+        {
+          "key": "q80-15",
+          "type": "true_false",
+          "prompt": "Data in a named volume survives removing and recreating the container.",
+          "answer": true,
+          "explanation": "That separation between the container lifecycle and the data is the whole reason volumes exist."
+        }
+      ]
+    },
+    {
+      "afterDay": 85,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q85-1",
+          "type": "mcq",
+          "prompt": "What does the FROM instruction do in a Dockerfile?",
+          "options": [
+            "Copies files",
+            "Sets the base image to build on",
+            "Runs a command",
+            "Sets the working directory"
+          ],
+          "answer": 1,
+          "explanation": "Every image starts from a base, and FROM names it."
+        },
+        {
+          "key": "q85-2",
+          "type": "mcq",
+          "prompt": "What is the difference between CMD and ENTRYPOINT?",
+          "options": [
+            "None",
+            "ENTRYPOINT sets the fixed command, CMD provides default arguments that can be overridden",
+            "CMD runs at build time",
+            "ENTRYPOINT is deprecated"
+          ],
+          "answer": 1,
+          "explanation": "ENTRYPOINT defines what always runs, and CMD supplies defaults that a run command can replace."
+        },
+        {
+          "key": "q85-3",
+          "type": "mcq",
+          "prompt": "Why should you copy dependency files before copying your source code?",
+          "options": [
+            "It looks tidier",
+            "So the dependency install layer stays cached when only code changes",
+            "It reduces image size",
+            "It is required by Docker"
+          ],
+          "answer": 1,
+          "explanation": "Docker caches layers in order, so putting the slow step above the fast changing step saves rebuild time."
+        },
+        {
+          "key": "q85-4",
+          "type": "mcq",
+          "prompt": "What invalidates a Docker layer cache?",
+          "options": [
+            "Time passing",
+            "A change to that instruction or to the files it copies",
+            "Restarting Docker",
+            "Changing the tag"
+          ],
+          "answer": 1,
+          "explanation": "Once a layer changes, every layer after it must be rebuilt too."
+        },
+        {
+          "key": "q85-5",
+          "type": "mcq",
+          "prompt": "What does a dockerignore file do?",
+          "options": [
+            "Hides files from the container",
+            "Keeps files out of the build context sent to Docker",
+            "Deletes files",
+            "Encrypts files"
+          ],
+          "answer": 1,
+          "explanation": "A smaller build context means faster builds and fewer accidental inclusions."
+        },
+        {
+          "key": "q85-6",
+          "type": "mcq",
+          "prompt": "What is the point of a multi stage build?",
+          "options": [
+            "Running multiple containers",
+            "Building in one stage and shipping only the artifact in the final image",
+            "Splitting across machines",
+            "Running tests"
+          ],
+          "answer": 1,
+          "explanation": "Build tools stay in the earlier stage, so the final image carries only what it needs to run."
+        },
+        {
+          "key": "q85-7",
+          "type": "mcq",
+          "prompt": "Why do smaller images matter?",
+          "options": [
+            "They run faster",
+            "Faster pulls, less storage cost and a smaller attack surface",
+            "They use less memory",
+            "They need no registry"
+          ],
+          "answer": 1,
+          "explanation": "Size affects deployment speed, storage bills and how much software could contain a vulnerability."
+        },
+        {
+          "key": "q85-8",
+          "type": "mcq",
+          "prompt": "What is the risk of a container running as root by default?",
+          "options": [
+            "It is slower",
+            "A container escape or flaw has far more power on the host",
+            "It cannot write files",
+            "It uses more memory"
+          ],
+          "answer": 1,
+          "explanation": "Running unprivileged limits what a compromise inside the container can reach."
+        },
+        {
+          "key": "q85-9",
+          "type": "mcq",
+          "prompt": "Why is putting a secret in a Dockerfile dangerous?",
+          "options": [
+            "It slows the build",
+            "It stays visible in the image history to anyone who pulls it",
+            "Docker rejects it",
+            "It expires quickly"
+          ],
+          "answer": 1,
+          "explanation": "Layers are inspectable, so a secret in a build instruction is effectively published with the image."
+        },
+        {
+          "key": "q85-10",
+          "type": "mcq",
+          "prompt": "Why pin a base image to a specific version?",
+          "options": [
+            "It is faster",
+            "So builds stay reproducible instead of changing when the tag moves",
+            "It is cheaper",
+            "It enables caching"
+          ],
+          "answer": 1,
+          "explanation": "Pinning means today's build and next month's build produce the same thing."
+        },
+        {
+          "key": "q85-11",
+          "type": "mcq",
+          "prompt": "What is ECR?",
+          "options": [
+            "A container runtime",
+            "A private container registry in AWS",
+            "A monitoring service",
+            "A load balancer"
+          ],
+          "answer": 1,
+          "explanation": "ECR stores your images inside your AWS account rather than on a public registry."
+        },
+        {
+          "key": "q85-12",
+          "type": "mcq",
+          "prompt": "What is the safest way for an EC2 instance to pull from ECR?",
+          "options": [
+            "Store access keys on the instance",
+            "Use an attached IAM role",
+            "Make the repository public",
+            "Use the root account"
+          ],
+          "answer": 1,
+          "explanation": "The instance role supplies temporary credentials with no long lived secret on disk."
+        },
+        {
+          "key": "q85-13",
+          "type": "true_false",
+          "prompt": "Combining several RUN commands into one reduces the number of image layers.",
+          "answer": true,
+          "explanation": "Each RUN creates a layer, so merging them produces a smaller and simpler image."
+        },
+        {
+          "key": "q85-14",
+          "type": "true_false",
+          "prompt": "Deleting a secret in a later Docker layer removes it from the image.",
+          "answer": false,
+          "explanation": "Earlier layers still contain it, so the only fix is rebuilding without the secret ever being added."
+        },
+        {
+          "key": "q85-15",
+          "type": "true_false",
+          "prompt": "An ECR lifecycle policy can automatically delete old images to control storage cost.",
+          "answer": true,
+          "explanation": "Without one, every build you ever pushed keeps costing money."
+        }
+      ]
+    },
+    {
+      "afterDay": 90,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q90-1",
+          "type": "mcq",
+          "prompt": "What problem does Docker Compose solve?",
+          "options": [
+            "Image size",
+            "Defining and running multi container applications from one file",
+            "Network security",
+            "Log storage"
+          ],
+          "answer": 1,
+          "explanation": "Compose replaces long run commands with a declarative file describing all the services."
+        },
+        {
+          "key": "q90-2",
+          "type": "mcq",
+          "prompt": "How does one compose service reach another?",
+          "options": [
+            "By host IP",
+            "By using the service name as a hostname",
+            "Through the host port only",
+            "It cannot"
+          ],
+          "answer": 1,
+          "explanation": "Compose puts services on a shared network with name resolution between them."
+        },
+        {
+          "key": "q90-3",
+          "type": "mcq",
+          "prompt": "What does depends_on actually guarantee?",
+          "options": [
+            "That the dependency is ready",
+            "Only the start order, not readiness",
+            "That the dependency is healthy",
+            "Nothing at all"
+          ],
+          "answer": 1,
+          "explanation": "Start order is not readiness, which is why healthchecks are needed for databases."
+        },
+        {
+          "key": "q90-4",
+          "type": "mcq",
+          "prompt": "Why add a healthcheck to a database service?",
+          "options": [
+            "To restart it faster",
+            "So dependent services wait until it can actually accept connections",
+            "To reduce memory",
+            "To enable logging"
+          ],
+          "answer": 1,
+          "explanation": "A started container is not necessarily an available one, and healthchecks close that gap."
+        },
+        {
+          "key": "q90-5",
+          "type": "mcq",
+          "prompt": "Why should configuration come from environment variables rather than the image?",
+          "options": [
+            "It is faster",
+            "So one image can run in different environments without rebuilding",
+            "Images cannot hold text",
+            "It reduces layers"
+          ],
+          "answer": 1,
+          "explanation": "The same artifact should move from staging to production with only its configuration changing."
+        },
+        {
+          "key": "q90-6",
+          "type": "mcq",
+          "prompt": "What belongs in a gitignore for this kind of project?",
+          "options": [
+            "The README",
+            "Env files, keys and local state",
+            "The Dockerfile",
+            "The workflow file"
+          ],
+          "answer": 1,
+          "explanation": "Anything secret or machine specific should never reach the repository."
+        },
+        {
+          "key": "q90-7",
+          "type": "mcq",
+          "prompt": "Where would a production system store database credentials?",
+          "options": [
+            "In the Dockerfile",
+            "In a secrets manager or parameter store",
+            "In the git repository",
+            "In the image tag"
+          ],
+          "answer": 1,
+          "explanation": "Dedicated secret storage keeps credentials out of code and out of images."
+        },
+        {
+          "key": "q90-8",
+          "type": "mcq",
+          "prompt": "What does a restart policy do?",
+          "options": [
+            "Rebuilds the image",
+            "Brings the container back automatically after a crash or reboot",
+            "Rolls back a deploy",
+            "Clears logs"
+          ],
+          "answer": 1,
+          "explanation": "Without one, a rebooted host comes back with nothing running."
+        },
+        {
+          "key": "q90-9",
+          "type": "mcq",
+          "prompt": "A container exits immediately. Where do you look first?",
+          "options": [
+            "The image size",
+            "The container logs and the exit code",
+            "The registry",
+            "The volume"
+          ],
+          "answer": 1,
+          "explanation": "The logs almost always contain the reason, and the exit code narrows the category."
+        },
+        {
+          "key": "q90-10",
+          "type": "mcq",
+          "prompt": "It works on your machine but fails in a clean environment. What is the usual cause?",
+          "options": [
+            "A Docker bug",
+            "Something on your machine that is not in the image or config",
+            "The registry",
+            "The network"
+          ],
+          "answer": 1,
+          "explanation": "Hidden local dependencies are the classic cause, and it is why reproducible builds matter."
+        },
+        {
+          "key": "q90-11",
+          "type": "mcq",
+          "prompt": "What happens when a container exceeds its memory limit?",
+          "options": [
+            "It slows down",
+            "It is killed",
+            "The limit is raised",
+            "The host reboots"
+          ],
+          "answer": 1,
+          "explanation": "The kernel terminates the process, which usually shows up as an abrupt container exit."
+        },
+        {
+          "key": "q90-12",
+          "type": "mcq",
+          "prompt": "Which log driver sends container logs to AWS CloudWatch?",
+          "options": [
+            "json-file",
+            "awslogs",
+            "syslog",
+            "none"
+          ],
+          "answer": 1,
+          "explanation": "The awslogs driver ships stdout straight into a CloudWatch log group."
+        },
+        {
+          "key": "q90-13",
+          "type": "true_false",
+          "prompt": "A container that starts successfully is guaranteed to be ready to serve traffic.",
+          "answer": false,
+          "explanation": "Applications often need time to initialise, which is what readiness checks are for."
+        },
+        {
+          "key": "q90-14",
+          "type": "true_false",
+          "prompt": "Running docker compose down removes containers but a named volume can keep the data.",
+          "answer": true,
+          "explanation": "Volumes are separate from containers, so data survives unless you explicitly remove them."
+        },
+        {
+          "key": "q90-15",
+          "type": "true_false",
+          "prompt": "You can use the networking tools from Month 2 inside a running container to debug it.",
+          "answer": true,
+          "explanation": "A container is a normal Linux environment, so the same troubleshooting approach applies."
+        }
+      ]
+    },
+    {
+      "afterDay": 95,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q95-1",
+          "type": "mcq",
+          "prompt": "What does git revert do that git reset does not?",
+          "options": [
+            "Deletes history",
+            "Creates a new commit that undoes a change, leaving history intact",
+            "Changes the branch name",
+            "Pushes to remote"
+          ],
+          "answer": 1,
+          "explanation": "Revert is the safe option on shared branches because it adds rather than rewrites."
+        },
+        {
+          "key": "q95-2",
+          "type": "mcq",
+          "prompt": "What causes a merge conflict?",
+          "options": [
+            "Two branches with different names",
+            "Two branches changing the same lines differently",
+            "A missing remote",
+            "An old commit"
+          ],
+          "answer": 1,
+          "explanation": "Git cannot decide which version wins, so it asks you to resolve it."
+        },
+        {
+          "key": "q95-3",
+          "type": "mcq",
+          "prompt": "Why turn on branch protection for main?",
+          "options": [
+            "It speeds up merges",
+            "So changes go through review and checks instead of direct pushes",
+            "It reduces repository size",
+            "It enables Actions"
+          ],
+          "answer": 1,
+          "explanation": "Protection is what makes the pipeline a real gate rather than a suggestion."
+        },
+        {
+          "key": "q95-4",
+          "type": "mcq",
+          "prompt": "In GitHub Actions, what is the relationship between a workflow, a job and a step?",
+          "options": [
+            "They are the same",
+            "A workflow contains jobs, and a job contains steps",
+            "A step contains jobs",
+            "Jobs contain workflows"
+          ],
+          "answer": 1,
+          "explanation": "Workflows hold jobs, jobs run on a runner, and each job is a list of steps."
+        },
+        {
+          "key": "q95-5",
+          "type": "mcq",
+          "prompt": "What does the checkout action do?",
+          "options": [
+            "Deploys the code",
+            "Makes the repository contents available to the job",
+            "Builds the image",
+            "Runs the tests"
+          ],
+          "answer": 1,
+          "explanation": "Runners start empty, so the code has to be fetched before anything can use it."
+        },
+        {
+          "key": "q95-6",
+          "type": "mcq",
+          "prompt": "What is the point of running tests on every pull request?",
+          "options": [
+            "To use more minutes",
+            "To catch broken changes before they reach main",
+            "To build images",
+            "To tag releases"
+          ],
+          "answer": 1,
+          "explanation": "The gate is only useful if it runs before the merge, not after."
+        },
+        {
+          "key": "q95-7",
+          "type": "mcq",
+          "prompt": "Why cache dependencies in a workflow?",
+          "options": [
+            "To improve security",
+            "To make runs faster by avoiding repeated downloads",
+            "To store secrets",
+            "To keep logs"
+          ],
+          "answer": 1,
+          "explanation": "Caching cuts the slowest repeated step out of most runs."
+        },
+        {
+          "key": "q95-8",
+          "type": "mcq",
+          "prompt": "How should a workflow get access to AWS?",
+          "options": [
+            "Hardcoded keys in the file",
+            "Repository secrets or OIDC federation",
+            "A public IAM user",
+            "The root account"
+          ],
+          "answer": 1,
+          "explanation": "Secrets or short lived OIDC credentials keep long lived keys out of the repository."
+        },
+        {
+          "key": "q95-9",
+          "type": "mcq",
+          "prompt": "GitHub masks secrets in logs. Why is that not full protection?",
+          "options": [
+            "Masking always fails",
+            "A step can still write the value somewhere else or transform it",
+            "Logs are public",
+            "Masking expires"
+          ],
+          "answer": 1,
+          "explanation": "Masking hides exact matches, but a determined or careless step can still leak the value."
+        },
+        {
+          "key": "q95-10",
+          "type": "mcq",
+          "prompt": "Why tag an image with the commit SHA?",
+          "options": [
+            "It is shorter",
+            "So every deployed image traces back to exact source code",
+            "It saves storage",
+            "It is required by ECR"
+          ],
+          "answer": 1,
+          "explanation": "Traceability from a running container back to a commit is essential when something breaks."
+        },
+        {
+          "key": "q95-11",
+          "type": "mcq",
+          "prompt": "What should happen to a pull request when a required check fails?",
+          "options": [
+            "It merges with a warning",
+            "It is blocked from merging",
+            "It merges automatically",
+            "It is deleted"
+          ],
+          "answer": 1,
+          "explanation": "A gate that can be ignored is not a gate."
+        },
+        {
+          "key": "q95-12",
+          "type": "mcq",
+          "prompt": "Why add a timeout to a CI job?",
+          "options": [
+            "It improves security",
+            "So a hung job cannot run indefinitely and consume minutes",
+            "It caches better",
+            "It enables notifications"
+          ],
+          "answer": 1,
+          "explanation": "Without a timeout, one stuck job can burn resources until someone notices."
+        },
+        {
+          "key": "q95-13",
+          "type": "true_false",
+          "prompt": "A failing test that blocks a deploy is the pipeline working correctly.",
+          "answer": true,
+          "explanation": "Stopping a broken change before it ships is exactly what the pipeline is for."
+        },
+        {
+          "key": "q95-14",
+          "type": "true_false",
+          "prompt": "Committing a secret and then deleting it in the next commit removes it from the repository.",
+          "answer": false,
+          "explanation": "It stays in the history, so the credential must be treated as compromised and rotated."
+        },
+        {
+          "key": "q95-15",
+          "type": "true_false",
+          "prompt": "Scoping CI permissions to only what the deploy needs reduces the damage of a leaked credential.",
+          "answer": true,
+          "explanation": "Least privilege applies to automation exactly as it applies to people."
+        }
+      ]
+    },
+    {
+      "afterDay": 100,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "q100-1",
+          "type": "mcq",
+          "prompt": "What is the goal of a continuous deployment pipeline?",
+          "options": [
+            "Faster typing",
+            "Code reaching the target environment with no manual steps",
+            "Cheaper hosting",
+            "Smaller images"
+          ],
+          "answer": 1,
+          "explanation": "The pipeline replaces the manual sequence a person would otherwise perform by hand every time."
+        },
+        {
+          "key": "q100-2",
+          "type": "mcq",
+          "prompt": "Why deploy to staging before production?",
+          "options": [
+            "It is faster",
+            "To catch problems in a safe environment first",
+            "It is cheaper",
+            "Production cannot be automated"
+          ],
+          "answer": 1,
+          "explanation": "Staging is where a bad change costs nothing, which is the point of having it."
+        },
+        {
+          "key": "q100-3",
+          "type": "mcq",
+          "prompt": "What is the simplest reliable rollback method?",
+          "options": [
+            "Rebuild from an old commit",
+            "Redeploy the previous known good image tag",
+            "Restore the database",
+            "Restart the server"
+          ],
+          "answer": 1,
+          "explanation": "Because images are immutable and tagged, the last good one is still there and ready to run."
+        },
+        {
+          "key": "q100-4",
+          "type": "mcq",
+          "prompt": "Why does immutable tagging make rollback easy?",
+          "options": [
+            "Tags compress well",
+            "The exact previous artifact still exists and can be redeployed",
+            "Tags are cached",
+            "Registries are free"
+          ],
+          "answer": 1,
+          "explanation": "Nothing needs rebuilding, so recovery is a pull and a restart."
+        },
+        {
+          "key": "q100-5",
+          "type": "mcq",
+          "prompt": "Why run two containers behind a proxy during deployment?",
+          "options": [
+            "To halve the cost",
+            "So one can serve traffic while the other is replaced",
+            "To improve logging",
+            "To use less memory"
+          ],
+          "answer": 1,
+          "explanation": "Replacing them one at a time is what removes the gap in service."
+        },
+        {
+          "key": "q100-6",
+          "type": "mcq",
+          "prompt": "What should gate traffic to a newly deployed container?",
+          "options": [
+            "A timer",
+            "A health check passing",
+            "The image size",
+            "A manual restart"
+          ],
+          "answer": 1,
+          "explanation": "Sending traffic before the app is ready produces errors that look like a failed deploy."
+        },
+        {
+          "key": "q100-7",
+          "type": "mcq",
+          "prompt": "How would you measure deployment downtime?",
+          "options": [
+            "Read the logs afterwards",
+            "Send requests in a loop during the deploy and count failures",
+            "Check CPU usage",
+            "Ask a colleague"
+          ],
+          "answer": 1,
+          "explanation": "Measuring it directly turns downtime from a feeling into a number you can improve."
+        },
+        {
+          "key": "q100-8",
+          "type": "mcq",
+          "prompt": "Why does a failed deploy need a notification?",
+          "options": [
+            "To fill the inbox",
+            "So you find out without having to check manually",
+            "It is required by GitHub",
+            "To trigger a rollback"
+          ],
+          "answer": 1,
+          "explanation": "An unnoticed failure means production silently stays on the old version, or worse."
+        },
+        {
+          "key": "q100-9",
+          "type": "mcq",
+          "prompt": "Which statement is strongest on a CV?",
+          "options": [
+            "Familiar with Docker and CI/CD",
+            "Built a pipeline that cut deployment time from 20 minutes to under 2",
+            "Used GitHub Actions",
+            "Interested in DevOps"
+          ],
+          "answer": 1,
+          "explanation": "A measured outcome shows what you did, while a tool list only shows what you have touched."
+        },
+        {
+          "key": "q100-10",
+          "type": "mcq",
+          "prompt": "The pipeline succeeds but the site serves old code. What do you check?",
+          "options": [
+            "The test suite",
+            "Whether the deploy step pulled the new tag and restarted the container",
+            "The linter",
+            "The README"
+          ],
+          "answer": 1,
+          "explanation": "A green build only proves the image was made, not that the running container was replaced."
+        },
+        {
+          "key": "q100-11",
+          "type": "mcq",
+          "prompt": "Why should the deploy use a specific tag rather than latest?",
+          "options": [
+            "It is shorter",
+            "So you know exactly which build is running",
+            "It pulls faster",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "With latest you cannot tell what is deployed, which makes both debugging and rollback guesswork."
+        },
+        {
+          "key": "q100-12",
+          "type": "mcq",
+          "prompt": "What makes a project repository valuable to an employer?",
+          "options": [
+            "Number of commits",
+            "A clear README, a working pipeline and a documented architecture",
+            "Repository size",
+            "Number of branches"
+          ],
+          "answer": 1,
+          "explanation": "Reviewers look for evidence of thinking and operation, not volume of code."
+        },
+        {
+          "key": "q100-13",
+          "type": "true_false",
+          "prompt": "A build that works locally but fails in CI usually means something on your machine is not captured in the repository.",
+          "answer": true,
+          "explanation": "That gap is the exact problem containers and pipelines exist to eliminate."
+        },
+        {
+          "key": "q100-14",
+          "type": "true_false",
+          "prompt": "Manual approval before a production deploy defeats the purpose of automation.",
+          "answer": false,
+          "explanation": "Automating the work while keeping a human decision point is a normal and sensible pattern."
+        },
+        {
+          "key": "q100-15",
+          "type": "true_false",
+          "prompt": "Being able to change one line, push it, and watch it reach production is a reasonable end goal for this month.",
+          "answer": true,
+          "explanation": "That single demonstration covers containers, registries, CI, deployment and rollback in one story."
+        }
+      ]
+    }
+  ]
+}

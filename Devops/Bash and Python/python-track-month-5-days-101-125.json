@@ -1,0 +1,1446 @@
+{
+  "days": [
+    {
+      "day": 101,
+      "title": "Dates And Times",
+      "tasks": [
+        {
+          "key": "p101-now",
+          "title": "Import datetime and print the current date and time.",
+          "required": true
+        },
+        {
+          "key": "p101-format",
+          "title": "Format a date as a string in a layout you choose, and parse a string back into a date.",
+          "required": true
+        },
+        {
+          "key": "p101-difference",
+          "title": "Calculate how many days there are between two dates.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 102,
+      "title": "List Comprehensions",
+      "tasks": [
+        {
+          "key": "p102-basic",
+          "title": "Rewrite a for loop that builds a list as a single list comprehension.",
+          "required": true
+        },
+        {
+          "key": "p102-with-condition",
+          "title": "Add a condition so the comprehension keeps only the items you want.",
+          "required": true
+        },
+        {
+          "key": "p102-readability",
+          "title": "Write one comprehension that is too clever, then rewrite it as a loop and pick the clearer version.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 103,
+      "title": "Dictionary Work",
+      "tasks": [
+        {
+          "key": "p103-dict-comprehension",
+          "title": "Build a dictionary from two lists using a comprehension.",
+          "required": true
+        },
+        {
+          "key": "p103-sorting",
+          "title": "Sort a list of dictionaries by one of their values.",
+          "required": true
+        },
+        {
+          "key": "p103-counting",
+          "title": "Count how many times each value appears using a dictionary.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 104,
+      "title": "Sets And Tuples",
+      "tasks": [
+        {
+          "key": "p104-set-basics",
+          "title": "Create a set and prove it removes duplicates automatically.",
+          "required": true
+        },
+        {
+          "key": "p104-set-operations",
+          "title": "Find the items in one list that are missing from another using sets.",
+          "required": true
+        },
+        {
+          "key": "p104-tuple",
+          "title": "Create a tuple and find out what happens when you try to change it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 105,
+      "title": "CSV Files",
+      "tasks": [
+        {
+          "key": "p105-read-csv",
+          "title": "Read a CSV file and print each row as a dictionary.",
+          "required": true
+        },
+        {
+          "key": "p105-filter-rows",
+          "title": "Filter the rows by a value in one column and count the matches.",
+          "required": true
+        },
+        {
+          "key": "p105-write-csv",
+          "title": "Write filtered results out to a new CSV file with a header row.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 106,
+      "title": "Calling An API",
+      "tasks": [
+        {
+          "key": "p106-install-requests",
+          "title": "Create a virtual environment, install requests inside it, and confirm the import works.",
+          "required": true
+        },
+        {
+          "key": "p106-first-get",
+          "title": "Make a GET request to a public API and print the response.",
+          "required": true
+        },
+        {
+          "key": "p106-json-response",
+          "title": "Convert the response to Python data and read one value out of it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 107,
+      "title": "Response Codes And Failures",
+      "tasks": [
+        {
+          "key": "p107-status-code",
+          "title": "Print the status code of a response and check it before using the data.",
+          "required": true
+        },
+        {
+          "key": "p107-raise-for-status",
+          "title": "Make the program fail clearly on a bad status rather than continuing with nothing.",
+          "required": true
+        },
+        {
+          "key": "p107-handle-404",
+          "title": "Request something that does not exist and handle the 404 with a clear message.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 108,
+      "title": "Parameters And Headers",
+      "tasks": [
+        {
+          "key": "p108-query-params",
+          "title": "Send query parameters properly rather than building the URL by hand with string joining.",
+          "required": true
+        },
+        {
+          "key": "p108-headers",
+          "title": "Add a custom header to a request and confirm the API received it.",
+          "required": true
+        },
+        {
+          "key": "p108-token-from-env",
+          "title": "Read an API token from an environment variable, never from the code.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 109,
+      "title": "Pagination",
+      "tasks": [
+        {
+          "key": "p109-one-page",
+          "title": "Fetch one page of results and print how many items it contained.",
+          "required": true
+        },
+        {
+          "key": "p109-loop-pages",
+          "title": "Loop until there are no more pages and collect every item into one list.",
+          "required": true
+        },
+        {
+          "key": "p109-safety-limit",
+          "title": "Add a maximum page count so a bug cannot loop forever.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 110,
+      "title": "Timeouts And Retries",
+      "tasks": [
+        {
+          "key": "p110-timeout",
+          "title": "Add a timeout to every request so the program cannot hang indefinitely.",
+          "required": true
+        },
+        {
+          "key": "p110-retry-function",
+          "title": "Write a function that retries a request a few times before giving up.",
+          "required": true
+        },
+        {
+          "key": "p110-backoff",
+          "title": "Add a pause between retries that grows each time, as you did in bash on day 48.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 111,
+      "title": "Virtual Environments And Packages",
+      "tasks": [
+        {
+          "key": "p111-why-venv",
+          "title": "Write down why installing packages globally causes problems across projects.",
+          "required": true
+        },
+        {
+          "key": "p111-create-activate",
+          "title": "Create and activate a virtual environment for a new project and install two packages.",
+          "required": true
+        },
+        {
+          "key": "p111-gitignore-venv",
+          "title": "Add the virtual environment folder to your gitignore and confirm git ignores it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 112,
+      "title": "Dependencies",
+      "tasks": [
+        {
+          "key": "p112-freeze",
+          "title": "Generate a requirements file listing your project dependencies with versions.",
+          "required": true
+        },
+        {
+          "key": "p112-install-from",
+          "title": "Delete the environment, recreate it, and install everything from the requirements file.",
+          "required": true
+        },
+        {
+          "key": "p112-pin-versions",
+          "title": "Explain in your notes why pinning versions matters, connecting it to pinning Docker base images.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 113,
+      "title": "Proper Command Line Tools",
+      "tasks": [
+        {
+          "key": "p113-argparse-basic",
+          "title": "Rewrite one script to use argparse instead of reading arguments manually.",
+          "required": true
+        },
+        {
+          "key": "p113-optional-flags",
+          "title": "Add an optional flag with a default value and a help message.",
+          "required": true
+        },
+        {
+          "key": "p113-auto-help",
+          "title": "Run your tool with the help flag and confirm the generated help text is useful.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 114,
+      "title": "Logging Instead Of Printing",
+      "tasks": [
+        {
+          "key": "p114-logging-basic",
+          "title": "Replace the print statements in one script with the logging module.",
+          "required": true
+        },
+        {
+          "key": "p114-levels",
+          "title": "Use debug, info, warning and error levels appropriately in the same script.",
+          "required": true
+        },
+        {
+          "key": "p114-log-to-file",
+          "title": "Configure logging to write to a file with timestamps included.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 115,
+      "title": "Configuration Files",
+      "tasks": [
+        {
+          "key": "p115-read-yaml",
+          "title": "Read a YAML configuration file into Python and use one of its values.",
+          "required": true
+        },
+        {
+          "key": "p115-env-file",
+          "title": "Load settings from an environment file and keep it out of git.",
+          "required": true
+        },
+        {
+          "key": "p115-precedence",
+          "title": "Decide the order of precedence between defaults, config file and command line flags, and implement it.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 116,
+      "title": "Classes: The Basics",
+      "tasks": [
+        {
+          "key": "p116-first-class",
+          "title": "Write a class with an initialiser that stores two values, and create an instance of it.",
+          "required": true
+        },
+        {
+          "key": "p116-method",
+          "title": "Add a method that uses those values and call it on your instance.",
+          "required": true
+        },
+        {
+          "key": "p116-when-class",
+          "title": "Write down when a class is worth it and when a function or dictionary is simpler.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 117,
+      "title": "Modelling Something Real",
+      "tasks": [
+        {
+          "key": "p117-server-class",
+          "title": "Write a class representing a server with name, ip and status.",
+          "required": true
+        },
+        {
+          "key": "p117-list-of-objects",
+          "title": "Create a list of instances and loop over them, printing a summary of each.",
+          "required": true
+        },
+        {
+          "key": "p117-method-logic",
+          "title": "Add a method that returns whether the server needs attention, and use it in a filter.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 118,
+      "title": "Type Hints",
+      "tasks": [
+        {
+          "key": "p118-add-hints",
+          "title": "Add type hints to the arguments and return values of three of your functions.",
+          "required": true
+        },
+        {
+          "key": "p118-why-hints",
+          "title": "Write down what type hints give you, given Python does not enforce them at runtime.",
+          "required": true
+        },
+        {
+          "key": "p118-check-tool",
+          "title": "Run a type checker over one file and read what it reports.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 119,
+      "title": "Build A Small API Client",
+      "tasks": [
+        {
+          "key": "p119-client-class",
+          "title": "Write a small class that wraps an API, with the base URL and token set once in the initialiser.",
+          "required": true
+        },
+        {
+          "key": "p119-two-methods",
+          "title": "Give it two methods that each fetch something useful and return Python data.",
+          "required": true
+        },
+        {
+          "key": "p119-error-handling",
+          "title": "Handle timeouts, bad status codes and empty responses inside the client, not in the caller.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 120,
+      "title": "Testing Code That Calls Out",
+      "tasks": [
+        {
+          "key": "p120-why-mock",
+          "title": "Write down why a test should not make a real network call every time it runs.",
+          "required": true
+        },
+        {
+          "key": "p120-fake-response",
+          "title": "Write a test that supplies a fake response instead of calling the real API.",
+          "required": true
+        },
+        {
+          "key": "p120-test-failure-path",
+          "title": "Write a second test that checks your client behaves correctly when the API returns an error.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 121,
+      "title": "Exam Week: Light Review Of Data",
+      "tasks": [
+        {
+          "key": "p121-light-comprehension",
+          "title": "Write two list comprehensions from memory. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p121-light-dates",
+          "title": "Calculate days between two dates without looking anything up.",
+          "required": true
+        },
+        {
+          "key": "p121-stop-early",
+          "title": "Stop after fifteen minutes. Your exam preparation matters more this week.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 122,
+      "title": "Exam Week: Light Review Of Requests",
+      "tasks": [
+        {
+          "key": "p122-light-get",
+          "title": "Make one API request with a timeout and check the status code. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p122-light-error",
+          "title": "Write one try and except block around it from memory.",
+          "required": true
+        },
+        {
+          "key": "p122-stop-early-two",
+          "title": "Stop after fifteen minutes and go back to your exam preparation.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 123,
+      "title": "Exam Week: Light Review Of Tools",
+      "tasks": [
+        {
+          "key": "p123-light-argparse",
+          "title": "Write a five line argparse setup from memory. Fifteen minutes only.",
+          "required": true
+        },
+        {
+          "key": "p123-light-logging",
+          "title": "Add one logging line at info level and one at error level.",
+          "required": true
+        },
+        {
+          "key": "p123-stop-early-three",
+          "title": "Stop after fifteen minutes.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 124,
+      "title": "Exam Week: Read Your Own Code",
+      "tasks": [
+        {
+          "key": "p124-reread",
+          "title": "Read one script you wrote earlier this month and find one thing you would now write better.",
+          "required": true
+        },
+        {
+          "key": "p124-one-fix",
+          "title": "Make that single improvement. Nothing more.",
+          "required": true
+        },
+        {
+          "key": "p124-rest",
+          "title": "Close the laptop early. Sleep matters more than one more script tonight.",
+          "required": true
+        }
+      ]
+    },
+    {
+      "day": 125,
+      "title": "Exam Day: Keep The Habit Alive",
+      "tasks": [
+        {
+          "key": "p125-tiny-script",
+          "title": "After the exam, write one five line script. Anything at all.",
+          "required": true
+        },
+        {
+          "key": "p125-commit",
+          "title": "Commit it. The point today is that the streak does not break.",
+          "required": true
+        },
+        {
+          "key": "p125-next-month",
+          "title": "Read one page about boto3 so you know what next month is.",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "quizzes": [
+    {
+      "afterDay": 105,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq105-1",
+          "type": "mcq",
+          "prompt": "What does a list comprehension replace?",
+          "options": [
+            "A function",
+            "A loop that builds a list",
+            "A dictionary",
+            "An import"
+          ],
+          "answer": 1,
+          "explanation": "It is a shorter way of writing the same build a list pattern."
+        },
+        {
+          "key": "pq105-2",
+          "type": "mcq",
+          "prompt": "When is a plain loop better than a comprehension?",
+          "options": [
+            "Never",
+            "When the comprehension becomes hard to read",
+            "When the list is long",
+            "When using dictionaries"
+          ],
+          "answer": 1,
+          "explanation": "Clever one liners that nobody can read are a cost, not a win."
+        },
+        {
+          "key": "pq105-3",
+          "type": "mcq",
+          "prompt": "What is a set useful for?",
+          "options": [
+            "Ordered data",
+            "Holding unique values and comparing collections",
+            "Key and value pairs",
+            "Fixed size data"
+          ],
+          "answer": 1,
+          "explanation": "Removing duplicates and finding differences are its two main jobs."
+        },
+        {
+          "key": "pq105-4",
+          "type": "mcq",
+          "prompt": "How would you find items in list A that are missing from list B?",
+          "options": [
+            "A nested loop only",
+            "Convert both to sets and subtract",
+            "Sort both lists",
+            "Use a dictionary"
+          ],
+          "answer": 1,
+          "explanation": "Set operations express that idea directly and run faster than nested loops."
+        },
+        {
+          "key": "pq105-5",
+          "type": "mcq",
+          "prompt": "What happens if you try to change a tuple?",
+          "options": [
+            "It changes",
+            "Python raises an error because tuples cannot be modified",
+            "It creates a copy",
+            "It becomes a list"
+          ],
+          "answer": 1,
+          "explanation": "That immutability is the point, and it is why tuples are used for fixed data."
+        },
+        {
+          "key": "pq105-6",
+          "type": "mcq",
+          "prompt": "Why read a CSV row as a dictionary rather than a list?",
+          "options": [
+            "It is faster",
+            "So you access values by column name instead of counting positions",
+            "It uses less memory",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "Position based access breaks the moment a column moves."
+        },
+        {
+          "key": "pq105-7",
+          "type": "mcq",
+          "prompt": "What does parsing a date string give you?",
+          "options": [
+            "Text",
+            "A date object you can compare and do arithmetic with",
+            "A number",
+            "A dictionary"
+          ],
+          "answer": 1,
+          "explanation": "You cannot subtract two strings, which is why parsing matters."
+        },
+        {
+          "key": "pq105-8",
+          "type": "mcq",
+          "prompt": "Why is date handling worth learning early?",
+          "options": [
+            "It is easy",
+            "Because expiry checks, log filtering and retention all depend on it",
+            "It is required",
+            "It is fast"
+          ],
+          "answer": 1,
+          "explanation": "You already needed it for certificate expiry and snapshot pruning in bash."
+        },
+        {
+          "key": "pq105-9",
+          "type": "mcq",
+          "prompt": "How do you sort a list of dictionaries by one of their values?",
+          "options": [
+            "It cannot be done",
+            "Pass a key function to sorted",
+            "Convert to a list first",
+            "Use a set"
+          ],
+          "answer": 1,
+          "explanation": "The key function tells sorted which value to compare."
+        },
+        {
+          "key": "pq105-10",
+          "type": "mcq",
+          "prompt": "What is a good way to count occurrences of values?",
+          "options": [
+            "A list",
+            "A dictionary mapping each value to its count",
+            "A set",
+            "A tuple"
+          ],
+          "answer": 1,
+          "explanation": "It is the same pattern behind counting error types in a log."
+        },
+        {
+          "key": "pq105-11",
+          "type": "mcq",
+          "prompt": "Why write a filtered CSV out rather than printing it?",
+          "options": [
+            "It is faster",
+            "Because the result can then be used by another tool or person",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "Output that another program can consume is what makes a tool composable."
+        },
+        {
+          "key": "pq105-12",
+          "type": "mcq",
+          "prompt": "Which earlier bash idea does a set difference resemble?",
+          "options": [
+            "Exit codes",
+            "Comparing open ports against an allowed list",
+            "Redirection",
+            "Trap and cleanup"
+          ],
+          "answer": 1,
+          "explanation": "That firewall audit was a set difference done the long way."
+        },
+        {
+          "key": "pq105-13",
+          "type": "true_false",
+          "prompt": "A comprehension is always better than a loop.",
+          "answer": false,
+          "explanation": "It is better when it stays readable, and worse the moment it stops being obvious."
+        },
+        {
+          "key": "pq105-14",
+          "type": "true_false",
+          "prompt": "Sets automatically remove duplicate values.",
+          "answer": true,
+          "explanation": "That single property solves a surprising number of everyday problems."
+        },
+        {
+          "key": "pq105-15",
+          "type": "true_false",
+          "prompt": "Date arithmetic is needed for expiry checks, log filtering and retention policies.",
+          "answer": true,
+          "explanation": "All three appeared in your bash month, and Python makes them much easier."
+        }
+      ]
+    },
+    {
+      "afterDay": 110,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq110-1",
+          "type": "mcq",
+          "prompt": "What should you always check before using data from an API response?",
+          "options": [
+            "The response length",
+            "The status code",
+            "The content type only",
+            "The URL"
+          ],
+          "answer": 1,
+          "explanation": "A 404 body parsed as data is how confusing bugs start."
+        },
+        {
+          "key": "pq110-2",
+          "type": "mcq",
+          "prompt": "What does raising on a bad status give you?",
+          "options": [
+            "Faster requests",
+            "A clear failure at the point of the problem",
+            "Retries",
+            "Better logging"
+          ],
+          "answer": 1,
+          "explanation": "Failing where the problem is beats failing three functions later."
+        },
+        {
+          "key": "pq110-3",
+          "type": "mcq",
+          "prompt": "Why send query parameters properly rather than building the URL by hand?",
+          "options": [
+            "It is faster",
+            "Because values are escaped correctly and the code stays readable",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "Manual URL building breaks on spaces and special characters."
+        },
+        {
+          "key": "pq110-4",
+          "type": "mcq",
+          "prompt": "Where should an API token come from?",
+          "options": [
+            "The source code",
+            "An environment variable or secret store",
+            "A comment",
+            "The URL"
+          ],
+          "answer": 1,
+          "explanation": "The same rule you learned for bash scripts and Docker images."
+        },
+        {
+          "key": "pq110-5",
+          "type": "mcq",
+          "prompt": "What is pagination?",
+          "options": [
+            "Sorting results",
+            "Fetching results in pages because the API will not return them all at once",
+            "Caching results",
+            "Filtering results"
+          ],
+          "answer": 1,
+          "explanation": "Almost every real API paginates, including the AWS ones you meet next month."
+        },
+        {
+          "key": "pq110-6",
+          "type": "mcq",
+          "prompt": "Why add a maximum page count to a pagination loop?",
+          "options": [
+            "It is faster",
+            "So a bug cannot loop forever",
+            "It is required",
+            "To reduce memory"
+          ],
+          "answer": 1,
+          "explanation": "It is the same reasoning as the maximum wait in your bash retry loop."
+        },
+        {
+          "key": "pq110-7",
+          "type": "mcq",
+          "prompt": "Why add a timeout to every request?",
+          "options": [
+            "It is required",
+            "Because a request with no timeout can hang the program indefinitely",
+            "It is faster",
+            "To reduce load"
+          ],
+          "answer": 1,
+          "explanation": "An unattended script that hangs is invisible until someone notices nothing happened."
+        },
+        {
+          "key": "pq110-8",
+          "type": "mcq",
+          "prompt": "Why retry a failed network request?",
+          "options": [
+            "It is required",
+            "Because transient failures are normal and a single attempt is fragile",
+            "It reduces cost",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Retrying turns a temporary blip into a non event."
+        },
+        {
+          "key": "pq110-9",
+          "type": "mcq",
+          "prompt": "Why increase the delay between retries?",
+          "options": [
+            "It is required",
+            "To avoid overwhelming a service that is already struggling",
+            "It is faster",
+            "It is more accurate"
+          ],
+          "answer": 1,
+          "explanation": "Backing off gives the other side a chance to recover."
+        },
+        {
+          "key": "pq110-10",
+          "type": "mcq",
+          "prompt": "What should happen when a request fails after all retries?",
+          "options": [
+            "Continue silently",
+            "Fail clearly with a message and a non zero exit",
+            "Retry forever",
+            "Return empty data"
+          ],
+          "answer": 1,
+          "explanation": "Silent success on failure is the worst possible outcome for automation."
+        },
+        {
+          "key": "pq110-11",
+          "type": "mcq",
+          "prompt": "What connects this to your Month 3 bash work?",
+          "options": [
+            "Nothing",
+            "The same retry, timeout and exit code patterns, in a language that handles data better",
+            "Python replaces curl",
+            "Bash cannot make requests"
+          ],
+          "answer": 1,
+          "explanation": "The concepts carry over, and Python handles the JSON and logic far more comfortably."
+        },
+        {
+          "key": "pq110-12",
+          "type": "mcq",
+          "prompt": "Why handle a 404 differently from a timeout?",
+          "options": [
+            "They are the same",
+            "One means the thing does not exist, the other means you could not reach it",
+            "404 is faster",
+            "Timeouts are always fatal"
+          ],
+          "answer": 1,
+          "explanation": "One should probably not be retried and the other should."
+        },
+        {
+          "key": "pq110-13",
+          "type": "true_false",
+          "prompt": "A request without a timeout can hang a script indefinitely.",
+          "answer": true,
+          "explanation": "It is the single most common cause of a scheduled job that never finishes."
+        },
+        {
+          "key": "pq110-14",
+          "type": "true_false",
+          "prompt": "Most real APIs return all their results in one response.",
+          "answer": false,
+          "explanation": "Pagination is the norm, which is why the loop pattern matters."
+        },
+        {
+          "key": "pq110-15",
+          "type": "true_false",
+          "prompt": "An API token belongs in the source code if the repository is private.",
+          "answer": false,
+          "explanation": "Private repositories get cloned, shared and made public, and the habit is what matters."
+        }
+      ]
+    },
+    {
+      "afterDay": 115,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq115-1",
+          "type": "mcq",
+          "prompt": "Why use a virtual environment per project?",
+          "options": [
+            "It runs faster",
+            "So projects with different package versions do not conflict",
+            "It is required by pip",
+            "It saves disk"
+          ],
+          "answer": 1,
+          "explanation": "Global installs make two projects fight over the same version."
+        },
+        {
+          "key": "pq115-2",
+          "type": "mcq",
+          "prompt": "Why should the virtual environment folder be in gitignore?",
+          "options": [
+            "It is secret",
+            "Because it is rebuildable and would bloat the repository",
+            "It is required",
+            "It contains passwords"
+          ],
+          "answer": 1,
+          "explanation": "The requirements file is what belongs in git, not the installed packages."
+        },
+        {
+          "key": "pq115-3",
+          "type": "mcq",
+          "prompt": "What does a requirements file let you do?",
+          "options": [
+            "Run faster",
+            "Recreate the exact same environment elsewhere",
+            "Reduce memory",
+            "Skip virtual environments"
+          ],
+          "answer": 1,
+          "explanation": "It is the reproducibility principle you keep meeting in every track."
+        },
+        {
+          "key": "pq115-4",
+          "type": "mcq",
+          "prompt": "Why pin package versions?",
+          "options": [
+            "It downloads faster",
+            "So an upstream update cannot break your project without warning",
+            "It is required",
+            "It reduces size"
+          ],
+          "answer": 1,
+          "explanation": "It is the same reason you pin Docker base images and Terraform providers."
+        },
+        {
+          "key": "pq115-5",
+          "type": "mcq",
+          "prompt": "What does argparse give you over reading arguments manually?",
+          "options": [
+            "Speed",
+            "Parsing, defaults, validation and automatic help text",
+            "Smaller code always",
+            "Type safety"
+          ],
+          "answer": 1,
+          "explanation": "The generated help alone makes it worth using."
+        },
+        {
+          "key": "pq115-6",
+          "type": "mcq",
+          "prompt": "Why is logging better than print for a real tool?",
+          "options": [
+            "It is faster",
+            "Because you get levels, timestamps and control over where output goes",
+            "It is required",
+            "It uses less memory"
+          ],
+          "answer": 1,
+          "explanation": "Print gives you one undifferentiated stream with no context."
+        },
+        {
+          "key": "pq115-7",
+          "type": "mcq",
+          "prompt": "When should you log at error level rather than info?",
+          "options": [
+            "Always",
+            "When something failed that the reader needs to act on",
+            "For every operation",
+            "Never"
+          ],
+          "answer": 1,
+          "explanation": "Levels are only useful if they mean something consistent."
+        },
+        {
+          "key": "pq115-8",
+          "type": "mcq",
+          "prompt": "Why write logs with timestamps?",
+          "options": [
+            "To make the file bigger",
+            "So you can tell when something happened and how long it lasted",
+            "It is required",
+            "To sort them"
+          ],
+          "answer": 1,
+          "explanation": "Exactly the same reason your bash monitoring script timestamped its log."
+        },
+        {
+          "key": "pq115-9",
+          "type": "mcq",
+          "prompt": "Why keep an environment file out of git?",
+          "options": [
+            "It is large",
+            "Because it usually contains secrets and machine specific values",
+            "It is required",
+            "It changes often"
+          ],
+          "answer": 1,
+          "explanation": "This is the same rule from day 88 of the DevOps track."
+        },
+        {
+          "key": "pq115-10",
+          "type": "mcq",
+          "prompt": "What is a sensible precedence order for settings?",
+          "options": [
+            "Config file always wins",
+            "Defaults, then config file, then command line flags",
+            "Command line first, then defaults",
+            "Random"
+          ],
+          "answer": 1,
+          "explanation": "The most specific and immediate source should win, which is what you learned with Terraform variables."
+        },
+        {
+          "key": "pq115-11",
+          "type": "mcq",
+          "prompt": "Why load configuration from a file rather than hardcoding it?",
+          "options": [
+            "It is faster",
+            "So behaviour changes without editing code",
+            "It is required",
+            "It reduces size"
+          ],
+          "answer": 1,
+          "explanation": "It is the same separation of configuration from code you applied to containers."
+        },
+        {
+          "key": "pq115-12",
+          "type": "mcq",
+          "prompt": "What does the automatic help text from argparse give a user?",
+          "options": [
+            "Faster execution",
+            "A way to understand the tool without reading the source",
+            "Type checking",
+            "Logging"
+          ],
+          "answer": 1,
+          "explanation": "It is the usage message from your bash tools, generated for free."
+        },
+        {
+          "key": "pq115-13",
+          "type": "true_false",
+          "prompt": "A requirements file makes a Python project reproducible on another machine.",
+          "answer": true,
+          "explanation": "Combined with pinned versions, it is the same reproducibility idea as infrastructure as code."
+        },
+        {
+          "key": "pq115-14",
+          "type": "true_false",
+          "prompt": "Using print for everything is fine as long as the script is small.",
+          "answer": false,
+          "explanation": "Small scripts grow, and retrofitting logging later is more work than starting with it."
+        },
+        {
+          "key": "pq115-15",
+          "type": "true_false",
+          "prompt": "Precedence between defaults, config files and flags is a decision you should make deliberately.",
+          "answer": true,
+          "explanation": "Leaving it accidental produces surprising behaviour that is hard to debug."
+        }
+      ]
+    },
+    {
+      "afterDay": 120,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq120-1",
+          "type": "mcq",
+          "prompt": "What does a class give you that a function does not?",
+          "options": [
+            "Speed",
+            "A way to keep related data and behaviour together",
+            "Type safety",
+            "Less memory"
+          ],
+          "answer": 1,
+          "explanation": "State plus the operations on that state is what a class is for."
+        },
+        {
+          "key": "pq120-2",
+          "type": "mcq",
+          "prompt": "When is a class not worth it?",
+          "options": [
+            "Always worth it",
+            "When a function or a dictionary would be simpler and clearer",
+            "For small data",
+            "When using imports"
+          ],
+          "answer": 1,
+          "explanation": "Not everything needs to be an object, and forcing it adds noise."
+        },
+        {
+          "key": "pq120-3",
+          "type": "mcq",
+          "prompt": "What does the initialiser of a class do?",
+          "options": [
+            "Runs every method",
+            "Sets up the instance when it is created",
+            "Imports modules",
+            "Returns a value"
+          ],
+          "answer": 1,
+          "explanation": "It is where the instance's starting values are stored."
+        },
+        {
+          "key": "pq120-4",
+          "type": "mcq",
+          "prompt": "Why model a server as a class rather than a dictionary?",
+          "options": [
+            "It is faster",
+            "Because you can attach behaviour such as needs attention to the data",
+            "It uses less memory",
+            "It is required"
+          ],
+          "answer": 1,
+          "explanation": "When the data has rules attached to it, a class keeps them in one place."
+        },
+        {
+          "key": "pq120-5",
+          "type": "mcq",
+          "prompt": "What do type hints do at runtime?",
+          "options": [
+            "Enforce types",
+            "Nothing by themselves",
+            "Convert types",
+            "Raise errors"
+          ],
+          "answer": 1,
+          "explanation": "They document intent and enable tooling, but Python does not enforce them."
+        },
+        {
+          "key": "pq120-6",
+          "type": "mcq",
+          "prompt": "What is the practical benefit of type hints?",
+          "options": [
+            "Faster code",
+            "Editors and checkers catch mistakes before you run the program",
+            "Smaller files",
+            "Automatic tests"
+          ],
+          "answer": 1,
+          "explanation": "They turn a class of runtime errors into things you see while writing."
+        },
+        {
+          "key": "pq120-7",
+          "type": "mcq",
+          "prompt": "Why wrap an API in a small client class?",
+          "options": [
+            "It is faster",
+            "So the base URL, token and error handling live in one place",
+            "It is required",
+            "It reduces requests"
+          ],
+          "answer": 1,
+          "explanation": "Callers then get clean methods instead of repeating request setup everywhere."
+        },
+        {
+          "key": "pq120-8",
+          "type": "mcq",
+          "prompt": "Where should error handling live in an API client?",
+          "options": [
+            "In every caller",
+            "Inside the client, so callers get clean results or clear failures",
+            "Nowhere",
+            "In the tests"
+          ],
+          "answer": 1,
+          "explanation": "Repeating the same try and except in ten places is how inconsistency creeps in."
+        },
+        {
+          "key": "pq120-9",
+          "type": "mcq",
+          "prompt": "Why should a test not make a real network call?",
+          "options": [
+            "It is slow only",
+            "Because the test would fail for reasons unrelated to your code",
+            "It is not allowed",
+            "It costs money"
+          ],
+          "answer": 1,
+          "explanation": "A test that depends on the internet is unreliable and tells you nothing specific."
+        },
+        {
+          "key": "pq120-10",
+          "type": "mcq",
+          "prompt": "What does supplying a fake response in a test let you check?",
+          "options": [
+            "Network speed",
+            "How your code behaves for a known input, including error cases",
+            "The API contract",
+            "Nothing useful"
+          ],
+          "answer": 1,
+          "explanation": "You can test the 500 path without needing the real API to fail."
+        },
+        {
+          "key": "pq120-11",
+          "type": "mcq",
+          "prompt": "Why test the failure path as well as the success path?",
+          "options": [
+            "For completeness only",
+            "Because failure handling is where most real bugs hide",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "The happy path usually works, and the error path is what nobody exercises."
+        },
+        {
+          "key": "pq120-12",
+          "type": "mcq",
+          "prompt": "What is the point of building an API client this month?",
+          "options": [
+            "Practice",
+            "Because boto3 next month is exactly this pattern, already written for you",
+            "It is required",
+            "To learn classes"
+          ],
+          "answer": 1,
+          "explanation": "Understanding what a client does makes boto3 obvious rather than magical."
+        },
+        {
+          "key": "pq120-13",
+          "type": "true_false",
+          "prompt": "Type hints are enforced by Python when the program runs.",
+          "answer": false,
+          "explanation": "They are for humans and tools, and the program will run regardless of whether they are correct."
+        },
+        {
+          "key": "pq120-14",
+          "type": "true_false",
+          "prompt": "A test that fails because the internet was down is a badly designed test.",
+          "answer": true,
+          "explanation": "It gives a false signal about your code, which is worse than no test."
+        },
+        {
+          "key": "pq120-15",
+          "type": "true_false",
+          "prompt": "Understanding what an API client does makes boto3 easier to learn.",
+          "answer": true,
+          "explanation": "boto3 is a client library, and next month it stops looking like magic."
+        }
+      ]
+    },
+    {
+      "afterDay": 125,
+      "passPercent": 70,
+      "questions": [
+        {
+          "key": "pq125-1",
+          "type": "mcq",
+          "prompt": "Why is this track deliberately reduced during exam week?",
+          "options": [
+            "The material is finished",
+            "Because the exam matters more and split attention hurts both",
+            "It is a holiday",
+            "The app requires it"
+          ],
+          "answer": 1,
+          "explanation": "Protecting the priority task is the whole reason the small track stays small."
+        },
+        {
+          "key": "pq125-2",
+          "type": "mcq",
+          "prompt": "Why keep doing fifteen minutes rather than stopping entirely?",
+          "options": [
+            "To finish the course",
+            "Because breaking a daily habit is much harder to restart than to maintain",
+            "It is required",
+            "To pass the quiz"
+          ],
+          "answer": 1,
+          "explanation": "The streak is the asset, and a short day preserves it at almost no cost."
+        },
+        {
+          "key": "pq125-3",
+          "type": "mcq",
+          "prompt": "What is the risk of studying two hard things at full intensity in the same week?",
+          "options": [
+            "Nothing",
+            "You do both badly instead of one well",
+            "It takes longer",
+            "It costs more"
+          ],
+          "answer": 1,
+          "explanation": "Split attention during an exam week is a reliable way to fail both."
+        },
+        {
+          "key": "pq125-4",
+          "type": "mcq",
+          "prompt": "Why read your own older code before an exam rather than writing new code?",
+          "options": [
+            "It is easier",
+            "Because reviewing consolidates without adding new load",
+            "It is required",
+            "It is faster"
+          ],
+          "answer": 1,
+          "explanation": "Review uses less cognitive energy than learning something new."
+        },
+        {
+          "key": "pq125-5",
+          "type": "mcq",
+          "prompt": "What should you do the evening before an exam?",
+          "options": [
+            "One more practice project",
+            "Stop early and sleep",
+            "Write a new tool",
+            "Read documentation"
+          ],
+          "answer": 1,
+          "explanation": "This matched the advice in the main track for exactly the same reason."
+        },
+        {
+          "key": "pq125-6",
+          "type": "mcq",
+          "prompt": "Why write one small script on exam day itself?",
+          "options": [
+            "To revise",
+            "So the daily habit survives the disruption",
+            "It is required",
+            "To celebrate"
+          ],
+          "answer": 1,
+          "explanation": "The day after a big event is where habits usually die."
+        },
+        {
+          "key": "pq125-7",
+          "type": "mcq",
+          "prompt": "What is boto3?",
+          "options": [
+            "A testing framework",
+            "The Python library for working with AWS",
+            "A web framework",
+            "A logging tool"
+          ],
+          "answer": 1,
+          "explanation": "It is next month's subject, and it is an API client like the one you just built."
+        },
+        {
+          "key": "pq125-8",
+          "type": "mcq",
+          "prompt": "Why will boto3 feel familiar after this month?",
+          "options": [
+            "It uses bash",
+            "Because it is a client library that returns the nested data you have been handling",
+            "It is simple",
+            "It has no errors"
+          ],
+          "answer": 1,
+          "explanation": "Clients, pagination, error handling and nested JSON are all things you now know."
+        },
+        {
+          "key": "pq125-9",
+          "type": "mcq",
+          "prompt": "What was the most transferable skill from this month?",
+          "options": [
+            "Class syntax",
+            "Handling real data and failures from external systems",
+            "Type hints",
+            "Comprehensions"
+          ],
+          "answer": 1,
+          "explanation": "Everything you automate professionally involves calling something that might fail."
+        },
+        {
+          "key": "pq125-10",
+          "type": "mcq",
+          "prompt": "Why does the small track have a rule about stopping after fifteen minutes?",
+          "options": [
+            "To reduce learning",
+            "Because without a limit it quietly expands and damages the main track",
+            "It is required",
+            "To finish sooner"
+          ],
+          "answer": 1,
+          "explanation": "The whole two track plan depends on the smaller one staying genuinely small."
+        },
+        {
+          "key": "pq125-11",
+          "type": "mcq",
+          "prompt": "What have the last two months of Python built toward?",
+          "options": [
+            "A certificate",
+            "Being able to automate AWS work in Python from Month 6",
+            "Web development",
+            "Data science"
+          ],
+          "answer": 1,
+          "explanation": "Fundamentals, then data and APIs, then AWS specifically."
+        },
+        {
+          "key": "pq125-12",
+          "type": "mcq",
+          "prompt": "What is a realistic self assessment after two months of Python?",
+          "options": [
+            "Professional developer",
+            "Can write small useful tools that handle real data and failures",
+            "Beginner with no skills",
+            "Ready for algorithm interviews"
+          ],
+          "answer": 1,
+          "explanation": "Accurate self assessment is worth more than an inflated claim you cannot defend."
+        },
+        {
+          "key": "pq125-13",
+          "type": "true_false",
+          "prompt": "Reducing a secondary track during an intense week is good planning rather than laziness.",
+          "answer": true,
+          "explanation": "Planning around known peaks is what makes a long plan survivable."
+        },
+        {
+          "key": "pq125-14",
+          "type": "true_false",
+          "prompt": "Skipping the daily habit entirely for a week is roughly as easy to recover from as doing fifteen minutes.",
+          "answer": false,
+          "explanation": "Restarting a broken habit is far harder than maintaining a reduced one."
+        },
+        {
+          "key": "pq125-15",
+          "type": "true_false",
+          "prompt": "The API client you built this month is conceptually the same kind of thing as boto3.",
+          "answer": true,
+          "explanation": "That is exactly why it was built before boto3 rather than after."
+        }
+      ]
+    }
+  ]
+}
