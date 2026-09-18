@@ -105,3 +105,20 @@ cd ~
 ls      # Notice config dotfiles are hidden
 ls -la  # Notice .bashrc, .profile, .ssh are now visible
 ```
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Direct Binary Execution Denial (`./script.sh: Permission denied`)
+- **Symptom / Alert**: Executing `./shebang_demo.sh` produced `bash: ./shebang_demo.sh: Permission denied`, despite the user owning the file.
+- **Investigation & Triage**:
+  1. Inspected file metadata: `ls -l shebang_demo.sh`.
+  2. Observed permission string: `-rw-r--r-- 1 ubuntu ubuntu`.
+  3. Noticed read and write bits were enabled for owner, but execute (`x`) bits were absent.
+- **Root Cause Analysis (RCA)**: Newly created files in Linux inherit default permissions based on `umask` (typically `0644`), which deliberately omits execution privileges to prevent unauthorized script execution.
+- **Remediation & Fix**:
+  - Granted execute permissions to user owner: `chmod +x shebang_demo.sh`.
+  - Verified updated permissions: `-rwxr-xr--`. Script executed cleanly.
+- **Engineering Takeaway**: Executability in Linux is decoupled from file extensions (`.sh`). The kernel strictly relies on the execute permission bit (`+x`) and the shebang magic bytes (`#!`).

@@ -46,3 +46,24 @@ sudo chown :devops /var/shared_projects
 sudo chmod 2775 /var/shared_projects
 ```
 Now, any file created by any user in `devops` will automatically belong to group `devops`.
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Shared Folder Collaboration Deadlock Due to Group Mismatch
+- **Symptom / Alert**: Engineer Alice could not edit or append to a shared configuration file created by Engineer Bob in `/opt/shared/`.
+- **Investigation & Triage**:
+  1. Inspected permissions: `ls -l /opt/shared/config.yaml`.
+  2. Output was `-rw-r--r-- 1 bob bob 1024 Sep 18 config.yaml`.
+  3. File was created under Bob's private primary group (`bob`) instead of the shared team group (`devops`).
+- **Root Cause Analysis (RCA)**: Normal directories do not inherit group ownership for newly created children. Files default to the primary group of the creating user.
+- **Remediation & Fix**:
+  - Applied the **SetGID bit** (`2775`) to the shared directory:
+    ```bash
+    sudo chown :devops /opt/shared
+    sudo chmod 2775 /opt/shared
+    ```
+  - Now, any file created by any user inside `/opt/shared` automatically inherits group ownership of `devops`.
+- **Engineering Takeaway**: Multi-user collaboration folders in Linux require the SetGID bit (`chmod g+s`) combined with appropriate team `umask` (e.g., `002`).

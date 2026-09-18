@@ -41,3 +41,19 @@ ubuntu:x:1000:1000:Ubuntu User,,,:/home/ubuntu:/bin/bash
 If you switch to root using `su root` instead of `su -`, you will NOT inherit root's admin path (`/sbin`, `/usr/sbin`). System maintenance commands (like `fdisk`, `iptables`, `systemctl`) will fail with `command not found` or execute using unprivileged paths.
 
 **Best Practice**: Always use `su -` (with a dash) when switching accounts.
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Build Tool Failure After Switching Accounts via `su`
+- **Symptom / Alert**: Deployment engineer switched to `deployer` account via `su deployer` and attempted to run build tools, resulting in `mvn: command not found` and permission errors writing to `/home/deployer`.
+- **Investigation & Triage**:
+  1. Ran `pwd`: Returned `/root` (engineer was still in root's directory!).
+  2. Checked environment variables: `echo $PATH` was using root's binary path, and `$HOME` was not updated.
+- **Root Cause Analysis (RCA)**: `su <user>` initiates a **non-login shell**. It preserves the calling user's current directory and environment variables, failing to load `/home/deployer/.profile` or `.bashrc`.
+- **Remediation & Fix**:
+  - Switched using a **login shell**: `su - deployer` (with the hyphen).
+  - Path and environment variables initialized correctly, and working directory shifted to `/home/deployer`.
+- **Engineering Takeaway**: In production environments, always switch accounts using `su - <user>` or `sudo -i -u <user>` to ensure full environment isolation.

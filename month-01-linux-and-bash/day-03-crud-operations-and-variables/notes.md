@@ -31,3 +31,19 @@ APP_ENV="production"
 # Syntax Error / Bug:
 APP_ENV = "production"   # Tries to execute a command named 'APP_ENV' with arguments '=' and 'production'
 ```
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Wildcard Unlink Collision & Permanent Data Loss
+- **Symptom / Alert**: Running `rm *.log` inside an application directory unexpectedly deleted critical audit logs that had not been backed up.
+- **Investigation & Triage**:
+  1. Checked shell command history: `history | tail -n 5`.
+  2. Found command executed was `rm -rf *.log` from the root of the project directory rather than `./tmp/logs/`.
+- **Root Cause Analysis (RCA)**: Bash expands wildcards (`*`) *before* executing the command. Combined with `rm`, there is no confirmation prompt and no recycling buffer. Ext4 unlinks inodes immediately.
+- **Remediation & Fix**:
+  - Implemented strict command hygiene: Always run `ls *.log` or `echo *.log` first to verify the target list before executing destructive deletion commands.
+  - Added alias protection in `.bashrc`: `alias rm='rm -i'` for interactive sessions.
+- **Engineering Takeaway**: In production automation, never use unconstrained wildcards with `rm`. Use `find /target/path -name "*.log" -mtime +30 -delete` with explicit boundary constraints.

@@ -1,66 +1,106 @@
-# 🐧 DevOps & Linux Engineering Roadmap
+<div align="center">
 
-> A disciplined, production-grade repository documenting daily hands-on engineering labs, system administration notes, and automation scripts.
+# 🐧 Enterprise DevOps & Linux Engineering Roadmap
+
+[![Ubuntu 24.04 LTS](https://img.shields.io/badge/Platform-Ubuntu%2024.04%20LTS-orange?logo=ubuntu&style=for-the-badge)](https://releases.ubuntu.com/24.04/)
+[![Bash Scripting](https://img.shields.io/badge/Automation-Bash%205.2+-4EAA25?logo=gnu-bash&logoColor=white&style=for-the-badge)](https://www.gnu.org/software/bash/)
+[![POSIX Compliant](https://img.shields.io/badge/Standard-POSIX%20Compliant-blue?style=for-the-badge)](https://pubs.opengroup.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+<p align="center">
+  <b>A disciplined, production-grade engineering repository documenting daily hands-on labs, defensive shell scripting, Linux kernel architecture, and real-world SRE incident post-mortems.</b>
+</p>
+
+[Roadmap Overview](#-roadmap-overview) •
+[Technical Competencies](#-core-technical-competencies) •
+[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-114) •
+[Quick Start](#-quick-start--local-validation) •
+[Author](#-author)
+
+</div>
 
 ---
 
-## 🧭 Repository Structure
+## 📌 Roadmap Overview
+
+This repository represents a rigorous **9-month DevOps & Cloud Infrastructure engineering journey**, spanning from low-level Linux systems administration and defensive scripting to modern cloud architectures, CI/CD, and Kubernetes orchestration.
+
+### 🗂️ Architectural Modules
 
 ```text
 .
-├── Devops/                                 # Raw curriculum roadmap specifications
-├── month-01-linux-and-bash/                # Month 1: Linux Fundamentals & Bash Companion
-│   ├── day-01-first-contact-and-scripting/
-│   ├── day-02-filesystem-and-shebang/
-│   ├── day-03-crud-operations-and-variables/
-│   ├── day-04-file-reading-and-command-substitution/
-│   ├── day-05-offline-help-and-user-input/
-│   ├── day-06-filesystem-hierarchy-and-arguments/
-│   ├── day-07-finding-files-and-exit-codes/
-│   ├── day-08-grep-searching-and-if-statements/
-│   ├── day-09-pipes-redirection-and-test-conditions/
-│   ├── day-10-text-processing-and-arithmetic/
-│   ├── day-11-users-groups-and-for-loops/
-│   ├── day-12-permissions-matrix-and-loop-audits/
-│   ├── day-13-ownership-umask-and-while-loops/
-│   └── day-14-sudo-privileges-and-case-menus/
-└── README.md                               # Root roadmap index & progress tracker
+├── month-01-linux-and-bash/       # Month 1: Linux Kernel, Inodes, Permissions & Bash Automation
+├── Devops/                        # Complete 9-month curriculum roadmap specifications
+└── README.md                      # Primary engineering dashboard
 ```
 
 ---
 
-## 📊 Month 1: Linux & Bash Foundations (Days 1–14 Progress)
+## 🛠️ Core Technical Competencies Demonstrated
 
-| Day | System Core (Linux Fundamentals) | Automation Companion (Bash Scripting) | Status |
-|:---:|---|---|:---:|
-| **01** | First Contact: VM Provisioning, Terminal & Commands | First Script: Shebang, Echo, Comments | ✅ Ready |
-| **02** | Filesystem Navigation: Inodes, Relative/Absolute Paths | Execution Rights: `chmod +x`, Why `./` is needed | ✅ Ready |
-| **03** | CRUD Operations: Directories, Safe File Deletion | Variables: Assignment, Quoting Rules (`"` vs `'`) | ✅ Ready |
-| **04** | File Inspection: Streaming, Paginated Viewers, Vim survival | Command Substitution: `$(...)` and dynamic timestamps | ✅ Ready |
-| **05** | Offline Discovery: `man` sections, `--help`, `apropos` | Interactive Input: `read -p` and prompt validation | ✅ Ready |
-| **06** | Filesystem Hierarchy Standard (FHS): System layout | Positional Parameters: `$1`, `$#`, CLI arguments | ✅ Ready |
-| **07** | Deep File Discovery: `find`, `which`, disk usage | Exit Codes: `$?`, `exit 1`, Pipeline reliability | ✅ Ready |
-| **08** | Pattern Matching: `grep` flags, regex, log triage | Conditional Logic: `if/else`, file guards | ✅ Ready |
-| **09** | I/O Redirection: `stdout`, `stderr`, pipes, `/dev/null` | Test Operators: `[ -f ]`, `[ -d ]`, string tests | ✅ Ready |
-| **10** | Text Processing: `sort`, `uniq`, `cut`, pipelines | Numbers & Arithmetic: `$(( ))`, integer comparison | ✅ Ready |
-| **11** | Multi-User Security: `/etc/passwd`, `/etc/shadow`, UIDs | The `for` Loop: Iteration, file globs, batch renames | ✅ Ready |
-| **12** | Permissions Matrix: Octal/Symbolic modes, directory `x` | Loop-Based Auditing: Permission checking scripts | ✅ Ready |
-| **13** | Ownership & umask: `chown`, `umask`, special bits | The `while` Loop: Line-by-line file parsing | ✅ Ready |
-| **14** | Privilege Escalation: `sudo`, `visudo`, least privilege | Structural Branching: `case` statements, CLI menus | ✅ Ready |
+| Domain | Key Concepts & Tools | Real-World Application |
+|---|---|---|
+| **Linux Systems Administration** | FHS Standard, Inode mechanics, Systemd, Storage partitions, `/proc`, `/sys` | Production server hardening, VM provisioning, resource monitoring, capacity planning. |
+| **Defensive Scripting** | `set -euo pipefail`, I/O redirection (`stdin`/`stdout`/`stderr`), guard clauses, traps | Resilient, non-interactive CI/CD deployment scripts that fail safely and transparently. |
+| **Security & Identity (IAM)** | UIDs, GIDs, `/etc/passwd`, `/etc/shadow`, `visudo`, Principle of Least Privilege | Multi-tenant user isolation, non-root container runtimes, audit trail compliance. |
+| **Access Control (DAC)** | Octal/Symbolic modes, Directory `x` bits, `umask`, SUID, SGID (`2775`), Sticky Bit | Collaborative shared team workspaces and permission-restricted secrets management. |
+| **Incident Response & SRE** | Log forensic triage (`/var/log/auth.log`), stream parsing (`awk`, `sed`, `grep`), Root Cause Analysis | Fast MTTR (Mean Time to Resolution) during production system outages. |
 
 ---
 
-## 🛠️ How to Use This Repository
+## 📊 Month 1: Linux & Bash Foundations (Days 1–14)
 
-1. **Navigate into a specific day**: Each folder contains a self-contained `README.md` outlining the curriculum tasks, technical notes, and verification drills.
-2. **Execute scripts**: Ensure scripts have execution permissions:
-   ```bash
-   chmod +x ./path/to/script.sh
-   ./path/to/script.sh
-   ```
-3. **Commit your work**: As you complete hands-on labs in your VM, record your findings in the respective day's `notes.md` and commit:
-   ```bash
-   git add .
-   git commit -m "feat(day-X): complete lab exercises and documentation"
-   git push origin main
-   ```
+Every lab directory is standardized to contain:
+- **`notes.md`**: Comprehensive architectural theory, command tables, and a **real-world Incident & Troubleshooting Journal (Post-Mortem)**.
+- **Working Scripts (`.sh`)**: Tested, idempotent, production-ready Bash automation utilities.
+
+| Day | System Core (Linux Fundamentals) | Automation Companion (Bash Scripting) | Working Deliverable | Incident Post-Mortem |
+|:---:|---|---|---|---|
+| **[Day 01](month-01-linux-and-bash/day-01-first-contact-and-scripting/)** | Ubuntu Server 24.04 VM Setup, Terminal vs. Shell | Script execution mechanics, shebang, comments | [`hello.sh`](month-01-linux-and-bash/day-01-first-contact-and-scripting/hello.sh) | SSH network timeout & NAT port forwarding |
+| **[Day 02](month-01-linux-and-bash/day-02-filesystem-and-shebang/)** | Inode navigation, relative/absolute paths, `ls -l` | Execution bits (`chmod +x`), the security model of `./` | [`shebang_demo.sh`](month-01-linux-and-bash/day-02-filesystem-and-shebang/shebang_demo.sh) | `./` execution denied & umask defaults |
+| **[Day 03](month-01-linux-and-bash/day-03-crud-operations-and-variables/)** | Inode unlinking, `rm` permanent dangers, wildcards | Variable assignment, single vs. double quoting rules | [`create_folder.sh`](month-01-linux-and-bash/day-03-crud-operations-and-variables/create_folder.sh) | Wildcard expansion & accidental deletion |
+| **[Day 04](month-01-linux-and-bash/day-04-file-reading-and-command-substitution/)** | Stream viewers (`less`, `head`, `tail -f`), Vim survival | Command substitution `$(date)` & dynamic timestamps | [`timestamp_backup.sh`](month-01-linux-and-bash/day-04-file-reading-and-command-substitution/timestamp_backup.sh) | Terminal freeze via raw binary streaming |
+| **[Day 05](month-01-linux-and-bash/day-05-offline-help-and-user-input/)** | Manual sections (1, 5, 8), `apropos`, offline discovery | User prompts (`read -p`) & dynamic input validation | [`interactive_mkdir.sh`](month-01-linux-and-bash/day-05-offline-help-and-user-input/interactive_mkdir.sh) | Missing man pages in cloud minimal AMIs |
+| **[Day 06](month-01-linux-and-bash/day-06-filesystem-hierarchy-and-arguments/)** | FHS standard (`/etc`, `/var`, `/tmp`, `/usr/bin` vs `/sbin`) | CLI arguments (`$0`, `$1`, `$#`, `$@`) | [`args_demo.sh`](month-01-linux-and-bash/day-06-filesystem-hierarchy-and-arguments/args_demo.sh) | Data loss via volatile `/tmp` reboot wipe |
+| **[Day 07](month-01-linux-and-bash/day-07-finding-files-and-exit-codes/)** | Deep file search (`find -exec`), disk utilization | Exit codes (`$?`), `exit 1`, pipeline gating in CI/CD | [`check_exit_status.sh`](month-01-linux-and-bash/day-07-finding-files-and-exit-codes/check_exit_status.sh) | Masked pipeline errors & `set -o pipefail` |
+| **[Day 08](month-01-linux-and-bash/day-08-grep-searching-and-if-statements/)** | Pattern searching (`grep -rni`), regular expressions | Conditional logic (`if/else`), defensive guard clauses | [`check_file_exists.sh`](month-01-linux-and-bash/day-08-grep-searching-and-if-statements/check_file_exists.sh) | Premature script crash via grep under `set -e` |
+| **[Day 09](month-01-linux-and-bash/day-09-pipes-redirection-and-test-conditions/)** | File descriptors (`0`, `1`, `2`), pipes (`\|`), `tee` | File test flags (`-f`, `-d`, `-r`, `-s`) & string tests | [`test_conditions.sh`](month-01-linux-and-bash/day-09-pipes-redirection-and-test-conditions/test_conditions.sh) | Headless cron job hung waiting on stdin |
+| **[Day 10](month-01-linux-and-bash/day-10-text-processing-and-arithmetic/)** | Text transformation (`sort`, `uniq`, `cut`, `awk`, `sed`) | Arithmetic expansion `$(( ))` & integer comparisons | [`file_count_alert.sh`](month-01-linux-and-bash/day-10-text-processing-and-arithmetic/file_count_alert.sh) | Uniq metric inaccuracy on unsorted streams |
+| **[Day 11](month-01-linux-and-bash/day-11-users-groups-and-for-loops/)** | Multi-user security, `/etc/passwd`, `/etc/shadow`, `su -` | The `for` loop over lists, number ranges, and file globs | [`batch_rename.sh`](month-01-linux-and-bash/day-11-users-groups-and-for-loops/batch_rename.sh) | Environment variable corruption in `su` |
+| **[Day 12](month-01-linux-and-bash/day-12-permissions-matrix-and-loop-audits/)** | Permissions matrix (`rwx`), directory execute `x` bit | Loop-based permission auditing & bulk hardening | [`audit_permissions.sh`](month-01-linux-and-bash/day-12-permissions-matrix-and-loop-audits/audit_permissions.sh) | Directory traversal lockout with `chmod 644` |
+| **[Day 13](month-01-linux-and-bash/day-13-ownership-umask-and-while-loops/)** | `chown`, `umask` calculations, SUID, SGID, Sticky bit | The `while` loop & safe line-by-line file reading | [`read_lines_safely.sh`](month-01-linux-and-bash/day-13-ownership-umask-and-while-loops/read_lines_safely.sh) | Collaboration deadlock & SetGID resolution |
+| **[Day 14](month-01-linux-and-bash/day-14-sudo-privileges-and-case-menus/)** | Sudoers administration, `visudo`, `/var/log/auth.log` | Structural branching with `case`, CLI menu dispatchers | [`service_dispatcher.sh`](month-01-linux-and-bash/day-14-sudo-privileges-and-case-menus/service_dispatcher.sh) | Sudoers syntax error averted via `visudo` |
+
+---
+
+## ⚡ Quick Start & Local Validation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/muhammadsaad9316/DevOps.git
+cd DevOps
+
+# 2. Grant execution permissions across working scripts
+find month-01-linux-and-bash/ -type f -name "*.sh" -exec chmod +x {} +
+
+# 3. Test a production service dispatcher script (Day 14)
+./month-01-linux-and-bash/day-14-sudo-privileges-and-case-menus/service_dispatcher.sh status
+
+# 4. Run an automated permission audit on your local directory (Day 12)
+./month-01-linux-and-bash/day-12-permissions-matrix-and-loop-audits/audit_permissions.sh .
+```
+
+---
+
+## 👨‍💻 Author
+
+**Muhammad Saad**  
+*Aspiring Cloud & DevOps Engineer | Linux Systems & Infrastructure Automation*
+
+- **GitHub**: [@muhammadsaad9316](https://github.com/muhammadsaad9316)
+- **Repository**: [github.com/muhammadsaad9316/DevOps](https://github.com/muhammadsaad9316/DevOps)
+
+---
+<div align="center">
+  <sub>Maintained with rigorous engineering discipline. Built as part of a 9-month continuous DevOps mastery curriculum.</sub>
+</div>

@@ -30,3 +30,26 @@
 ```bash
 grep -rni "ssh" /etc/ 2>/dev/null
 ```
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Premature Script Abort with `grep` Under `set -e`
+- **Symptom / Alert**: A health-check script abruptly crashed halfway through execution with zero error message.
+- **Investigation & Triage**:
+  1. Added debug tracing: `bash -x health_check.sh`.
+  2. Script halted at line: `grep -i "CRITICAL" /var/log/app.log`.
+  3. Checked exit code of grep when no "CRITICAL" entries exist: `$? == 1`.
+- **Root Cause Analysis (RCA)**: When `set -e` (exit on error) is active, `grep` returning exit code 1 (indicating "no matching lines found") is interpreted by the shell as a fatal error, triggering an instant script abort.
+- **Remediation & Fix**:
+  - Wrapped grep check in conditional syntax:
+    ```bash
+    if grep -q "CRITICAL" /var/log/app.log; then
+      notify_pager
+    else
+      echo "System healthy: 0 critical events found."
+    fi
+    ```
+- **Engineering Takeaway**: In Bash scripts running with `set -e`, handle standard non-zero exit statuses (such as `grep` returning 1 for no match) explicitly.

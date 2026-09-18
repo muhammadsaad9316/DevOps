@@ -31,3 +31,19 @@
     |                         |   :q!  (force quit)     |
     +-------------------------+-------------------------+
 ```
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Terminal Lockup via Raw Binary Stream Ingestion
+- **Symptom / Alert**: Executing `cat /var/log/syslog.2.gz` rendered the terminal completely unresponsive, emitting audible bell beeps and printing corrupted ASCII/garbage symbols.
+- **Investigation & Triage**:
+  1. Terminal prompt failed to render correctly after pressing `Ctrl + C`.
+  2. Typed characters appeared as scrambled Greek and mathematical symbols.
+- **Root Cause Analysis (RCA)**: Compressed gzip archives contain binary byte sequences that trigger ANSI escape codes when written directly to a terminal stdout buffer, remapping font tables and character sets.
+- **Remediation & Fix**:
+  - Restored terminal display without closing session by blind-typing: `reset` followed by `Enter`.
+  - For compressed logs, used decompression streaming view tools: `zcat` or `zless`.
+- **Engineering Takeaway**: Never dump uninspected or compressed data with `cat`. Use pagers like `less` (which detects binary data and prompts for confirmation) or `file <path>` first.

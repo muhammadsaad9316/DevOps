@@ -79,3 +79,19 @@ find /etc -name "*.conf" -exec ls -lh {} +
 sudo find /var -type f -exec du -h {} + 2>/dev/null | sort -rh | head -n 5
 ```
 *(Or using `ls`: `sudo find /var -type f -exec ls -lh {} + 2>/dev/null | sort -k5 -rh | head -n 5`)*
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Silent CI/CD Pipeline Success on Masked Command Failure
+- **Symptom / Alert**: Deployment pipeline reported a green status (0 errors), but the web server failed to start because the production configuration was never copied.
+- **Investigation & Triage**:
+  1. Examined CI shell script: `cp /source/conf.json /dest/ 2>&1 | tee copy.log`.
+  2. Verified exit status `$?` of that pipeline step: returned `0`.
+- **Root Cause Analysis (RCA)**: In standard Unix pipelines, the return code of `cmd1 | cmd2` is the exit code of `cmd2` (`tee`). Even though `cp` failed with error code 1, `tee` succeeded in receiving standard error and exited with 0, masking the fatal deployment error.
+- **Remediation & Fix**:
+  - Enabled pipefail at the top of the CI script: `set -o pipefail`.
+  - Verified behavior: With `pipefail`, if any command in a pipeline fails, the entire pipeline returns that non-zero exit status.
+- **Engineering Takeaway**: Always enforce `set -euo pipefail` in CI/CD pipeline runners to prevent silent error masking.

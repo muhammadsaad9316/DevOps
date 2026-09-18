@@ -68,3 +68,20 @@ Verify whether files created in `/tmp` survive a reboot or are volatile.
 
 ## Conclusion & System Behavior
 In modern systemd-based Linux distributions (like Ubuntu 24.04), `/tmp` is mounted as a virtual memory filesystem (`tmpfs`) or cleaned on boot by `systemd-tmpfiles-setup.service`. Files stored in `/tmp` are wiped upon system reboot. **Never store persistent data in `/tmp`.**
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Application Crash Due to Volatile `/tmp` Reliance
+- **Symptom / Alert**: An automated data ingestion worker crashed on server boot with `FileNotFoundError: /tmp/app_state.json`.
+- **Investigation & Triage**:
+  1. Verified system uptime: Machine had rebooted due to an automatic kernel patch.
+  2. Checked `/tmp` contents: State file was absent.
+  3. Inspected mount points: `mount | grep /tmp` revealed `/tmp` was mounted as `tmpfs` (RAM-backed virtual filesystem).
+- **Root Cause Analysis (RCA)**: The software relied on `/tmp` for state persistence across restarts. Under the FHS and systemd conventions, `/tmp` is wiped clean upon every reboot cycle.
+- **Remediation & Fix**:
+  - Migrated state storage path to `/var/lib/ingestion-service/` (designed for persistent runtime state).
+  - Configured directory permissions: `chown -R appuser:appuser /var/lib/ingestion-service/`.
+- **Engineering Takeaway**: Strictly respect the Filesystem Hierarchy Standard: `/tmp` is ephemeral; persistent application state belongs in `/var/lib/`, and runtime PID/socket files belong in `/run/`.

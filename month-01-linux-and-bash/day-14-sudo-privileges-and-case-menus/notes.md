@@ -95,3 +95,22 @@ groups testuser
 # Delete test account and home directory
 sudo userdel -r testuser
 ```
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Syntax Error in Sudoers Averted via `visudo`
+- **Symptom / Alert**: While attempting to grant deployment privileges to a CI service account, a rule was entered with a missing comma syntax error.
+- **Investigation & Triage**:
+  - The engineer attempted to save changes. The editor responded:
+    ```text
+    >>> /etc/sudoers: syntax error near line 28 <<<
+    What now? [x=exit, e=edit, f=re-edit]:
+    ```
+- **Root Cause Analysis (RCA)**: The sudoers syntax parser detected an illegal character before the file was committed to disk.
+- **Remediation & Fix**:
+  - Selected `e` to re-edit and corrected the syntax to `deployer ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart nginx`.
+  - Saved and validated clean exit.
+- **Engineering Takeaway**: Never edit `/etc/sudoers` with a standard text editor like `nano` or `vim`. `visudo` performs lock-file management and atomic syntax parsing to prevent system-wide administrative lockout.

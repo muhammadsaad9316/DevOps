@@ -55,3 +55,19 @@ apropos "network interface"
 - **Discovery**: `man -k crontab` or `apropos crontab`.
 - **Finding**: `crontab (1)` is the user program; `crontab (5)` is the file tables syntax.
 - **Solution Command**: `man 5 crontab`
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Missing Man Pages on Production Cloud Images
+- **Symptom / Alert**: Executing `man 5 passwd` on an AWS EC2 Ubuntu Minimal AMI returned `bash: man: command not found`.
+- **Investigation & Triage**:
+  1. Checked package status: `dpkg -l | grep man-db` (returned exit code 1 - package not installed).
+  2. Inspected disk footprint optimization policies on minimal cloud images.
+- **Root Cause Analysis (RCA)**: Cloud providers strip documentation, man pages, and local caches from minimal AMIs to reduce base image sizes and cold-boot deployment times.
+- **Remediation & Fix**:
+  - Installed man infrastructure: `sudo apt update && sudo apt install -y man-db manpages`.
+  - Rebuilt index database: `sudo mandb`.
+- **Engineering Takeaway**: In production cloud container environments, rely on `--help` and online registries; when provisioning maintenance jump-boxes, include `man-db` in your Terraform/Ansible baseline configuration.

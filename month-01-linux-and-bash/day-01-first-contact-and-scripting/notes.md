@@ -57,3 +57,20 @@
    uname -a
    hostnamectl
    ```
+
+
+---
+
+## 🚨 Incident & Troubleshooting Journal (Lab Post-Mortem)
+
+### Case Study: Host-to-Guest SSH Connection Timeout
+- **Symptom / Alert**: Attempting to connect via SSH (`ssh ubuntu@10.0.2.15`) from the host OS resulted in `Connection timed out` or `Network unreachable`.
+- **Investigation & Triage**:
+  1. Ran `ip a` on the VM guest: IP assigned was `10.0.2.15/24`.
+  2. Verified OpenSSH service status: `sudo systemctl status ssh` (service was active and listening on port 22).
+  3. Checked listening sockets: `ss -tulpn | grep :22`.
+- **Root Cause Analysis (RCA)**: VirtualBox's default NAT networking isolates the guest VM in a private subnet behind a virtual router. Host machines cannot route packets directly into VirtualBox private NAT IPs without port forwarding.
+- **Remediation & Fix**:
+  - Configured VirtualBox Network Port Forwarding rule: `Host Port 2222 -> Guest Port 22`.
+  - Connected successfully via `ssh -p 2222 ubuntu@127.0.0.1`.
+- **Engineering Takeaway**: Distinguish between NAT, Bridged, and Host-Only networking topologies in hypervisors before diagnosing OS-level firewall or daemon issues.
