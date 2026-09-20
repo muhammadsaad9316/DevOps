@@ -13,7 +13,7 @@
 
 [Roadmap Overview](#-roadmap-overview) •
 [Technical Competencies](#-core-technical-competencies) •
-[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-114) •
+[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-116) •
 [Quick Start](#-quick-start--local-validation) •
 [Author](#-author)
 
@@ -48,7 +48,7 @@ This repository represents a rigorous **9-month DevOps & Cloud Infrastructure en
 
 ---
 
-## 📊 Month 1: Linux & Bash Foundations (Days 1–14)
+## 📊 Month 1: Linux & Bash Foundations (Days 1–16)
 
 Every lab directory is standardized to contain:
 - **`notes.md`**: Comprehensive architectural theory, command tables, and a **real-world Incident & Troubleshooting Journal (Post-Mortem)**.
@@ -70,6 +70,8 @@ Every lab directory is standardized to contain:
 | **[Day 12](month-01-linux-and-bash/day-12-permissions-matrix-and-loop-audits/)** | Permissions matrix (`rwx`), directory execute `x` bit | Loop-based permission auditing & bulk hardening | [`audit_permissions.sh`](month-01-linux-and-bash/day-12-permissions-matrix-and-loop-audits/audit_permissions.sh) | Directory traversal lockout with `chmod 644` |
 | **[Day 13](month-01-linux-and-bash/day-13-ownership-umask-and-while-loops/)** | `chown`, `umask` calculations, SUID, SGID, Sticky bit | The `while` loop & safe line-by-line file reading | [`read_lines_safely.sh`](month-01-linux-and-bash/day-13-ownership-umask-and-while-loops/read_lines_safely.sh) | Collaboration deadlock & SetGID resolution |
 | **[Day 14](month-01-linux-and-bash/day-14-sudo-privileges-and-case-menus/)** | Sudoers administration, `visudo`, `/var/log/auth.log` | Structural branching with `case`, CLI menu dispatchers | [`service_dispatcher.sh`](month-01-linux-and-bash/day-14-sudo-privileges-and-case-menus/service_dispatcher.sh) | Sudoers syntax error averted via `visudo` |
+| **[Day 15](month-01-linux-and-bash/day-15-ssh-remote-access-and-output-redirection/)** | OpenSSH daemon, asymmetric keys (Ed25519), `StrictModes` | Output redirection (`>`, `>>`, `2>`, `2>&1`), structured logging | [`production_logger.sh`](month-01-linux-and-bash/day-15-ssh-remote-access-and-output-redirection/production_logger.sh) | Silent SSH auth failure via `StrictModes` |
+| **[Day 16](month-01-linux-and-bash/day-16-process-monitoring-and-management/)** | Process tree (PID 1), states (`R`, `S`, `D`, `Z`), signals | Process supervision, `pgrep`, `.pid` file lock, watchdog | [`process_watchdog.sh`](month-01-linux-and-bash/day-16-process-monitoring-and-management/process_watchdog.sh) | Kernel PID exhaustion via zombie leakage |
 
 ---
 
@@ -88,6 +90,12 @@ find month-01-linux-and-bash/ -type f -name "*.sh" -exec chmod +x {} +
 
 # 4. Run an automated permission audit on your local directory (Day 12)
 ./month-01-linux-and-bash/day-12-permissions-matrix-and-loop-audits/audit_permissions.sh .
+
+# 5. Execute production output logger with dual streams (Day 15)
+./month-01-linux-and-bash/day-15-ssh-remote-access-and-output-redirection/production_logger.sh
+
+# 6. Run process watchdog on a target service (Day 16)
+./month-01-linux-and-bash/day-16-process-monitoring-and-management/process_watchdog.sh sshd
 ```
 
 ---
