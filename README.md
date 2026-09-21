@@ -13,7 +13,7 @@
 
 [Roadmap Overview](#-roadmap-overview) •
 [Technical Competencies](#-core-technical-competencies) •
-[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-116) •
+[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-117) •
 [Quick Start](#-quick-start--local-validation) •
 [Author](#-author)
 
@@ -48,7 +48,7 @@ This repository represents a rigorous **9-month DevOps & Cloud Infrastructure en
 
 ---
 
-## 📊 Month 1: Linux & Bash Foundations (Days 1–16)
+## 📊 Month 1: Linux & Bash Foundations (Days 1–17)
 
 Every lab directory is standardized to contain:
 - **`notes.md`**: Comprehensive architectural theory, command tables, and a **real-world Incident & Troubleshooting Journal (Post-Mortem)**.
@@ -72,6 +72,7 @@ Every lab directory is standardized to contain:
 | **[Day 14](month-01-linux-and-bash/day-14-sudo-privileges-and-case-menus/)** | Sudoers administration, `visudo`, `/var/log/auth.log` | Structural branching with `case`, CLI menu dispatchers | [`service_dispatcher.sh`](month-01-linux-and-bash/day-14-sudo-privileges-and-case-menus/service_dispatcher.sh) | Sudoers syntax error averted via `visudo` |
 | **[Day 15](month-01-linux-and-bash/day-15-ssh-remote-access-and-output-redirection/)** | OpenSSH daemon, asymmetric keys (Ed25519), `StrictModes` | Output redirection (`>`, `>>`, `2>`, `2>&1`), structured logging | [`production_logger.sh`](month-01-linux-and-bash/day-15-ssh-remote-access-and-output-redirection/production_logger.sh) | Silent SSH auth failure via `StrictModes` |
 | **[Day 16](month-01-linux-and-bash/day-16-process-monitoring-and-management/)** | Process tree (PID 1), states (`R`, `S`, `D`, `Z`), signals | Process supervision, `pgrep`, `.pid` file lock, watchdog | [`process_watchdog.sh`](month-01-linux-and-bash/day-16-process-monitoring-and-management/process_watchdog.sh) | Kernel PID exhaustion via zombie leakage |
+| **[Day 17](month-01-linux-and-bash/day-17-jobs-background-and-parallel-execution/)** | Job control (`&`, `Ctrl+Z`, `jobs`, `bg`, `fg`), `nohup`, `tmux` sessions | Async execution (`&`), `$!`, process sync with `wait`, parallel workers | [`parallel_batch_processor.sh`](month-01-linux-and-bash/day-17-jobs-background-and-parallel-execution/parallel_batch_processor.sh) | SIGHUP pipeline termination on SSH disconnect & uncommitted DB state |
 
 ---
 
@@ -96,6 +97,9 @@ find month-01-linux-and-bash/ -type f -name "*.sh" -exec chmod +x {} +
 
 # 6. Run process watchdog on a target service (Day 16)
 ./month-01-linux-and-bash/day-16-process-monitoring-and-management/process_watchdog.sh sshd
+
+# 7. Run parallel batch processor with fan-out / fan-in worker synchronization (Day 17)
+./month-01-linux-and-bash/day-17-jobs-background-and-parallel-execution/parallel_batch_processor.sh
 ```
 
 ---
