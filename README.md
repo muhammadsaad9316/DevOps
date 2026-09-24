@@ -13,7 +13,7 @@
 
 [Roadmap Overview](#-roadmap-overview) •
 [Technical Competencies](#-core-technical-competencies) •
-[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-117) •
+[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-120) •
 [Quick Start](#-quick-start--local-validation) •
 [Author](#-author)
 
@@ -48,7 +48,7 @@ This repository represents a rigorous **9-month DevOps & Cloud Infrastructure en
 
 ---
 
-## 📊 Month 1: Linux & Bash Foundations (Days 1–17)
+## 📊 Month 1: Linux & Bash Foundations (Days 1–20)
 
 Every lab directory is standardized to contain:
 - **`notes.md`**: Comprehensive architectural theory, command tables, and a **real-world Incident & Troubleshooting Journal (Post-Mortem)**.
@@ -73,6 +73,9 @@ Every lab directory is standardized to contain:
 | **[Day 15](month-01-linux-and-bash/day-15-ssh-remote-access-and-output-redirection/)** | OpenSSH daemon, asymmetric keys (Ed25519), `StrictModes` | Output redirection (`>`, `>>`, `2>`, `2>&1`), structured logging | [`production_logger.sh`](month-01-linux-and-bash/day-15-ssh-remote-access-and-output-redirection/production_logger.sh) | Silent SSH auth failure via `StrictModes` |
 | **[Day 16](month-01-linux-and-bash/day-16-process-monitoring-and-management/)** | Process tree (PID 1), states (`R`, `S`, `D`, `Z`), signals | Process supervision, `pgrep`, `.pid` file lock, watchdog | [`process_watchdog.sh`](month-01-linux-and-bash/day-16-process-monitoring-and-management/process_watchdog.sh) | Kernel PID exhaustion via zombie leakage |
 | **[Day 17](month-01-linux-and-bash/day-17-jobs-background-and-parallel-execution/)** | Job control (`&`, `Ctrl+Z`, `jobs`, `bg`, `fg`), `nohup`, `tmux` sessions | Async execution (`&`), `$!`, process sync with `wait`, parallel workers | [`parallel_batch_processor.sh`](month-01-linux-and-bash/day-17-jobs-background-and-parallel-execution/parallel_batch_processor.sh) | SIGHUP pipeline termination on SSH disconnect & uncommitted DB state |
+| **[Day 18](month-01-linux-and-bash/day-18-systemd-services-and-automation/)** | Systemd architecture (PID 1), unit hierarchy, `systemctl` lifecycle, chaos config failure | Service health status checking inside `if`, idempotent self-healing restart, single-line reporting | [`service_sentinel.sh`](month-01-linux-and-bash/day-18-systemd-services-and-automation/service_sentinel.sh) | Systemd restart thrashing & `start-limit-hit` gateway lockout |
+| **[Day 19](month-01-linux-and-bash/day-19-logs-troubleshooting-and-log-checks/)** | `systemd-journald` binary logs, `journalctl` time/priority/unit filtering, `logrotate` internals | Stream parsing with `grep -c`, match counting, warning/critical alert threshold triggers | [`log_alert_sentinel.sh`](month-01-linux-and-bash/day-19-logs-troubleshooting-and-log-checks/log_alert_sentinel.sh) | Unrotated access logs exhaust 100% disk & freeze database transactions |
+| **[Day 20](month-01-linux-and-bash/day-20-package-management-and-package-checks/)** | Debian packaging (`.deb`), `dpkg` vs `apt`, `update` vs `upgrade`, `remove` vs `purge`, `/etc/apt/sources.list` | Idempotent package provisioning loop, `dpkg-query` status audits, non-interactive execution | [`idempotent_package_installer.sh`](month-01-linux-and-bash/day-20-package-management-and-package-checks/idempotent_package_installer.sh) | Blind `apt-get upgrade` in cloud-init breaks PostgreSQL driver ABI |
 
 ---
 
@@ -100,6 +103,15 @@ find month-01-linux-and-bash/ -type f -name "*.sh" -exec chmod +x {} +
 
 # 7. Run parallel batch processor with fan-out / fan-in worker synchronization (Day 17)
 ./month-01-linux-and-bash/day-17-jobs-background-and-parallel-execution/parallel_batch_processor.sh
+
+# 8. Run systemd service health sentinel and auto-restart check (Day 18)
+./month-01-linux-and-bash/day-18-systemd-services-and-automation/service_sentinel.sh --check nginx
+
+# 9. Scan and alert on log patterns exceeding thresholds (Day 19)
+./month-01-linux-and-bash/day-19-logs-troubleshooting-and-log-checks/log_alert_sentinel.sh --warn 5 --crit 10 /var/log/syslog "error"
+
+# 10. Audit and idempotently provision system packages (Day 20)
+./month-01-linux-and-bash/day-20-package-management-and-package-checks/idempotent_package_installer.sh --dry-run --install
 ```
 
 ---
