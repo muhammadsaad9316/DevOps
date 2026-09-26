@@ -48,7 +48,7 @@ This repository represents a rigorous **9-month DevOps & Cloud Infrastructure en
 
 ---
 
-## 📊 Month 1: Linux & Bash Foundations (Days 1–20)
+## 📊 Month 1: Linux & Bash Foundations (Days 1–21)
 
 Every lab directory is standardized to contain:
 - **`notes.md`**: Comprehensive architectural theory, command tables, and a **real-world Incident & Troubleshooting Journal (Post-Mortem)**.
@@ -76,6 +76,7 @@ Every lab directory is standardized to contain:
 | **[Day 18](month-01-linux-and-bash/day-18-systemd-services-and-automation/)** | Systemd architecture (PID 1), unit hierarchy, `systemctl` lifecycle, chaos config failure | Service health status checking inside `if`, idempotent self-healing restart, single-line reporting | [`service_sentinel.sh`](month-01-linux-and-bash/day-18-systemd-services-and-automation/service_sentinel.sh) | Systemd restart thrashing & `start-limit-hit` gateway lockout |
 | **[Day 19](month-01-linux-and-bash/day-19-logs-troubleshooting-and-log-checks/)** | `systemd-journald` binary logs, `journalctl` time/priority/unit filtering, `logrotate` internals | Stream parsing with `grep -c`, match counting, warning/critical alert threshold triggers | [`log_alert_sentinel.sh`](month-01-linux-and-bash/day-19-logs-troubleshooting-and-log-checks/log_alert_sentinel.sh) | Unrotated access logs exhaust 100% disk & freeze database transactions |
 | **[Day 20](month-01-linux-and-bash/day-20-package-management-and-package-checks/)** | Debian packaging (`.deb`), `dpkg` vs `apt`, `update` vs `upgrade`, `remove` vs `purge`, `/etc/apt/sources.list` | Idempotent package provisioning loop, `dpkg-query` status audits, non-interactive execution | [`idempotent_package_installer.sh`](month-01-linux-and-bash/day-20-package-management-and-package-checks/idempotent_package_installer.sh) | Blind `apt-get upgrade` in cloud-init breaks PostgreSQL driver ABI |
+| **[Day 21](month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/)** | Filesystem stack (VFS, ext4/XFS, inodes), block devices (`lsblk`), `df`/`du` capacity forensics, `/etc/fstab` persistence | Disk usage percentage extraction, threshold breach sentinels (WARN/CRIT), top-5 directory hogs analysis | [`disk_space_sentinel.sh`](month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/disk_space_sentinel.sh) & [`storage_triage_analyzer.sh`](month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/storage_triage_analyzer.sh) | Unlinked open file descriptor leakage causes 100% disk deadlock (`df` vs `du` discrepancy) |
 
 ---
 
@@ -112,6 +113,10 @@ find month-01-linux-and-bash/ -type f -name "*.sh" -exec chmod +x {} +
 
 # 10. Audit and idempotently provision system packages (Day 20)
 ./month-01-linux-and-bash/day-20-package-management-and-package-checks/idempotent_package_installer.sh --dry-run --install
+
+# 11. Run storage sentinel & triage largest directories (Day 21)
+./month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/disk_space_sentinel.sh --warn 80 --crit 90
+./month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/storage_triage_analyzer.sh biggest .
 ```
 
 ---
