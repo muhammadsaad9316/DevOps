@@ -13,7 +13,7 @@
 
 [Roadmap Overview](#-roadmap-overview) •
 [Technical Competencies](#-core-technical-competencies) •
-[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-120) •
+[Daily Labs & Incident Index](#-month-1-linux--bash-foundations-days-122) •
 [Quick Start](#-quick-start--local-validation) •
 [Author](#-author)
 
@@ -48,7 +48,7 @@ This repository represents a rigorous **9-month DevOps & Cloud Infrastructure en
 
 ---
 
-## 📊 Month 1: Linux & Bash Foundations (Days 1–21)
+## 📊 Month 1: Linux & Bash Foundations (Days 1–22)
 
 Every lab directory is standardized to contain:
 - **`notes.md`**: Comprehensive architectural theory, command tables, and a **real-world Incident & Troubleshooting Journal (Post-Mortem)**.
@@ -77,6 +77,7 @@ Every lab directory is standardized to contain:
 | **[Day 19](month-01-linux-and-bash/day-19-logs-troubleshooting-and-log-checks/)** | `systemd-journald` binary logs, `journalctl` time/priority/unit filtering, `logrotate` internals | Stream parsing with `grep -c`, match counting, warning/critical alert threshold triggers | [`log_alert_sentinel.sh`](month-01-linux-and-bash/day-19-logs-troubleshooting-and-log-checks/log_alert_sentinel.sh) | Unrotated access logs exhaust 100% disk & freeze database transactions |
 | **[Day 20](month-01-linux-and-bash/day-20-package-management-and-package-checks/)** | Debian packaging (`.deb`), `dpkg` vs `apt`, `update` vs `upgrade`, `remove` vs `purge`, `/etc/apt/sources.list` | Idempotent package provisioning loop, `dpkg-query` status audits, non-interactive execution | [`idempotent_package_installer.sh`](month-01-linux-and-bash/day-20-package-management-and-package-checks/idempotent_package_installer.sh) | Blind `apt-get upgrade` in cloud-init breaks PostgreSQL driver ABI |
 | **[Day 21](month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/)** | Disks and filesystems (`df -h`, `lsblk`, `mount`), inodes (`df -i`), `/etc/fstab` | Print disk usage percentage (`--percent-only`), warn on threshold, find 5 largest folders | [`disk_space_sentinel.sh`](month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/disk_space_sentinel.sh) & [`storage_triage_analyzer.sh`](month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/storage_triage_analyzer.sh) | Unlinked open files hold disk space (`df` vs `du` difference) |
+| **[Day 22](month-01-linux-and-bash/day-22-archives-transfer-and-backup-automation/)** | Archives & compression (`tar`, `gzip`), remote transfer (`scp`), differential sync (`rsync`) | Automated timestamped backups (`tar -czf`), source validation, 7-day retention pruning | [`backup_manager.sh`](month-01-linux-and-bash/day-22-archives-transfer-and-backup-automation/backup_manager.sh) & [`directory_sync_helper.sh`](month-01-linux-and-bash/day-22-archives-transfer-and-backup-automation/directory_sync_helper.sh) | Rsync trailing slash disaster (`--delete` wiping destination data) |
 
 ---
 
@@ -117,6 +118,9 @@ find month-01-linux-and-bash/ -type f -name "*.sh" -exec chmod +x {} +
 # 11. Check disk usage and find largest folders (Day 21)
 ./month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/disk_space_sentinel.sh 80 /
 ./month-01-linux-and-bash/day-21-disks-filesystems-and-storage-automation/storage_triage_analyzer.sh .
+
+# 12. Create timestamped backup archive with 7-day retention cleanup (Day 22)
+./month-01-linux-and-bash/day-22-archives-transfer-and-backup-automation/backup_manager.sh /var/log ./backups 7
 ```
 
 ---
